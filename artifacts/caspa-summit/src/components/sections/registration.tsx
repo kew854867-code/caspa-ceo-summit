@@ -24,23 +24,11 @@ export function RegistrationSection() {
             Attendance is strictly limited to ensure an intimate atmosphere for meaningful dialogue among industry leaders.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto text-left mb-16">
-            <div className="border border-white/10 bg-background/50 p-8 hover:border-primary/30 transition-colors duration-300">
-              <h3 className="font-serif text-2xl mb-2 text-foreground">VIP Gala Access</h3>
-              <p className="text-muted-foreground font-light mb-6">Full access to the reception, banquet, and CEO summit panels.</p>
-              <div className="text-3xl text-primary font-serif mb-8">$10,000 <span className="text-sm font-sans text-muted-foreground font-light">/ seat</span></div>
-              <button className="w-full bg-primary/10 text-primary border border-primary/30 px-6 py-3 font-medium tracking-widest uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-300">
-                Request Seat
-              </button>
-            </div>
-            
+          <div className="max-w-md mx-auto text-left mb-16">
             <div className="border border-primary/30 bg-primary/5 p-8 relative">
-              <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 uppercase tracking-widest">
-                Recommended
-              </div>
               <h3 className="font-serif text-2xl mb-2 text-foreground">Corporate Table</h3>
               <p className="text-muted-foreground font-light mb-6">Premium seating for 10 guests with branding opportunities.</p>
-              <div className="text-3xl text-primary font-serif mb-8">$85,000 <span className="text-sm font-sans text-muted-foreground font-light">/ table</span></div>
+              <div className="text-3xl text-primary font-serif mb-8">$10,000 <span className="text-sm font-sans text-muted-foreground font-light">/ table</span></div>
               <button className="w-full bg-primary text-primary-foreground px-6 py-3 font-medium tracking-widest uppercase hover:bg-primary/90 transition-all duration-300">
                 Reserve Table
               </button>
