@@ -6,6 +6,7 @@ import { VenueSection } from "@/components/sections/venue";
 import { RegistrationSection } from "@/components/sections/registration";
 import { Footer } from "@/components/layout/footer";
 import { motion, useScroll, useSpring } from "framer-motion";
+import caspaLogo from "@assets/IMG_4516_1778917187971.png";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -28,9 +29,7 @@ export default function Home() {
       {/* Navbar (minimal) */}
       <nav className="fixed top-0 w-full z-40 bg-background/80 backdrop-blur-md border-b border-white/5">
         <div className="container mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="font-serif text-2xl font-bold tracking-wider">
-            CASPA <span className="text-primary italic font-normal">Summit</span>
-          </div>
+          <img src={caspaLogo} alt="CASPA Logo" className="h-10 brightness-0 invert opacity-90" />
           <button className="hidden md:block text-sm font-medium tracking-widest uppercase hover:text-primary transition-colors">
             Request Invitation
           </button>
