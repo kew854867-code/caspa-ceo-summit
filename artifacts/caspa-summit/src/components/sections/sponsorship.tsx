@@ -2,17 +2,20 @@ import { motion } from "framer-motion";
 
 const tiers = [
   {
-    name: "Platinum",
-    description: "Premier brand visibility across all event materials, dedicated speaking opportunity, and premium table placement.",
-    perks: ["Keynote speaking slot", "2 reserved tables (20 seats)", "Logo on all print & digital materials", "Dedicated sponsor mention", "Post-event media coverage"],
+    name: "Premier",
+    price: "$50,000",
+    description: "Maximum brand visibility across all event materials, dedicated premium placement, and top-tier recognition throughout the evening.",
+    perks: ["Premium seat in dinner banquet", "2 reserved tables (20 seats)", "Logo on all print & digital materials", "Dedicated sponsor mention", "Post-event media coverage"],
   },
   {
-    name: "Gold",
+    name: "Partner",
+    price: null,
     description: "High-profile recognition with prominent placement throughout the venue and event collateral.",
     perks: ["1 reserved table (10 seats)", "Logo on stage backdrop & website", "Program book full-page feature", "Networking reception access"],
   },
   {
-    name: "Silver",
+    name: "Associate",
+    price: null,
     description: "Meaningful brand presence with recognition in key event touchpoints.",
     perks: ["5 reserved seats", "Logo on website & program", "Recognition in opening remarks", "Networking reception access"],
   },
@@ -81,6 +84,9 @@ export function SponsorshipSection() {
                 <span className="text-xs font-medium tracking-widest uppercase text-primary">{tier.name}</span>
                 <div className="w-8 h-[1px] bg-primary/40 mt-2 group-hover:w-full transition-all duration-500" />
               </div>
+              {tier.price && (
+                <div className="text-2xl font-serif text-primary mb-4">{tier.price}</div>
+              )}
               <p className="text-muted-foreground font-light text-sm leading-relaxed mb-6">{tier.description}</p>
               <ul className="space-y-3 mt-auto">
                 {tier.perks.map((perk) => (
