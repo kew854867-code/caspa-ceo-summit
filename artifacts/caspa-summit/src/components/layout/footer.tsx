@@ -26,7 +26,7 @@ export function Footer() {
           <div>
             <h4 className="text-foreground font-medium tracking-widest uppercase text-sm mb-4">Contact</h4>
             <ul className="space-y-2 text-muted-foreground font-light">
-              <li><a href="mailto:info@caspa.com" className="hover:text-primary transition-colors">info@caspa.com</a></li>
+              <li><a href="mailto:office@caspa.com" className="hover:text-primary transition-colors">office@caspa.com</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Sponsorships</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Press Inquiries</a></li>
             </ul>
