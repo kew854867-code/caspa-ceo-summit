@@ -20,6 +20,18 @@ const tiers = [
     perks: ["5 reserved seats", "Logo on website & program", "Recognition in opening remarks", "1 VIP reception access"],
   },
   {
+    name: "VIP Room",
+    price: "$20,000",
+    description: "Exclusive VIP room sponsorship with premium branding and private access for your guests during the event.",
+    perks: ["Exclusive VIP room branding", "1 reserved table (10 seats)", "1 VIP reception access", "Logo on all print & digital materials", "Dedicated sponsor mention"],
+  },
+  {
+    name: "CEO Lounge",
+    price: "$30,000",
+    description: "Premier sponsorship of the exclusive CEO Lounge — the most intimate networking space of the evening.",
+    perks: ["Exclusive CEO Lounge branding", "2 reserved tables (20 seats)", "1 VIP reception access", "Logo on all print & digital materials", "Dedicated sponsor mention", "Priority seating placement"],
+  },
+  {
     name: "Display Table",
     price: "$3,000",
     description: "Dedicated display space to showcase your brand, products, or materials to all event attendees.",
