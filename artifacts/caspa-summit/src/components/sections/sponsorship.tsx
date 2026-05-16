@@ -30,7 +30,7 @@ export function SponsorshipSection() {
         {/* Header with CTA */}
         <div className="text-center mb-20">
           <motion.a
-            href="mailto:sponsorship@caspa.com"
+            href="mailto:office@caspa.com"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -97,7 +97,7 @@ export function SponsorshipSection() {
                 ))}
               </ul>
               <a
-                href="mailto:sponsorship@caspa.com"
+                href="mailto:office@caspa.com"
                 className="mt-8 block text-center border border-primary/30 text-primary px-6 py-3 text-sm font-medium tracking-widest uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-300"
               >
                 Inquire
@@ -113,7 +113,7 @@ export function SponsorshipSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-center text-muted-foreground text-sm font-light mt-12"
         >
-          Custom packages available. Contact <a href="mailto:sponsorship@caspa.com" className="text-primary hover:underline">sponsorship@caspa.com</a> to discuss opportunities.
+          Custom packages available. Contact <a href="mailto:office@caspa.com" className="text-primary hover:underline">office@caspa.com</a> to discuss opportunities.
         </motion.p>
       </div>
     </section>
