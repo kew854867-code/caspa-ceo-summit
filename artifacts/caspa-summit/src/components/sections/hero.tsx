@@ -65,7 +65,7 @@ export function HeroSection() {
           className="mb-8"
         >
           <div className="inline-block border border-primary/30 px-6 py-2 rounded-full backdrop-blur-sm bg-primary/5">
-            <span className="text-primary text-sm font-medium tracking-[0.2em] uppercase">CASPA Annual Conference & Dinner Banquet</span>
+            <span className="text-primary text-sm font-medium tracking-[0.2em] uppercase">CASPA 35th Annual Conference & Dinner Banquet</span>
           </div>
         </motion.div>
 

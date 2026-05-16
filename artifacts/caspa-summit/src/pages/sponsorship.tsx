@@ -69,7 +69,7 @@ export default function SponsorshipPage() {
               transition={{ duration: 0.6 }}
               className="inline-block border border-primary/30 px-6 py-2 rounded-full backdrop-blur-sm bg-primary/5 mb-8"
             >
-              <span className="text-primary text-sm font-medium tracking-[0.2em] uppercase">CASPA Annual Conference & Dinner Banquet</span>
+              <span className="text-primary text-sm font-medium tracking-[0.2em] uppercase">CASPA 35th Annual Conference & Dinner Banquet</span>
             </motion.div>
 
             <motion.h1
