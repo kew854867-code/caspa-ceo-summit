@@ -5,19 +5,19 @@ const tiers = [
     name: "Premier",
     price: "$50,000",
     description: "Maximum brand visibility across all event materials, dedicated premium placement, and top-tier recognition throughout the evening.",
-    perks: ["Premium seat in dinner banquet", "1 reserved table (10 seats)", "VIP reception access", "Logo on all print & digital materials", "Dedicated sponsor mention"],
+    perks: ["1 Premium seat in Dinner Banquet", "1 reserved table (10 seats)", "1 VIP reception access", "Logo on all print & digital materials", "Dedicated sponsor mention"],
   },
   {
     name: "Partner",
     price: "$12,000",
     description: "High-profile recognition with prominent placement throughout the venue and event collateral.",
-    perks: ["1 reserved table (10 seats)", "Logo on stage website", "Program book full-page feature", "One VIP reception access"],
+    perks: ["1 reserved table (10 seats)", "Logo on stage website", "Program book full-page feature", "1 VIP reception access"],
   },
   {
     name: "Associate",
     price: "$6,000",
     description: "Meaningful brand presence with recognition in key event touchpoints.",
-    perks: ["5 reserved seats", "Logo on website & program", "Recognition in opening remarks", "Networking reception access"],
+    perks: ["5 reserved seats", "Logo on website & program", "Recognition in opening remarks", "1 VIP reception access"],
   },
 ];
 
