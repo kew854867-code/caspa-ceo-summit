@@ -11,7 +11,7 @@ import annaGoldieImg from "@assets/607DBF28-2718-42EE-BA73-59BE82AB69F9_17789159
 
 const speakers = [
   { name: "Lip-Bu Tan", title: "CEO", company: "Intel", image: lipBuTanImg },
-  { name: "John Martinis", title: "2025 Nobel Laureate in Physics", company: "Member of PCAST", image: johnMartinisImg },
+  { name: "John Martinis", title: "2025 Nobel Laureate in Physics", company: "President's Council of Advisors on Science and Technology", image: johnMartinisImg },
   { name: "Michael Hurlston", title: "CEO", company: "Lumentum", image: michaelHurlstonImg },
   { name: "Paul Cho", title: "President", company: "Samsung Semiconductor", image: paulChoImg },
   { name: "David Lam", title: "CEO, Multibeam", company: "Founder, Lam Research", image: davidLamImg },
