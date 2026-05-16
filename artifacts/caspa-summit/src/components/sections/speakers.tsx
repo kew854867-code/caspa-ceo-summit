@@ -15,9 +15,9 @@ const speakers = [
   { name: "Michael Hurlston", title: "CEO", company: "Lumentum", image: michaelHurlstonImg },
   { name: "Paul Cho", title: "President", company: "Samsung Semiconductor", image: paulChoImg },
   { name: "David Lam", title: "CEO, Multibeam", company: "Founder, Lam Research", image: davidLamImg },
-  { name: "Raghib Hussain", title: "CEO", company: "Altera", image: raghibHussainImg },
+  { name: "Raghib Hussain", title: "CEO", company: "Altera", image: sidShethImg },
   { name: "Rodrigo Liang", title: "CEO", company: "SambaNova", image: rodrigoLiangImg },
-  { name: "Sid Sheth", title: "CEO", company: "D-Matrix", image: sidShethImg },
+  { name: "Sid Sheth", title: "CEO", company: "D-Matrix", image: raghibHussainImg },
   { name: "Anna Goldie", title: "CEO", company: "Ricursive Intelligence", image: annaGoldieImg },
 ];
 
