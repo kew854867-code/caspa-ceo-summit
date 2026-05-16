@@ -109,7 +109,7 @@ export function HeroSection() {
           transition={{ duration: 1, delay: 0.9, ease: "easeOut" }}
         >
           <button className="bg-primary text-primary-foreground px-10 py-4 font-medium tracking-widest uppercase hover:bg-primary/90 transition-colors duration-300">
-            Request Invitation
+            Register Now
           </button>
         </motion.div>
       </div>

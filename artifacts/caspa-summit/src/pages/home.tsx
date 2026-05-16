@@ -5,6 +5,7 @@ import { AgendaSection } from "@/components/sections/agenda";
 import { VenueSection } from "@/components/sections/venue";
 import { RegistrationSection } from "@/components/sections/registration";
 import { Footer } from "@/components/layout/footer";
+import { SponsorshipSection } from "@/components/sections/sponsorship";
 import { motion, useScroll, useSpring } from "framer-motion";
 import caspaLogo from "@assets/IMG_4516_1778917187971.png";
 
@@ -31,7 +32,7 @@ export default function Home() {
         <div className="container mx-auto px-6 h-20 flex items-center justify-between">
           <img src={caspaLogo} alt="CASPA Logo" className="h-10 brightness-0 invert opacity-90" />
           <button className="hidden md:block text-sm font-medium tracking-widest uppercase hover:text-primary transition-colors">
-            Request Invitation
+            Register Now
           </button>
         </div>
       </nav>
@@ -42,6 +43,7 @@ export default function Home() {
         <SpeakersSection />
         <AgendaSection />
         <VenueSection />
+        <SponsorshipSection />
         <RegistrationSection />
       </main>
 
