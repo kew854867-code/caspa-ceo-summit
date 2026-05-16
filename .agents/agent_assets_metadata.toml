@@ -23,3 +23,15 @@ id = "0u7HPLPrK9mdVzDw3kmOS"
 uri = "file://attached_assets/generated_images/caspa_summit_poster_story.png"
 type = "image"
 title = "CASPA CEO Summit — Story/Reel (9:16)"
+
+[[outputs]]
+id = "mrdOqiSliDx1X7x1jGncK"
+uri = "file://attached_assets/generated_images/caspa_speakers_poster_square.png"
+type = "image"
+title = "CASPA CEO Summit — Speaker Poster, Square (1:1)"
+
+[[outputs]]
+id = "lU-lS-wZeMbUZKzp14Y7N"
+uri = "file://attached_assets/generated_images/caspa_speakers_poster_story.png"
+type = "image"
+title = "CASPA CEO Summit — Speaker Poster, Story/Reel (9:16)"
