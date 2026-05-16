@@ -35,9 +35,6 @@ export function VenueSection() {
               </div>
             </div>
 
-            <button className="text-primary border-b border-primary pb-1 font-medium tracking-widest uppercase text-sm hover:text-primary/80 transition-colors">
-              Get Directions
-            </button>
           </motion.div>
 
           <motion.div

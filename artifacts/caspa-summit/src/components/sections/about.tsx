@@ -29,7 +29,7 @@ export function AboutSection() {
               The CEO Summit at CASPA Annual Conference and Dinner Banquet represents the pinnacle of semiconductor leadership. It is an exclusive gathering designed to foster dialogue among the industry's most influential figures.
             </p>
             <p>
-              In an era defined by rapid advancements in AI, computing, and global supply chains, the decisions made by these leaders reverberate across the global economy. This evening offers a rare opportunity to engage with peers, share visionary insights, and shape the trajectory of technology.
+              In an era defined by rapid advancements in AI, computing, and global supply chains, the decisions made by these leaders reverberate across the global economy. This event offers a rare opportunity to engage with peers, share visionary insights, and shape the trajectory of technology.
             </p>
             <p className="text-foreground font-medium uppercase tracking-widest text-sm pt-4">
               October 24, 2026 • Santa Clara Convention Center
