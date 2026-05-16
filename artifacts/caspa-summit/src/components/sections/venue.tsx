@@ -20,7 +20,7 @@ export function VenueSection() {
             </div>
             
             <p className="text-muted-foreground font-light text-lg leading-relaxed">
-              Join us at an exclusive location in the heart of Silicon Valley, curated for an evening of unparalleled luxury and sophisticated dialogue.
+              Join us at the Santa Clara Convention Center, curated for an evening of unparalleled luxury and sophisticated dialogue.
             </p>
             
             <div className="space-y-4">
