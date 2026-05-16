@@ -35,3 +35,39 @@ id = "lU-lS-wZeMbUZKzp14Y7N"
 uri = "file://attached_assets/generated_images/caspa_speakers_poster_story.png"
 type = "image"
 title = "CASPA CEO Summit — Speaker Poster, Story/Reel (9:16)"
+
+[[outputs]]
+id = "VtDdKb4DU4FopfZtY6uY1"
+uri = "file://attached_assets/generated_images/poster_t1_square.png"
+type = "image"
+title = "Template 1 — Classic Gold (Square 1:1)"
+
+[[outputs]]
+id = "LrEkOJf0FZ6XImKovr48J"
+uri = "file://attached_assets/generated_images/poster_t1_story.png"
+type = "image"
+title = "Template 1 — Classic Gold (Story 9:16)"
+
+[[outputs]]
+id = "zE7FZIxnd_RUw2teGyviA"
+uri = "file://attached_assets/generated_images/poster_t2_square.png"
+type = "image"
+title = "Template 2 — Geometric Dark (Square 1:1)"
+
+[[outputs]]
+id = "194d6ndjjZyBMHLE7ClDy"
+uri = "file://attached_assets/generated_images/poster_t2_story.png"
+type = "image"
+title = "Template 2 — Geometric Dark (Story 9:16)"
+
+[[outputs]]
+id = "_dO5odny6tgepZLYneSA8"
+uri = "file://attached_assets/generated_images/poster_t3_square.png"
+type = "image"
+title = "Template 3 — Minimal Elegant (Square 1:1)"
+
+[[outputs]]
+id = "Z0426cy7B95kmpu0Imdye"
+uri = "file://attached_assets/generated_images/poster_t3_story.png"
+type = "image"
+title = "Template 3 — Minimal Elegant (Story 9:16)"
