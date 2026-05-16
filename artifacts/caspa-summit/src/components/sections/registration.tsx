@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export function RegistrationSection() {
   return (
     <section className="py-32 bg-card relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.05),transparent_50%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(30,105,175,0.05),transparent_50%)] pointer-events-none" />
       
       <div className="container mx-auto px-6 relative z-10 max-w-4xl text-center">
         <motion.div

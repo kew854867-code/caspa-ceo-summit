@@ -42,7 +42,7 @@ const tiers = [
 export function SponsorshipSection() {
   return (
     <section className="py-32 bg-background relative border-t border-white/5 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,175,55,0.07),transparent_60%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(30,105,175,0.07),transparent_60%)] pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Header with CTA */}
