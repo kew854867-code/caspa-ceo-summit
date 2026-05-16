@@ -53,7 +53,7 @@ export function HeroSection() {
         style={{ y, opacity }}
         className="absolute inset-0 z-0"
       >
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(30,105,175,0.15),transparent_50%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.15),transparent_50%)] pointer-events-none" />
         <div className="absolute inset-0 bg-background/80 backdrop-blur-[2px]" />
       </motion.div>
 

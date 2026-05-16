@@ -81,7 +81,7 @@ export function SpeakersSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
                 
                 {/* Subtle gold glow on hover */}
-                <div className="absolute inset-0 shadow-[inset_0_0_50px_rgba(30,105,175,0)] group-hover:shadow-[inset_0_0_50px_rgba(30,105,175,0.15)] transition-shadow duration-700 pointer-events-none" />
+                <div className="absolute inset-0 shadow-[inset_0_0_50px_rgba(212,175,55,0)] group-hover:shadow-[inset_0_0_50px_rgba(212,175,55,0.15)] transition-shadow duration-700 pointer-events-none" />
               </div>
               <div className="text-center">
                 <h3 className="text-2xl font-serif text-foreground mb-1 group-hover:text-primary transition-colors duration-300">{speaker.name}</h3>
