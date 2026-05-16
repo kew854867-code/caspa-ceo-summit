@@ -91,6 +91,16 @@ export function SpeakersSection() {
             </motion.div>
           ))}
         </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="text-center text-primary/80 font-light italic text-lg mt-16 tracking-wide"
+        >
+          More Distinguished Speakers to Be Announced Soon
+        </motion.p>
       </div>
     </section>
   );
