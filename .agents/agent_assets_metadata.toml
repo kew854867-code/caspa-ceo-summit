@@ -1,0 +1,25 @@
+uploads = []
+
+[[generated]]
+id = "XoMI5HparxBE-jWNwyPKx"
+uri = "file://attached_assets/generated_images/caspa_summit_poster_square.png"
+type = "image"
+title = "caspa summit social media poster square"
+
+[[generated]]
+id = "U7zbEM8ihxKCLFRN73mkm"
+uri = "file://attached_assets/generated_images/caspa_summit_poster_story.png"
+type = "image"
+title = "caspa summit social media story poster"
+
+[[outputs]]
+id = "V4-9Z4RpxrCltyeG8VVD_"
+uri = "file://attached_assets/generated_images/caspa_summit_poster_square.png"
+type = "image"
+title = "CASPA CEO Summit — Square Post (1:1)"
+
+[[outputs]]
+id = "0u7HPLPrK9mdVzDw3kmOS"
+uri = "file://attached_assets/generated_images/caspa_summit_poster_story.png"
+type = "image"
+title = "CASPA CEO Summit — Story/Reel (9:16)"
