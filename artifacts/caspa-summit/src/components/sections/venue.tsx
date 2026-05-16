@@ -4,7 +4,7 @@ export function VenueSection() {
   return (
     <section className="py-32 bg-background relative border-t border-white/5">
       <div className="container mx-auto px-6 max-w-6xl">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-2xl">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -37,24 +37,6 @@ export function VenueSection() {
 
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-            className="aspect-square lg:aspect-[4/3] bg-card border border-white/5 relative overflow-hidden group"
-          >
-            {/* Abstract visual representation of a high-end venue since we don't have a specific image */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(212,175,55,0.1),transparent_70%)]" />
-            <div className="absolute inset-0 bg-background/40 backdrop-blur-sm" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-32 h-32 rounded-full border border-primary/20 flex items-center justify-center">
-                <div className="w-24 h-24 rounded-full border border-primary/40 flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full bg-primary/10" />
-                </div>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>
