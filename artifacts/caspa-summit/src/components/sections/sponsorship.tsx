@@ -19,6 +19,12 @@ const tiers = [
     description: "Meaningful brand presence with recognition in key event touchpoints.",
     perks: ["5 reserved seats", "Logo on website & program", "Recognition in opening remarks", "1 VIP reception access"],
   },
+  {
+    name: "Display Table",
+    price: "$3,000",
+    description: "Dedicated display space to showcase your brand, products, or materials to all event attendees.",
+    perks: ["1 display table at venue", "Logo on website & program", "2 reserved seats"],
+  },
 ];
 
 export function SponsorshipSection() {
