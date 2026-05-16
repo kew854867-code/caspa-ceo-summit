@@ -9,13 +9,13 @@ const tiers = [
   },
   {
     name: "Partner",
-    price: null,
+    price: "$12,000",
     description: "High-profile recognition with prominent placement throughout the venue and event collateral.",
     perks: ["1 reserved table (10 seats)", "Logo on stage website", "Program book full-page feature", "One VIP reception access"],
   },
   {
     name: "Associate",
-    price: null,
+    price: "$6,000",
     description: "Meaningful brand presence with recognition in key event touchpoints.",
     perks: ["5 reserved seats", "Logo on website & program", "Recognition in opening remarks", "Networking reception access"],
   },
