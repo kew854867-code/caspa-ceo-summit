@@ -5,7 +5,7 @@ const tiers = [
     name: "Premier",
     price: "$50,000",
     description: "Maximum brand visibility across all event materials, dedicated premium placement, and top-tier recognition throughout the evening.",
-    perks: ["Premium seat in dinner banquet", "2 reserved tables (20 seats)", "Logo on all print & digital materials", "Dedicated sponsor mention", "Post-event media coverage"],
+    perks: ["Premium seat in dinner banquet", "1 reserved table (10 seats)", "VIP reception access", "Logo on all print & digital materials", "Dedicated sponsor mention"],
   },
   {
     name: "Partner",
