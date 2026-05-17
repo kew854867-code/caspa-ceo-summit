@@ -64,8 +64,8 @@ export function HeroSection() {
           transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
           className="mb-8"
         >
-          <div className="inline-block border border-primary/30 px-6 py-2 rounded-full backdrop-blur-sm bg-primary/5">
-            <span className="text-primary text-sm font-medium tracking-[0.2em] uppercase">CASPA 35th Annual Conference & Dinner Banquet</span>
+          <div className="inline-block border border-primary/30 px-6 py-3 rounded-full backdrop-blur-sm bg-primary/5">
+            <span className="text-primary text-base md:text-lg font-medium tracking-[0.2em] uppercase">CASPA 35th Annual Conference & Dinner Banquet</span>
           </div>
         </motion.div>
 
@@ -73,7 +73,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-          className="text-5xl md:text-7xl lg:text-8xl font-serif text-foreground leading-[1.1] mb-6 max-w-5xl"
+          className="text-4xl md:text-5xl lg:text-6xl font-serif text-foreground leading-[1.1] mb-6 max-w-5xl"
         >
           The <span className="text-primary italic">CEO Summit</span>
         </motion.h1>
