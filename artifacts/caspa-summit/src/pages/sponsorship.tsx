@@ -5,7 +5,7 @@ import caspaLogo from "@assets/IMG_4516_1778917187971.png";
 const tiers = [
   {
     name: "Premier",
-    price: "$50,000",
+    price: "$40,000",
     description: "Maximum brand visibility across all event materials, dedicated premium placement, and top-tier recognition throughout the evening.",
     perks: ["1 Premium seat in Dinner Banquet", "1 reserved table (10 seats)", "1 VIP reception access", "Logo on all print & digital materials", "Dedicated sponsor mention"],
   },
