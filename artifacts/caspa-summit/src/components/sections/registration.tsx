@@ -28,7 +28,7 @@ export function RegistrationSection() {
             <div className="border border-primary/30 bg-primary/5 p-8 relative">
               <h3 className="font-serif text-2xl mb-2 text-foreground">Corporate Table</h3>
               <p className="text-muted-foreground font-light mb-6">Premium seating for 10 guests with branding opportunities.</p>
-              <div className="text-3xl text-primary font-serif mb-8">$10,000 <span className="text-sm font-sans text-muted-foreground font-light">/ table</span></div>
+              <div className="text-3xl text-primary font-serif mb-8">$13,000 <span className="text-sm font-sans text-muted-foreground font-light">/ table</span></div>
               <button className="w-full bg-primary text-primary-foreground px-6 py-3 font-medium tracking-widest uppercase hover:bg-primary/90 transition-all duration-300">
                 Reserve Table
               </button>
