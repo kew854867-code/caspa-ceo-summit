@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import lipBuTanImg from "@assets/2C524BF7-CBB4-419F-A97E-A9E39B687AA3_1779086898716.png";
-import chenMingHuImg from "@assets/69DE7B8C-6175-4290-85CB-2AF126403227_1779025982631.png";
+import chenMingHuImg from "@assets/55464DD5-0037-4AC7-8E91-D403F5C100D3_1779121957187.png";
 import johnMartinisImg from "@assets/6A7EF360-96B9-4CCB-944B-5D261E218AE9_1778915933700.png";
 import ajitMonachoImg from "@assets/A460DB3B-9093-4E84-94AA-A6C8ADEC051A_1779085584552.png";
 import michaelHurlstonImg from "@assets/D4E3FEF0-CB1F-4CFC-92C8-FBE2423D3026_1778915933700.png";
 import paulChoImg from "@assets/EFCF1D2A-C8D2-4D24-9076-00D406059288_1778915933700.png";
 import raghibHussainImg from "@assets/B17E97FA-FCA9-4F06-86B0-FF3AE511025A_1778915933700.png";
 import davidLamImg from "@assets/407E990F-0E32-4B6C-882F-AD61B64E22A5_1778915933700.png";
-import rodrigoLiangImg from "@assets/1C67BD62-6D2E-47E5-A720-F9F977B5B558_1778915933700.png";
+import rodrigoLiangImg from "@assets/D5D33C40-3802-45DF-83B8-37A68C8E529B_1779121957187.png";
 import sidShethImg from "@assets/AE1B747A-FB29-42E3-B787-F25E78086DCC_1778915933700.png";
 import annaGoldieImg from "@assets/607DBF28-2718-42EE-BA73-59BE82AB69F9_1778915933700.png";
 
