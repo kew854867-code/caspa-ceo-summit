@@ -11,7 +11,7 @@ const tiers = [
   },
   {
     name: "CEO Lounge",
-    price: "$30,000",
+    price: "$40,000",
     description: "Premier sponsorship of the exclusive CEO Lounge — the most intimate networking space of the evening.",
     perks: ["Exclusive CEO Lounge branding", "1 VIP reception access", "Logo on all print & digital materials", "Dedicated sponsor mention", "Priority seating placement"],
   },
