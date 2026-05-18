@@ -122,28 +122,12 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.75, ease: "easeOut" }}
-          className="flex items-center justify-center gap-8 md:gap-12 mb-14 w-full max-w-xl border border-white/10 bg-white/5 backdrop-blur-sm px-8 py-6"
+          className="mb-10 text-center"
         >
-          {/* Attribution */}
-          <div className="text-left">
-            <p className="font-serif text-xl text-primary italic mb-1">— Jimmy Cheng</p>
-            <p className="text-muted-foreground text-sm font-light leading-snug">
-              Creator of the CEO Summit,<br />CASPA President 2026–2027
-            </p>
-          </div>
-
-          {/* Vertical divider */}
-          <div className="h-16 w-[1px] bg-primary/40 shrink-0" />
-
-          {/* 35th anniversary badge */}
-          <div className="text-center">
-            <div className="flex items-start justify-center leading-none">
-              <span className="font-serif text-5xl text-primary font-bold">35</span>
-              <span className="font-serif text-lg text-primary font-bold mt-1">TH</span>
-            </div>
-            <p className="text-white text-xs font-medium tracking-[0.2em] uppercase mt-1">Anniversary</p>
-            <p className="text-primary/70 text-xs tracking-widest mt-0.5">1991 – 2026</p>
-          </div>
+          <p className="font-serif text-xl text-primary italic mb-1">— Jimmy Cheng</p>
+          <p className="text-muted-foreground text-sm font-light leading-snug">
+            Creator of the CEO Summit, CASPA President 2026–2027
+          </p>
         </motion.div>
 
         {/* Countdown */}
