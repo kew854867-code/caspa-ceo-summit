@@ -99,12 +99,12 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.55, ease: "easeOut" }}
-          className="relative mb-12 px-4"
+          className="relative mb-6 px-4"
         >
           {/* Opening quote mark */}
           <span className="absolute -top-6 -left-2 md:left-0 font-serif text-7xl md:text-8xl text-primary/70 leading-none select-none">&ldquo;</span>
 
-          <p className="font-serif text-xl md:text-2xl lg:text-3xl leading-relaxed text-foreground/90 pt-6">
+          <p className="font-serif text-lg md:text-xl lg:text-2xl leading-relaxed text-foreground/90 pt-6">
             Behind every technological revolution are the{" "}
             <span className="text-primary italic">leaders bold enough to shape it.</span>{" "}
             The CEO Summit was created to{" "}
