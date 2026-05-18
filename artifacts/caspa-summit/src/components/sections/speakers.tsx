@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import lipBuTanImg from "@assets/C903BD82-9F70-4B4A-830F-D4CECEF193A4_1778915933700.png";
+import lipBuTanImg from "@assets/2C524BF7-CBB4-419F-A97E-A9E39B687AA3_1779086898716.png";
 import chenMingHuImg from "@assets/69DE7B8C-6175-4290-85CB-2AF126403227_1779025982631.png";
 import johnMartinisImg from "@assets/6A7EF360-96B9-4CCB-944B-5D261E218AE9_1778915933700.png";
 import ajitMonachoImg from "@assets/A460DB3B-9093-4E84-94AA-A6C8ADEC051A_1779085584552.png";
