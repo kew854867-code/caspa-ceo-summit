@@ -8,7 +8,7 @@ const eveningItems = [
   { start: "6:20 PM", end: "6:30 PM", title: "Welcome Speech", description: "" },
   { start: "6:30 PM", end: "7:00 PM", title: "Banquet Dinner", description: "" },
   { start: "7:00 PM", end: "7:15 PM", title: "CASPA 2025–2026 President Gary Wang's Speech", description: "" },
-  { start: "7:15 PM", end: "7:25 PM", title: "CASPA Leadership Transition Ceremony", description: "Overseen by Dr. Chenming Hu" },
+  { start: "7:15 PM", end: "7:25 PM", title: "CASPA Leadership Transition Ceremony", description: "" },
   { start: "7:25 PM", end: "7:40 PM", title: "CASPA 2026–2027 President Jimmy Cheng's Speech", description: "" },
   { start: "7:40 PM", end: "7:45 PM", title: "Special Address and Introduction of Lip-Bu Tan", description: "By Dr. Chenming Hu" },
   { start: "7:45 PM", end: "8:45 PM", title: "Fireside Chat: Intel CEO Lip-Bu Tan", description: "Hosted by Jimmy Cheng" },
