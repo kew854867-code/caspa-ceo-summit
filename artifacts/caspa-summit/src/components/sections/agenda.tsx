@@ -8,12 +8,13 @@ const eveningItems = [
   { start: "6:20 PM", end: "6:30 PM", title: "Welcome Speech", description: "" },
   { start: "6:30 PM", end: "7:00 PM", title: "Banquet Dinner", description: "" },
   { start: "7:00 PM", end: "7:15 PM", title: "CASPA 2025–2026 President Gary Wang's Speech", description: "" },
-  { start: "7:15 PM", end: "7:25 PM", title: "CASPA Leadership Transition Ceremony", description: "Overseen by Dr. Chenming Hu · Followed by a Special Address from Dr. Chenming Hu" },
+  { start: "7:15 PM", end: "7:25 PM", title: "CASPA Leadership Transition Ceremony", description: "Overseen by Dr. Chenming Hu" },
   { start: "7:25 PM", end: "7:40 PM", title: "CASPA 2026–2027 President Jimmy Cheng's Speech", description: "" },
-  { start: "7:40 PM", end: "8:40 PM", title: "Fireside Chat: Intel CEO Lip-Bu Tan", description: "Hosted by Jimmy Cheng" },
-  { start: "8:40 PM", end: "8:55 PM", title: "CASPA/IEEE Scholarship", description: "Issued by IEEE President and Intel CEO" },
-  { start: "8:55 PM", end: "9:10 PM", title: "Raffle", description: "" },
-  { start: "9:10 PM", end: "9:40 PM", title: "Networking", description: "" },
+  { start: "7:40 PM", end: "7:45 PM", title: "Special Address and Introduction of Lip-Bu Tan", description: "By Dr. Chenming Hu" },
+  { start: "7:45 PM", end: "8:45 PM", title: "Fireside Chat: Intel CEO Lip-Bu Tan", description: "Hosted by Jimmy Cheng" },
+  { start: "8:45 PM", end: "9:00 PM", title: "CASPA/IEEE Scholarship", description: "Issued by IEEE President and Intel CEO" },
+  { start: "9:00 PM", end: "9:15 PM", title: "Raffle", description: "" },
+  { start: "9:15 PM", end: "9:45 PM", title: "Networking", description: "" },
 ];
 
 const sectionVariants = {
