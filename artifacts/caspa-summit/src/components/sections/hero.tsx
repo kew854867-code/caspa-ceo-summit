@@ -94,22 +94,6 @@ export function HeroSection() {
           <div className="h-[1px] w-16 bg-primary/60" />
         </motion.div>
 
-        {/* Theme line */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-          className="mb-10 flex flex-col items-center gap-2"
-        >
-          <p className="font-serif text-xl md:text-2xl text-foreground/80 italic text-center leading-snug">
-            "Silicon, Systems, and Intelligence:
-          </p>
-          <p className="font-serif text-xl md:text-2xl text-primary italic text-center leading-snug">
-            Designing the Next Decade."
-          </p>
-          <p className="text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground mt-1">2026 Theme</p>
-        </motion.div>
-
         {/* Quote block */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
