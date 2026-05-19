@@ -29,7 +29,7 @@ export function AboutSection() {
               The CEO Summit at CASPA 35th Annual Conference and Dinner Banquet represents the pinnacle of semiconductor leadership — an exclusive gathering designed to foster dialogue among the industry's most influential figures.
             </p>
             <p>
-              Under this year's theme, <span className="text-foreground font-medium italic">"Silicon, Systems, and Intelligence: Designing the Next Decade,"</span> the evening will explore how the decisions made today will define the next era of technology — from advanced silicon to AI-driven systems.
+              Under this year's theme, <span className="text-foreground font-medium italic">"Silicon, Systems, and Intelligence: Designing the Next Decade,"</span> the summit will explore how the decisions made today will define the next era of technology — from advanced silicon to AI-driven systems.
             </p>
             <p className="text-foreground font-medium uppercase tracking-widest text-sm pt-4">
               October 24, 2026 • Santa Clara Convention Center
