@@ -11,12 +11,14 @@ import rodrigoLiangImg from "@assets/D5D33C40-3802-45DF-83B8-37A68C8E529B_177912
 import sidShethImg from "@assets/AE1B747A-FB29-42E3-B787-F25E78086DCC_1778915933700.png";
 import annaGoldieImg from "@assets/607DBF28-2718-42EE-BA73-59BE82AB69F9_1778915933700.png";
 import naveenRaoImg from "@assets/675C4E53-308C-478B-939B-5DCADE397C7F_1779175010186.png";
+import maryEllenRandallImg from "@assets/FE02514B-FACD-4065-94FD-F790F6502F85_1779297912788.png";
 
 const speakers = [
   { name: "Lip-Bu Tan", title: "CEO", company: "Intel", image: lipBuTanImg },
   { name: "Chenming Hu", title: "TSMC Distinguished Professor Emeritus, Father of 3D Transistor", company: "UC Berkeley", image: chenMingHuImg },
   { name: "John Martinis", title: "2025 Nobel Laureate in Physics", company: "President's Council of Advisors on Science and Technology", image: johnMartinisImg },
   { name: "Ajit Manocha", title: "CEO", company: "SEMI", image: ajitMonachoImg },
+  { name: "Mary Ellen Randall", title: "President", company: "IEEE", image: maryEllenRandallImg },
   { name: "Michael Hurlston", title: "CEO", company: "Lumentum", image: michaelHurlstonImg },
   { name: "Paul Cho", title: "President", company: "Samsung Semiconductor", image: paulChoImg },
   { name: "David Lam", title: "CEO, Multibeam", company: "Founder, Lam Research", image: davidLamImg },
