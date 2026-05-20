@@ -11,15 +11,33 @@ const tiers = [
   },
   {
     name: "CEO Lounge",
-    price: "$40,000",
-    description: "Premier sponsorship of the exclusive CEO Lounge — the most intimate networking space of the evening.",
+    price: "$50,000",
+    description: "Premier sponsorship of the exclusive CEO Lounge — the most intimate networking space of the day.",
     perks: ["Exclusive CEO Lounge branding", "1 VIP reception access", "Logo on all print & digital materials", "Dedicated sponsor mention", "Priority seating placement"],
+  },
+  {
+    name: "Lunch Sponsorship",
+    price: "$40,000",
+    description: "Exclusive sponsorship of the summit lunch with prominent brand presence and a dedicated speaking opportunity during the lunch session.",
+    perks: ["Dedicated speaking opportunity at lunch", "Logo on all print & digital materials", "1 VIP reception access", "Recognition in opening remarks", "Dedicated sponsor mention"],
+  },
+  {
+    name: "CEO Dinner Table",
+    price: "$40,000",
+    description: "Exclusive branding opportunity for the premier CEO dinner table at the Dinner Banquet — where the most influential conversations happen.",
+    perks: ["Exclusive CEO dinner table branding", "1 reserved table (10 seats)", "1 VIP reception access", "Logo on all print & digital materials", "Dedicated sponsor mention"],
   },
   {
     name: "VIP Room",
     price: "$20,000",
     description: "Exclusive VIP room sponsorship with premium branding and private access for your guests during the event.",
     perks: ["Exclusive VIP room branding", "1 VIP reception access", "Logo on all print & digital materials", "Dedicated sponsor mention"],
+  },
+  {
+    name: "General Dinner Table",
+    price: "$20,000",
+    description: "Brand visibility at a dinner table during the Dinner Banquet, connecting your company with all attendees throughout the evening.",
+    perks: ["Branded dinner table signage", "1 reserved table (10 seats)", "Logo on website & program", "Recognition in opening remarks"],
   },
   {
     name: "Partner",
