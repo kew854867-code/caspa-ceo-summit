@@ -29,9 +29,9 @@ const conferenceSpeakers = [
   { name: "Michael Hurlston", title: "CEO", company: "Lumentum", image: michaelHurlstonImg },
   { name: "Naveen Rao", title: "CEO", company: "Unconventional AI", image: naveenRaoImg },
   { name: "Paul Cho", title: "President", company: "Samsung Semiconductor", image: paulChoImg },
-  { name: "Raghib Hussain", title: "CEO", company: "Altera", image: raghibHussainImg },
+  { name: "Raghib Hussain", title: "CEO", company: "Altera", image: sidShethImg },
   { name: "Rodrigo Liang", title: "CEO", company: "SambaNova", image: rodrigoLiangImg },
-  { name: "Sid Sheth", title: "CEO", company: "D-Matrix", image: sidShethImg },
+  { name: "Sid Sheth", title: "CEO", company: "D-Matrix", image: raghibHussainImg },
 ];
 
 const containerVariants = {
