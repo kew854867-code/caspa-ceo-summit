@@ -21,16 +21,16 @@ const banquetSpeakers = [
 ];
 
 const conferenceSpeakers = [
-  { name: "Paul Cho", title: "President", company: "Samsung Semiconductor", image: paulChoImg },
-  { name: "Anna Goldie", title: "CEO", company: "Ricursive Intelligence", image: annaGoldieImg },
-  { name: "Michael Hurlston", title: "CEO", company: "Lumentum", image: michaelHurlstonImg },
-  { name: "Raghib Hussain", title: "CEO", company: "Altera", image: raghibHussainImg },
-  { name: "David Lam", title: "CEO, Multibeam", company: "Founder, Lam Research", image: davidLamImg },
-  { name: "Rodrigo Liang", title: "CEO", company: "SambaNova", image: rodrigoLiangImg },
   { name: "Ajit Manocha", title: "CEO", company: "SEMI", image: ajitMonachoImg },
+  { name: "Anna Goldie", title: "CEO", company: "Ricursive Intelligence", image: annaGoldieImg },
+  { name: "David Lam", title: "CEO, Multibeam", company: "Founder, Lam Research", image: davidLamImg },
   { name: "John Martinis", title: "2025 Nobel Laureate in Physics", company: "President's Council of Advisors on Science and Technology", image: johnMartinisImg },
   { name: "Mary Ellen Randall", title: "President", company: "IEEE", image: maryEllenRandallImg },
+  { name: "Michael Hurlston", title: "CEO", company: "Lumentum", image: michaelHurlstonImg },
   { name: "Naveen Rao", title: "CEO", company: "Unconventional AI", image: naveenRaoImg },
+  { name: "Paul Cho", title: "President", company: "Samsung Semiconductor", image: paulChoImg },
+  { name: "Raghib Hussain", title: "CEO", company: "Altera", image: raghibHussainImg },
+  { name: "Rodrigo Liang", title: "CEO", company: "SambaNova", image: rodrigoLiangImg },
   { name: "Sid Sheth", title: "CEO", company: "D-Matrix", image: sidShethImg },
 ];
 
