@@ -17,7 +17,7 @@ const tiers = [
   },
   {
     name: "Lunch Sponsorship",
-    price: "$40,000",
+    price: "$20,000",
     description: "Exclusive sponsorship of the summit lunch with prominent brand presence and a dedicated speaking opportunity during the lunch session.",
     perks: ["Dedicated speaking opportunity at lunch", "Logo on all print & digital materials", "1 VIP reception access", "Recognition in opening remarks", "Dedicated sponsor mention"],
   },
@@ -41,7 +41,7 @@ const tiers = [
   },
   {
     name: "Partner",
-    price: "$13,000",
+    price: "$12,000",
     description: "High-profile recognition with prominent placement throughout the venue and event collateral.",
     perks: ["1 reserved table (10 seats)", "Logo on stage website", "Program book full-page feature", "1 VIP reception access"],
   },
