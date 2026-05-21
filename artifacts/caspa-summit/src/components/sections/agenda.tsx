@@ -71,7 +71,7 @@ export function AgendaSection() {
               transition={{ duration: 0.6 }}
               className="text-xs font-medium tracking-widest uppercase text-primary mb-6"
             >
-              Morning
+              Morning Annual Conference
             </motion.h3>
             <TBABlock label="Morning Program" />
           </div>
@@ -85,7 +85,7 @@ export function AgendaSection() {
               transition={{ duration: 0.6 }}
               className="text-xs font-medium tracking-widest uppercase text-primary mb-6"
             >
-              Afternoon
+              Afternoon Annual Conference
             </motion.h3>
             <TBABlock label="Afternoon Program" />
           </div>
