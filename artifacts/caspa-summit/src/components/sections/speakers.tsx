@@ -17,7 +17,7 @@ import maryEllenRandallImg from "@assets/FE02514B-FACD-4065-94FD-F790F6502F85_17
 const banquetSpeakers = [
   { name: "Lip-Bu Tan", title: "CEO", company: "Intel", image: lipBuTanImg },
   { name: "Chenming Hu", title: "TSMC Distinguished Professor Emeritus, Father of 3D Transistor", company: "UC Berkeley", image: chenMingHuImg },
-  { name: "Jimmy Cheng", title: "CASPA President 2026–2027", company: "CASPA", image: jimmyChengImg },
+  { name: "Jimmy Cheng", title: "President 2026–2027", company: "CASPA", image: jimmyChengImg },
 ];
 
 const conferenceSpeakers = [
