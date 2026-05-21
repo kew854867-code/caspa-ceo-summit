@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import lipBuTanImg from "@assets/2C524BF7-CBB4-419F-A97E-A9E39B687AA3_1779086898716.png";
 import chenMingHuImg from "@assets/55464DD5-0037-4AC7-8E91-D403F5C100D3_1779121957187.png";
-import jimmyChengImg from "@assets/3ED37154-D6CF-4A41-97C1-B549B76B2D3A_1779344530958.png";
+
 import johnMartinisImg from "@assets/6A7EF360-96B9-4CCB-944B-5D261E218AE9_1778915933700.png";
 import ajitMonachoImg from "@assets/A460DB3B-9093-4E84-94AA-A6C8ADEC051A_1779085584552.png";
 import michaelHurlstonImg from "@assets/D4E3FEF0-CB1F-4CFC-92C8-FBE2423D3026_1778915933700.png";
@@ -17,7 +17,6 @@ import maryEllenRandallImg from "@assets/FE02514B-FACD-4065-94FD-F790F6502F85_17
 const banquetSpeakers = [
   { name: "Lip-Bu Tan", title: "CEO", company: "Intel", image: lipBuTanImg },
   { name: "Chenming Hu", title: "TSMC Distinguished Professor Emeritus, Father of 3D Transistor", company: "UC Berkeley", image: chenMingHuImg },
-  { name: "Jimmy Cheng", title: "President 2026–2027", company: "CASPA", image: jimmyChengImg },
 ];
 
 const conferenceSpeakers = [
