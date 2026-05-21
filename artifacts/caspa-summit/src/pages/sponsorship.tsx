@@ -46,6 +46,12 @@ const tiers = [
     perks: ["1 reserved table (10 seats)", "Logo on stage website", "Program book full-page feature", "1 VIP reception access"],
   },
   {
+    name: "Lanyard",
+    price: "$10,000",
+    description: "Exclusive branding on every attendee's lanyard — your logo visible throughout the entire event.",
+    perks: ["Exclusive lanyard branding", "Logo on website & program", "Recognition in opening remarks", "2 dinner banquet seats"],
+  },
+  {
     name: "Associate",
     price: "$7,000",
     description: "Meaningful brand presence with recognition in key event touchpoints.",
