@@ -34,6 +34,12 @@ const tiers = [
     perks: ["Exclusive VIP room branding", "1 VIP reception access", "Logo on all print & digital materials", "Dedicated sponsor mention"],
   },
   {
+    name: "Stage LCD Screen",
+    price: "$20,000",
+    description: "Prime brand placement on the main stage LCD screen, visible to all attendees throughout the entire evening program.",
+    perks: ["Exclusive stage screen branding", "Logo displayed during all presentations", "Logo on website & program", "2 dinner banquet seats"],
+  },
+  {
     name: "General Dinner Table",
     price: "$20,000",
     description: "Brand visibility at a dinner table during the Dinner Banquet, connecting your company with all attendees throughout the evening.",
