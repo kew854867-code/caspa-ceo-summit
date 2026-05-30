@@ -3,6 +3,7 @@ import lipBuTanImg from "@assets/2C524BF7-CBB4-419F-A97E-A9E39B687AA3_1779086898
 import chenMingHuImg from "@assets/55464DD5-0037-4AC7-8E91-D403F5C100D3_1779121957187.png";
 
 import sassineGhaziImg from "@assets/B2A302B6-4BEF-4567-A084-08BE4E098438_1779501150436.png";
+import michaelXieImg from "@assets/278D7D17-9372-4E07-957C-EC5DCDA6FBA7_1780116650886.png";
 import johnMartinisImg from "@assets/6A7EF360-96B9-4CCB-944B-5D261E218AE9_1778915933700.png";
 import ajitMonachoImg from "@assets/A460DB3B-9093-4E84-94AA-A6C8ADEC051A_1779085584552.png";
 import michaelHurlstonImg from "@assets/D4E3FEF0-CB1F-4CFC-92C8-FBE2423D3026_1778915933700.png";
@@ -27,6 +28,7 @@ const conferenceSpeakers = [
   { name: "John Martinis", title: "2025 Nobel Laureate in Physics", company: "President's Council of Advisors on Science and Technology", image: johnMartinisImg },
   { name: "Mary Ellen Randall", title: "President", company: "IEEE", image: maryEllenRandallImg },
   { name: "Michael Hurlston", title: "CEO", company: "Lumentum", image: michaelHurlstonImg },
+  { name: "Michael Xie", title: "President & Co-Founder", company: "Fortinet", image: michaelXieImg },
   { name: "Naveen Rao", title: "CEO", company: "Unconventional AI", image: naveenRaoImg },
   { name: "Paul Cho", title: "President", company: "Samsung Semiconductor", image: paulChoImg },
   { name: "Raghib Hussain", title: "CEO", company: "Altera", image: sidShethImg },
