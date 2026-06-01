@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import lipBuTanImg from "@assets/2C524BF7-CBB4-419F-A97E-A9E39B687AA3_1779086898716.png";
 import chenMingHuImg from "@assets/55464DD5-0037-4AC7-8E91-D403F5C100D3_1779121957187.png";
 
-import sassineGhaziImg from "@assets/B2A302B6-4BEF-4567-A084-08BE4E098438_1779501150436.png";
+import sassineGhaziImg from "@assets/92FE495A-00F9-44B1-AF46-A088FA81D57D_1780293398458.png";
 import michaelXieImg from "@assets/278D7D17-9372-4E07-957C-EC5DCDA6FBA7_1780116650886.png";
 import johnMartinisImg from "@assets/6A7EF360-96B9-4CCB-944B-5D261E218AE9_1778915933700.png";
 import ajitMonachoImg from "@assets/A460DB3B-9093-4E84-94AA-A6C8ADEC051A_1779085584552.png";
