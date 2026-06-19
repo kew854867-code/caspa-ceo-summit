@@ -32,7 +32,7 @@ const conferenceSpeakers = [
   { name: "Irving Tan", title: "CEO", company: "Western Digital", image: irvingTanImg },
   { name: "John Martinis", title: "2025 Nobel Laureate in Physics", company: "President's Council of Advisors on Science and Technology", image: johnMartinisImg },
   { name: "Mark Wade", title: "CEO", company: "Ayar Labs", image: markWadeImg },
-  { name: "Mary Ellen Randall", title: "President", company: "IEEE", image: maryEllenRandallImg },
+  { name: "Mary Ellen Randall", title: "President & CEO", company: "IEEE", image: maryEllenRandallImg },
   { name: "Michael Hurlston", title: "CEO", company: "Lumentum", image: michaelHurlstonImg },
   { name: "Michael Xie", title: "President & Co-Founder", company: "Fortinet", image: michaelXieImg },
   { name: "Naveen Rao", title: "CEO", company: "Unconventional AI", image: naveenRaoImg },
