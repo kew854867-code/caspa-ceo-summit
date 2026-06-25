@@ -7,6 +7,7 @@ import michaelXieImg from "@assets/278D7D17-9372-4E07-957C-EC5DCDA6FBA7_17801166
 import irvingTanImg from "@assets/F1A23EB4-C629-4C0D-9BA2-5B670A376C8B_1780563808959.png";
 import dylanPatelImg from "@assets/B3D57552-05EE-404E-B8B5-D6A3F1C08E7D_1780946493570.jpeg";
 import markWadeImg from "@assets/2A9C2A7C-3A47-47C6-BFD5-30AC8D32B697_1780946493570.png";
+import sunghyunParkImg from "@assets/C462E470-E1A6-4398-87A5-715533D6F533_1782395495008.png";
 import johnMartinisImg from "@assets/6A7EF360-96B9-4CCB-944B-5D261E218AE9_1778915933700.png";
 import ajitMonachoImg from "@assets/A460DB3B-9093-4E84-94AA-A6C8ADEC051A_1779085584552.png";
 import michaelHurlstonImg from "@assets/D4E3FEF0-CB1F-4CFC-92C8-FBE2423D3026_1778915933700.png";
@@ -41,6 +42,7 @@ const conferenceSpeakers = [
   { name: "Rodrigo Liang", title: "CEO", company: "SambaNova", image: rodrigoLiangImg },
   { name: "Sassine Ghazi", title: "CEO", company: "Synopsys", image: sassineGhaziImg },
   { name: "Sid Sheth", title: "CEO", company: "D-Matrix", image: raghibHussainImg },
+  { name: "Sunghyun Park", title: "CEO", company: "Rebellions", image: sunghyunParkImg },
 ];
 
 const containerVariants = {
