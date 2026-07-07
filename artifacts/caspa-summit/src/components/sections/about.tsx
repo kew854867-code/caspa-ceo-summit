@@ -32,7 +32,7 @@ export function AboutSection() {
               Under this year's theme, <span className="text-foreground font-medium italic">"Silicon, Systems, and Intelligence: Designing the Next Decade,"</span> the summit will explore how the decisions made today will define the next era of technology — from advanced silicon to AI-driven systems.
             </p>
             <p className="text-foreground font-medium uppercase tracking-widest text-sm pt-4">
-              October 24, 2026 • Santa Clara Convention Center
+              October 23–24, 2026 • Santa Clara Convention Center
             </p>
           </motion.div>
         </div>

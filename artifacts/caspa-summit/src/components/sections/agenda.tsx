@@ -62,6 +62,43 @@ export function AgendaSection() {
         </div>
 
         <div className="space-y-16">
+
+          {/* Oct 23 heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="border-b border-primary/30 pb-3"
+          >
+            <p className="font-serif text-2xl text-primary">October 23, 2026</p>
+          </motion.div>
+
+          {/* Oct 23 Afternoon */}
+          <div>
+            <motion.h3
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-xs font-medium tracking-widest uppercase text-primary mb-6"
+            >
+              Afternoon Annual Conference
+            </motion.h3>
+            <TBABlock label="Afternoon Program" />
+          </div>
+
+          {/* Oct 24 heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="border-b border-primary/30 pb-3"
+          >
+            <p className="font-serif text-2xl text-primary">October 24, 2026</p>
+          </motion.div>
+
           {/* Morning */}
           <div>
             <motion.h3

@@ -3,7 +3,7 @@ import jimmyChengPhoto from "@assets/IMG_4704_1779822235845.png";
 import { useEffect, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 
-const EVENT_DATE = new Date("2026-10-24T17:00:00");
+const EVENT_DATE = new Date("2026-10-23T08:00:00");
 
 function useCountdown(target: Date) {
   const [timeLeft, setTimeLeft] = useState(() => getTimeLeft(target));
