@@ -7,6 +7,7 @@ import { RegistrationSection } from "@/components/sections/registration";
 import { Footer } from "@/components/layout/footer";
 import { SponsorshipSection } from "@/components/sections/sponsorship";
 import { motion, useScroll, useSpring } from "framer-motion";
+import { Link } from "wouter";
 import caspaLogo from "@assets/IMG_4516_1778917187971.png";
 
 export default function Home() {
@@ -29,9 +30,17 @@ export default function Home() {
       <nav className="fixed top-0 w-full z-40 bg-background/80 backdrop-blur-md border-b border-white/5">
         <div className="container mx-auto px-6 h-20 flex items-center justify-between">
           <img src={caspaLogo} alt="CASPA Logo" className="h-10 brightness-0 invert opacity-90" />
-          <button className="hidden md:block text-sm font-medium tracking-widest uppercase hover:text-primary transition-colors">
-            Register Now
-          </button>
+          <div className="flex items-center gap-6">
+            <Link
+              href="/sponsorship"
+              className="hidden md:block text-sm font-medium tracking-widest uppercase text-primary hover:text-primary/80 transition-colors"
+            >
+              Sponsor Today
+            </Link>
+            <button className="hidden md:block text-sm font-medium tracking-widest uppercase hover:text-primary transition-colors">
+              Register Now
+            </button>
+          </div>
         </div>
       </nav>
 
