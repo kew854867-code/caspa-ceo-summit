@@ -8,6 +8,9 @@ import irvingTanImg from "@assets/F1A23EB4-C629-4C0D-9BA2-5B670A376C8B_178056380
 import dylanPatelImg from "@assets/B3D57552-05EE-404E-B8B5-D6A3F1C08E7D_1780946493570.jpeg";
 import markWadeImg from "@assets/0886A067-9919-4756-BAB4-6F8A0421AF07_1783024768619.png";
 import xinGuoImg from "@assets/3DEF3128-BDD7-4370-A37C-159C25164D57_1783024768619.png";
+import albertKimImg from "@assets/1F1F5885-6A94-4D7F-B33E-395286947D01_1783637006894.png";
+import farajAalaeiImg from "@assets/51140AE6-E8C7-41C8-9BAB-DFA02317B765_1783637006894.png";
+import stacyRasgonImg from "@assets/9091DD4F-D0EF-48BF-AC6E-1DF7283CAA62_1783637006894.png";
 import khurramIsmailImg from "@assets/DF087C9C-2FD8-4DA8-981C-6CACE372E69F_1783024768619.png";
 import sunghyunParkImg from "@assets/C462E470-E1A6-4398-87A5-715533D6F533_1782395495008.png";
 import gavinUbertiImg from "@assets/267ED105-AAEE-45C3-8EE0-3E068D0B3B48_1782695597644.png";
@@ -30,9 +33,11 @@ const banquetSpeakers = [
 
 const conferenceSpeakers = [
   { name: "Ajit Manocha", title: "CEO", company: "SEMI", image: ajitMonachoImg },
+  { name: "Albert Kim", title: "Head", company: "Samsung Ventures America", image: albertKimImg },
   { name: "Anna Goldie", title: "CEO", company: "Ricursive Intelligence", image: annaGoldieImg },
   { name: "David Lam", title: "CEO, Multibeam", company: "Founder, Lam Research", image: davidLamImg },
   { name: "Dylan Patel", title: "CEO", company: "SemiAnalysis", image: dylanPatelImg },
+  { name: "Faraj Aalaei", title: "CEO", company: "Cognichip", image: farajAalaeiImg },
   { name: "Gavin Uberti", title: "CEO", company: "Etched", image: gavinUbertiImg },
   { name: "Irving Tan", title: "CEO", company: "Western Digital", image: irvingTanImg },
   { name: "John Martinis", title: "2025 Nobel Laureate in Physics", company: "President's Council of Advisors on Science and Technology", image: johnMartinisImg },
@@ -47,6 +52,7 @@ const conferenceSpeakers = [
   { name: "Rodrigo Liang", title: "CEO", company: "SambaNova", image: rodrigoLiangImg },
   { name: "Sassine Ghazi", title: "CEO", company: "Synopsys", image: sassineGhaziImg },
   { name: "Sid Sheth", title: "CEO", company: "D-Matrix", image: raghibHussainImg },
+  { name: "Stacy Rasgon", title: "Managing Director", company: "Bernstein", image: stacyRasgonImg },
   { name: "Sunghyun Park", title: "CEO", company: "Rebellions", image: sunghyunParkImg },
   { name: "Xin Guo", title: "CEO", company: "Solidgm", image: xinGuoImg },
 ];
