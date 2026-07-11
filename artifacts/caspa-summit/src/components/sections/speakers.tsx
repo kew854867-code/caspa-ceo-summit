@@ -9,6 +9,7 @@ import dylanPatelImg from "@assets/B3D57552-05EE-404E-B8B5-D6A3F1C08E7D_17809464
 import markWadeImg from "@assets/0886A067-9919-4756-BAB4-6F8A0421AF07_1783024768619.png";
 import xinGuoImg from "@assets/3DEF3128-BDD7-4370-A37C-159C25164D57_1783024768619.png";
 import albertKimImg from "@assets/1F1F5885-6A94-4D7F-B33E-395286947D01_1783637006894.png";
+import andrewFeldmanImg from "@assets/F3EF3946-5B5D-400F-BCA9-E0F42CD64866_1783751307115.png";
 import farajAalaeiImg from "@assets/51140AE6-E8C7-41C8-9BAB-DFA02317B765_1783637006894.png";
 import stacyRasgonImg from "@assets/9091DD4F-D0EF-48BF-AC6E-1DF7283CAA62_1783637006894.png";
 import khurramIsmailImg from "@assets/DF087C9C-2FD8-4DA8-981C-6CACE372E69F_1783024768619.png";
@@ -34,6 +35,7 @@ const banquetSpeakers = [
 const conferenceSpeakers = [
   { name: "Ajit Manocha", title: "CEO", company: "SEMI", image: ajitMonachoImg },
   { name: "Albert Kim", title: "Head", company: "Samsung Ventures America", image: albertKimImg },
+  { name: "Andrew Feldman", title: "CEO", company: "Cerebras", image: andrewFeldmanImg },
   { name: "Anna Goldie", title: "CEO", company: "Ricursive Intelligence", image: annaGoldieImg },
   { name: "David Lam", title: "CEO, Multibeam", company: "Founder, Lam Research", image: davidLamImg },
   { name: "Dylan Patel", title: "CEO", company: "SemiAnalysis", image: dylanPatelImg },
