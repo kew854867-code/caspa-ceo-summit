@@ -1,7 +1,38 @@
 import { motion } from "framer-motion";
+import stacyRasgonImg from "@assets/9091DD4F-D0EF-48BF-AC6E-1DF7283CAA62_1783637006894.png";
+import dylanPatelImg from "@assets/B3D57552-05EE-404E-B8B5-D6A3F1C08E7D_1780946493570.jpeg";
+import shahinFarshchiImg from "@assets/48D1A2B2-3D61-4F91-9FE7-400671EA43B3_1784036585053.png";
+import albertKimImg from "@assets/1F1F5885-6A94-4D7F-B33E-395286947D01_1783637006894.png";
+import farajAalaeiImg from "@assets/51140AE6-E8C7-41C8-9BAB-DFA02317B765_1783637006894.png";
 
-const morningItems = null;
-const afternoonItems = null;
+const oct23AfternoonPanels = [
+  {
+    start: "2:00 PM",
+    end: "3:15 PM",
+    title: "Semiconductor Industry Outlook Panel",
+    speakers: [
+      { name: "Stacy Rasgon", title: "Managing Director", company: "Bernstein", image: stacyRasgonImg },
+      { name: "Dylan Patel", title: "CEO", company: "SemiAnalysis", image: dylanPatelImg },
+    ],
+  },
+  {
+    start: "3:15 PM",
+    end: "4:30 PM",
+    title: "Venture Capital Investment Panel",
+    speakers: [
+      { name: "Shahin Farshchi", title: "General Partner", company: "Lux Capital", image: shahinFarshchiImg },
+      { name: "Albert Kim", title: "Head", company: "Samsung Ventures America", image: albertKimImg },
+    ],
+  },
+  {
+    start: "4:30 PM",
+    end: "5:30 PM",
+    title: "Semiconductor Startup Panel",
+    speakers: [
+      { name: "Faraj Aalaei", title: "CEO", company: "Cognichip", image: farajAalaeiImg },
+    ],
+  },
+];
 
 const eveningItems = [
   { start: "5:00 PM", end: "6:00 PM", title: "Registration and VIP Reception", description: "" },
@@ -85,7 +116,42 @@ export function AgendaSection() {
             >
               Afternoon Annual Conference
             </motion.h3>
-            <TBABlock label="Afternoon Program" />
+            <div className="space-y-0">
+              {oct23AfternoonPanels.map((panel, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="flex flex-col md:flex-row gap-4 md:gap-12 items-start group py-6 border-b border-white/10 last:border-0"
+                >
+                  <div className="md:w-44 shrink-0 flex flex-col">
+                    <span className="text-primary font-medium tracking-wider text-sm">{panel.start}</span>
+                    <span className="text-muted-foreground/50 text-xs tracking-wider">until {panel.end}</span>
+                  </div>
+                  <div className="flex-1">
+                    <div className="absolute left-[-1.5rem] md:left-[-4rem] top-1.5 w-1.5 h-1.5 rounded-full border border-primary/40 group-hover:bg-primary transition-colors duration-300 hidden md:block" />
+                    <h4 className="text-xl font-serif text-foreground group-hover:text-primary transition-colors duration-300 mb-4">
+                      {panel.title}
+                    </h4>
+                    <div className="flex flex-wrap gap-4">
+                      {panel.speakers.map((speaker, si) => (
+                        <div key={si} className="flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-full overflow-hidden ring-1 ring-primary/30 shrink-0">
+                            <img src={speaker.image} alt={speaker.name} className="w-full h-full object-cover object-top" />
+                          </div>
+                          <div>
+                            <p className="text-sm font-medium text-foreground leading-tight">{speaker.name}</p>
+                            <p className="text-xs text-muted-foreground leading-tight">{speaker.title}, {speaker.company}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
 
           {/* Oct 24 heading */}
