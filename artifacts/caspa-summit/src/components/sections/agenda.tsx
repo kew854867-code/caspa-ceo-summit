@@ -8,7 +8,13 @@ import farajAalaeiImg from "@assets/51140AE6-E8C7-41C8-9BAB-DFA02317B765_1783637
 const oct23AfternoonPanels = [
   {
     start: "2:00 PM",
-    end: "3:15 PM",
+    end: "2:10 PM",
+    title: "CASPA Opening",
+    speakers: [],
+  },
+  {
+    start: "2:10 PM",
+    end: "3:20 PM",
     title: "Semiconductor Industry Outlook Panel",
     speakers: [
       { name: "Stacy Rasgon", title: "Managing Director", company: "Bernstein", image: stacyRasgonImg },
@@ -16,8 +22,8 @@ const oct23AfternoonPanels = [
     ],
   },
   {
-    start: "3:15 PM",
-    end: "4:30 PM",
+    start: "3:20 PM",
+    end: "4:10 PM",
     title: "Venture Capital Investment Panel",
     speakers: [
       { name: "Shahin Farshchi", title: "General Partner", company: "Lux Capital", image: shahinFarshchiImg },
@@ -25,8 +31,8 @@ const oct23AfternoonPanels = [
     ],
   },
   {
-    start: "4:30 PM",
-    end: "5:30 PM",
+    start: "4:10 PM",
+    end: "5:00 PM",
     title: "Semiconductor Startup Panel",
     speakers: [
       { name: "Faraj Aalaei", title: "CEO", company: "Cognichip", image: farajAalaeiImg },
