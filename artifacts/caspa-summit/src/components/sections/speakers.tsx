@@ -58,7 +58,7 @@ const conferenceSpeakers = [
   { name: "Sid Sheth", title: "CEO", company: "D-Matrix", image: raghibHussainImg },
   { name: "Stacy Rasgon", title: "Managing Director", company: "Bernstein", image: stacyRasgonImg },
   { name: "Sunghyun Park", title: "CEO", company: "Rebellions", image: sunghyunParkImg },
-  { name: "Xin Guo", title: "CEO", company: "Solidgm", image: xinGuoImg },
+  { name: "Xin Guo", title: "CEO", company: "Solidigm", image: xinGuoImg },
 ];
 
 const containerVariants = {
