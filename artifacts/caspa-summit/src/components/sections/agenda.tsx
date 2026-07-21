@@ -34,9 +34,7 @@ const oct23AfternoonPanels = [
     start: "4:10 PM",
     end: "5:00 PM",
     title: "Semiconductor Startup Panel",
-    speakers: [
-      { name: "Faraj Aalaei", title: "CEO", company: "Cognichip", image: farajAalaeiImg },
-    ],
+    speakers: [],
   },
 ];
 
@@ -141,19 +139,23 @@ export function AgendaSection() {
                     <h4 className="text-xl font-serif text-foreground group-hover:text-primary transition-colors duration-300 mb-4">
                       {panel.title}
                     </h4>
-                    <div className="flex flex-wrap gap-4">
-                      {panel.speakers.map((speaker, si) => (
-                        <div key={si} className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-full overflow-hidden ring-1 ring-primary/30 shrink-0">
-                            <img src={speaker.image} alt={speaker.name} className="w-full h-full object-cover object-top" />
+                    {panel.speakers.length > 0 ? (
+                      <div className="flex flex-wrap gap-4">
+                        {panel.speakers.map((speaker, si) => (
+                          <div key={si} className="flex items-center gap-3">
+                            <div className="w-10 h-10 rounded-full overflow-hidden ring-1 ring-primary/30 shrink-0">
+                              <img src={speaker.image} alt={speaker.name} className="w-full h-full object-cover object-top" />
+                            </div>
+                            <div>
+                              <p className="text-sm font-medium text-foreground leading-tight">{speaker.name}</p>
+                              <p className="text-xs text-muted-foreground leading-tight">{speaker.title}, {speaker.company}</p>
+                            </div>
                           </div>
-                          <div>
-                            <p className="text-sm font-medium text-foreground leading-tight">{speaker.name}</p>
-                            <p className="text-xs text-muted-foreground leading-tight">{speaker.title}, {speaker.company}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <p className="text-sm text-muted-foreground italic">Speakers To Be Announced</p>
+                    )}
                   </div>
                 </motion.div>
               ))}
