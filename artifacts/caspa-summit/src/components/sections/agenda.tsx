@@ -22,8 +22,8 @@ const oct23AfternoonPanels = [
     ],
   },
   {
-    start: "3:30 PM",
-    end: "4:10 PM",
+    start: "2:50 PM",
+    end: "3:30 PM",
     title: "Venture Capital Investment Panel",
     speakers: [
       { name: "Shahin Farshchi", title: "General Partner", company: "Lux Capital", image: shahinFarshchiImg },
@@ -31,14 +31,14 @@ const oct23AfternoonPanels = [
     ],
   },
   {
-    start: "4:10 PM",
-    end: "4:50 PM",
+    start: "3:30 PM",
+    end: "4:10 PM",
     title: "Semiconductor Industry Outlook Panel",
     speakers: [],
   },
   {
-    start: "4:50 PM",
-    end: "5:30 PM",
+    start: "4:10 PM",
+    end: "4:50 PM",
     title: "Semiconductor Startup Panel",
     speakers: [],
   },
