@@ -14,7 +14,7 @@ const oct23AfternoonPanels = [
   },
   {
     start: "2:10 PM",
-    end: "3:20 PM",
+    end: "2:50 PM",
     title: "Semiconductor Industry Outlook Panel",
     speakers: [
       { name: "Stacy Rasgon", title: "Managing Director", company: "Bernstein", image: stacyRasgonImg },
@@ -22,7 +22,15 @@ const oct23AfternoonPanels = [
     ],
   },
   {
-    start: "3:20 PM",
+    start: "2:50 PM",
+    end: "3:30 PM",
+    title: "Semiconductor Startup Panel",
+    speakers: [
+      { name: "Faraj Aalaei", title: "CEO", company: "Cognichip", image: farajAalaeiImg },
+    ],
+  },
+  {
+    start: "3:30 PM",
     end: "4:10 PM",
     title: "Venture Capital Investment Panel",
     speakers: [
@@ -32,7 +40,13 @@ const oct23AfternoonPanels = [
   },
   {
     start: "4:10 PM",
-    end: "5:00 PM",
+    end: "4:50 PM",
+    title: "Semiconductor Industry Outlook Panel",
+    speakers: [],
+  },
+  {
+    start: "4:50 PM",
+    end: "5:30 PM",
     title: "Semiconductor Startup Panel",
     speakers: [],
   },
