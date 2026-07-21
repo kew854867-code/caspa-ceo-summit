@@ -163,10 +163,14 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.05, ease: "easeOut" }}
+          className="flex flex-col items-center gap-3"
         >
           <button className="bg-primary text-primary-foreground px-10 py-4 font-medium tracking-widest uppercase hover:bg-primary/90 transition-colors duration-300">
             Register Now
           </button>
+          <p className="text-muted-foreground text-sm tracking-widest uppercase">
+            Registration Opens <span className="text-primary font-medium">July 31</span>
+          </p>
         </motion.div>
       </div>
 
