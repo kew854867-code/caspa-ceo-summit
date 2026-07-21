@@ -38,7 +38,7 @@ export default function Home() {
               Sponsor Today
             </Link>
             <button className="hidden md:block text-sm font-medium tracking-widest uppercase hover:text-primary transition-colors">
-              Register Now
+              Register Starting 7/31
             </button>
           </div>
         </div>
