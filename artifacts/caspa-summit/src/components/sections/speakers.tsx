@@ -44,7 +44,7 @@ const conferenceSpeakers = [
   { name: "Dylan Patel", title: "CEO", company: "SemiAnalysis", image: dylanPatelImg },
   { name: "Faraj Aalaei", title: "CEO", company: "Cognichip", image: farajAalaeiImg },
   { name: "Gavin Uberti", title: "CEO", company: "Etched", image: gavinUbertiImg },
-  { name: "Irving Tan", title: "CEO", company: "Western Digital", image: irvingTanImg },
+  { name: "Irving Tan", title: "CEO", company: "WD", image: irvingTanImg },
   { name: "John Martinis", title: "2025 Nobel Laureate in Physics", company: "President's Council of Advisors on Science and Technology", image: johnMartinisImg },
   { name: "Khurram Ismail", title: "CPO", company: "SanDisk", image: khurramIsmailImg },
   { name: "Mark Wade", title: "CEO", company: "Ayar Labs", image: markWadeImg },
