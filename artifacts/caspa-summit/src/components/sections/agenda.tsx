@@ -22,14 +22,6 @@ const oct23AfternoonPanels = [
     ],
   },
   {
-    start: "2:50 PM",
-    end: "3:30 PM",
-    title: "Semiconductor Startup Panel",
-    speakers: [
-      { name: "Faraj Aalaei", title: "CEO", company: "Cognichip", image: farajAalaeiImg },
-    ],
-  },
-  {
     start: "3:30 PM",
     end: "4:10 PM",
     title: "Venture Capital Investment Panel",
