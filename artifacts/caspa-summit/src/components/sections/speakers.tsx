@@ -14,6 +14,7 @@ import andrewFeldmanImg from "@assets/F3EF3946-5B5D-400F-BCA9-E0F42CD64866_17837
 import shahinFarshchiImg from "@assets/48D1A2B2-3D61-4F91-9FE7-400671EA43B3_1784036585053.png";
 import farajAalaeiImg from "@assets/51140AE6-E8C7-41C8-9BAB-DFA02317B765_1783637006894.png";
 import stacyRasgonImg from "@assets/9091DD4F-D0EF-48BF-AC6E-1DF7283CAA62_1783637006894.png";
+import meltonChangImg from "@assets/493_1784912725098.jpeg";
 import khurramIsmailImg from "@assets/DF087C9C-2FD8-4DA8-981C-6CACE372E69F_1783024768619.png";
 import sunghyunParkImg from "@assets/C462E470-E1A6-4398-87A5-715533D6F533_1782395495008.png";
 import gavinUbertiImg from "@assets/267ED105-AAEE-45C3-8EE0-3E068D0B3B48_1782695597644.png";
@@ -49,6 +50,7 @@ const conferenceSpeakers = [
   { name: "Khurram Ismail", title: "CPO", company: "SanDisk", image: khurramIsmailImg },
   { name: "Mark Wade", title: "CEO", company: "Ayar Labs", image: markWadeImg },
   { name: "Mary Ellen Randall", title: "President & CEO", company: "IEEE", image: maryEllenRandallImg },
+  { name: "Melton Chang", title: "President", company: "Schneider Electric Power Systems", image: meltonChangImg },
   { name: "Michael Hurlston", title: "CEO", company: "Lumentum", image: michaelHurlstonImg },
   { name: "Michael Xie", title: "President & Co-Founder", company: "Fortinet", image: michaelXieImg },
   { name: "Naveen Rao", title: "CEO", company: "Unconventional AI", image: naveenRaoImg },
