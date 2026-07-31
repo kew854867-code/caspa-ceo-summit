@@ -30,9 +30,7 @@ export function RegistrationSection() {
               <p className="text-muted-foreground font-light mb-6">Premium seating for 10 guests with branding opportunities.</p>
               <div className="text-3xl text-primary font-serif mb-8">$12,000 <span className="text-sm font-sans text-muted-foreground font-light">/ table</span></div>
               <a
-                href="https://caspaceosummit.eventbrite.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:office@caspa.com"
                 className="block w-full text-center bg-primary text-primary-foreground px-6 py-3 font-medium tracking-widest uppercase hover:bg-primary/90 transition-all duration-300"
               >
                 Reserve Table
