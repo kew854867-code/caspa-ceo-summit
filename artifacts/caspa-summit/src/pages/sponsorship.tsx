@@ -65,6 +65,18 @@ const tiers = [
     perks: ["Exclusive lanyard branding at banquet", "Logo on website & program", "Recognition in opening remarks", "2 dinner banquet seats"],
   },
   {
+    name: "Coffee Sponsorship",
+    price: "$10,000",
+    description: "Exclusive branding on all coffee and beverage stations during the Annual Conference — a high-visibility touchpoint for every attendee throughout the day.",
+    perks: ["Exclusive coffee station branding", "Logo on website & program", "Recognition in opening remarks", "2 conference seats"],
+  },
+  {
+    name: "Oct 23 Dinner Sponsorship",
+    price: "$10,000",
+    description: "Exclusive sponsorship of the October 23 dinner following the afternoon conference sessions — prime brand presence during an intimate networking dinner.",
+    perks: ["Exclusive dinner branding", "Logo on website & program", "Recognition in opening remarks", "2 dinner seats"],
+  },
+  {
     name: "Associate",
     price: "$7,000",
     description: "Meaningful brand presence with recognition in key event touchpoints.",
