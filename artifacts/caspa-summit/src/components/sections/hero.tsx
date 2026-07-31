@@ -174,7 +174,7 @@ export function HeroSection() {
             Register Now
           </a>
           <p className="text-muted-foreground text-sm tracking-widest uppercase">
-            Registration Opens <span className="text-primary font-medium">July 31</span>
+            Early Bird Sale Ends <span className="text-primary font-medium">Aug 31</span>
           </p>
         </motion.div>
       </div>
