@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import lipBuTanImg from "@assets/2C524BF7-CBB4-419F-A97E-A9E39B687AA3_1779086898716.png";
 import chenMingHuImg from "@assets/55464DD5-0037-4AC7-8E91-D403F5C100D3_1779121957187.png";
+import jimmyChengImg from "@assets/IMG_4704_1785518260658.png";
+import farisSbahiImg from "@assets/13D263ED-E081-4D81-8948-2DE6A9C04C9D_1785518260658.png";
+import ankurGuptaImg from "@assets/09BF73E0-26BD-4EE9-B5DE-932E07F44234_1785518260658.png";
 
 import sassineGhaziImg from "@assets/92FE495A-00F9-44B1-AF46-A088FA81D57D_1780293398458.png";
 import michaelXieImg from "@assets/278D7D17-9372-4E07-957C-EC5DCDA6FBA7_1780116650886.png";
@@ -33,6 +36,7 @@ import maryEllenRandallImg from "@assets/FE02514B-FACD-4065-94FD-F790F6502F85_17
 const banquetSpeakers = [
   { name: "Lip-Bu Tan", title: "CEO", company: "Intel", image: lipBuTanImg },
   { name: "Chenming Hu", title: "TSMC Distinguished Professor Emeritus, Father of 3D Transistor", company: "UC Berkeley", image: chenMingHuImg },
+  { name: "Jimmy Cheng", title: "President", company: "CASPA '26–27", image: jimmyChengImg },
 ];
 
 const conferenceSpeakers = [
@@ -40,10 +44,12 @@ const conferenceSpeakers = [
   { name: "Albert Kim", title: "Head", company: "Samsung Ventures America", image: albertKimImg },
   { name: "Albert Zhang", title: "CEO", company: "Silith", image: albertZhangImg },
   { name: "Andrew Feldman", title: "CEO", company: "Cerebras", image: andrewFeldmanImg },
+  { name: "Ankur Gupta", title: "Head of EDA IC", company: "Siemens", image: ankurGuptaImg },
   { name: "Anna Goldie", title: "CEO", company: "Ricursive Intelligence", image: annaGoldieImg },
   { name: "David Lam", title: "CEO, Multibeam", company: "Founder, Lam Research", image: davidLamImg },
   { name: "Dylan Patel", title: "CEO", company: "SemiAnalysis", image: dylanPatelImg },
   { name: "Faraj Aalaei", title: "CEO", company: "Cognichip", image: farajAalaeiImg },
+  { name: "Faris Sbahi", title: "CEO", company: "Normal Computing", image: farisSbahiImg },
   { name: "Gavin Uberti", title: "CEO", company: "Etched", image: gavinUbertiImg },
   { name: "Irving Tan", title: "CEO", company: "WD", image: irvingTanImg },
   { name: "John Martinis", title: "2025 Nobel Laureate in Physics", company: "President's Council of Advisors on Science and Technology", image: johnMartinisImg },
