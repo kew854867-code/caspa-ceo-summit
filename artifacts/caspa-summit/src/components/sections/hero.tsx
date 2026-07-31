@@ -165,9 +165,14 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 1.05, ease: "easeOut" }}
           className="flex flex-col items-center gap-3"
         >
-          <button className="bg-primary text-primary-foreground px-10 py-4 font-medium tracking-widest uppercase hover:bg-primary/90 transition-colors duration-300">
+          <a
+            href="https://caspaceosummit.eventbrite.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-primary text-primary-foreground px-10 py-4 font-medium tracking-widest uppercase hover:bg-primary/90 transition-colors duration-300"
+          >
             Register Now
-          </button>
+          </a>
           <p className="text-muted-foreground text-sm tracking-widest uppercase">
             Registration Opens <span className="text-primary font-medium">July 31</span>
           </p>

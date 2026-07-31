@@ -37,9 +37,14 @@ export default function Home() {
             >
               Sponsor Today
             </Link>
-            <button className="hidden md:block text-sm font-medium tracking-widest uppercase hover:text-primary transition-colors">
+            <a
+              href="https://caspaceosummit.eventbrite.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:block text-sm font-medium tracking-widest uppercase hover:text-primary transition-colors"
+            >
               Register Starting 7/31
-            </button>
+            </a>
           </div>
         </div>
       </nav>
