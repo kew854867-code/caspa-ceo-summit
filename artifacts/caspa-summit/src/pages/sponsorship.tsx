@@ -6,6 +6,7 @@ const tiers = [
   {
     name: "Premier",
     price: "$50,000",
+    sold: true,
     description: "Maximum brand visibility across all event materials, dedicated premium placement, and top-tier recognition throughout the evening.",
     perks: ["1 Premium seat in Dinner Banquet", "1 reserved table (10 seats)", "1 VIP reception access", "Logo on all print & digital materials", "Dedicated sponsor mention"],
   },
@@ -159,7 +160,12 @@ export default function SponsorshipPage() {
                   className="border border-white/10 bg-background/50 p-8 hover:border-primary/40 transition-colors duration-500 group flex flex-col"
                 >
                   <div className="mb-6">
-                    <span className="text-xs font-medium tracking-widest uppercase text-primary">{tier.name}</span>
+                    <div className="flex items-center gap-3">
+                      <span className="text-xs font-medium tracking-widest uppercase text-primary">{tier.name}</span>
+                      {tier.sold && (
+                        <span className="text-xs font-semibold tracking-widest uppercase bg-red-600/90 text-white px-2 py-0.5">SOLD</span>
+                      )}
+                    </div>
                     <div className="w-8 h-[1px] bg-primary/40 mt-2 group-hover:w-full transition-all duration-500" />
                   </div>
                   <div className="text-2xl font-serif text-primary mb-4">{tier.price}</div>
@@ -172,12 +178,18 @@ export default function SponsorshipPage() {
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href="mailto:office@caspa.com"
-                    className="mt-8 block text-center border border-primary/30 text-primary px-6 py-3 text-sm font-medium tracking-widest uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                  >
-                    Inquire
-                  </a>
+                  {tier.sold ? (
+                    <div className="mt-8 block text-center border border-red-600/40 text-red-500/70 px-6 py-3 text-sm font-medium tracking-widest uppercase cursor-not-allowed">
+                      Sold Out
+                    </div>
+                  ) : (
+                    <a
+                      href="mailto:office@caspa.com"
+                      className="mt-8 block text-center border border-primary/30 text-primary px-6 py-3 text-sm font-medium tracking-widest uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                    >
+                      Inquire
+                    </a>
+                  )}
                 </motion.div>
               ))}
             </div>
