@@ -24,7 +24,7 @@ import gavinUbertiImg from "@assets/267ED105-AAEE-45C3-8EE0-3E068D0B3B48_1782695
 import johnMartinisImg from "@assets/6A7EF360-96B9-4CCB-944B-5D261E218AE9_1778915933700.png";
 import ajitMonachoImg from "@assets/A460DB3B-9093-4E84-94AA-A6C8ADEC051A_1779085584552.png";
 import michaelHurlstonImg from "@assets/D4E3FEF0-CB1F-4CFC-92C8-FBE2423D3026_1778915933700.png";
-import paulChoImg from "@assets/EFCF1D2A-C8D2-4D24-9076-00D406059288_1778915933700.png";
+
 import raghibHussainImg from "@assets/B17E97FA-FCA9-4F06-86B0-FF3AE511025A_1778915933700.png";
 import davidLamImg from "@assets/407E990F-0E32-4B6C-882F-AD61B64E22A5_1778915933700.png";
 import rodrigoLiangImg from "@assets/D5D33C40-3802-45DF-83B8-37A68C8E529B_1779121957187.png";
@@ -60,7 +60,7 @@ const conferenceSpeakers = [
   { name: "Michael Hurlston", title: "CEO", company: "Lumentum", image: michaelHurlstonImg },
   { name: "Michael Xie", title: "President & Co-Founder", company: "Fortinet", image: michaelXieImg },
   { name: "Naveen Rao", title: "CEO", company: "Unconventional AI", image: naveenRaoImg },
-  { name: "Paul Cho", title: "President", company: "Samsung Semiconductor", image: paulChoImg },
+
   { name: "Raghib Hussain", title: "CEO", company: "Altera", image: sidShethImg },
   { name: "Rodrigo Liang", title: "CEO", company: "SambaNova", image: rodrigoLiangImg },
   { name: "Sassine Ghazi", title: "CEO", company: "Synopsys", image: sassineGhaziImg },
