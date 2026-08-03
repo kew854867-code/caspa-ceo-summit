@@ -33,7 +33,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground font-light">
+        <div className="pt-8 border-t border-white/5 mb-6 text-xs text-muted-foreground/60 font-light leading-relaxed">
+          <p><span className="font-medium text-muted-foreground/80">Program Disclaimer:</span> All speakers, session topics, schedules, and event activities are subject to change. While every effort will be made to present the advertised program, unforeseen business or personal commitments may require speaker substitutions or schedule modifications. CASPA reserves the right to make changes without prior notice.</p>
+        </div>
+
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground font-light">
           <p>&copy; {new Date().getFullYear()} CASPA. All rights reserved.</p>
           <div className="flex gap-4">
             <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
