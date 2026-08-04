@@ -3,6 +3,7 @@ import stacyRasgonImg from "@assets/9091DD4F-D0EF-48BF-AC6E-1DF7283CAA62_1783637
 import dylanPatelImg from "@assets/B3D57552-05EE-404E-B8B5-D6A3F1C08E7D_1780946493570.jpeg";
 import shahinFarshchiImg from "@assets/48D1A2B2-3D61-4F91-9FE7-400671EA43B3_1784036585053.png";
 import albertKimImg from "@assets/1F1F5885-6A94-4D7F-B33E-395286947D01_1783637006894.png";
+import andrewTanImg from "@assets/B143CC9B-2159-44F4-BD32-A57E80C2597F_1785812065542.png";
 import farajAalaeiImg from "@assets/51140AE6-E8C7-41C8-9BAB-DFA02317B765_1783637006894.png";
 
 const oct23AfternoonPanels = [
@@ -28,6 +29,7 @@ const oct23AfternoonPanels = [
     speakers: [
       { name: "Shahin Farshchi", title: "General Partner", company: "Lux Capital", image: shahinFarshchiImg },
       { name: "Albert Kim", title: "Head", company: "Samsung Ventures America", image: albertKimImg },
+      { name: "Andrew Tan", title: "Managing Director", company: "Salience Capital", image: andrewTanImg },
     ],
   },
   {

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import lipBuTanImg from "@assets/2C524BF7-CBB4-419F-A97E-A9E39B687AA3_1779086898716.png";
 import chenMingHuImg from "@assets/55464DD5-0037-4AC7-8E91-D403F5C100D3_1779121957187.png";
 import jimmyChengImg from "@assets/IMG_4704_1785518260658.png";
+import andrewTanImg from "@assets/B143CC9B-2159-44F4-BD32-A57E80C2597F_1785812065542.png";
 import farisSbahiImg from "@assets/13D263ED-E081-4D81-8948-2DE6A9C04C9D_1785518260658.png";
 import ankurGuptaImg from "@assets/09BF73E0-26BD-4EE9-B5DE-932E07F44234_1785518260658.png";
 
@@ -44,6 +45,7 @@ const conferenceSpeakers = [
   { name: "Albert Kim", title: "Head", company: "Samsung Ventures America", image: albertKimImg },
   { name: "Albert Zhang", title: "CEO", company: "Silith", image: albertZhangImg },
   { name: "Andrew Feldman", title: "CEO", company: "Cerebras", image: andrewFeldmanImg },
+  { name: "Andrew Tan", title: "Managing Director", company: "Salience Capital", image: andrewTanImg },
   { name: "Ankur Gupta", title: "Head of EDA IC", company: "Siemens", image: ankurGuptaImg },
   { name: "Anna Goldie", title: "CEO", company: "Ricursive Intelligence", image: annaGoldieImg },
   { name: "David Lam", title: "CEO, Multibeam", company: "Founder, Lam Research", image: davidLamImg },
