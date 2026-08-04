@@ -4,6 +4,7 @@ import dylanPatelImg from "@assets/B3D57552-05EE-404E-B8B5-D6A3F1C08E7D_17809464
 import shahinFarshchiImg from "@assets/48D1A2B2-3D61-4F91-9FE7-400671EA43B3_1784036585053.png";
 import albertKimImg from "@assets/1F1F5885-6A94-4D7F-B33E-395286947D01_1783637006894.png";
 import andrewTanImg from "@assets/B143CC9B-2159-44F4-BD32-A57E80C2597F_1785812065542.png";
+import brandonWangImg from "@assets/IMG_6406_1785812799347.png";
 import farajAalaeiImg from "@assets/51140AE6-E8C7-41C8-9BAB-DFA02317B765_1783637006894.png";
 
 const oct23AfternoonPanels = [
@@ -27,6 +28,7 @@ const oct23AfternoonPanels = [
     end: "3:30 PM",
     title: "Venture Capital Investment Panel",
     speakers: [
+      { name: "Brandon Wang", title: "VP of Strategy", company: "Synopsys", image: brandonWangImg, moderator: true },
       { name: "Shahin Farshchi", title: "General Partner", company: "Lux Capital", image: shahinFarshchiImg },
       { name: "Albert Kim", title: "Head", company: "Samsung Ventures America", image: albertKimImg },
       { name: "Andrew Tan", title: "Managing Director", company: "Salience Capital", image: andrewTanImg },
@@ -151,11 +153,18 @@ export function AgendaSection() {
                       <div className="flex flex-wrap gap-4">
                         {panel.speakers.map((speaker, si) => (
                           <div key={si} className="flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-full overflow-hidden ring-1 ring-primary/30 shrink-0">
-                              <img src={speaker.image} alt={speaker.name} className="w-full h-full object-cover object-top" />
+                            <div className="relative w-10 h-10 shrink-0">
+                              <div className="w-10 h-10 rounded-full overflow-hidden ring-1 ring-primary/30">
+                                <img src={speaker.image} alt={speaker.name} className="w-full h-full object-cover object-top" />
+                              </div>
                             </div>
                             <div>
-                              <p className="text-sm font-medium text-foreground leading-tight">{speaker.name}</p>
+                              <div className="flex items-center gap-2">
+                                <p className="text-sm font-medium text-foreground leading-tight">{speaker.name}</p>
+                                {speaker.moderator && (
+                                  <span className="text-[10px] font-semibold tracking-widest uppercase text-primary/80 border border-primary/30 px-1.5 py-0.5 leading-none">Moderator</span>
+                                )}
+                              </div>
                               <p className="text-xs text-muted-foreground leading-tight">{speaker.title}, {speaker.company}</p>
                             </div>
                           </div>
