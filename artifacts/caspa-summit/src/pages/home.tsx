@@ -43,7 +43,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="hidden md:block text-sm font-medium tracking-widest uppercase hover:text-primary transition-colors"
             >
-              Register Starting 7/31
+              Registration
             </a>
           </div>
         </div>
