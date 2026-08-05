@@ -28,7 +28,7 @@ const oct23AfternoonPanels = [
     end: "3:30 PM",
     title: "Venture Capital Investment Panel",
     speakers: [
-      { name: "Brandon Wang", title: "VP of Strategy", company: "Synopsys", image: brandonWangImg, moderator: true },
+      { name: "Brandon Wang", title: "VP of Corporate Technology Strategy", company: "Synopsys", image: brandonWangImg, moderator: true },
       { name: "Shahin Farshchi", title: "General Partner", company: "Lux Capital", image: shahinFarshchiImg },
       { name: "Albert Kim", title: "Head", company: "Samsung Ventures America", image: albertKimImg },
       { name: "Andrew Tan", title: "Managing Director", company: "Salience Capital", image: andrewTanImg },
