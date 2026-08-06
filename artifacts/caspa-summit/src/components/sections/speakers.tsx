@@ -10,6 +10,7 @@ import sassineGhaziImg from "@assets/92FE495A-00F9-44B1-AF46-A088FA81D57D_178029
 import michaelXieImg from "@assets/278D7D17-9372-4E07-957C-EC5DCDA6FBA7_1780116650886.png";
 import irvingTanImg from "@assets/F1A23EB4-C629-4C0D-9BA2-5B670A376C8B_1780563808959.png";
 import hongHouImg from "@assets/D68D902F-41E0-4CC1-BC62-B773BAA35122_1785860935821.png";
+import haoZhongImg from "@assets/636BA633-15E1-466C-9DF2-4DAB82F7F430_1785997200645.png";
 import dylanPatelImg from "@assets/B3D57552-05EE-404E-B8B5-D6A3F1C08E7D_1780946493570.jpeg";
 import markWadeImg from "@assets/0886A067-9919-4756-BAB4-6F8A0421AF07_1783024768619.png";
 import xinGuoImg from "@assets/3DEF3128-BDD7-4370-A37C-159C25164D57_1783024768619.png";
@@ -54,6 +55,7 @@ const conferenceSpeakers = [
   { name: "Faraj Aalaei", title: "CEO", company: "Cognichip", image: farajAalaeiImg },
   { name: "Faris Sbahi", title: "CEO", company: "Normal Computing", image: farisSbahiImg },
   { name: "Gavin Uberti", title: "CEO", company: "Etched", image: gavinUbertiImg },
+  { name: "Hao Zhong", title: "CEO", company: "Scaleflux", image: haoZhongImg },
   { name: "Hong Hou", title: "CEO", company: "Semtech", image: hongHouImg },
   { name: "Irving Tan", title: "CEO", company: "WD", image: irvingTanImg },
   { name: "John Martinis", title: "2025 Nobel Laureate in Physics", company: "President's Council of Advisors on Science and Technology", image: johnMartinisImg },
