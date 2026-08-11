@@ -19,7 +19,7 @@ const tiers = [
   },
   {
     name: "Lunch Sponsorship",
-    price: "$40,000",
+    price: "$50,000",
     description: "Exclusive sponsorship of the summit lunch with prominent brand presence and a dedicated speaking opportunity during the lunch session.",
     perks: ["Dedicated speaking opportunity at lunch", "Logo on all print & digital materials", "1 VIP reception access", "Recognition in opening remarks", "Dedicated sponsor mention"],
   },
