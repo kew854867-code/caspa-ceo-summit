@@ -4,9 +4,9 @@ import { useRef } from "react";
 import { ChevronDown } from "lucide-react";
 
 const tickets = [
-  { name: "Annual Conference", earlyBird: "$199", regular: "$399", lastMinute: "$499" },
-  { name: "Dinner Banquet", earlyBird: "$1,199", regular: "$1,299", lastMinute: "$1,399" },
-  { name: "Bundle", earlyBird: "$1,299", regular: "$1,599", lastMinute: "$1,799", best: true },
+  { name: "Annual Conference", earlyBird: "$199", earlyBirdSave: "$300", regular: "$399", regularSave: "$100", lastMinute: "$499" },
+  { name: "Dinner Banquet", earlyBird: "$1,199", earlyBirdSave: "$200", regular: "$1,299", regularSave: "$100", lastMinute: "$1,399" },
+  { name: "Bundle", earlyBird: "$1,299", earlyBirdSave: "$500", regular: "$1,599", regularSave: "$200", lastMinute: "$1,799", best: true },
 ];
 
 export function HeroSection() {
@@ -145,15 +145,15 @@ export function HeroSection() {
               </div>
               <div className="px-4 py-3 border-r border-white/10 bg-primary/5 text-center">
                 <span className="font-serif text-base text-primary">{t.earlyBird}</span>
-                <span className="text-[10px] text-muted-foreground block">+ fee</span>
+                <span className="text-[10px] text-emerald-400/80 font-semibold block">Save {t.earlyBirdSave}</span>
               </div>
               <div className="px-4 py-3 border-r border-white/10 text-center">
                 <span className="font-serif text-base text-foreground/40">{t.regular}</span>
-                <span className="text-[10px] text-muted-foreground block">+ fee</span>
+                <span className="text-[10px] text-emerald-400/50 font-semibold block">Save {t.regularSave}</span>
               </div>
               <div className="px-4 py-3 text-center">
                 <span className="font-serif text-base text-foreground/25">{t.lastMinute}</span>
-                <span className="text-[10px] text-muted-foreground block">+ fee</span>
+                <span className="text-[10px] text-muted-foreground/40 block">Full price</span>
               </div>
             </div>
           ))}
