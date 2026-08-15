@@ -145,14 +145,17 @@ export function HeroSection() {
               </div>
               <div className="px-4 py-3 border-r border-white/10 bg-primary/5 text-center">
                 <span className="font-serif text-base text-primary">{t.earlyBird}</span>
+                <span className="text-[10px] text-muted-foreground block">+ fee</span>
                 <span className="text-[10px] text-emerald-400/80 font-semibold block">Save {t.earlyBirdSave}</span>
               </div>
               <div className="px-4 py-3 border-r border-white/10 text-center">
                 <span className="font-serif text-base text-foreground/40">{t.regular}</span>
+                <span className="text-[10px] text-muted-foreground block">+ fee</span>
                 <span className="text-[10px] text-emerald-400/50 font-semibold block">Save {t.regularSave}</span>
               </div>
               <div className="px-4 py-3 text-center">
                 <span className="font-serif text-base text-foreground/25">{t.lastMinute}</span>
+                <span className="text-[10px] text-muted-foreground/40 block">+ fee</span>
                 <span className="text-[10px] text-muted-foreground/40 block">Full price</span>
               </div>
             </div>
