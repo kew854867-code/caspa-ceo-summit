@@ -1,41 +1,13 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import jimmyChengPhoto from "@assets/IMG_4704_1779822235845.png";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { ChevronDown } from "lucide-react";
 
-const EVENT_DATE = new Date("2026-10-23T08:00:00");
-
-function useCountdown(target: Date) {
-  const [timeLeft, setTimeLeft] = useState(() => getTimeLeft(target));
-
-  function getTimeLeft(date: Date) {
-    const diff = Math.max(0, date.getTime() - Date.now());
-    return {
-      days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-      hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-      minutes: Math.floor((diff / (1000 * 60)) % 60),
-      seconds: Math.floor((diff / 1000) % 60),
-    };
-  }
-
-  useEffect(() => {
-    const id = setInterval(() => setTimeLeft(getTimeLeft(target)), 1000);
-    return () => clearInterval(id);
-  }, [target]);
-
-  return timeLeft;
-}
-
-function CountdownUnit({ value, label }: { value: number; label: string }) {
-  return (
-    <div className="flex flex-col items-center">
-      <span className="font-serif text-4xl md:text-5xl text-primary tabular-nums leading-none">
-        {String(value).padStart(2, "0")}
-      </span>
-      <span className="text-xs text-muted-foreground tracking-widest uppercase mt-2">{label}</span>
-    </div>
-  );
-}
+const tickets = [
+  { name: "Annual Conference", earlyBird: "$199", regular: "$399", lastMinute: "$499" },
+  { name: "Dinner Banquet", earlyBird: "$1,199", regular: "$1,299", lastMinute: "$1,399" },
+  { name: "Bundle", earlyBird: "$1,299", regular: "$1,599", lastMinute: "$1,799", best: true },
+];
 
 export function HeroSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -46,7 +18,6 @@ export function HeroSection() {
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
-  const countdown = useCountdown(EVENT_DATE);
 
   return (
     <section ref={ref} className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-background py-24">
@@ -102,9 +73,7 @@ export function HeroSection() {
           transition={{ duration: 1, delay: 0.55, ease: "easeOut" }}
           className="relative mb-6 px-4"
         >
-          {/* Opening quote mark */}
           <span className="absolute -top-6 -left-2 md:left-0 font-serif text-7xl md:text-8xl text-primary/70 leading-none select-none">&ldquo;</span>
-
           <p className="font-serif text-lg md:text-xl lg:text-2xl leading-relaxed text-foreground/90 pt-6">
             Behind every technological revolution are the{" "}
             <span className="text-primary italic">leaders bold enough to shape it.</span>{" "}
@@ -113,8 +82,6 @@ export function HeroSection() {
             under{" "}
             <span className="text-primary italic">one stage.</span>
           </p>
-
-          {/* Closing quote mark */}
           <span className="font-serif text-7xl md:text-8xl text-primary/70 leading-none select-none float-right -mt-4">&rdquo;</span>
         </motion.div>
 
@@ -123,17 +90,12 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.75, ease: "easeOut" }}
-          className="flex items-center gap-6 mb-14 w-full max-w-xl border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden"
+          className="flex items-center gap-6 mb-10 w-full max-w-xl border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden"
         >
-          {/* Photo */}
           <div className="w-24 h-24 shrink-0 overflow-hidden">
             <img src={jimmyChengPhoto} alt="Jimmy Cheng" className="w-full h-full object-cover object-top" />
           </div>
-
-          {/* Vertical divider */}
           <div className="h-16 w-[1px] bg-primary/40 shrink-0" />
-
-          {/* Attribution text */}
           <div className="text-left pr-6">
             <p className="font-serif text-xl text-primary italic mb-1">— Jimmy Cheng</p>
             <p className="text-muted-foreground text-sm font-light leading-snug">
@@ -142,20 +104,59 @@ export function HeroSection() {
           </div>
         </motion.div>
 
-        {/* Countdown */}
+        {/* Pricing table */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
-          className="flex items-center gap-6 md:gap-10 mb-10 px-8 py-5 border border-white/10 bg-white/5 backdrop-blur-sm"
+          className="w-full max-w-2xl mb-8"
         >
-          <CountdownUnit value={countdown.days} label="Days" />
-          <span className="text-primary/40 text-3xl font-light mb-4">·</span>
-          <CountdownUnit value={countdown.hours} label="Hours" />
-          <span className="text-primary/40 text-3xl font-light mb-4">·</span>
-          <CountdownUnit value={countdown.minutes} label="Minutes" />
-          <span className="text-primary/40 text-3xl font-light mb-4">·</span>
-          <CountdownUnit value={countdown.seconds} label="Seconds" />
+          {/* Urgency header */}
+          <div className="bg-primary text-primary-foreground px-5 py-2.5 flex items-center justify-between mb-px">
+            <div className="flex items-center gap-2">
+              <span className="text-sm">⚡</span>
+              <span className="text-xs font-bold tracking-widest uppercase">Early Bird Ends Aug 31</span>
+            </div>
+            <span className="text-xs font-medium text-primary-foreground/80">Prices increase Sep 1</span>
+          </div>
+
+          {/* Column headers */}
+          <div className="grid grid-cols-4 bg-white/5 border border-white/10 border-b-0">
+            <div className="px-4 py-2.5 border-r border-white/10">
+              <span className="text-[10px] font-medium tracking-widest uppercase text-muted-foreground">Ticket</span>
+            </div>
+            <div className="px-4 py-2.5 border-r border-white/10 bg-primary/10 text-center">
+              <span className="text-[10px] font-bold tracking-widest uppercase text-primary">Early Bird</span>
+            </div>
+            <div className="px-4 py-2.5 border-r border-white/10 text-center">
+              <span className="text-[10px] tracking-widest uppercase text-muted-foreground/60">Regular</span>
+            </div>
+            <div className="px-4 py-2.5 text-center">
+              <span className="text-[10px] tracking-widest uppercase text-muted-foreground/40">Last Minute</span>
+            </div>
+          </div>
+
+          {/* Rows */}
+          {tickets.map((t, i) => (
+            <div key={i} className={`grid grid-cols-4 border border-white/10 border-t-0 ${t.best ? "bg-primary/5" : ""}`}>
+              <div className="px-4 py-3 border-r border-white/10 flex items-center gap-2">
+                {t.best && <span className="text-[9px] font-bold tracking-widest uppercase bg-primary text-primary-foreground px-1.5 py-0.5 shrink-0">Best</span>}
+                <span className="text-xs font-medium text-foreground leading-tight">{t.name}</span>
+              </div>
+              <div className="px-4 py-3 border-r border-white/10 bg-primary/5 text-center">
+                <span className="font-serif text-base text-primary">{t.earlyBird}</span>
+                <span className="text-[10px] text-muted-foreground block">+ fee</span>
+              </div>
+              <div className="px-4 py-3 border-r border-white/10 text-center">
+                <span className="font-serif text-base text-foreground/40">{t.regular}</span>
+                <span className="text-[10px] text-muted-foreground block">+ fee</span>
+              </div>
+              <div className="px-4 py-3 text-center">
+                <span className="font-serif text-base text-foreground/25">{t.lastMinute}</span>
+                <span className="text-[10px] text-muted-foreground block">+ fee</span>
+              </div>
+            </div>
+          ))}
         </motion.div>
 
         {/* CTA */}
@@ -171,7 +172,7 @@ export function HeroSection() {
             rel="noopener noreferrer"
             className="bg-primary text-primary-foreground px-10 py-4 font-medium tracking-widest uppercase hover:bg-primary/90 transition-colors duration-300"
           >
-            Register Now
+            Register Now — Early Bird Price
           </a>
           <p className="text-muted-foreground text-sm tracking-widest uppercase">
             Early Bird Sale Ends <span className="text-primary font-medium">Aug 31</span>
