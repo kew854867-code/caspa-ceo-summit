@@ -53,6 +53,7 @@ const conferenceSpeakers = [
   { name: "Andrew Tan", title: "Managing Director", company: "Salience Capital", image: andrewTanImg },
   { name: "Ankur Gupta", title: "Head of EDA IC", company: "Siemens", image: ankurGuptaImg },
   { name: "Anna Goldie", title: "CEO", company: "Ricursive Intelligence", image: annaGoldieImg },
+  { name: "Barun Kar", title: "CEO", company: "Upscale AI", image: null },
   { name: "David Lam", title: "CEO, Multibeam", company: "Founder, Lam Research", image: davidLamImg },
   { name: "Dylan Patel", title: "CEO", company: "SemiAnalysis", image: dylanPatelImg },
   { name: "Faraj Aalaei", title: "CEO", company: "Cognichip", image: farajAalaeiImg },
@@ -101,14 +102,21 @@ const itemVariants = {
 };
 
 function SpeakerCard({ speaker }: { speaker: typeof banquetSpeakers[0] }) {
+  const initials = speaker.name.split(" ").map((n) => n[0]).join("").slice(0, 2);
   return (
     <motion.div variants={itemVariants} className="group cursor-pointer">
       <div className="relative overflow-hidden mb-6 aspect-[4/5] bg-card border border-white/5 group-hover:border-primary/50 transition-colors duration-500">
-        <img
-          src={speaker.image}
-          alt={speaker.name}
-          className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-        />
+        {speaker.image ? (
+          <img
+            src={speaker.image}
+            alt={speaker.name}
+            className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.18),transparent_70%)] bg-card">
+            <span className="font-serif text-5xl text-primary/60 select-none">{initials}</span>
+          </div>
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
         <div className="absolute inset-0 shadow-[inset_0_0_50px_rgba(212,175,55,0)] group-hover:shadow-[inset_0_0_50px_rgba(212,175,55,0.15)] transition-shadow duration-700 pointer-events-none" />
       </div>
