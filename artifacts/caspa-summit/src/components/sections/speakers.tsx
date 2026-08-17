@@ -38,6 +38,7 @@ import sidShethImg from "@assets/AE1B747A-FB29-42E3-B787-F25E78086DCC_1778915933
 import annaGoldieImg from "@assets/607DBF28-2718-42EE-BA73-59BE82AB69F9_1778915933700.png";
 import naveenRaoImg from "@assets/675C4E53-308C-478B-939B-5DCADE397C7F_1779175010186.png";
 import maryEllenRandallImg from "@assets/FE02514B-FACD-4065-94FD-F790F6502F85_1779297912788.png";
+import barunKarImg from "@assets/D82EA37F-328D-4934-B5C2-D5F03A69BE5A_1786944069778.jpeg";
 
 const banquetSpeakers = [
   { name: "Lip-Bu Tan", title: "CEO", company: "Intel", image: lipBuTanImg },
@@ -53,7 +54,7 @@ const conferenceSpeakers = [
   { name: "Andrew Tan", title: "Managing Director", company: "Salience Capital", image: andrewTanImg },
   { name: "Ankur Gupta", title: "Head of EDA IC", company: "Siemens", image: ankurGuptaImg },
   { name: "Anna Goldie", title: "CEO", company: "Ricursive Intelligence", image: annaGoldieImg },
-  { name: "Barun Kar", title: "CEO", company: "Upscale AI", image: null },
+  { name: "Barun Kar", title: "CEO", company: "Upscale AI", image: barunKarImg },
   { name: "David Lam", title: "CEO, Multibeam", company: "Founder, Lam Research", image: davidLamImg },
   { name: "Dylan Patel", title: "CEO", company: "SemiAnalysis", image: dylanPatelImg },
   { name: "Faraj Aalaei", title: "CEO", company: "Cognichip", image: farajAalaeiImg },
