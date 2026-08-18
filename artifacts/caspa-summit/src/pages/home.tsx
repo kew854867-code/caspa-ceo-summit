@@ -35,7 +35,7 @@ export default function Home() {
               href="/sponsorship"
               className="hidden md:block text-sm font-medium tracking-widest uppercase text-primary hover:text-primary/80 transition-colors"
             >
-              Sponsor Today
+              Sponsorship
             </Link>
             <a
               href="https://caspaceosummit.eventbrite.com"
