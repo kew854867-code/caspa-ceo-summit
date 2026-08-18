@@ -55,7 +55,7 @@ const conferenceSpeakers = [
   { name: "Andrew Tan", title: "Managing Director", company: "Salience Capital", image: andrewTanImg },
   { name: "Ankur Gupta", title: "Head of EDA IC", company: "Siemens", image: ankurGuptaImg },
   { name: "Anna Goldie", title: "CEO", company: "Ricursive Intelligence", image: annaGoldieImg },
-  { name: "Austin Lyons", title: "Senior Analyst, Creative Strategies", company: "SemiAnalysis", image: austinLyonsImg },
+  { name: "Austin Lyons", title: "Senior Analyst, Creative Strategies", company: "", image: austinLyonsImg },
   { name: "Barun Kar", title: "CEO", company: "Upscale AI", image: barunKarImg },
   { name: "David Lam", title: "CEO, Multibeam", company: "Founder, Lam Research", image: davidLamImg },
   { name: "Dylan Patel", title: "CEO", company: "SemiAnalysis", image: dylanPatelImg },
