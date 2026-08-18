@@ -37,7 +37,7 @@ import rodrigoLiangImg from "@assets/D5D33C40-3802-45DF-83B8-37A68C8E529B_177912
 import sidShethImg from "@assets/AE1B747A-FB29-42E3-B787-F25E78086DCC_1778915933700.png";
 import annaGoldieImg from "@assets/36B0412A-4419-4BD1-BA4D-E732DAFB6F8A_1786950348557.png";
 import naveenRaoImg from "@assets/675C4E53-308C-478B-939B-5DCADE397C7F_1779175010186.png";
-import maryEllenRandallImg from "@assets/FE02514B-FACD-4065-94FD-F790F6502F85_1779297912788.png";
+import maryEllenRandallImg from "@assets/IMG_6572_1787074080316.jpeg";
 import barunKarImg from "@assets/D82EA37F-328D-4934-B5C2-D5F03A69BE5A_1786944069778.jpeg";
 
 
