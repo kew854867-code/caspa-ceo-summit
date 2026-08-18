@@ -7,6 +7,7 @@ import andrewTanImg from "@assets/B143CC9B-2159-44F4-BD32-A57E80C2597F_178581206
 import brandonWangImg from "@assets/IMG_6406_1785812799347.png";
 import umeshPadvalImg from "@assets/DB5817CF-7F94-4B5D-BFC5-9AE571647808_1786154700547.png";
 import farajAalaeiImg from "@assets/51140AE6-E8C7-41C8-9BAB-DFA02317B765_1783637006894.png";
+import austinLyonsImg from "@assets/952EB7F8-5B18-40E1-892A-0262AAB75DA2_1787030187788.png";
 
 const oct23AfternoonPanels = [
   {
@@ -20,6 +21,7 @@ const oct23AfternoonPanels = [
     end: "2:50 PM",
     title: "Semiconductor Industry Outlook Panel",
     speakers: [
+      { name: "Austin Lyons", title: "Senior Analyst, Creative Strategies", company: "SemiAnalysis", image: austinLyonsImg, moderator: true },
       { name: "Stacy Rasgon", title: "Managing Director", company: "Bernstein", image: stacyRasgonImg },
       { name: "Dylan Patel", title: "CEO", company: "SemiAnalysis", image: dylanPatelImg },
     ],
