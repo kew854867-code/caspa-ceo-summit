@@ -1,7 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "wouter";
-import caspaLogo from "@assets/caspa-logo-white.png";
+import caspaLogo from "@assets/caspa-world-logo.png";
 
 type SiteNavProps = {
   active?: "program" | "sponsorship";
@@ -17,7 +17,7 @@ export function SiteNav({ active }: SiteNavProps) {
     <nav className="fixed top-0 w-full z-40 bg-background/80 backdrop-blur-md border-b border-white/5">
       <div className="container mx-auto px-5 sm:px-6 h-16 md:h-20 flex items-center justify-between">
         <Link href="/" onClick={closeMenu} aria-label="CASPA CEO Summit home">
-          <img src={caspaLogo} alt="CASPA Logo" className="h-9 md:h-10 w-auto opacity-90 cursor-pointer" />
+          <img src={caspaLogo} alt="CASPA World Logo" className="h-12 md:h-14 w-auto opacity-95 cursor-pointer" />
         </Link>
 
         <div className="flex items-center gap-6">
