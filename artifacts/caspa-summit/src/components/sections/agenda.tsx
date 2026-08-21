@@ -173,7 +173,7 @@ const oct24AfternoonItems: AgendaItem[] = [
     end: "4:00 PM",
     title: "Optical Interconnects & High-Speed Connectivity: The Next Data Center",
     speakers: [
-      { name: "Dan Hutcheson", title: "Vice Chair", company: "TechInsights", moderator: true },
+      { name: "Dan Armbrust", title: "Co-founder", company: "Silicon Catalyst", moderator: true },
       { name: "Albert Zhang", title: "CEO", company: "Silith", image: albertZhangImg },
       { name: "Mark Wade", title: "CEO", company: "Ayar Labs", image: markWadeImg },
       { name: "Hong Hou", title: "CEO", company: "Semtech", image: hongHouImg },
