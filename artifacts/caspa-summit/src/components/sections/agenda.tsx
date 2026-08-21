@@ -41,6 +41,7 @@ import chenMingHuImg from "@assets/55464DD5-0037-4AC7-8E91-D403F5C100D3_17791219
 import garyWangImg from "@assets/IMG_6797_1787319026185.jpeg";
 import nanZhouImg from "@assets/IMG_6801_1787329662285.jpeg";
 import ianCutressImg from "@assets/IMG_6800_1787330526274.jpeg";
+import danArmbrustImg from "@assets/IMG_6810_1787336307162.webp";
 
 type AgendaSpeaker = {
   name: string;
@@ -179,7 +180,7 @@ const oct24AfternoonItems: AgendaItem[] = [
     end: "4:00 PM",
     title: "Optical Interconnects & High-Speed Connectivity: The Next Data Center",
     speakers: [
-      { name: "Dan Armbrust", title: "Co-founder", company: "Silicon Catalyst", moderator: true },
+      { name: "Dan Armbrust", title: "Co-founder", company: "Silicon Catalyst", image: danArmbrustImg, moderator: true },
       { name: "Albert Zhang", title: "CEO", company: "Silith", image: albertZhangImg },
       { name: "Mark Wade", title: "CEO", company: "Ayar Labs", image: markWadeImg },
       { name: "Hong Hou", title: "CEO", company: "Semtech", image: hongHouImg },
