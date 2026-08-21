@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
-import caspaLogo from "@assets/caspa-logo-white.png";
+import { SiteNav } from "@/components/layout/site-nav";
 
 const tiers = [
   {
@@ -94,52 +92,9 @@ const tiers = [
 ];
 
 export default function SponsorshipPage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
     <div className="min-h-screen bg-background text-foreground dark">
-      {/* Navbar */}
-      <nav className="fixed top-0 w-full z-40 bg-background/80 backdrop-blur-md border-b border-white/5">
-        <div className="container mx-auto px-5 sm:px-6 h-16 md:h-20 flex items-center justify-between">
-          <Link href="/">
-            <img src={caspaLogo} alt="CASPA Logo" className="h-9 md:h-10 w-auto opacity-90 cursor-pointer" />
-          </Link>
-          <div className="flex items-center">
-            <Link href="/">
-              <span className="hidden md:block text-sm font-medium tracking-widest uppercase hover:text-primary transition-colors cursor-pointer">
-                Back to Event
-              </span>
-            </Link>
-            <button
-              type="button"
-              aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
-              aria-expanded={isMenuOpen}
-              aria-controls="mobile-sponsorship-navigation"
-              onClick={() => setIsMenuOpen((open) => !open)}
-              className="md:hidden inline-flex h-10 w-10 items-center justify-center border border-primary/30 text-primary hover:bg-primary/10 transition-colors"
-            >
-              {isMenuOpen ? <X size={21} strokeWidth={1.5} /> : <Menu size={21} strokeWidth={1.5} />}
-            </button>
-          </div>
-        </div>
-        {isMenuOpen && (
-          <div
-            id="mobile-sponsorship-navigation"
-            className="md:hidden border-t border-white/10 bg-background/95 backdrop-blur-xl px-5 pb-5 pt-3 shadow-2xl"
-          >
-            <div className="container mx-auto">
-              <Link
-                href="/"
-                onClick={() => setIsMenuOpen(false)}
-                className="flex items-center justify-between py-4 text-sm font-medium tracking-[0.2em] uppercase text-primary"
-              >
-              Back to Event
-                <span aria-hidden="true" className="text-lg font-light">→</span>
-              </Link>
-            </div>
-          </div>
-        )}
-      </nav>
+      <SiteNav active="sponsorship" />
 
       <main className="pt-20">
         {/* Hero */}
