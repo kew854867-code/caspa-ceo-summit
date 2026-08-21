@@ -36,6 +36,8 @@ import markWadeImg from "@assets/0886A067-9919-4756-BAB4-6F8A0421AF07_1783024768
 import hongHouImg from "@assets/D68D902F-41E0-4CC1-BC62-B773BAA35122_1785860935821.png";
 import andrewFeldmanImg from "@assets/F3EF3946-5B5D-400F-BCA9-E0F42CD64866_1783751307115.png";
 import jimmyChengImg from "@assets/IMG_4704_1785518260658.png";
+import lipBuTanImg from "@assets/2C524BF7-CBB4-419F-A97E-A9E39B687AA3_1779086898716.png";
+import chenMingHuImg from "@assets/55464DD5-0037-4AC7-8E91-D403F5C100D3_1779121957187.png";
 
 type AgendaSpeaker = {
   name: string;
@@ -193,15 +195,36 @@ const oct24AfternoonItems: AgendaItem[] = [
   { start: "4:30 PM", end: "5:00 PM", title: "Closing Remarks & Transition to Evening Gala" },
 ];
 
-const eveningItems = [
+const eveningItems: AgendaItem[] = [
   { start: "5:00 PM", end: "6:00 PM", title: "Registration and VIP Reception", description: "" },
   { start: "6:20 PM", end: "6:30 PM", title: "Welcome Speech", description: "" },
   { start: "6:30 PM", end: "7:00 PM", title: "Banquet Dinner", description: "" },
   { start: "7:00 PM", end: "7:15 PM", title: "CASPA 2025–2026 President Gary Wang's Speech", description: "" },
   { start: "7:15 PM", end: "7:25 PM", title: "CASPA Leadership Transition Ceremony", description: "" },
-  { start: "7:25 PM", end: "7:40 PM", title: "CASPA 2026–2027 President Jimmy Cheng's Speech", description: "" },
-  { start: "7:40 PM", end: "7:45 PM", title: "Special Address and Introduction of Lip-Bu Tan", description: "By Dr. Chenming Hu" },
-  { start: "7:45 PM", end: "8:45 PM", title: "Fireside Chat: Intel CEO Lip-Bu Tan and CASPA President Jimmy Cheng", description: "" },
+  {
+    start: "7:25 PM",
+    end: "7:40 PM",
+    title: "CASPA 2026–2027 President Jimmy Cheng's Speech",
+    description: "",
+    speakers: [{ name: "Jimmy Cheng", title: "President", company: "CASPA '26–27", image: jimmyChengImg }],
+  },
+  {
+    start: "7:40 PM",
+    end: "7:45 PM",
+    title: "Special Address and Introduction of Lip-Bu Tan",
+    description: "By Dr. Chenming Hu",
+    speakers: [{ name: "Chenming Hu", title: "TSMC Distinguished Professor Emeritus, Father of 3D Transistor", company: "UC Berkeley", image: chenMingHuImg }],
+  },
+  {
+    start: "7:45 PM",
+    end: "8:45 PM",
+    title: "Fireside Chat: Intel CEO Lip-Bu Tan and CASPA President Jimmy Cheng",
+    description: "",
+    speakers: [
+      { name: "Lip-Bu Tan", title: "CEO", company: "Intel", image: lipBuTanImg },
+      { name: "Jimmy Cheng", title: "President", company: "CASPA '26–27", image: jimmyChengImg },
+    ],
+  },
   { start: "8:45 PM", end: "9:05 PM", title: "Introduce Annual Conference Speakers on Stage", description: "" },
   { start: "9:05 PM", end: "9:20 PM", title: "CASPA/IEEE Scholarship", description: "Issued by IEEE President and Intel CEO" },
   { start: "9:20 PM", end: "9:35 PM", title: "Raffle", description: "" },
@@ -382,36 +405,7 @@ export function AgendaSection() {
               Evening — Dinner Banquet
             </motion.h3>
 
-            <div className="space-y-0">
-              {eveningItems.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.6, delay: index * 0.07 }}
-                  className="flex flex-col md:flex-row gap-4 md:gap-12 items-start group py-6 border-b border-white/10 last:border-0"
-                >
-                  <div className="md:w-44 shrink-0 flex flex-col">
-                    <span className="text-primary font-medium tracking-wider text-sm">
-                      {item.start}
-                    </span>
-                    <span className="text-muted-foreground/50 text-xs tracking-wider">
-                      until {item.end}
-                    </span>
-                  </div>
-                  <div className="flex-1 relative">
-                    <div className="absolute left-[-1.5rem] md:left-[-4rem] top-1.5 w-1.5 h-1.5 rounded-full border border-primary/40 group-hover:bg-primary transition-colors duration-300 hidden md:block" />
-                    <h4 className="text-xl font-serif text-foreground group-hover:text-primary transition-colors duration-300">
-                      {item.title}
-                    </h4>
-                    {item.description && (
-                      <p className="text-muted-foreground font-light mt-1 text-sm">{item.description}</p>
-                    )}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+            <ScheduleList items={eveningItems} />
           </div>
         </div>
       </div>
