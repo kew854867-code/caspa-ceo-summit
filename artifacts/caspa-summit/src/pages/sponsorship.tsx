@@ -44,6 +44,7 @@ const tiers = [
   {
     name: "General Dinner Table",
     price: "$20,000",
+    sold: true,
     description: "Brand visibility at a dinner table during the Dinner Banquet, connecting your company with all attendees throughout the evening.",
     perks: ["Branded dinner table signage", "1 reserved table (10 seats)", "Logo on website & program", "Recognition in opening remarks"],
   },
