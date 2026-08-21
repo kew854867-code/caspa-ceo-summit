@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import eeTimesLogo from "@assets/ee-times-logo.png";
 
 export function VenueSection() {
   return (
@@ -29,6 +30,15 @@ export function VenueSection() {
               <div className="text-left">
                 <h4 className="text-foreground font-medium text-lg mb-1">Santa Clara Convention Center</h4>
                 <p className="text-muted-foreground font-light">5001 Great America Pkwy, Santa Clara, CA 95054</p>
+              </div>
+            </div>
+
+            <div className="pt-10 mt-10 border-t border-white/5">
+              <p className="text-primary text-xs font-medium tracking-[0.25em] uppercase mb-5">
+                Official Media Partner
+              </p>
+              <div className="mx-auto flex min-h-16 max-w-xs items-center justify-center border border-white/10 bg-white/[0.03] px-8 py-4">
+                <img src={eeTimesLogo} alt="EE Times" className="w-full max-w-[220px] h-auto object-contain" />
               </div>
             </div>
 
