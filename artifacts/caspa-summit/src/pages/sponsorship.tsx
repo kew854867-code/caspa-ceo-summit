@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import caspaLogo from "@assets/IMG_4516_1778917187971.png";
+import caspaLogo from "@assets/caspa-logo-white.png";
 
 const tiers = [
   {
@@ -98,7 +98,7 @@ export default function SponsorshipPage() {
       <nav className="fixed top-0 w-full z-40 bg-background/80 backdrop-blur-md border-b border-white/5">
         <div className="container mx-auto px-6 h-20 flex items-center justify-between">
           <Link href="/">
-            <img src={caspaLogo} alt="CASPA Logo" className="h-10 brightness-0 invert opacity-90 cursor-pointer" />
+            <img src={caspaLogo} alt="CASPA Logo" className="h-10 w-auto opacity-90 cursor-pointer" />
           </Link>
           <Link href="/">
             <span className="hidden md:block text-sm font-medium tracking-widest uppercase hover:text-primary transition-colors cursor-pointer">

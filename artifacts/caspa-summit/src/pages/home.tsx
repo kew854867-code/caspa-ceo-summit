@@ -8,7 +8,7 @@ import { Footer } from "@/components/layout/footer";
 import { SponsorshipSection } from "@/components/sections/sponsorship";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { Link } from "wouter";
-import caspaLogo from "@assets/IMG_4516_1778917187971.png";
+import caspaLogo from "@assets/caspa-logo-white.png";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -29,7 +29,7 @@ export default function Home() {
       {/* Navbar */}
       <nav className="fixed top-0 w-full z-40 bg-background/80 backdrop-blur-md border-b border-white/5">
         <div className="container mx-auto px-6 h-20 flex items-center justify-between">
-          <img src={caspaLogo} alt="CASPA Logo" className="h-10 brightness-0 invert opacity-90" />
+          <img src={caspaLogo} alt="CASPA Logo" className="h-10 w-auto opacity-90" />
           <div className="flex items-center gap-6">
             <Link
               href="/sponsorship"

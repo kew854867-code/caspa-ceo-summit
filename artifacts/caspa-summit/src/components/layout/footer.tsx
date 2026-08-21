@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import caspaLogo from "@assets/IMG_4516_1778917187971.png";
+import caspaLogo from "@assets/caspa-logo-white.png";
 
 export function Footer() {
   return (
@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div className="md:col-span-2">
-            <img src={caspaLogo} alt="CASPA Logo" className="h-12 mb-4 brightness-0 invert opacity-80" />
+            <img src={caspaLogo} alt="CASPA Logo" className="h-12 w-auto mb-4 opacity-80" />
             <p className="text-muted-foreground font-light max-w-sm">
               Chinese American Semiconductor Professionals Association. The premier organization for semiconductor professionals.
             </p>
