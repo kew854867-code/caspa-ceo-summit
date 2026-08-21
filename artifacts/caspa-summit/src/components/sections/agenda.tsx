@@ -40,6 +40,7 @@ import lipBuTanImg from "@assets/2C524BF7-CBB4-419F-A97E-A9E39B687AA3_1779086898
 import chenMingHuImg from "@assets/55464DD5-0037-4AC7-8E91-D403F5C100D3_1779121957187.png";
 import garyWangImg from "@assets/IMG_6797_1787319026185.jpeg";
 import nanZhouImg from "@assets/IMG_6801_1787329662285.jpeg";
+import ianCutressImg from "@assets/IMG_6800_1787330526274.jpeg";
 
 type AgendaSpeaker = {
   name: string;
@@ -138,7 +139,7 @@ const oct24MorningItems: AgendaItem[] = [
     end: "11:50 AM",
     title: "AI Compute: Architectures Beyond the GPU",
     speakers: [
-      { name: "Ian Cutress", title: "CEO", company: "More than Moore", moderator: true },
+      { name: "Ian Cutress", title: "CEO", company: "More than Moore", image: ianCutressImg, moderator: true },
       { name: "Naveen Rao", title: "CEO", company: "Unconventional AI", image: naveenRaoImg },
       { name: "Faris Sbahi", title: "CEO", company: "Normal Computing", image: farisSbahiImg },
       { name: "Rodrigo Liang", title: "CEO", company: "SambaNova", image: rodrigoLiangImg },
