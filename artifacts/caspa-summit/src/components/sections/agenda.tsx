@@ -267,7 +267,7 @@ function ScheduleList({ items }: { items: AgendaItem[] }) {
               <p className="text-muted-foreground font-light mt-1 text-sm">{item.description}</p>
             )}
             {item.speakers && item.speakers.length > 0 && (
-              <div className="flex flex-wrap gap-4 mt-4">
+                <div className="flex flex-col gap-3 mt-4 md:flex-row md:flex-wrap md:gap-4">
                 {item.speakers.map((speaker) => {
                   const initials = speaker.name.split(" ").map((name) => name[0]).join("").slice(0, 2);
                   return (
