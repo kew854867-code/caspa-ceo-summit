@@ -199,7 +199,6 @@ const oct24AfternoonItems: AgendaItem[] = [
 const eveningItems: AgendaItem[] = [
   { start: "5:00 PM", end: "6:00 PM", title: "Registration and VIP Reception", description: "" },
   { start: "6:20 PM", end: "6:30 PM", title: "Welcome Speech", description: "" },
-  { start: "6:30 PM", end: "7:00 PM", title: "Banquet Dinner", description: "" },
   {
     start: "7:00 PM",
     end: "7:15 PM",
