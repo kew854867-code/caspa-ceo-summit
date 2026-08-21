@@ -197,11 +197,11 @@ const oct24AfternoonItems: AgendaItem[] = [
       { name: "Jimmy Cheng", title: "President", company: "CASPA '26–27", image: jimmyChengImg },
     ],
   },
-  { start: "4:30 PM", end: "5:00 PM", title: "Closing Remarks & Transition to Evening Gala" },
+  { start: "4:30 PM", end: "5:00 PM", title: "Dinner Banquet Registration" },
 ];
 
 const eveningItems: AgendaItem[] = [
-  { start: "5:00 PM", end: "6:00 PM", title: "Registration and VIP Reception", description: "" },
+  { start: "5:00 PM", end: "6:00 PM", title: "VIP Reception", description: "" },
   { start: "6:20 PM", end: "6:30 PM", title: "Welcome Speech", description: "" },
   { start: "6:30 PM", end: "7:00 PM", title: "Dinner", description: "" },
   {
