@@ -38,6 +38,7 @@ import andrewFeldmanImg from "@assets/F3EF3946-5B5D-400F-BCA9-E0F42CD64866_17837
 import jimmyChengImg from "@assets/IMG_4704_1785518260658.png";
 import lipBuTanImg from "@assets/2C524BF7-CBB4-419F-A97E-A9E39B687AA3_1779086898716.png";
 import chenMingHuImg from "@assets/55464DD5-0037-4AC7-8E91-D403F5C100D3_1779121957187.png";
+import garyWangImg from "@assets/IMG_6797_1787319026185.jpeg";
 
 type AgendaSpeaker = {
   name: string;
@@ -199,7 +200,13 @@ const eveningItems: AgendaItem[] = [
   { start: "5:00 PM", end: "6:00 PM", title: "Registration and VIP Reception", description: "" },
   { start: "6:20 PM", end: "6:30 PM", title: "Welcome Speech", description: "" },
   { start: "6:30 PM", end: "7:00 PM", title: "Banquet Dinner", description: "" },
-  { start: "7:00 PM", end: "7:15 PM", title: "CASPA 2025–2026 President Gary Wang's Speech", description: "" },
+  {
+    start: "7:00 PM",
+    end: "7:15 PM",
+    title: "CASPA 2025–2026 President Gary Wang's Speech",
+    description: "",
+    speakers: [{ name: "Gary Wang", title: "President", company: "CASPA '25–26", image: garyWangImg }],
+  },
   { start: "7:15 PM", end: "7:25 PM", title: "CASPA Leadership Transition Ceremony", description: "" },
   {
     start: "7:25 PM",
