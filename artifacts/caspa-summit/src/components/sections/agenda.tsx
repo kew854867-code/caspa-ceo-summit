@@ -35,6 +35,7 @@ import albertZhangImg from "@assets/6AA5EE25-3C6E-4D4D-8475-B14C351175A2_1784656
 import markWadeImg from "@assets/0886A067-9919-4756-BAB4-6F8A0421AF07_1783024768619.png";
 import hongHouImg from "@assets/D68D902F-41E0-4CC1-BC62-B773BAA35122_1785860935821.png";
 import andrewFeldmanImg from "@assets/F3EF3946-5B5D-400F-BCA9-E0F42CD64866_1783751307115.png";
+import jimmyChengImg from "@assets/IMG_4704_1785518260658.png";
 
 type AgendaSpeaker = {
   name: string;
@@ -184,7 +185,10 @@ const oct24AfternoonItems: AgendaItem[] = [
     end: "4:30 PM",
     title: "Fireside Chat: Andrew Feldman & Jimmy Cheng",
     description: "Cerebras CEO Andrew Feldman in conversation with CASPA President Jimmy Cheng",
-    speakers: [{ name: "Andrew Feldman", title: "CEO", company: "Cerebras", image: andrewFeldmanImg }],
+    speakers: [
+      { name: "Andrew Feldman", title: "CEO", company: "Cerebras", image: andrewFeldmanImg },
+      { name: "Jimmy Cheng", title: "President", company: "CASPA '26–27", image: jimmyChengImg },
+    ],
   },
   { start: "4:30 PM", end: "5:00 PM", title: "Closing Remarks & Transition to Evening Gala" },
 ];
