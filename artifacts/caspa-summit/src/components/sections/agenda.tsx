@@ -64,7 +64,7 @@ const oct23AfternoonPanels: AgendaItem[] = [
     end: "2:50 PM",
     title: "Semiconductor Industry Outlook Panel",
     speakers: [
-      { name: "Austin Lyons", title: "Senior Analyst, Creative Strategies", company: "", image: austinLyonsImg, moderator: true },
+      { name: "Austin Lyons", title: "Senior Analyst", company: "Creative Strategies", image: austinLyonsImg, moderator: true },
       { name: "Stacy Rasgon", title: "Managing Director", company: "Bernstein", image: stacyRasgonImg },
       { name: "Dylan Patel", title: "CEO", company: "SemiAnalysis", image: dylanPatelImg },
     ],
@@ -74,7 +74,7 @@ const oct23AfternoonPanels: AgendaItem[] = [
     end: "3:30 PM",
     title: "Venture Capital Investment Panel",
     speakers: [
-      { name: "Brandon Wang", title: "VP of Corporate Technology Strategy", company: "Synopsys", image: brandonWangImg, moderator: true },
+      { name: "Brandon Wang", title: "VP", company: "Synopsys", image: brandonWangImg, moderator: true },
       { name: "Shahin Farshchi", title: "General Partner", company: "Lux Capital", image: shahinFarshchiImg },
       { name: "Albert Kim", title: "Head", company: "Samsung Ventures America", image: albertKimImg },
       { name: "Andrew Tan", title: "Managing Director", company: "Salience Capital", image: andrewTanImg },
@@ -86,7 +86,7 @@ const oct23AfternoonPanels: AgendaItem[] = [
     end: "4:20 PM",
     title: "AI Computing: Designing the Next Generation of Intelligence",
     speakers: [
-      { name: "Daniel Nenni", title: "Moderator", moderator: true },
+      { name: "Daniel Nenni", title: "Founder", company: "SemiWiki", moderator: true },
       { name: "Faraj Aalaei", title: "CEO", company: "Cognichip", image: farajAalaeiImg },
       { name: "Sunghyun Park", title: "CEO", company: "Rebellions", image: sunghyunParkImg },
       { name: "Barun Kar", title: "CEO", company: "Upscale AI", image: barunKarImg },
@@ -122,7 +122,7 @@ const oct24MorningItems: AgendaItem[] = [
     end: "11:10 AM",
     title: "Data Storage & Infrastructure in the AI Era",
     speakers: [
-      { name: "Nan Zhou", title: "Moderator", company: "Temasek", moderator: true },
+      { name: "Nan Zhou", title: "Director", company: "Temasek", moderator: true },
       { name: "Xin Guo", title: "CEO", company: "Solidigm", image: xinGuoImg },
       { name: "Khurram Ismail", title: "CPO", company: "SanDisk", image: khurramIsmailImg },
       { name: "Hao Zhong", title: "CEO", company: "Scaleflux", image: haoZhongImg },
@@ -133,7 +133,7 @@ const oct24MorningItems: AgendaItem[] = [
     end: "11:50 AM",
     title: "AI Compute: Architectures Beyond the GPU",
     speakers: [
-      { name: "Ian Cutress", title: "Moderator", moderator: true },
+      { name: "Ian Cutress", title: "CEO", company: "More than Moore", moderator: true },
       { name: "Naveen Rao", title: "CEO", company: "Unconventional AI", image: naveenRaoImg },
       { name: "Faris Sbahi", title: "CEO", company: "Normal Computing", image: farisSbahiImg },
       { name: "Rodrigo Liang", title: "CEO", company: "SambaNova", image: rodrigoLiangImg },
@@ -151,7 +151,7 @@ const oct24AfternoonItems: AgendaItem[] = [
     end: "2:30 PM",
     title: "The Next Semiconductor Era: FPGAs, Advanced Manufacturing & Physical AI",
     speakers: [
-      { name: "Nitin Dahad", title: "Moderator", moderator: true },
+      { name: "Nitin Dahad", title: "Senior Editor", company: "EE Times", moderator: true },
       { name: "Raghib Hussain", title: "CEO", company: "Altera", image: raghibHussainImg },
       { name: "David Lam", title: "CEO, Multibeam", company: "Founder, Lam Research", image: davidLamImg },
     ],
@@ -173,7 +173,7 @@ const oct24AfternoonItems: AgendaItem[] = [
     end: "4:00 PM",
     title: "Optical Interconnects & High-Speed Connectivity: The Next Data Center",
     speakers: [
-      { name: "Dan Armbrust", title: "Moderator", moderator: true },
+      { name: "Dan Hutcheson", title: "Vice Chair", company: "TechInsights", moderator: true },
       { name: "Albert Zhang", title: "CEO", company: "Silith", image: albertZhangImg },
       { name: "Mark Wade", title: "CEO", company: "Ayar Labs", image: markWadeImg },
       { name: "Hong Hou", title: "CEO", company: "Semtech", image: hongHouImg },
