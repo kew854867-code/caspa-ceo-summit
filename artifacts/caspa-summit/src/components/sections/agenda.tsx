@@ -39,6 +39,7 @@ import jimmyChengImg from "@assets/IMG_4704_1785518260658.png";
 import lipBuTanImg from "@assets/2C524BF7-CBB4-419F-A97E-A9E39B687AA3_1779086898716.png";
 import chenMingHuImg from "@assets/55464DD5-0037-4AC7-8E91-D403F5C100D3_1779121957187.png";
 import garyWangImg from "@assets/IMG_6797_1787319026185.jpeg";
+import nanZhouImg from "@assets/IMG_6801_1787329662285.jpeg";
 
 type AgendaSpeaker = {
   name: string;
@@ -126,7 +127,7 @@ const oct24MorningItems: AgendaItem[] = [
     end: "11:10 AM",
     title: "Data Storage & Infrastructure in the AI Era",
     speakers: [
-      { name: "Nan Zhou", title: "Director", company: "Temasek", moderator: true },
+      { name: "Nan Zhou", title: "Director", company: "Temasek", image: nanZhouImg, moderator: true },
       { name: "Xin Guo", title: "CEO", company: "Solidigm", image: xinGuoImg },
       { name: "Khurram Ismail", title: "CPO", company: "SanDisk", image: khurramIsmailImg },
       { name: "Hao Zhong", title: "CEO", company: "Scaleflux", image: haoZhongImg },
