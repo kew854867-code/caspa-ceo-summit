@@ -43,6 +43,7 @@ import nanZhouImg from "@assets/IMG_6801_1787329662285.jpeg";
 import ianCutressImg from "@assets/IMG_6800_1787330526274.jpeg";
 import danArmbrustImg from "@assets/IMG_6810_1787336307162.webp";
 import danielNenniImg from "@assets/IMG_6812_1787336509855.jpeg";
+import nitinDahadImg from "@assets/IMG_6813_1787336767215.webp";
 
 type AgendaSpeaker = {
   name: string;
@@ -158,7 +159,7 @@ const oct24AfternoonItems: AgendaItem[] = [
     end: "2:30 PM",
     title: "The Next Semiconductor Era: FPGAs, Advanced Manufacturing & Physical AI",
     speakers: [
-      { name: "Nitin Dahad", title: "Senior Editor", company: "EE Times", moderator: true },
+      { name: "Nitin Dahad", title: "Senior Editor", company: "EE Times", image: nitinDahadImg, moderator: true },
       { name: "Raghib Hussain", title: "CEO", company: "Altera", image: raghibHussainImg },
       { name: "David Lam", title: "CEO, Multibeam", company: "Founder, Lam Research", image: davidLamImg },
     ],
