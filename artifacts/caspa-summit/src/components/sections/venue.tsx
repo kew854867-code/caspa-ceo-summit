@@ -3,7 +3,7 @@ import eeTimesLogo from "@assets/ee-times-logo.png";
 
 export function VenueSection() {
   return (
-    <section className="py-32 bg-background relative border-t border-white/5">
+    <section id="venue" className="py-32 bg-background relative border-t border-white/5 scroll-mt-20">
       <div className="container mx-auto px-6 max-w-3xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

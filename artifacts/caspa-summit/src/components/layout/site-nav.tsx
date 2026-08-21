@@ -28,6 +28,12 @@ export function SiteNav({ active }: SiteNavProps) {
             >
               Program
             </Link>
+            <a
+              href="/#venue"
+              className={`${linkClass} hover:text-primary`}
+            >
+              Venue
+            </a>
             <Link
               href="/sponsorship"
               className={`${linkClass} ${active === "sponsorship" ? "text-primary" : "text-primary hover:text-primary/80"}`}
@@ -71,6 +77,14 @@ export function SiteNav({ active }: SiteNavProps) {
               Program
               <span aria-hidden="true" className="text-lg font-light">→</span>
             </Link>
+            <a
+              href="/#venue"
+              onClick={closeMenu}
+              className={`${linkClass} flex items-center justify-between border-b border-white/10 py-4 text-foreground hover:text-primary`}
+            >
+              Venue
+              <span aria-hidden="true" className="text-lg font-light">→</span>
+            </a>
             <Link
               href="/sponsorship"
               onClick={closeMenu}
