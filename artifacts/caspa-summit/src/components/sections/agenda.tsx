@@ -274,7 +274,12 @@ function ScheduleList({ items }: { items: AgendaItem[] }) {
                     <div key={speaker.name} className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-full overflow-hidden ring-1 ring-primary/30 bg-primary/10 shrink-0 flex items-center justify-center">
                         {speaker.image ? (
-                          <img src={speaker.image} alt={speaker.name} className="w-full h-full object-cover object-top" />
+                          <img
+                            src={speaker.image}
+                            alt={speaker.name}
+                            className="w-full h-full object-cover object-top"
+                            style={speaker.name === "Chenming Hu" ? { objectPosition: "center 35%" } : undefined}
+                          />
                         ) : (
                           <span className="font-serif text-sm text-primary/70">{initials}</span>
                         )}
