@@ -12,7 +12,7 @@ import sunghyunParkImg from "@assets/C462E470-E1A6-4398-87A5-715533D6F533_178239
 import barunKarImg from "@assets/D82EA37F-328D-4934-B5C2-D5F03A69BE5A_1786944069778.jpeg";
 import krishnaRangasayeeImg from "@assets/147934E5-D9D9-425F-B01A-A3E1C83DAE03_1786154700547.png";
 import meltonChangImg from "@assets/493_1784912725098.jpeg";
-import sidShethImg from "@assets/AE1B747A-FB29-42E3-B787-F25E78086DCC_1778915933700.png";
+import sidShethImg from "@assets/IMG_6834_1787414044687.jpeg";
 import xinGuoImg from "@assets/3DEF3128-BDD7-4370-A37C-159C25164D57_1783024768619.png";
 import khurramIsmailImg from "@assets/DF087C9C-2FD8-4DA8-981C-6CACE372E69F_1783024768619.png";
 import haoZhongImg from "@assets/636BA633-15E1-466C-9DF2-4DAB82F7F430_1785997200645.png";
