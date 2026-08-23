@@ -26,7 +26,7 @@ import sassineGhaziImg from "@assets/92FE495A-00F9-44B1-AF46-A088FA81D57D_178029
 import michaelHurlstonImg from "@assets/D4E3FEF0-CB1F-4CFC-92C8-FBE2423D3026_1778915933700.png";
 import michaelXieImg from "@assets/278D7D17-9372-4E07-957C-EC5DCDA6FBA7_1780116650886.png";
 import irvingTanImg from "@assets/F1A23EB4-C629-4C0D-9BA2-5B670A376C8B_1780563808959.png";
-import raghibHussainImg from "@assets/B17E97FA-FCA9-4F06-86B0-FF3AE511025A_1778915933700.png";
+import raghibHussainImg from "@assets/raghib-hussain-portrait.jpeg";
 import davidLamImg from "@assets/407E990F-0E32-4B6C-882F-AD61B64E22A5_1778915933700.png";
 import annaGoldieImg from "@assets/36B0412A-4419-4BD1-BA4D-E732DAFB6F8A_1786950348557.png";
 import gavinUbertiImg from "@assets/267ED105-AAEE-45C3-8EE0-3E068D0B3B48_1782695597644.png";
