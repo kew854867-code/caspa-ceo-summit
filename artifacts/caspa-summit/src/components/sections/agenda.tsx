@@ -151,7 +151,7 @@ const oct24MorningItems: AgendaItem[] = [
 ];
 
 const oct24AfternoonItems: AgendaItem[] = [
-  { start: "1:00 PM", end: "1:20 PM", title: "Lumentum Address", speakers: [{ name: "Michael Hurlston", title: "CEO", company: "Lumentum", image: michaelHurlstonImg }] },
+  { start: "1:00 PM", end: "1:20 PM", title: "The Invisible Backbone of AI: Why Light Powers Intelligence", speakers: [{ name: "Michael Hurlston", title: "CEO", company: "Lumentum", image: michaelHurlstonImg }] },
   { start: "1:20 PM", end: "1:40 PM", title: "Fortinet Address", speakers: [{ name: "Michael Xie", title: "President & Co-Founder", company: "Fortinet", image: michaelXieImg }] },
   { start: "1:40 PM", end: "2:00 PM", title: "WD Address", speakers: [{ name: "Irving Tan", title: "CEO", company: "WD", image: irvingTanImg }] },
   {
