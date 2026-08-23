@@ -123,7 +123,7 @@ const oct24MorningItems: AgendaItem[] = [
   { start: "9:10 AM", end: "9:30 AM", title: "SEMI Address", speakers: [{ name: "Ajit Manocha", title: "CEO", company: "SEMI", image: ajitManochaImg }] },
   { start: "9:30 AM", end: "9:50 AM", title: "IEEE Address", speakers: [{ name: "Mary Ellen Randall", title: "President & CEO", company: "IEEE", image: maryEllenRandallImg }] },
   { start: "9:50 AM", end: "9:55 AM", title: "GSA Address (Video)", speakers: [{ name: "Jodi Shelton", title: "CEO", company: "Global Semiconductor Alliance", image: jodiSheltonImg }] },
-  { start: "9:55 AM", end: "10:15 AM", title: "Synopsys Address", speakers: [{ name: "Sassine Ghazi", title: "CEO", company: "Synopsys", image: sassineGhaziImg }] },
+  { start: "9:55 AM", end: "10:15 AM", title: "Re-Engineering the Future", speakers: [{ name: "Sassine Ghazi", title: "CEO", company: "Synopsys", image: sassineGhaziImg }] },
   { start: "10:15 AM", end: "10:30 AM", title: "Break" },
   {
     start: "10:30 AM",
