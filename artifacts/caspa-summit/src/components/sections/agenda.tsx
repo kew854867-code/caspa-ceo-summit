@@ -44,6 +44,7 @@ import ianCutressImg from "@assets/IMG_6800_1787330526274.jpeg";
 import danArmbrustImg from "@assets/IMG_6810_1787336307162.webp";
 import danielNenniImg from "@assets/IMG_6812_1787336509855.jpeg";
 import nitinDahadImg from "@assets/IMG_6813_1787336767215.webp";
+import edwardSperlingImg from "@assets/IMG_6845_1787502635651.jpeg";
 
 type AgendaSpeaker = {
   name: string;
@@ -168,9 +169,9 @@ const oct24AfternoonItems: AgendaItem[] = [
   {
     start: "2:40 PM",
     end: "3:20 PM",
-    title: "AI Innovation: Building the Future of Intelligent Systems",
+    title: "From AI Algorithms to AI Silicon: Redefining the Future of Compute",
     speakers: [
-      { name: "Moderator", title: "To Be Announced", moderator: true },
+      { name: "Edward Sperling", title: "Editor in Chief", company: "Semiconductor Engineering", image: edwardSperlingImg, moderator: true },
       { name: "Anna Goldie", title: "CEO", company: "Ricursive Intelligence", image: annaGoldieImg },
       { name: "Gavin Uberti", title: "CEO", company: "Etched", image: gavinUbertiImg },
       { name: "Ankur Gupta", title: "Head of EDA IC", company: "Siemens", image: ankurGuptaImg },
