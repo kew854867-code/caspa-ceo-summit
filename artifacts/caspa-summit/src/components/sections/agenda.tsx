@@ -122,7 +122,7 @@ const oct23ClosingItems: AgendaItem[] = [
 const oct24MorningItems: AgendaItem[] = [
   { start: "9:00 AM", end: "9:10 AM", title: "CASPA Welcome Remarks" },
   { start: "9:10 AM", end: "9:30 AM", title: "SEMI Industry Update", speakers: [{ name: "Ajit Manocha", title: "CEO", company: "SEMI", image: ajitManochaImg }] },
-  { start: "9:30 AM", end: "9:50 AM", title: "Inspiring the Next Generation of Innovators", speakers: [{ name: "Mary Ellen Randall", title: "President & CEO", company: "IEEE", image: maryEllenRandallImg }] },
+  { start: "9:30 AM", end: "9:50 AM", title: "Inspiring the Next Generation of Innovators", speakers: [{ name: "Mary Ellen Randall", title: "President & CEO", company: "IEEE Address", image: maryEllenRandallImg }] },
   { start: "9:50 AM", end: "9:55 AM", title: "GSA Address (Video)", speakers: [{ name: "Jodi Shelton", title: "CEO", company: "Global Semiconductor Alliance", image: jodiSheltonImg }] },
   { start: "9:55 AM", end: "10:15 AM", title: "Re-Engineering the Future", speakers: [{ name: "Sassine Ghazi", title: "CEO", company: "Synopsys", image: sassineGhaziImg }] },
   { start: "10:15 AM", end: "10:30 AM", title: "Break" },
