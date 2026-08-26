@@ -160,7 +160,7 @@ const oct24AfternoonItems: AgendaItem[] = [
     end: "2:30 PM",
     title: "The Next Semiconductor Era: FPGAs, Advanced Manufacturing & Physical AI",
     speakers: [
-      { name: "Nitin Dahad", title: "Senior Editor", company: "EE Times", image: nitinDahadImg, moderator: true },
+      { name: "Nitin Dahad", title: "Executive Editor", company: "EE Times", image: nitinDahadImg, moderator: true },
       { name: "Raghib Hussain", title: "CEO", company: "Altera", image: raghibHussainImg },
       { name: "David Lam", title: "CEO, Multibeam", company: "Founder, Lam Research", image: davidLamImg },
     ],
