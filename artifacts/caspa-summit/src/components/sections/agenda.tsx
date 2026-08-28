@@ -191,7 +191,7 @@ const oct24AfternoonItems: AgendaItem[] = [
   {
     start: "4:00 PM",
     end: "4:30 PM",
-    title: "Fireside Chat: Andrew Feldman & Jimmy Cheng",
+    title: "Wafer-Scale AI: Breaking the Compute Bottleneck",
     description: "Cerebras CEO Andrew Feldman in conversation with CASPA President Jimmy Cheng",
     speakers: [
       { name: "Andrew Feldman", title: "CEO", company: "Cerebras", image: andrewFeldmanImg },
