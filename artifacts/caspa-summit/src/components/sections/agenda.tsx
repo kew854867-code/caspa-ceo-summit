@@ -82,7 +82,7 @@ const oct23AfternoonPanels: AgendaItem[] = [
   {
     start: "2:50 PM",
     end: "3:30 PM",
-    title: "Venture Capital Investment Panel",
+    title: "Silicon Capital: Investing in the Next Semiconductor Wave",
     speakers: [
       { name: "Brandon Wang", title: "VP", company: "Synopsys", image: brandonWangImg, moderator: true },
       { name: "Shahin Farshchi", title: "General Partner", company: "Lux Capital", image: shahinFarshchiImg },
