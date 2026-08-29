@@ -38,6 +38,7 @@ const tiers = [
   {
     name: "Stage LCD Screen",
     price: "$20,000",
+    sold: true,
     description: "Prime brand placement on the main stage LCD screen, visible to all attendees throughout the entire evening program.",
     perks: ["Exclusive stage screen branding", "Logo displayed during all presentations", "Logo on website & program", "2 dinner banquet seats"],
   },
