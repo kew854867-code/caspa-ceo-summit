@@ -166,7 +166,7 @@ export function HeroSection() {
             rel="noopener noreferrer"
             className="bg-primary text-primary-foreground px-10 py-4 font-medium tracking-widest uppercase hover:bg-primary/90 transition-colors duration-300"
           >
-            Register Now — Regular Price
+            Register Now
           </a>
           <p className="text-muted-foreground text-sm tracking-widest uppercase">
             Regular pricing ends <span className="text-primary font-medium">Sep 30</span>

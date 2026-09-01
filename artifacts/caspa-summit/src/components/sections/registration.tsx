@@ -103,7 +103,7 @@ export function RegistrationSection() {
             rel="noopener noreferrer"
             className="inline-block bg-primary text-primary-foreground px-14 py-4 font-bold tracking-widest uppercase hover:bg-primary/90 transition-all duration-300 text-sm"
           >
-            Register Now — Regular Price
+            Register Now
           </a>
           <p className="text-muted-foreground text-xs font-light mt-4">
             All registrations subject to approval by the CASPA organizing committee.
