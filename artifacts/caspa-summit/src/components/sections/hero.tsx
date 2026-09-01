@@ -4,9 +4,9 @@ import { useRef } from "react";
 import { ChevronDown } from "lucide-react";
 
 const tickets = [
-  { name: "Annual Conference", earlyBird: "$199", earlyBirdSave: "$300", regular: "$399", regularSave: "$100", lastMinute: "$499" },
-  { name: "Dinner Banquet", earlyBird: "$1,199", earlyBirdSave: "$200", regular: "$1,299", regularSave: "$100", lastMinute: "$1,399" },
-  { name: "Bundle", earlyBird: "$1,299", earlyBirdSave: "$500", regular: "$1,599", regularSave: "$200", lastMinute: "$1,799", best: true },
+  { name: "Annual Conference", regular: "$399", regularSave: "$100", lastMinute: "$499" },
+  { name: "Dinner Banquet", regular: "$1,299", regularSave: "$100", lastMinute: "$1,399" },
+  { name: "Bundle", regular: "$1,599", regularSave: "$200", lastMinute: "$1,799", best: true },
 ];
 
 export function HeroSection() {
@@ -115,48 +115,40 @@ export function HeroSection() {
           <div className="bg-primary text-primary-foreground px-5 py-2.5 flex items-center justify-between mb-px">
             <div className="flex items-center gap-2">
               <span className="text-sm">⚡</span>
-              <span className="text-xs font-bold tracking-widest uppercase">Early Bird Ends Aug 31</span>
+              <span className="text-xs font-bold tracking-widest uppercase">Regular Pricing</span>
             </div>
-            <span className="text-xs font-medium text-primary-foreground/80">Prices increase Sep 1</span>
+            <span className="text-xs font-medium text-primary-foreground/80">Prices increase Oct 1</span>
           </div>
 
           {/* Column headers */}
-          <div className="grid grid-cols-4 bg-white/5 border border-white/10 border-b-0">
+          <div className="grid grid-cols-3 bg-white/5 border border-white/10 border-b-0">
             <div className="px-4 py-2.5 border-r border-white/10">
               <span className="text-[10px] font-medium tracking-widest uppercase text-muted-foreground">Ticket</span>
             </div>
             <div className="px-4 py-2.5 border-r border-white/10 bg-primary/10 text-center">
-              <span className="text-[10px] font-bold tracking-widest uppercase text-primary">Early Bird</span>
-            </div>
-            <div className="px-4 py-2.5 border-r border-white/10 text-center">
-              <span className="text-[10px] tracking-widest uppercase text-muted-foreground/60">Regular</span>
+              <span className="text-[10px] font-bold tracking-widest uppercase text-primary">Regular</span>
             </div>
             <div className="px-4 py-2.5 text-center">
-              <span className="text-[10px] tracking-widest uppercase text-muted-foreground/40">Last Minute</span>
+              <span className="text-[10px] tracking-widest uppercase text-muted-foreground/60">Last Minute</span>
             </div>
           </div>
 
           {/* Rows */}
           {tickets.map((t, i) => (
-            <div key={i} className={`grid grid-cols-4 border border-white/10 border-t-0 ${t.best ? "bg-primary/5" : ""}`}>
+            <div key={i} className={`grid grid-cols-3 border border-white/10 border-t-0 ${t.best ? "bg-primary/5" : ""}`}>
               <div className="px-4 py-3 border-r border-white/10 flex items-center gap-2">
                 {t.best && <span className="text-[9px] font-bold tracking-widest uppercase bg-primary text-primary-foreground px-1.5 py-0.5 shrink-0">Best</span>}
                 <span className="text-xs font-medium text-foreground leading-tight">{t.name}</span>
               </div>
               <div className="px-4 py-3 border-r border-white/10 bg-primary/5 text-center">
-                <span className="font-serif text-base text-primary">{t.earlyBird}</span>
+                <span className="font-serif text-base text-primary">{t.regular}</span>
                 <span className="text-[10px] text-muted-foreground block">+ fee</span>
-                <span className="text-[10px] text-emerald-400/80 font-semibold block">Save {t.earlyBirdSave}</span>
-              </div>
-              <div className="px-4 py-3 border-r border-white/10 text-center">
-                <span className="font-serif text-base text-foreground/40">{t.regular}</span>
-                <span className="text-[10px] text-muted-foreground block">+ fee</span>
-                <span className="text-[10px] text-emerald-400/50 font-semibold block">Save {t.regularSave}</span>
+                <span className="text-[10px] text-emerald-400/80 font-semibold block">Save {t.regularSave}</span>
               </div>
               <div className="px-4 py-3 text-center">
-                <span className="font-serif text-base text-foreground/25">{t.lastMinute}</span>
-                <span className="text-[10px] text-muted-foreground/40 block">+ fee</span>
-                <span className="text-[10px] text-muted-foreground/40 block">Full price</span>
+                <span className="font-serif text-base text-foreground/40">{t.lastMinute}</span>
+                <span className="text-[10px] text-muted-foreground block">+ fee</span>
+                <span className="text-[10px] text-emerald-400/50 font-semibold block">Save {t.regularSave}</span>
               </div>
             </div>
           ))}
@@ -175,10 +167,10 @@ export function HeroSection() {
             rel="noopener noreferrer"
             className="bg-primary text-primary-foreground px-10 py-4 font-medium tracking-widest uppercase hover:bg-primary/90 transition-colors duration-300"
           >
-            Register Now — Early Bird Price
+            Register Now — Regular Price
           </a>
           <p className="text-muted-foreground text-sm tracking-widest uppercase">
-            Early Bird Sale Ends <span className="text-primary font-medium">Aug 31</span>
+            Regular pricing ends <span className="text-primary font-medium">Sep 30</span>
           </p>
         </motion.div>
       </div>

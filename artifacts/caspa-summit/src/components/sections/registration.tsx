@@ -1,48 +1,8 @@
 import { motion } from "framer-motion";
 
 const phases = [
-  { period: "7/31 – 8/31", label: "Early Bird", sublabel: "Best Price", active: true },
-  { period: "9/1 – 9/30", label: "Regular", sublabel: "", active: false },
+  { period: "9/1 – 9/30", label: "Regular", sublabel: "Current Price", active: true },
   { period: "10/1 – 10/24", label: "Last Minute", sublabel: "", active: false },
-];
-
-const tickets = [
-  {
-    icon: "◈",
-    name: "Annual Conference",
-    sub: "Conference only",
-    earlyBird: "$199",
-    earlyBirdSave: "SAVE $300",
-    regular: "$399",
-    regularNote: "Price increases $200",
-    lastMinute: "$499",
-    lastMinuteNote: "Price increases $300",
-    bestValue: false,
-  },
-  {
-    icon: "◉",
-    name: "Dinner Banquet",
-    sub: "Banquet only",
-    earlyBird: "$1,199",
-    earlyBirdSave: "SAVE $200",
-    regular: "$1,299",
-    regularNote: "Price increases $100",
-    lastMinute: "$1,399",
-    lastMinuteNote: "Price increases $200",
-    bestValue: false,
-  },
-  {
-    icon: "★",
-    name: "Bundle",
-    sub: "Conference + Banquet",
-    earlyBird: "$1,299",
-    earlyBirdSave: "SAVE $500",
-    regular: "$1,599",
-    regularNote: "Price increases $300",
-    lastMinute: "$1,799",
-    lastMinuteNote: "Price increases $500",
-    bestValue: true,
-  },
 ];
 
 export function RegistrationSection() {
@@ -67,7 +27,7 @@ export function RegistrationSection() {
             Secure Your <span className="text-primary italic">Seat</span>
           </h2>
           <p className="text-muted-foreground font-light text-lg max-w-xl mx-auto">
-            Lock in the best price before September 1, 2026. Prices increase — don't wait.
+            Register before October 1, 2026. Prices increase — don't wait.
           </p>
         </motion.div>
 
@@ -82,13 +42,13 @@ export function RegistrationSection() {
           <div className="flex items-center gap-3">
             <span className="text-xl">⚡</span>
             <div>
-              <p className="font-bold tracking-widest uppercase text-sm">Early Bird Ends Soon!</p>
-              <p className="text-primary-foreground/80 text-xs font-light">Lock in your best price before September 1, 2026</p>
+              <p className="font-bold tracking-widest uppercase text-sm">Regular Pricing Available</p>
+              <p className="text-primary-foreground/80 text-xs font-light">Register before October 1, 2026</p>
             </div>
           </div>
           <div className="text-right shrink-0">
-            <p className="font-bold text-sm tracking-wider uppercase">Prices Increase Sep 1</p>
-            <p className="text-primary-foreground/80 text-xs">Secure the best rate today</p>
+            <p className="font-bold text-sm tracking-wider uppercase">Prices Increase Oct 1</p>
+            <p className="text-primary-foreground/80 text-xs">Secure the regular rate today</p>
           </div>
         </motion.div>
 
@@ -124,7 +84,7 @@ export function RegistrationSection() {
         >
           <div className="flex items-center gap-2">
             <span className="text-primary text-sm">⚠</span>
-            <p className="text-primary text-sm font-semibold tracking-widest uppercase">Prices Increase September 1, 2026</p>
+            <p className="text-primary text-sm font-semibold tracking-widest uppercase">Prices Increase October 1, 2026</p>
           </div>
           <p className="text-muted-foreground text-sm font-light">Don't miss your chance to save!</p>
         </motion.div>
@@ -143,7 +103,7 @@ export function RegistrationSection() {
             rel="noopener noreferrer"
             className="inline-block bg-primary text-primary-foreground px-14 py-4 font-bold tracking-widest uppercase hover:bg-primary/90 transition-all duration-300 text-sm"
           >
-            Register Now — Early Bird Price
+            Register Now — Regular Price
           </a>
           <p className="text-muted-foreground text-xs font-light mt-4">
             All registrations subject to approval by the CASPA organizing committee.
