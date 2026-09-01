@@ -148,7 +148,6 @@ export function HeroSection() {
               <div className="px-4 py-3 text-center">
                 <span className="font-serif text-base text-foreground/40">{t.lastMinute}</span>
                 <span className="text-[10px] text-muted-foreground block">+ fee</span>
-                <span className="text-[10px] text-emerald-400/50 font-semibold block">Save {t.regularSave}</span>
               </div>
             </div>
           ))}
