@@ -11,6 +11,12 @@ const tiers = [
     perks: ["1 Premium seat in Dinner Banquet", "1 reserved table (10 seats)", "1 VIP reception access", "Logo on all print & digital materials", "Dedicated sponsor mention"],
   },
   {
+    name: "Elite Sponsorship",
+    price: "$50,000",
+    description: "Premium access and brand visibility across the Dinner Banquet and the most exclusive summit experiences.",
+    perks: ["1 Premium seat in Dinner Banquet", "1 CEO Speaker Lounge Access", "1 VIP reception access", "Logo on all print & digital materials", "Dinner Banquet Badge Sponsorship", "Dedicated sponsor mention"],
+  },
+  {
     name: "CEO Lounge",
     price: "$50,000",
     sold: true,
