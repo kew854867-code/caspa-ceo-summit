@@ -69,7 +69,7 @@ const tiers = [
   },
   {
     name: "Dinner Banquet Lanyard",
-    price: "$20,000",
+    price: "$25,000",
     description: "Exclusive branding on every attendee's lanyard during the Dinner Banquet — your logo visible to all guests throughout the evening.",
     perks: ["Exclusive lanyard branding at banquet", "Logo on website & program", "Recognition in opening remarks", "2 dinner banquet seats"],
   },
