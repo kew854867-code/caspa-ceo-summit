@@ -87,7 +87,7 @@ const tiers = [
   },
   {
     name: "Coffee Sponsorship",
-    price: "$10,000",
+    price: "$20,000",
     description: "Exclusive branding on all coffee and beverage stations during the Annual Conference — a high-visibility touchpoint for every attendee throughout the day.",
     perks: ["Exclusive coffee station branding", "Logo on website & program", "Recognition in opening remarks", "2 conference seats"],
   },
