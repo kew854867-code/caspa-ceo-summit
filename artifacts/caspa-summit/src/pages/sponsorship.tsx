@@ -36,10 +36,16 @@ const tiers = [
     perks: ["Exclusive VIP room branding", "1 VIP reception access", "Logo on all print & digital materials", "Dedicated sponsor mention"],
   },
   {
-    name: "Badge Sponsorship",
+    name: "Dinner Banquet Badge Sponsorship",
     price: "$25,000",
-    description: "Exclusive branding on attendee badges throughout the event, keeping your brand visible at every interaction.",
-    perks: ["Exclusive attendee badge branding", "Logo on website & program", "Recognition in opening remarks", "2 conference seats"],
+    description: "Exclusive branding on every attendee badge during the Dinner Banquet, keeping your brand visible throughout the evening.",
+    perks: ["Exclusive dinner banquet badge branding", "Logo on website & program", "Recognition in opening remarks", "2 dinner banquet seats"],
+  },
+  {
+    name: "Annual Conference Badge Sponsorship",
+    price: "$25,000",
+    description: "Exclusive branding on every attendee badge during the Annual Conference, keeping your brand visible throughout the day.",
+    perks: ["Exclusive annual conference badge branding", "Logo on website & program", "Recognition in opening remarks", "2 conference seats"],
   },
   {
     name: "Stage LCD Screen",
