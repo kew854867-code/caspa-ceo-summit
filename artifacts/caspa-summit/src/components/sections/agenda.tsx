@@ -42,7 +42,7 @@ import garyWangImg from "@assets/IMG_6797_1787319026185.jpeg";
 import nanZhouImg from "@assets/IMG_6801_1787329662285.jpeg";
 import ianCutressImg from "@assets/IMG_6800_1787330526274.jpeg";
 import danArmbrustImg from "@assets/IMG_6810_1787336307162.webp";
-import danielNenniImg from "@assets/IMG_6812_1787336509855.jpeg";
+import danielNenniImg from "@assets/EF0F90CA-2606-4B1C-AB33-FFBC64237FF7_1788494357958.png";
 import nitinDahadImg from "@assets/IMG_6813_1787336767215.webp";
 import edwardSperlingImg from "@assets/IMG_6845_1787502635651.jpeg";
 import billBrennanImg from "@assets/96F4B38E-48A3-44B1-886A-627494ED3818_1788494304576.png";
