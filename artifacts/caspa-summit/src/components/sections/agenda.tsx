@@ -45,6 +45,7 @@ import danArmbrustImg from "@assets/IMG_6810_1787336307162.webp";
 import danielNenniImg from "@assets/IMG_6812_1787336509855.jpeg";
 import nitinDahadImg from "@assets/IMG_6813_1787336767215.webp";
 import edwardSperlingImg from "@assets/IMG_6845_1787502635651.jpeg";
+import billBrennanImg from "@assets/FC4A101B-09BA-4320-B2A5-975099DCC8E3_1788488857914.png";
 
 type AgendaSpeaker = {
   name: string;
@@ -64,14 +65,22 @@ type AgendaItem = {
 
 const oct23AfternoonPanels: AgendaItem[] = [
   {
-    start: "2:00 PM",
-    end: "2:10 PM",
+    start: "1:30 PM",
+    end: "1:40 PM",
     title: "CASPA Opening",
     speakers: [],
   },
   {
-    start: "2:10 PM",
-    end: "2:50 PM",
+    start: "1:40 PM",
+    end: "2:00 PM",
+    title: "Credo Address",
+    speakers: [
+      { name: "Bill Brennan", title: "CEO", company: "Credo", image: billBrennanImg },
+    ],
+  },
+  {
+    start: "2:00 PM",
+    end: "2:40 PM",
     title: "Semiconductor Industry Outlook Panel",
     speakers: [
       { name: "Austin Lyons", title: "Senior Analyst", company: "Creative Strategies", image: austinLyonsImg, moderator: true },
@@ -80,7 +89,7 @@ const oct23AfternoonPanels: AgendaItem[] = [
     ],
   },
   {
-    start: "2:50 PM",
+    start: "2:40 PM",
     end: "3:30 PM",
     title: "Silicon Capital: Investing in the Next Semiconductor Wave",
     speakers: [
