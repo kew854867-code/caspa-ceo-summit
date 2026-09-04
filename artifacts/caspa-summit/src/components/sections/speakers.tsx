@@ -179,7 +179,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 
 export function SpeakersSection() {
   return (
-    <section className="py-32 bg-background relative border-t border-white/5">
+    <section id="speakers" className="py-32 bg-background relative border-t border-white/5 scroll-mt-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-20">
           <motion.h2

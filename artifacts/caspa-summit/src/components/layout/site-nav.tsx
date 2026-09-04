@@ -25,6 +25,12 @@ export function SiteNav({ active }: SiteNavProps) {
 
         <div className="flex items-center gap-6">
           <div className="hidden md:flex items-center gap-6">
+            <a
+              href="/#speakers"
+              className={`${linkClass} hover:text-primary`}
+            >
+              Speakers
+            </a>
             <Link
               href="/program"
               className={`${linkClass} ${active === "program" ? "text-primary" : "hover:text-primary"}`}
@@ -72,6 +78,14 @@ export function SiteNav({ active }: SiteNavProps) {
           className="md:hidden border-t border-white/10 bg-background/95 backdrop-blur-xl px-5 pb-5 pt-3 shadow-2xl"
         >
           <div className="container mx-auto flex flex-col">
+            <a
+              href="/#speakers"
+              onClick={closeMenu}
+              className={`${linkClass} flex items-center justify-between border-b border-white/10 py-4 text-foreground hover:text-primary`}
+            >
+              Speakers
+              <span aria-hidden="true" className="text-lg font-light">→</span>
+            </a>
             <Link
               href="/program"
               onClick={closeMenu}
