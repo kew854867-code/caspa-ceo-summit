@@ -47,6 +47,7 @@ import nanZhouImg from "@assets/E59075D2-E551-4B91-8DB5-B455F63B4D41_17884999987
 import brandonWangImg from "@assets/IMG_6406_1785812799347.png";
 import danielNenniImg from "@assets/EF0F90CA-2606-4B1C-AB33-FFBC64237FF7_1788494357958.png";
 import danArmbrustImg from "@assets/IMG_6810_1787336307162.webp";
+import kristenTzeMcImg from "@assets/IMG_7106_1788500147925.png";
 
 
 const banquetSpeakers = [
@@ -235,6 +236,24 @@ export function SpeakersSection() {
             {moderators.map((moderator, index) => (
               <SpeakerCard key={index} speaker={moderator} />
             ))}
+          </motion.div>
+        </div>
+
+        {/* Master of Ceremonies */}
+        <div className="max-w-6xl mx-auto mt-20">
+          <SectionLabel>Master of Ceremonies</SectionLabel>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+            className="border border-white/10 overflow-hidden bg-card"
+          >
+            <img
+              src={kristenTzeMcImg}
+              alt="Kristen Tze, two-time Emmy winner and ABC7 anchor, Master of Ceremonies for the Dinner Banquet"
+              className="w-full h-auto"
+            />
           </motion.div>
         </div>
 
