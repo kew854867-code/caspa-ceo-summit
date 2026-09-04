@@ -101,7 +101,7 @@ const conferenceSpeakers = [
 const moderators = [
   { name: "Austin Lyons", title: "Senior Analyst", company: "Creative Strategies", image: austinLyonsImg },
   { name: "Ian Cutress", title: "CEO", company: "More than Moore", image: ianCutressImg },
-  { name: "Nitin Dahad", title: "Senior Editor", company: "EE Times", image: nitinDahadImg },
+  { name: "Nitin Dahad", title: "Executive Editor", company: "EE Times", image: nitinDahadImg },
   { name: "Nan Zhou", title: "Director", company: "Temasek", image: nanZhouImg },
   { name: "Brandon Wang", title: "VP", company: "Synopsys", image: brandonWangImg },
   { name: "Daniel Nenni", title: "Founder", company: "SemiWiki", image: danielNenniImg },
