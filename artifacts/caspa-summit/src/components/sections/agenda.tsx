@@ -45,7 +45,7 @@ import danArmbrustImg from "@assets/IMG_6810_1787336307162.webp";
 import danielNenniImg from "@assets/IMG_6812_1787336509855.jpeg";
 import nitinDahadImg from "@assets/IMG_6813_1787336767215.webp";
 import edwardSperlingImg from "@assets/IMG_6845_1787502635651.jpeg";
-import billBrennanImg from "@assets/FC4A101B-09BA-4320-B2A5-975099DCC8E3_1788488857914.png";
+import billBrennanImg from "@assets/96F4B38E-48A3-44B1-886A-627494ED3818_1788494304576.png";
 
 type AgendaSpeaker = {
   name: string;

@@ -39,7 +39,7 @@ import annaGoldieImg from "@assets/36B0412A-4419-4BD1-BA4D-E732DAFB6F8A_17869503
 import naveenRaoImg from "@assets/675C4E53-308C-478B-939B-5DCADE397C7F_1779175010186.png";
 import maryEllenRandallImg from "@assets/IMG_6572_1787074080316.jpeg";
 import barunKarImg from "@assets/D82EA37F-328D-4934-B5C2-D5F03A69BE5A_1786944069778.jpeg";
-import billBrennanImg from "@assets/FC4A101B-09BA-4320-B2A5-975099DCC8E3_1788488857914.png";
+import billBrennanImg from "@assets/96F4B38E-48A3-44B1-886A-627494ED3818_1788494304576.png";
 
 
 const banquetSpeakers = [
