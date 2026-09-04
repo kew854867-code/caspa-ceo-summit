@@ -47,7 +47,7 @@ import nanZhouImg from "@assets/E59075D2-E551-4B91-8DB5-B455F63B4D41_17884999987
 import brandonWangImg from "@assets/IMG_6406_1785812799347.png";
 import danielNenniImg from "@assets/EF0F90CA-2606-4B1C-AB33-FFBC64237FF7_1788494357958.png";
 import danArmbrustImg from "@assets/IMG_6810_1787336307162.webp";
-import kristenTzeMcImg from "@assets/kristen-tze-portrait.png";
+import kristenTzeMcImg from "@assets/BA5F63D3-0953-41A1-89E6-BB92D264586A_1788500787616.png";
 
 
 const banquetSpeakers = [
