@@ -47,7 +47,7 @@ import nanZhouImg from "@assets/E59075D2-E551-4B91-8DB5-B455F63B4D41_17884999987
 import brandonWangImg from "@assets/IMG_6406_1785812799347.png";
 import danielNenniImg from "@assets/EF0F90CA-2606-4B1C-AB33-FFBC64237FF7_1788494357958.png";
 import danArmbrustImg from "@assets/IMG_6810_1787336307162.webp";
-import kristenTzeMcImg from "@assets/IMG_7106_1788500147925.png";
+import kristenTzeMcImg from "@assets/kristen-tze-portrait.png";
 
 
 const banquetSpeakers = [
@@ -106,6 +106,13 @@ const moderators = [
   { name: "Daniel Nenni", title: "Founder", company: "SemiWiki", image: danielNenniImg },
   { name: "Dan Armbrust", title: "Co-founder", company: "Silicon Catalyst", image: danArmbrustImg },
 ];
+
+const masterOfCeremonies = {
+  name: "Kristen Tze",
+  title: "Two-Time Emmy Winner",
+  company: "Anchor, ABC7",
+  image: kristenTzeMcImg,
+};
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -243,17 +250,13 @@ export function SpeakersSection() {
         <div className="max-w-6xl mx-auto mt-20">
           <SectionLabel>Master of Ceremonies</SectionLabel>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-            className="border border-white/10 overflow-hidden bg-card"
+            className="max-w-sm mx-auto"
           >
-            <img
-              src={kristenTzeMcImg}
-              alt="Kristen Tze, two-time Emmy winner and ABC7 anchor, Master of Ceremonies for the Dinner Banquet"
-              className="w-full h-auto"
-            />
+            <SpeakerCard speaker={masterOfCeremonies} />
           </motion.div>
         </div>
 
