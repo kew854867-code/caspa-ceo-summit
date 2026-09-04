@@ -40,6 +40,13 @@ import naveenRaoImg from "@assets/675C4E53-308C-478B-939B-5DCADE397C7F_177917501
 import maryEllenRandallImg from "@assets/IMG_6572_1787074080316.jpeg";
 import barunKarImg from "@assets/D82EA37F-328D-4934-B5C2-D5F03A69BE5A_1786944069778.jpeg";
 import billBrennanImg from "@assets/96F4B38E-48A3-44B1-886A-627494ED3818_1788494304576.png";
+import austinLyonsImg from "@assets/952EB7F8-5B18-40E1-892A-0262AAB75DA2_1787030187788.png";
+import ianCutressImg from "@assets/IMG_6800_1787330526274.jpeg";
+import nitinDahadImg from "@assets/IMG_6813_1787336767215.webp";
+import nanZhouImg from "@assets/E59075D2-E551-4B91-8DB5-B455F63B4D41_1788499998722.png";
+import brandonWangImg from "@assets/IMG_6406_1785812799347.png";
+import danielNenniImg from "@assets/EF0F90CA-2606-4B1C-AB33-FFBC64237FF7_1788494357958.png";
+import danArmbrustImg from "@assets/IMG_6810_1787336307162.webp";
 
 
 const banquetSpeakers = [
@@ -87,6 +94,16 @@ const conferenceSpeakers = [
   { name: "Sunghyun Park", title: "CEO", company: "Rebellions", image: sunghyunParkImg },
   { name: "Umesh Padval", title: "Managing Partner", company: "Seligman Ventures", image: umeshPadvalImg },
   { name: "Xin Guo", title: "CEO", company: "Solidigm", image: xinGuoImg },
+];
+
+const moderators = [
+  { name: "Austin Lyons", title: "Senior Analyst", company: "Creative Strategies", image: austinLyonsImg },
+  { name: "Ian Cutress", title: "CEO", company: "More than Moore", image: ianCutressImg },
+  { name: "Nitin Dahad", title: "Senior Editor", company: "EE Times", image: nitinDahadImg },
+  { name: "Nan Zhou", title: "Director", company: "Temasek", image: nanZhouImg },
+  { name: "Brandon Wang", title: "VP", company: "Synopsys", image: brandonWangImg },
+  { name: "Daniel Nenni", title: "Founder", company: "SemiWiki", image: danielNenniImg },
+  { name: "Dan Armbrust", title: "Co-founder", company: "Silicon Catalyst", image: danArmbrustImg },
 ];
 
 const containerVariants = {
@@ -201,6 +218,22 @@ export function SpeakersSection() {
           >
             {conferenceSpeakers.map((speaker, index) => (
               <SpeakerCard key={index} speaker={speaker} />
+            ))}
+          </motion.div>
+        </div>
+
+        {/* Moderators */}
+        <div className="max-w-6xl mx-auto mt-20">
+          <SectionLabel>Moderators</SectionLabel>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16"
+          >
+            {moderators.map((moderator, index) => (
+              <SpeakerCard key={index} speaker={moderator} />
             ))}
           </motion.div>
         </div>
