@@ -48,6 +48,7 @@ import brandonWangImg from "@assets/IMG_6406_1785812799347.png";
 import danielNenniImg from "@assets/EF0F90CA-2606-4B1C-AB33-FFBC64237FF7_1788494357958.png";
 import danArmbrustImg from "@assets/IMG_6810_1787336307162.webp";
 import kristenTzeMcImg from "@assets/BA5F63D3-0953-41A1-89E6-BB92D264586A_1788500787616.png";
+import edwardSperlingImg from "@assets/IMG_7209_1788501402107.jpeg";
 
 
 const banquetSpeakers = [
@@ -105,6 +106,7 @@ const moderators = [
   { name: "Brandon Wang", title: "VP", company: "Synopsys", image: brandonWangImg },
   { name: "Daniel Nenni", title: "Founder", company: "SemiWiki", image: danielNenniImg },
   { name: "Dan Armbrust", title: "Co-founder", company: "Silicon Catalyst", image: danArmbrustImg },
+  { name: "Edward Sperling", title: "Editor in Chief", company: "Semiconductor Engineering", image: edwardSperlingImg },
 ];
 
 const masterOfCeremonies = {
