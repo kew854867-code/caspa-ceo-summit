@@ -104,7 +104,7 @@ const tiers = [
     perks: ["5 reserved seats", "Logo on website & program", "Recognition in opening remarks", "1 VIP reception access"],
   },
   {
-    name: "Display Table",
+    name: "Annual Conference Display Table",
     price: "$5,000",
     description: "Dedicated display space to showcase your brand, products, or materials to all event attendees.",
     perks: ["1 display table at venue", "Logo on website & program"],
