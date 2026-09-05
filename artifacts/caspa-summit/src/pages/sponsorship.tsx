@@ -75,7 +75,7 @@ const tiers = [
   },
   {
     name: "Annual Conference Lanyard",
-    price: "$20,000",
+    price: "$25,000",
     description: "Exclusive branding on every attendee's lanyard during the Annual Conference — your logo visible to all conference participants throughout the day.",
     perks: ["Exclusive lanyard branding at conference", "Logo on website & program", "Recognition in opening remarks", "2 conference seats"],
   },
