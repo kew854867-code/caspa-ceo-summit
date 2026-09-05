@@ -68,7 +68,7 @@ const tiers = [
     perks: ["Branded dinner table signage", "1 reserved table (10 seats)", "Logo on website & program", "Recognition in opening remarks"],
   },
   {
-    name: "Partner",
+    name: "Corporate Dinner Table Partner Sponsorship",
     price: "$12,000",
     description: "High-profile recognition with prominent placement throughout the venue and event collateral.",
     perks: ["1 reserved table (10 seats)", "Logo on stage website", "Program book full-page feature", "1 VIP reception access"],
