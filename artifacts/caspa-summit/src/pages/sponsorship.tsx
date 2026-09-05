@@ -36,10 +36,10 @@ const tiers = [
     perks: ["Exclusive CEO dinner table branding", "1 reserved table (10 seats)", "1 VIP reception access", "Logo on all print & digital materials", "Dedicated sponsor mention"],
   },
   {
-    name: "VIP Room",
-    price: "$20,000",
-    description: "Exclusive VIP room sponsorship with premium branding and private access for your guests during the event.",
-    perks: ["Exclusive VIP room branding", "1 VIP reception access", "Logo on all print & digital materials", "Dedicated sponsor mention"],
+    name: "VIP Reception",
+    price: "$30,000",
+    description: "Exclusive VIP reception sponsorship with premium branding and private access for your guests during the event.",
+    perks: ["Exclusive VIP reception branding", "1 VIP reception access", "Logo on all print & digital materials", "Dedicated sponsor mention"],
   },
   {
     name: "Dinner Banquet Badge Sponsorship",
