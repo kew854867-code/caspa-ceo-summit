@@ -104,7 +104,7 @@ export function HeroSection() {
           </div>
         </motion.div>
 
-        {/* Labor Day promotion */}
+        {/* Flash sale promotion */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -114,13 +114,13 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div className="text-left">
               <p className="text-primary text-xs font-bold tracking-[0.22em] uppercase mb-1">
-                Labor Day Sale
+                Flash Sale
               </p>
               <p className="font-serif text-2xl text-foreground">
                 Save <span className="text-primary italic">10% off</span> registration
               </p>
               <p className="text-xs text-muted-foreground tracking-widest uppercase mt-1">
-                Sale ends September 11
+                Sale ends February 16
               </p>
             </div>
             <div className="shrink-0 border border-dashed border-primary/70 bg-background/60 px-5 py-3 text-center">
