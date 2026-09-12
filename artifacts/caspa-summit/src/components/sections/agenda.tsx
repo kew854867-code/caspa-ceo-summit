@@ -163,7 +163,7 @@ const oct24MorningItems: AgendaItem[] = [
 const oct24AfternoonItems: AgendaItem[] = [
   { start: "1:00 PM", end: "1:20 PM", title: "the Race to connect AI", speakers: [{ name: "Michael Hurlston", title: "CEO", company: "Lumentum", image: michaelHurlstonImg }] },
   { start: "1:20 PM", end: "1:40 PM", title: "ASIC design and Cyber Security", speakers: [{ name: "Michael Xie", title: "President & Co-Founder", company: "Fortinet", image: michaelXieImg }] },
-  { start: "1:40 PM", end: "2:00 PM", title: "WD Address", speakers: [{ name: "Irving Tan", title: "CEO", company: "WD", image: irvingTanImg }] },
+  { start: "1:40 PM", end: "2:00 PM", title: "The Infrastructure the AI Economy Demands Next", speakers: [{ name: "Irving Tan", title: "CEO", company: "WD", image: irvingTanImg }] },
   {
     start: "2:00 PM",
     end: "2:30 PM",
