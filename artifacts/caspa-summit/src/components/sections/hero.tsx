@@ -120,7 +120,7 @@ export function HeroSection() {
                 Save <span className="text-primary italic">10% off</span> registration
               </p>
               <p className="text-xs text-muted-foreground tracking-widest uppercase mt-1">
-                Sale ends February 16
+                Sale ends September 16
               </p>
             </div>
             <div className="shrink-0 border border-dashed border-primary/70 bg-background/60 px-5 py-3 text-center">
