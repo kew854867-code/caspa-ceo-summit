@@ -104,32 +104,6 @@ export function HeroSection() {
           </div>
         </motion.div>
 
-        {/* Flash sale promotion */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.85, ease: "easeOut" }}
-          className="w-full max-w-2xl mb-5 border border-primary/50 bg-primary/10 px-5 py-4"
-        >
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div className="text-left">
-              <p className="text-primary text-xs font-bold tracking-[0.22em] uppercase mb-1">
-                Flash Sale
-              </p>
-              <p className="font-serif text-2xl text-foreground">
-                Save <span className="text-primary italic">10% off</span> registration
-              </p>
-              <p className="text-xs text-muted-foreground tracking-widest uppercase mt-1">
-                Sale ends September 16
-              </p>
-            </div>
-            <div className="shrink-0 border border-dashed border-primary/70 bg-background/60 px-5 py-3 text-center">
-              <p className="text-[10px] text-muted-foreground tracking-widest uppercase mb-1">Discount Code</p>
-              <p className="font-mono text-lg font-bold tracking-[0.12em] text-primary">EEWIKI10</p>
-            </div>
-          </div>
-        </motion.div>
-
         {/* Pricing table */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
