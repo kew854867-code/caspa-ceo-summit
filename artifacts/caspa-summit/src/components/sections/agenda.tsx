@@ -225,7 +225,7 @@ const eveningItems: AgendaItem[] = [
   {
     start: "7:25 PM",
     end: "7:40 PM",
-    title: "CASPA 2026–2027 President Jimmy Cheng's Speech",
+    title: "35 years along the Chip Industry",
     description: "",
     speakers: [{ name: "Jimmy Cheng", title: "President", company: "CASPA '26–27", image: jimmyChengImg }],
   },
