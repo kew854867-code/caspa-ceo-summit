@@ -1,0 +1,1 @@
+- [Vite cache after React upgrades](vite-react-cache.md) — a restarted preview can still serve old prebundled React DOM after a workspace version change.

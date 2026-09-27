@@ -1,6 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "wouter";
+import { Show } from "@clerk/react";
 import caspaLogo from "@assets/caspa-world-logo-white.png";
 
 type SiteNavProps = {
@@ -8,6 +9,7 @@ type SiteNavProps = {
 };
 
 const linkClass = "text-sm font-medium tracking-widest uppercase transition-colors";
+const summitPath = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/summit`;
 
 export function SiteNav({ active }: SiteNavProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +18,7 @@ export function SiteNav({ active }: SiteNavProps) {
   return (
     <nav className="fixed top-0 w-full z-40 bg-background/80 backdrop-blur-md border-b border-white/5">
       <div className="container mx-auto px-5 sm:px-6 h-16 md:h-20 flex items-center justify-between">
-        <Link href="/" onClick={closeMenu} aria-label="CASPA CEO Summit home">
+        <Link href="/summit" onClick={closeMenu} aria-label="CASPA CEO Summit home">
           <span className="flex items-center gap-2.5 cursor-pointer">
             <img src={caspaLogo} alt="CASPA World Logo" className="h-10 md:h-12 w-auto opacity-95" />
             <span className="text-sm md:text-base font-medium tracking-[0.22em] text-foreground">CASPA</span>
@@ -24,9 +26,9 @@ export function SiteNav({ active }: SiteNavProps) {
         </Link>
 
         <div className="flex items-center gap-6">
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden xl:flex items-center gap-6">
             <a
-              href="/#speakers"
+              href={`${summitPath}#speakers`}
               className={`${linkClass} hover:text-primary`}
             >
               Speakers
@@ -38,7 +40,7 @@ export function SiteNav({ active }: SiteNavProps) {
               Program
             </Link>
             <a
-              href="/#venue"
+              href={`${summitPath}#venue`}
               className={`${linkClass} hover:text-primary`}
             >
               Venue
@@ -57,6 +59,19 @@ export function SiteNav({ active }: SiteNavProps) {
             >
               Registration
             </a>
+            <Show when="signed-out">
+              <Link href="/sign-in" className={`${linkClass} hover:text-primary`}>
+                Sign in
+              </Link>
+              <Link href="/sign-up" className={`${linkClass} border border-primary px-4 py-2 text-primary hover:bg-primary/10`}>
+                Create account
+              </Link>
+            </Show>
+            <Show when="signed-in">
+              <Link href="/user-portal" className={`${linkClass} border border-primary px-4 py-2 text-primary hover:bg-primary/10`}>
+                My account
+              </Link>
+            </Show>
           </div>
 
           <button
@@ -65,7 +80,7 @@ export function SiteNav({ active }: SiteNavProps) {
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"
             onClick={() => setIsMenuOpen((open) => !open)}
-            className="md:hidden inline-flex h-10 w-10 items-center justify-center border border-primary/30 text-primary hover:bg-primary/10 transition-colors"
+            className="xl:hidden inline-flex h-10 w-10 items-center justify-center border border-primary/30 text-primary hover:bg-primary/10 transition-colors"
           >
             {isMenuOpen ? <X size={21} strokeWidth={1.5} /> : <Menu size={21} strokeWidth={1.5} />}
           </button>
@@ -75,11 +90,11 @@ export function SiteNav({ active }: SiteNavProps) {
       {isMenuOpen && (
         <div
           id="mobile-navigation"
-          className="md:hidden border-t border-white/10 bg-background/95 backdrop-blur-xl px-5 pb-5 pt-3 shadow-2xl"
+          className="xl:hidden border-t border-white/10 bg-background/95 backdrop-blur-xl px-5 pb-5 pt-3 shadow-2xl"
         >
           <div className="container mx-auto flex flex-col">
             <a
-              href="/#speakers"
+              href={`${summitPath}#speakers`}
               onClick={closeMenu}
               className={`${linkClass} flex items-center justify-between border-b border-white/10 py-4 text-foreground hover:text-primary`}
             >
@@ -95,7 +110,7 @@ export function SiteNav({ active }: SiteNavProps) {
               <span aria-hidden="true" className="text-lg font-light">→</span>
             </Link>
             <a
-              href="/#venue"
+              href={`${summitPath}#venue`}
               onClick={closeMenu}
               className={`${linkClass} flex items-center justify-between border-b border-white/10 py-4 text-foreground hover:text-primary`}
             >
@@ -120,6 +135,19 @@ export function SiteNav({ active }: SiteNavProps) {
               Registration
               <span aria-hidden="true" className="text-lg font-light">→</span>
             </a>
+            <Show when="signed-out">
+              <Link href="/sign-in" onClick={closeMenu} className={`${linkClass} flex items-center justify-between border-t border-white/10 py-4 text-foreground hover:text-primary`}>
+                Sign in <span aria-hidden="true" className="text-lg font-light">→</span>
+              </Link>
+              <Link href="/sign-up" onClick={closeMenu} className={`${linkClass} flex items-center justify-between border-t border-white/10 py-4 text-primary`}>
+                Create account <span aria-hidden="true" className="text-lg font-light">→</span>
+              </Link>
+            </Show>
+            <Show when="signed-in">
+              <Link href="/user-portal" onClick={closeMenu} className={`${linkClass} flex items-center justify-between border-t border-white/10 py-4 text-primary`}>
+                My account <span aria-hidden="true" className="text-lg font-light">→</span>
+              </Link>
+            </Show>
           </div>
         </div>
       )}

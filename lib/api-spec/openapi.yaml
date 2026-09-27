@@ -10,6 +10,8 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: auth
+    description: Current account operations
 paths:
   /healthz:
     get:
@@ -24,6 +26,20 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /auth/me:
+    get:
+      operationId: getCurrentUser
+      tags: [auth]
+      summary: Get the signed-in user's account and role
+      responses:
+        "200":
+          description: Account and server-verified role
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CurrentUser"
+        "401":
+          description: Sign-in required
 components:
   schemas:
     HealthStatus:
@@ -33,4 +49,20 @@ components:
           type: string
       required:
         - status
+    CurrentUser:
+      type: object
+      properties:
+        userId:
+          type: string
+        email:
+          type: string
+        displayName:
+          type: string
+        isAdmin:
+          type: boolean
+      required:
+        - userId
+        - email
+        - displayName
+        - isAdmin
 

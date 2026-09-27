@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" role="img" aria-label="CASPA">
+  <g fill="none" stroke="#D4AF37" stroke-width="2">
+    <circle cx="35" cy="35" r="25"/>
+    <ellipse cx="35" cy="35" rx="12" ry="25"/>
+    <path d="M10 35h50M15 23h40M15 47h40"/>
+  </g>
+  <text x="73" y="46" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="34" font-weight="600" letter-spacing="3">CASPA</text>
+</svg>
