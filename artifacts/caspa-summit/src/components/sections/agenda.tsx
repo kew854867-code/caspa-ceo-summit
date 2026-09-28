@@ -246,7 +246,7 @@ const eveningItems: AgendaItem[] = [
       { name: "Jimmy Cheng", title: "President", company: "CASPA '26–27", image: jimmyChengImg },
     ],
   },
-  { start: "8:45 PM", end: "9:05 PM", title: "Introduce Annual Conference Speakers on Stage", description: "" },
+  { start: "8:45 PM", end: "9:05 PM", title: "Award for Annual Conference speakers on stage", description: "" },
   { start: "9:05 PM", end: "9:20 PM", title: "CASPA/IEEE Scholarship", description: "Issued by IEEE President and Intel CEO" },
   { start: "9:20 PM", end: "9:35 PM", title: "Raffle", description: "" },
   { start: "9:35 PM", end: "10:05 PM", title: "Networking", description: "" },
