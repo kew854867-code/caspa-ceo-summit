@@ -41,7 +41,7 @@ import maryEllenRandallImg from "@assets/IMG_6572_1787074080316.jpeg";
 import barunKarImg from "@assets/D82EA37F-328D-4934-B5C2-D5F03A69BE5A_1786944069778.jpeg";
 import billBrennanImg from "@assets/96F4B38E-48A3-44B1-886A-627494ED3818_1788494304576.png";
 import austinLyonsImg from "@assets/952EB7F8-5B18-40E1-892A-0262AAB75DA2_1787030187788.png";
-import ianCutressImg from "@assets/IMG_6800_1787330526274.jpeg";
+import maxCherneyImg from "@assets/IMG_7789_1790827309585.jpeg";
 import nitinDahadImg from "@assets/IMG_6813_1787336767215.webp";
 import nanZhouImg from "@assets/E59075D2-E551-4B91-8DB5-B455F63B4D41_1788499998722.png";
 import brandonWangImg from "@assets/IMG_6406_1785812799347.png";
@@ -100,7 +100,7 @@ const conferenceSpeakers = [
 
 const moderators = [
   { name: "Austin Lyons", title: "Senior Analyst", company: "Creative Strategies", image: austinLyonsImg },
-  { name: "Ian Cutress", title: "CEO", company: "More than Moore", image: ianCutressImg },
+  { name: "Max Cherney", title: "Tech Correspondent", company: "Reuters", image: maxCherneyImg },
   { name: "Nitin Dahad", title: "Executive Editor", company: "EE Times", image: nitinDahadImg },
   { name: "Nan Zhou", title: "Director", company: "Temasek", image: nanZhouImg },
   { name: "Brandon Wang", title: "VP", company: "Synopsys", image: brandonWangImg },

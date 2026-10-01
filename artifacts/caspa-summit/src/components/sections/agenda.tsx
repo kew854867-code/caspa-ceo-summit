@@ -40,7 +40,7 @@ import lipBuTanImg from "@assets/2C524BF7-CBB4-419F-A97E-A9E39B687AA3_1779086898
 import chenMingHuImg from "@assets/55464DD5-0037-4AC7-8E91-D403F5C100D3_1779121957187.png";
 import garyWangImg from "@assets/IMG_6797_1787319026185.jpeg";
 import nanZhouImg from "@assets/E59075D2-E551-4B91-8DB5-B455F63B4D41_1788499998722.png";
-import ianCutressImg from "@assets/IMG_6800_1787330526274.jpeg";
+import maxCherneyImg from "@assets/IMG_7789_1790827309585.jpeg";
 import danArmbrustImg from "@assets/IMG_6810_1787336307162.webp";
 import danielNenniImg from "@assets/EF0F90CA-2606-4B1C-AB33-FFBC64237FF7_1788494357958.png";
 import nitinDahadImg from "@assets/IMG_6813_1787336767215.webp";
@@ -151,7 +151,7 @@ const oct24MorningItems: AgendaItem[] = [
     end: "11:50 AM",
     title: "AI Compute: Architectures Beyond the GPU",
     speakers: [
-      { name: "Ian Cutress", title: "CEO", company: "More than Moore", image: ianCutressImg, moderator: true },
+      { name: "Max Cherney", title: "Tech Correspondent", company: "Reuters", image: maxCherneyImg, moderator: true },
       { name: "Naveen Rao", title: "CEO", company: "Unconventional AI", image: naveenRaoImg },
       { name: "Faris Sbahi", title: "CEO", company: "Normal Computing", image: farisSbahiImg },
       { name: "Rodrigo Liang", title: "CEO", company: "SambaNova", image: rodrigoLiangImg },
