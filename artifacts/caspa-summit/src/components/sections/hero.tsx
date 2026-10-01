@@ -113,9 +113,6 @@ export function HeroSection() {
           >
             Register Now
           </a>
-          <p className="text-muted-foreground text-sm tracking-widest uppercase">
-            Regular pricing ends <span className="text-primary font-medium">Sep 30</span>
-          </p>
         </motion.div>
       </div>
 
