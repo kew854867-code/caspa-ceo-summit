@@ -3,12 +3,6 @@ import jimmyChengPhoto from "@assets/IMG_4704_1779822235845.png";
 import { useRef } from "react";
 import { ChevronDown } from "lucide-react";
 
-const tickets = [
-  { name: "Annual Conference", regular: "$399", regularSave: "$100", lastMinute: "$499" },
-  { name: "Dinner Banquet", regular: "$1,299", regularSave: "$100", lastMinute: "$1,399" },
-  { name: "Bundle", regular: "$1,599", regularSave: "$200", lastMinute: "$1,799", best: true },
-];
-
 export function HeroSection() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -102,55 +96,6 @@ export function HeroSection() {
               Creator of the CEO Summit,<br />CASPA President 2026–2027
             </p>
           </div>
-        </motion.div>
-
-        {/* Pricing table */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
-          className="w-full max-w-2xl mb-8"
-        >
-          {/* Urgency header */}
-          <div className="bg-primary text-primary-foreground px-5 py-2.5 flex items-center justify-between mb-px">
-            <div className="flex items-center gap-2">
-              <span className="text-sm">⚡</span>
-              <span className="text-xs font-bold tracking-widest uppercase">Regular Pricing</span>
-            </div>
-            <span className="text-xs font-medium text-primary-foreground/80">Prices increase Oct 1</span>
-          </div>
-
-          {/* Column headers */}
-          <div className="grid grid-cols-3 bg-white/5 border border-white/10 border-b-0">
-            <div className="px-4 py-2.5 border-r border-white/10">
-              <span className="text-[10px] font-medium tracking-widest uppercase text-muted-foreground">Ticket</span>
-            </div>
-            <div className="px-4 py-2.5 border-r border-white/10 bg-primary/10 text-center">
-              <span className="text-[10px] font-bold tracking-widest uppercase text-primary">Regular</span>
-            </div>
-            <div className="px-4 py-2.5 text-center">
-              <span className="text-[10px] tracking-widest uppercase text-muted-foreground/60">Last Minute</span>
-            </div>
-          </div>
-
-          {/* Rows */}
-          {tickets.map((t, i) => (
-            <div key={i} className={`grid grid-cols-3 border border-white/10 border-t-0 ${t.best ? "bg-primary/5" : ""}`}>
-              <div className="px-4 py-3 border-r border-white/10 flex items-center gap-2">
-                {t.best && <span className="text-[9px] font-bold tracking-widest uppercase bg-primary text-primary-foreground px-1.5 py-0.5 shrink-0">Best</span>}
-                <span className="text-xs font-medium text-foreground leading-tight">{t.name}</span>
-              </div>
-              <div className="px-4 py-3 border-r border-white/10 bg-primary/5 text-center">
-                <span className="font-serif text-base text-primary">{t.regular}</span>
-                <span className="text-[10px] text-muted-foreground block">+ fee</span>
-                <span className="text-[10px] text-emerald-400/80 font-semibold block">Save {t.regularSave}</span>
-              </div>
-              <div className="px-4 py-3 text-center">
-                <span className="font-serif text-base text-foreground/40">{t.lastMinute}</span>
-                <span className="text-[10px] text-muted-foreground block">+ fee</span>
-              </div>
-            </div>
-          ))}
         </motion.div>
 
         {/* CTA */}
