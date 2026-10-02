@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import eeTimesLogo from "@assets/ee-times-logo.png";
+import semiWikiLogo from "@assets/IMG_7818_1790955521337.png";
 
 export function VenueSection() {
   return (
@@ -35,10 +36,15 @@ export function VenueSection() {
 
             <div className="pt-10 mt-10 border-t border-white/5">
               <p className="text-primary text-xs font-medium tracking-[0.25em] uppercase mb-5">
-                Official Media Partner
+                Official Media Partners
               </p>
-              <div className="mx-auto flex min-h-16 max-w-xs items-center justify-center border border-white/10 bg-white/[0.03] px-8 py-4">
-                <img src={eeTimesLogo} alt="EE Times" className="w-full max-w-[220px] h-auto object-contain" />
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <div className="flex min-h-24 w-full max-w-xs items-center justify-center border border-white/10 bg-white/[0.03] px-8 py-4">
+                  <img src={eeTimesLogo} alt="EE Times" className="w-full max-w-[220px] h-auto object-contain" />
+                </div>
+                <div className="flex min-h-24 w-full max-w-xs items-center justify-center border border-white/10 bg-white px-8 py-4">
+                  <img src={semiWikiLogo} alt="SemiWiki" className="w-full max-w-[220px] h-auto object-contain" />
+                </div>
               </div>
             </div>
 
