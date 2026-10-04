@@ -33,7 +33,7 @@ export const SPONSOR_TIERS: SponsorTier[] = [
    "rambus",
    "normalcomputing.svg",
    "silith",
-   "architectlabs.svg",
+   "architectlabs.png",
    "tetramem"
   ]
  },
