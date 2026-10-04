@@ -42,8 +42,7 @@ export function SponsorsSection({ onBecomeSponsor }: { onBecomeSponsor: () => vo
           className="sdeck"
           style={{
             marginTop: 44,
-            borderTop: "1px solid var(--line)",
-            paddingTop: 36,
+            paddingTop: 20,
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",

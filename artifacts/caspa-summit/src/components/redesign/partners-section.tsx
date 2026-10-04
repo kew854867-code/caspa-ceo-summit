@@ -47,9 +47,6 @@ export function PartnersSection({ onPress }: { onPress: () => void }) {
           <LogoGrid items={ALLIANCE_PARTNERS} id="alliancePartners" />
         </div>
 
-        <p className="dim" style={{ marginTop: 22, fontSize: 15 }}>
-          Panels moderated by journalists from Reuters, EE Times, Semiconductor Engineering and SemiWiki.
-        </p>
         <div style={{ marginTop: 34, textAlign: "center" }}>
           <button type="button" className="btn line" onClick={onPress}>
             Cover The Summit — apply for a media pass →
