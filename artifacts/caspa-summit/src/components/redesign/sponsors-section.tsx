@@ -43,14 +43,14 @@ export function SponsorsSection({ onBecomeSponsor }: { onBecomeSponsor: () => vo
         >
           <div>
             <span className="eyebrow">Sponsor The CEO Summit</span>
-            <h3 style={{ fontSize: "clamp(22px,2.4vw,30px)", margin: "6px 0 0" }}>Put your team in the room</h3>
+            <h3 style={{ fontSize: "clamp(22px,2.4vw,30px)", margin: "6px 0 0" }}>Put Your Team In The Room</h3>
             <p className="dim" style={{ maxWidth: 540, marginTop: 10 }}>
               Packages are built around what you actually need — from stage time to table seats. Tell us what a
               good outcome looks like and we will shape it around that.
             </p>
           </div>
           <button type="button" className="btn gold" onClick={onBecomeSponsor}>
-            Request the sponsorship deck →
+            Request The Sponsorship Deck →
           </button>
         </div>
       </div>

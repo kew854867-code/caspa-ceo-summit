@@ -43,7 +43,7 @@ export function RedesignNav({ active }: RedesignNavProps) {
             </Link>
           </Show>
           <Link href="/summit#tickets" className="btn gold sm">
-            Get tickets
+            Get Tickets
           </Link>
         </div>
       </div>

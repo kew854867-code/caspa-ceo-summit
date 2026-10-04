@@ -31,10 +31,10 @@ export function HeroSection() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Register now →
+            Register Now →
           </a>
           <Link className="btn line" href="/agenda">
-            See the agenda
+            See The Agenda
           </Link>
         </div>
       </div>

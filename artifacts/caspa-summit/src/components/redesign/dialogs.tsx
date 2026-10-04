@@ -100,7 +100,7 @@ function SponsorDialog({ onClose }: { onClose: () => void }) {
   const { submitted, bad, onSubmit } = useMailtoForm(onClose);
   return (
     <DialogShell
-      title="Request the sponsorship package"
+      title="Request The Sponsorship Package"
       subtitle="Leave your details and we will email you the package."
       onClose={onClose}
     >
@@ -135,7 +135,7 @@ function SponsorDialog({ onClose }: { onClose: () => void }) {
           </label>
           <input name="website" className="hp" tabIndex={-1} autoComplete="off" aria-hidden="true" />
           <button className="btn gold" type="submit">
-            Send me the package →
+            Send Me The Package →
           </button>
         </form>
       )}
@@ -147,7 +147,7 @@ function PressDialog({ onClose }: { onClose: () => void }) {
   const { submitted, bad, onSubmit } = useMailtoForm(onClose);
   return (
     <DialogShell
-      title="Apply for a media pass"
+      title="Apply For A Media Pass"
       subtitle="For working journalists and editors. We review every application and email a personal registration code to approved applicants."
       onClose={onClose}
     >
@@ -208,7 +208,7 @@ function PressDialog({ onClose }: { onClose: () => void }) {
           </p>
           <input name="website" className="hp" tabIndex={-1} autoComplete="off" aria-hidden="true" />
           <button className="btn gold" type="submit">
-            Submit application →
+            Submit Application →
           </button>
         </form>
       )}

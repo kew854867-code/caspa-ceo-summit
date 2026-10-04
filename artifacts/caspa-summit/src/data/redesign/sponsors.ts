@@ -131,7 +131,7 @@ export const RECAP_VIDEOS: { id: string; title: string; meta: string }[] = [
  },
  {
   "id": "F2eis4isQiA",
-  "title": "Fireside Chat with Jensen Huang",
+  "title": "Fireside Chat With Jensen Huang",
   "meta": "2023 Dinner Banquet · 1:00:28"
  },
  {
@@ -144,7 +144,7 @@ export const RECAP_VIDEOS: { id: string; title: string; meta: string }[] = [
 export const TICKETS: { hl: boolean; name: string; price: string; perks: string[]; href: string; cta: string }[] = [
  {
   "hl": false,
-  "name": "Hear it from the people deciding",
+  "name": "Hear It From The People Deciding",
   "price": "$399",
   "perks": [
    "Oct 23–24 keynotes and panels"

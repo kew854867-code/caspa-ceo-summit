@@ -23,7 +23,7 @@ export function WaysSection({
             <div className="wimg" style={{ backgroundImage: `url(${REDESIGN_BASE}img/panel.jpg)` }} />
             <div className="wb">
               <span className="eyebrow">Attend</span>
-              <h3>Hear it from the people deciding</h3>
+              <h3>Hear It From The People Deciding</h3>
               <a href="#tickets">GET TICKETS →</a>
             </div>
           </div>
@@ -31,7 +31,7 @@ export function WaysSection({
             <div className="wimg" style={{ backgroundImage: `url(${REDESIGN_BASE}img/award.jpg)` }} />
             <div className="wb">
               <span className="eyebrow">Sponsor</span>
-              <h3>Put your team in the room</h3>
+              <h3>Put Your Team In The Room</h3>
               <button type="button" className="waybtn" onClick={onSponsor}>
                 REQUEST THE SPONSORSHIP PACKAGE →
               </button>
@@ -41,7 +41,7 @@ export function WaysSection({
             <div className="wimg" style={{ backgroundImage: `url(${REDESIGN_BASE}img/snap.jpg)` }} />
             <div className="wb">
               <span className="eyebrow">Media</span>
-              <h3>Cover the summit</h3>
+              <h3>Cover The Summit</h3>
               <button type="button" className="waybtn" onClick={onPress}>
                 APPLY FOR A MEDIA PASS →
               </button>

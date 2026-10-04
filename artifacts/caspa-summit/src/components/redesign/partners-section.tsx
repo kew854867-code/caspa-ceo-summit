@@ -52,7 +52,7 @@ export function PartnersSection() {
         </p>
         <div style={{ marginTop: 34, textAlign: "center" }}>
           <button type="button" className="btn line" onClick={onPress}>
-            Cover the summit — apply for a media pass →
+            Cover The Summit — apply for a media pass →
           </button>
         </div>
       </div>
