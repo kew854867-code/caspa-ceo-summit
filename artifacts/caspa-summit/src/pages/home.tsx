@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { useReveal } from "@/components/redesign/use-reveal";
 import { RedesignNav } from "@/components/redesign/redesign-nav";
 import { RedesignFooter } from "@/components/redesign/redesign-footer";
@@ -9,10 +9,9 @@ import { PartnersSection } from "@/components/redesign/partners-section";
 import { RecapSection } from "@/components/redesign/recap-section";
 import { TicketsSection } from "@/components/redesign/tickets-section";
 import { VenueAbout, IntroSection } from "@/components/redesign/venue-about-intro";
-import { RedesignDialogs, type DialogKind } from "@/components/redesign/dialogs";
+import { openMail } from "@/components/redesign/mail-templates";
 
 export default function Home() {
-  const [dialog, setDialog] = useState<DialogKind | null>(null);
   const root = useRef<HTMLDivElement>(null);
   useReveal(root, []);
 
@@ -23,14 +22,13 @@ export default function Home() {
       <main>
         <SpeakersSection />
         <VenueAbout />
-        <SponsorsSection onBecomeSponsor={() => setDialog("sponsor")} />
-        <PartnersSection onPress={() => setDialog("press")} />
+        <SponsorsSection onBecomeSponsor={() => openMail("sponsor")} />
+        <PartnersSection onPress={() => openMail("press")} />
         <RecapSection />
         <TicketsSection />
         <IntroSection />
       </main>
       <RedesignFooter />
-      <RedesignDialogs kind={dialog} onClose={() => setDialog(null)} />
     </div>
   );
 }
