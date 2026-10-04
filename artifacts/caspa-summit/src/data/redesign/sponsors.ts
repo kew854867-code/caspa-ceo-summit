@@ -18,7 +18,7 @@ export const SPONSOR_TIERS: SponsorTier[] = [
   "c4": true,
   "cols": "c4",
   "logos": [
-   "credo",
+   "credo.svg",
    "siemens",
    "t3w",
    "fareast",

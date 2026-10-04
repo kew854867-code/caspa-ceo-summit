@@ -29,6 +29,9 @@ export function PartnersSection({ onPress }: { onPress: () => void }) {
               Media &amp; Alliance <em>Partners.</em>
             </h2>
           </div>
+          <button type="button" className="btn gold" onClick={onPress}>
+            Cover The Summit
+          </button>
         </div>
       </div>
 
@@ -45,12 +48,6 @@ export function PartnersSection({ onPress }: { onPress: () => void }) {
             <span className="eyebrow">Alliance Partners</span>
           </div>
           <LogoGrid items={ALLIANCE_PARTNERS} id="alliancePartners" />
-        </div>
-
-        <div style={{ marginTop: 34, textAlign: "center" }}>
-          <button type="button" className="btn line" onClick={onPress}>
-            Cover The Summit — apply for a media pass →
-          </button>
         </div>
       </div>
     </section>
