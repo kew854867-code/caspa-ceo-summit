@@ -17,7 +17,7 @@ export const FEATURED: Person[] = [
 
 export const MORE: Person[] = [
   { name: "Rajiv Khemani", title: "Executive Chairman, Upscale AI", company: "CEO, Velaura AI", photo: "rajiv-khemani.jpg" },
-  { name: "Avi Shetty", title: "Vice President", company: "Solidigm", photo: "avi-shetty.jpg" },
+  { name: "Avi Shetty", title: "Vice President", company: "Solidigm", photo: "avi-shetty-2.jpg" },
   { name: "Albert Kim", title: "Head", company: "Samsung Ventures America", photo: "albert-kim.jpg" },
   { name: "Albert Zhang", title: "CEO", company: "Silith", photo: "albert-zhang.jpg" },
   { name: "Andrew Tan", title: "Managing Director", company: "Salience Capital", photo: "andrew-tan.jpg" },
