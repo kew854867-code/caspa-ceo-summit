@@ -352,3 +352,5 @@
 
 .rsv3 .lgrid.c3{grid-template-columns:repeat(3,1fr)}
 @media(max-width:900px){.rsv3 .lgrid.c3{grid-template-columns:1fr}}
+
+.rsv3 .lg img[src$=".svg"]{width:100%;height:100%;object-fit:contain}
