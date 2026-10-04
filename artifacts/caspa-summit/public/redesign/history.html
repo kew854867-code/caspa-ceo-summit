@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="google" content="notranslate">
+<title>History — Past CASPA Summits</title>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.pg{max-width:1180px;margin:0 auto;padding:120px 24px 60px}
+.pg h1{font-family:'Playfair Display',serif;font-size:clamp(40px,6vw,72px);line-height:1.06;margin:6px 0 16px}
+.yr{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:22px;margin-top:44px}
+.yr .y{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--bg2)}
+.yr .th{position:relative;aspect-ratio:16/9;background-size:cover;background-position:center;cursor:pointer}
+.yr .th i{position:absolute;inset:0;margin:auto;width:64px;height:64px;border-radius:50%;background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.5)}
+.yr .th i:after{content:"";position:absolute;inset:0;margin:auto;width:0;height:0;border-top:11px solid transparent;border-bottom:11px solid transparent;border-left:18px solid #fff;left:3px}
+.yr .th iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.yr .b{padding:18px 20px 20px}
+.yr .b b{font-family:'Playfair Display',serif;font-size:20px;display:block}
+.yr .b span{color:var(--mute);font-size:13px;display:block;margin-top:6px}
+.yr .b .yout{display:inline-block;margin-top:12px;font-size:14px;color:var(--gold);text-decoration:underline}
+.note{color:var(--mute);font-size:15px;max-width:640px;line-height:1.6;margin-top:44px}
+</style>
+</head>
+<body class="rsv3">
+<nav><div class="wrap"><img src="assets/caspa-logo.png" alt="CASPA"><div class="links"><a href="index.html#speakers">Speakers</a><a href="agenda.html">Agenda</a><a href="index.html#sponsors">Sponsors</a><a href="history.html">History</a><a href="index.html#tickets">Tickets</a></div><a class="btn gold" style="padding:10px 20px" href="https://www.eventbrite.com/e/caspa-35th-annual-conference-dinner-banquet-the-ceo-summit-tickets-1994631439329?aff=oddtdtcreator" target="_blank" rel="noopener">Get tickets</a></div></nav>
+
+<div class="pg">
+  <span class="eyebrow">History</span>
+  <h1>Past CASPA <em>summits.</em></h1>
+  <p class="dim" style="font-size:19px;max-width:620px">35 years of annual conferences, banquets and fireside chats. Pick a year to relive it.</p>
+
+  <div class="yr" id="years"></div>
+
+  <p class="note">Every year since 1991, CASPA has brought the semiconductor community together. Highlights from recent years are below — for the full archive, visit our YouTube channel.</p>
+  <p style="margin-top:18px"><a class="btn gold" href="https://www.youtube.com/@CASPAOFFICE/videos" target="_blank" rel="noopener">More on YouTube ↗</a></p>
+</div>
+
+<footer><div class="wrap"><div><span style="display:inline-flex;align-items:center;gap:16px"><img src="assets/caspa-logo.png" style="height:34px"><span><span style="white-space:nowrap;display:block">© 2026 CASPA · office@caspa.com</span><span class="flinks" style="margin-top:14px;display:inline-flex;gap:22px"><a href="https://caspa.com/" target="_blank" rel="noopener noreferrer">CASPA official website ↗</a><a href="https://www.linkedin.com/company/chinese-american-semiconductor-professional-association/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></span></span></span></div><div>Santa Clara Convention Center<br>5001 Great America Pkwy, Santa Clara, CA 95054</div></div></footer>
+
+<script>
+const YEARS=[
+ {id:"aUwHrFS5kJ4",year:"2025",title:"2025 Annual Conference &amp; Dinner Banquet",meta:"Recap · 2:10"},
+ {id:"Ukoc7_vyLf0",year:"2024",title:"2024 Annual Conference &amp; Dinner Banquet",meta:"Summary · 2:14"},
+ {id:"F2eis4isQiA",year:"2023",title:"Fireside Chat with Jensen Huang",meta:"2023 Dinner Banquet · 1:00:28"}
+];
+document.getElementById('years').innerHTML=YEARS.map(v=>
+ `<div class="y"><div class="th" data-id="${v.id}" style="background-image:url(https://i.ytimg.com/vi/${v.id}/hqdefault.jpg)"><i></i></div>
+ <div class="b"><b>${v.year} · ${v.title}</b><span>${v.meta}</span>
+ <a class="yout" href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener">Watch on YouTube ↗</a></div></div>`).join('');
+document.querySelectorAll('.th').forEach(t=>t.onclick=()=>{const th=t;th.innerHTML=`<iframe src="https://www.youtube.com/embed/${th.dataset.id}?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;},{once:true});
+</script>
+</body>
+</html>

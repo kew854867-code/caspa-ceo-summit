@@ -48,7 +48,7 @@ const clerkAppearance = {
     colorInput: "#0F172A",
     colorInputForeground: "#F8FAFC",
     colorNeutral: "#9CAAC2",
-    fontFamily: "Inter, sans-serif",
+    fontFamily: "DM Sans, system-ui, sans-serif",
     borderRadius: "0px",
   },
   elements: {
@@ -152,6 +152,7 @@ function Router() {
       <Route path="/" component={HomeRedirect} />
       <Route path="/summit" component={Home} />
       <Route path="/program" component={ProgramPage} />
+      <Route path="/agenda" component={ProgramPage} />
       <Route path="/sponsorship" component={SponsorshipPage} />
       <Route path="/user-portal" component={UserPortal} />
       <Route path="/sign-in/*?" component={SignInPage} />

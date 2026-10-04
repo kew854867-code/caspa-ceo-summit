@@ -1,41 +1,33 @@
-import { HeroSection } from "@/components/sections/hero";
-import { AboutSection } from "@/components/sections/about";
-import { SpeakersSection } from "@/components/sections/speakers";
-import { VenueSection } from "@/components/sections/venue";
-import { RegistrationSection } from "@/components/sections/registration";
-import { Footer } from "@/components/layout/footer";
-import { SponsorshipSection } from "@/components/sections/sponsorship";
-import { motion, useScroll, useSpring } from "framer-motion";
-import { SiteNav } from "@/components/layout/site-nav";
+import { useState } from "react";
+import { RedesignNav } from "@/components/redesign/redesign-nav";
+import { RedesignFooter } from "@/components/redesign/redesign-footer";
+import { HeroSection } from "@/components/redesign/hero";
+import { SpeakersSection } from "@/components/redesign/speakers-section";
+import { SponsorsSection } from "@/components/redesign/sponsors-section";
+import { PartnersSection } from "@/components/redesign/partners-section";
+import { RecapSection } from "@/components/redesign/recap-section";
+import { TicketsSection } from "@/components/redesign/tickets-section";
+import { VenueAbout, IntroSection } from "@/components/redesign/venue-about-intro";
+import { RedesignDialogs, type DialogKind } from "@/components/redesign/dialogs";
 
 export default function Home() {
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  });
+  const [dialog, setDialog] = useState<DialogKind | null>(null);
 
   return (
-    <div className="min-h-screen bg-background text-foreground dark">
-      {/* Progress Bar */}
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-primary origin-left z-50"
-        style={{ scaleX }}
-      />
-
-      <SiteNav />
-
+    <div className="rsv3">
+      <RedesignNav active="speakers" />
+      <HeroSection />
       <main>
-        <HeroSection />
-        <AboutSection />
         <SpeakersSection />
-        <VenueSection />
-        <SponsorshipSection />
-        <RegistrationSection />
+        <VenueAbout />
+        <SponsorsSection onBecomeSponsor={() => setDialog("sponsor")} />
+        <PartnersSection />
+        <RecapSection />
+        <TicketsSection />
+        <IntroSection />
       </main>
-
-      <Footer />
+      <RedesignFooter />
+      <RedesignDialogs kind={dialog} onClose={() => setDialog(null)} />
     </div>
   );
 }
