@@ -155,7 +155,7 @@ export const TICKETS: { hl: boolean; name: string; price: string; perks: string[
  {
   "hl": true,
   "name": "Conference + Banquet",
-  "price": "$1,799",
+  "price": "$1,599",
   "perks": [
    "Both days, plus the banquet",
    "Save $99 vs. buying separately"
@@ -166,7 +166,7 @@ export const TICKETS: { hl: boolean; name: string; price: string; perks: string[
  {
   "hl": false,
   "name": "Dinner Banquet",
-  "price": "$1,399",
+  "price": "$1,299",
   "perks": [
    "Oct 24 evening with Lip-Bu Tan"
   ],
