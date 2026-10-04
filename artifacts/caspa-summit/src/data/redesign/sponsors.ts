@@ -60,18 +60,18 @@ export const SPONSOR_TIERS: SponsorTier[] = [
    "arm",
    "amd",
    "cadence",
-   "synopsys",
+   "synopsys.svg",
    "ase",
    "advantest",
    "jpmorgan",
    "ey",
    "sandisk",
    "umc",
-   "coherent",
+   "coherent.svg",
    "empyrean",
    "alchip",
    "semtech",
-   "innoscience",
+   "innoscience.svg",
    "diodes"
   ]
  }
