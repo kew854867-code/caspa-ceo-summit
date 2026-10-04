@@ -23,6 +23,7 @@ export const SPONSOR_TIERS: SponsorTier[] = [
    "siemens",
    "credo.svg",
    "rambus",
+   "normalcomputing.svg",
    "silith",
    "tetramem",
    "multibeam",
@@ -34,14 +35,6 @@ export const SPONSOR_TIERS: SponsorTier[] = [
    "t3w",
    "futurus",
    "youandi"
-  ]
- },
- {
-  "name": "Non-CEO Table Sponsors",
-  "c4": true,
-  "cols": "c4",
-  "logos": [
-   "normalcomputing.svg"
   ]
  },
  {
