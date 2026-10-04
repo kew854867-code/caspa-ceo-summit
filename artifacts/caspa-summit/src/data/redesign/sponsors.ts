@@ -38,6 +38,21 @@ export const SPONSOR_TIERS: SponsorTier[] = [
   ]
  },
  {
+  "name": "Display Tables",
+  "c4": true,
+  "cols": "c4",
+  "logos": [
+   "kaiyan",
+   "westerndigital",
+   "wiskind",
+   "tgvtech",
+   "architectlabs",
+   "puppygraph.svg",
+   "upmarket",
+   "phantafield"
+  ]
+ },
+ {
   "name": "CASPA Corporate Sponsors",
   "c4": true,
   "cols": "c4",
