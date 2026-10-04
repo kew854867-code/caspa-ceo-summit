@@ -21,7 +21,7 @@ export function VenueAbout() {
             <ul className="gl">
               <li>Student scholarships, presented at our annual banquet</li>
               <li>The CASPA Mentorship Program</li>
-              <li>Symposia, job fairs, and career events throughout the year</li>
+              <li>Symposium, job fairs, and career events throughout the year</li>
             </ul>
             <div className="stats2">
               <div>
