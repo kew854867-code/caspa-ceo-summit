@@ -81,7 +81,7 @@ function useMailtoForm(onClose: () => void) {
       .join(", ");
     if (checked) lines.push(`Coverage format: ${checked}`);
     const body = lines.join("\n");
-    window.location.href = `mailto:office@caspa.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:office@caspa.com?cc=JimmyCheng@caspa.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSubmitted(true);
   };
 

@@ -349,3 +349,6 @@
 @media(max-width:900px){.rsv3 .lgrid.c2{grid-template-columns:1fr}}
 
 .rsv3 .lg img[alt="statschippac"]{max-width:300px}
+
+.rsv3 .lgrid.c3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.rsv3 .lgrid.c3{grid-template-columns:1fr}}

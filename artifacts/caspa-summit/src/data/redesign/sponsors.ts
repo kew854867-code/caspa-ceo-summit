@@ -7,10 +7,11 @@ export const SPONSOR_TIERS: SponsorTier[] = [
  {
   "name": "Event Sponsors",
   "c4": false,
-  "cols": "c2",
+  "cols": "c3",
   "logos": [
+   "statschippac|Premier Sponsor",
    "solidigm|LED Sponsor",
-   "statschippac|Premier Sponsor"
+   "normalcomputing.svg|Non-CEO Table Sponsor"
   ]
  },
  {
@@ -18,23 +19,22 @@ export const SPONSOR_TIERS: SponsorTier[] = [
   "c4": true,
   "cols": "c4",
   "logos": [
-   "credo.svg",
-   "siemens",
-   "t3w",
-   "fareast",
-   "futurus",
-   "multibeam",
-   "opennetwork",
-   "sufastech",
-   "wgtech",
-   "youandi",
-   "westerndigital",
    "meta",
+   "westerndigital",
+   "siemens",
+   "credo.svg",
    "rambus",
-   "normalcomputing.svg",
    "silith",
-   "architectlabs.png",
-   "tetramem"
+   "tetramem",
+   "multibeam",
+   "architectlabs",
+   "sufastech",
+   "opennetwork",
+   "wgtech",
+   "fareast",
+   "t3w",
+   "futurus",
+   "youandi"
   ]
  },
  {
@@ -42,14 +42,14 @@ export const SPONSOR_TIERS: SponsorTier[] = [
   "c4": true,
   "cols": "c4",
   "logos": [
-   "kaiyan",
    "westerndigital",
-   "wiskind",
    "tgvtech",
    "architectlabs",
    "puppygraph.svg",
-   "upmarket",
-   "phantafield"
+   "phantafield",
+   "wiskind",
+   "kaiyan",
+   "upmarket"
   ]
  },
  {

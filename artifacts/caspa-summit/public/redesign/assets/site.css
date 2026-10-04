@@ -323,3 +323,6 @@ dialog.dlg{margin:auto;position:fixed;inset:0}
 @media(max-width:900px){.lgrid.c2{grid-template-columns:1fr}}
 
 .lg img[alt="statschippac"]{max-width:300px}
+
+.lgrid.c3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.lgrid.c3{grid-template-columns:1fr}}
