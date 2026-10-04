@@ -29,7 +29,7 @@ export function SponsorsSection({ onBecomeSponsor }: { onBecomeSponsor: () => vo
                 const [file, cap] = entry.split("|");
                 return (
                   <div key={entry} className={`lg${tier.cols === "c2" ? " big" : ""}${cap ? " cp" : ""}`}>
-                    <img loading="lazy" src={`${LOGO_BASE}${file}.png`} alt={file} />
+                    <img loading="lazy" src={`${LOGO_BASE}${file.includes(".") ? file : `${file}.png`}`} alt={file} />
                     {cap && <span className="cap">{cap}</span>}
                   </div>
                 );

@@ -31,9 +31,9 @@ export const SPONSOR_TIERS: SponsorTier[] = [
    "westerndigital",
    "meta",
    "rambus",
-   "text:Normal Computing",
+   "normalcomputing.svg",
    "silith",
-   "text:Architect Labs",
+   "architectlabs.svg",
    "tetramem"
   ]
  },
