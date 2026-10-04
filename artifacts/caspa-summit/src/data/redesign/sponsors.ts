@@ -24,7 +24,7 @@ export const SPONSOR_TIERS: SponsorTier[] = [
    "credo.svg",
    "rambus",
    "normalcomputing.svg",
-   "silith",
+   "silith-white",
    "tetramem",
    "multibeam",
    "architectlabs",
