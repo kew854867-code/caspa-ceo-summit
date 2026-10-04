@@ -50,7 +50,7 @@ function Slot({ item }: { item: AgendaItem }) {
   const modName = mod ? mod.split("|")[0] : null;
   const modOrg = mod ? mod.split("|")[1] : null;
   return (
-    <div className={`slot${soft ? " soft" : ""}${flags || ""}`}>
+    <div className={`slot${soft ? " soft" : ""}${flags ? ` ${flags}` : ""}`}>
       <div className="tm">{time}</div>
       <div>
         {type ? <span className="tag">{type}</span> : null}
