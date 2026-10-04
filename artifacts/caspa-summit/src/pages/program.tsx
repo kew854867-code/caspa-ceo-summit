@@ -1,4 +1,5 @@
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
+import { useReveal } from "@/components/redesign/use-reveal";
 import { Link } from "wouter";
 import { RedesignNav } from "@/components/redesign/redesign-nav";
 import { RedesignFooter } from "@/components/redesign/redesign-footer";
@@ -89,9 +90,11 @@ function DaySection({ day }: { day: AgendaDay }) {
 export default function ProgramPage() {
   const [filter, setFilter] = useState<string>("all");
   const chips = useMemo(() => DAY_CHIPS, []);
+  const root = useRef<HTMLDivElement>(null);
+  useReveal(root, [filter]);
 
   return (
-    <div className="rsv3">
+    <div className="rsv3" ref={root}>
       <RedesignNav active="agenda" />
 
       <header className="ahero">

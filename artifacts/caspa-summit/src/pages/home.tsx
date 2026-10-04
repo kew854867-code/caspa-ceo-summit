@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { useReveal } from "@/components/redesign/use-reveal";
 import { RedesignNav } from "@/components/redesign/redesign-nav";
 import { RedesignFooter } from "@/components/redesign/redesign-footer";
 import { HeroSection } from "@/components/redesign/hero";
@@ -12,16 +13,18 @@ import { RedesignDialogs, type DialogKind } from "@/components/redesign/dialogs"
 
 export default function Home() {
   const [dialog, setDialog] = useState<DialogKind | null>(null);
+  const root = useRef<HTMLDivElement>(null);
+  useReveal(root, []);
 
   return (
-    <div className="rsv3">
+    <div className="rsv3" ref={root}>
       <RedesignNav active="speakers" />
       <HeroSection />
       <main>
         <SpeakersSection />
         <VenueAbout />
         <SponsorsSection onBecomeSponsor={() => setDialog("sponsor")} />
-        <PartnersSection />
+        <PartnersSection onPress={() => setDialog("press")} />
         <RecapSection />
         <TicketsSection />
         <IntroSection />

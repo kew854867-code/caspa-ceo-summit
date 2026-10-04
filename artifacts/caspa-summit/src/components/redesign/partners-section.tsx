@@ -18,7 +18,7 @@ function LogoGrid({ items, id }: { items: [string, string | null][]; id?: string
   );
 }
 
-export function PartnersSection() {
+export function PartnersSection({ onPress }: { onPress: () => void }) {
   return (
     <section id="partners" className="partners">
       <div className="wrap">
