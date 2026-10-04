@@ -1,102 +1,63 @@
 // AUTO-GENERATED from public/redesign/index.html — do not edit by hand.
 export const LOGO_BASE = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/redesign/assets/logos/`;
 
-export type SponsorTier = { name: string; c4: boolean; logos: string[] };
+export type SponsorTier = { name: string; c4: boolean; cols: string; logos: string[] };
 
 export const SPONSOR_TIERS: SponsorTier[] = [
  {
-  "name": "Crown",
-  "c4": true,
-  "logos": [
-   "arm.png",
-   "ase.png",
-   "cadence.png",
-   "m37managementlp.png",
-   "solidigm.png",
-   "statschippac.png",
-   "synopsys.png"
-  ]
- },
- {
-  "name": "Diamond",
+  "name": "Event Sponsors",
   "c4": false,
+  "cols": "c2",
   "logos": [
-   "advantest.png",
-   "amd.png",
-   "bayviewgolfclub.png",
-   "chipagentsai.png",
-   "dimercoexpressgroup.png",
-   "diodes.png",
-   "epicsemi.png",
-   "ey.png",
-   "incube.png",
-   "innoscience.png",
-   "jpmorgan.png",
-   "meta.png",
-   "mloptic.png",
-   "omnionpower.png",
-   "schneider.png",
-   "sflab.png",
-   "sytrons.png",
-   "tetramem.png",
-   "westerndigital.png"
+   "solidigm|LED Sponsor",
+   "statschippac|Premier Sponsor"
   ]
  },
  {
-  "name": "Platinum",
-  "c4": false,
-  "logos": [
-   "alchip.png",
-   "allwin21.png",
-   "altara.png",
-   "ansys.png",
-   "coherent.png",
-   "collov.png",
-   "eastlink.png",
-   "empyrean.png",
-   "gvc.png",
-   "globalunichipguc.png",
-   "himalayacapital.png",
-   "iglobepartners.png",
-   "investhongkong.png",
-   "jjlake.png",
-   "kyec.png",
-   "msquare.png",
-   "megmeet.png",
-   "nexustest.png",
-   "nsysustipc.png",
-   "omelveny.png",
-   "orbbec.png",
-   "proficium.png",
-   "richtek.png",
-   "sambanova.png",
-   "sandisk.png",
-   "sarcina.png",
-   "semicore.png",
-   "semtech.png",
-   "sheppardmullin.png",
-   "silith.png",
-   "umc.png",
-   "upmarket.png",
-   "valkyriefund.png",
-   "wesco.png",
-   "ytec.png"
-  ]
- },
- {
-  "name": "Table sponsors",
+  "name": "Table Sponsors",
   "c4": true,
+  "cols": "c4",
   "logos": [
-   "credo.png",
-   "siemens.png",
-   "t3w.png",
-   "fareast.png",
-   "futurus.png",
-   "multibeam.png",
-   "opennetwork.png",
-   "sufastech.png",
-   "wgtech.png",
-   "youandi.png"
+   "credo",
+   "siemens",
+   "t3w",
+   "fareast",
+   "futurus",
+   "multibeam",
+   "opennetwork",
+   "sufastech",
+   "wgtech",
+   "youandi",
+   "westerndigital",
+   "meta",
+   "rambus",
+   "text:Normal Computing",
+   "silith",
+   "text:Architect Labs",
+   "tetramem"
+  ]
+ },
+ {
+  "name": "CASPA Corporate Sponsors",
+  "c4": true,
+  "cols": "c4",
+  "logos": [
+   "arm",
+   "amd",
+   "cadence",
+   "synopsys",
+   "ase",
+   "advantest",
+   "jpmorgan",
+   "ey",
+   "sandisk",
+   "umc",
+   "coherent",
+   "empyrean",
+   "alchip",
+   "semtech",
+   "innoscience",
+   "diodes"
   ]
  }
 ];

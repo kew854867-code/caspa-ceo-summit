@@ -316,3 +316,8 @@ dialog.dlg{margin:auto;position:fixed;inset:0}
 .pgroup:first-of-type{margin-top:12px}
 .phead{max-width:1180px;margin:0 auto 16px;padding:0 24px}
 .phead .eyebrow{margin-bottom:4px}
+
+.lgrid.c2{grid-template-columns:repeat(2,1fr)}
+.lg.cp{flex-direction:column;gap:14px;height:180px}
+.lg .cap{font:500 12px 'DM Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+@media(max-width:900px){.lgrid.c2{grid-template-columns:1fr}}

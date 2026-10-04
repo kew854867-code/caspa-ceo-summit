@@ -14,7 +14,7 @@ export function RedesignFooter() {
               CASPA official website ↗
             </a>
             <a
-              href="https://www.linkedin.com/company/chinese-american-semiconductor-professional-association/"
+              href="https://www.linkedin.com/in/caspa-office-595263a"
               target="_blank"
               rel="noopener noreferrer"
             >

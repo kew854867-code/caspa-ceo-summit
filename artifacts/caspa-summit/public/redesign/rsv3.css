@@ -342,3 +342,8 @@
 #mediaPartners{grid-template-columns:repeat(5,1fr)}
 #alliancePartners{grid-template-columns:repeat(7,1fr)}
 @media(max-width:900px){#mediaPartners{grid-template-columns:repeat(3,1fr)}#alliancePartners{grid-template-columns:repeat(4,1fr)}}
+
+.rsv3 .lgrid.c2{grid-template-columns:repeat(2,1fr)}
+.rsv3 .lg.cp{flex-direction:column;gap:14px;height:180px}
+.rsv3 .lg .cap{font:500 12px 'DM Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+@media(max-width:900px){.rsv3 .lgrid.c2{grid-template-columns:1fr}}

@@ -50,7 +50,7 @@ export const MORE: Person[] = [
 
 export const ALL: Person[] = [...FEATURED, ...MORE];
 
-export const TOP_NAMES: string[] = ["Lip-Bu Tan","Chenming Hu","Sassine Ghazi","Andrew Feldman","Irving Tan","Jimmy Cheng","Michael Hurlston","Bill Brennan","Ajit Manocha","Michael Xie","Dylan Patel","David Lam","Rodrigo Liang","Albert Kim","Ankur Gupta","Raghib Hussain","Hong Hou","Krishna Rangasayee"];
+export const TOP_NAMES: string[] = ["Gavin Uberti","Naveen Rao","Lip-Bu Tan","Chenming Hu","Sassine Ghazi","Andrew Feldman","Irving Tan","Jimmy Cheng","Michael Hurlston","Bill Brennan","Ajit Manocha","Michael Xie","Dylan Patel","David Lam","Rodrigo Liang","Raghib Hussain","Hong Hou","Krishna Rangasayee"];
 
 export const byName = (name: string): Person | undefined =>
   ALL.find((p) => p.name === name);

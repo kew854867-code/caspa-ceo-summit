@@ -18,12 +18,22 @@ export function SponsorsSection({ onBecomeSponsor }: { onBecomeSponsor: () => vo
         {SPONSOR_TIERS.map((tier) => (
           <div key={tier.name}>
             <div className="tier-l">{tier.name}</div>
-            <div className={`lgrid${tier.c4 ? " c4" : ""}`}>
-              {tier.logos.map((logo) => (
-                <div key={logo} className={`lg${tier.c4 ? " big" : ""}`}>
-                  <img loading="lazy" src={`${LOGO_BASE}${logo}`} alt={logo.replace(/\.\w+$/, "")} />
-                </div>
-              ))}
+            <div className={`lgrid ${tier.cols}`}>
+              {tier.logos.map((entry) => {
+                if (entry.startsWith("text:"))
+                  return (
+                    <div key={entry} className="lg tx">
+                      {entry.slice(5)}
+                    </div>
+                  );
+                const [file, cap] = entry.split("|");
+                return (
+                  <div key={entry} className={`lg${tier.cols === "c2" ? " big" : ""}${cap ? " cp" : ""}`}>
+                    <img loading="lazy" src={`${LOGO_BASE}${file}.png`} alt={file} />
+                    {cap && <span className="cap">{cap}</span>}
+                  </div>
+                );
+              })}
             </div>
           </div>
         ))}
