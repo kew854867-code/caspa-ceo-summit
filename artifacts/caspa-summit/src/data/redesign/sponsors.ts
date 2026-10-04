@@ -57,7 +57,7 @@ export const SPONSOR_TIERS: SponsorTier[] = [
   "c4": true,
   "cols": "c4",
   "logos": [
-   "arm",
+   "arm.svg",
    "amd",
    "cadence",
    "synopsys.svg",
@@ -69,8 +69,8 @@ export const SPONSOR_TIERS: SponsorTier[] = [
    "umc",
    "coherent.svg",
    "empyrean",
-   "alchip",
-   "semtech",
+   "alchip.svg",
+   "semtech.svg",
    "innoscience.svg",
    "diodes"
   ]
