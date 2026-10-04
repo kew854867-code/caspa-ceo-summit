@@ -321,3 +321,5 @@ dialog.dlg{margin:auto;position:fixed;inset:0}
 .lg.cp{flex-direction:column;gap:14px;height:180px}
 .lg .cap{font:500 12px 'DM Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
 @media(max-width:900px){.lgrid.c2{grid-template-columns:1fr}}
+
+.lg img[alt="statschippac"]{max-width:300px}
