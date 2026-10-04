@@ -7,11 +7,10 @@ export const SPONSOR_TIERS: SponsorTier[] = [
  {
   "name": "Event Sponsors",
   "c4": false,
-  "cols": "c3",
+  "cols": "c2",
   "logos": [
    "statschippac|Premier Sponsor",
-   "solidigm|LED Sponsor",
-   "normalcomputing.svg|Non-CEO Table Sponsor"
+   "solidigm|LED Sponsor"
   ]
  },
  {
@@ -20,7 +19,7 @@ export const SPONSOR_TIERS: SponsorTier[] = [
   "cols": "c4",
   "logos": [
    "meta",
-   "westerndigital",
+   "wd.svg",
    "siemens",
    "credo.svg",
    "rambus",
@@ -38,11 +37,19 @@ export const SPONSOR_TIERS: SponsorTier[] = [
   ]
  },
  {
+  "name": "Non-CEO Table Sponsors",
+  "c4": true,
+  "cols": "c4",
+  "logos": [
+   "normalcomputing.svg"
+  ]
+ },
+ {
   "name": "Display Tables",
   "c4": true,
   "cols": "c4",
   "logos": [
-   "westerndigital",
+   "wd.svg",
    "tgvtech",
    "architectlabs",
    "puppygraph.svg",
