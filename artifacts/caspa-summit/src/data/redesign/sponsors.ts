@@ -51,29 +51,6 @@ export const SPONSOR_TIERS: SponsorTier[] = [
    "kaiyan",
    "upmarket"
   ]
- },
- {
-  "name": "CASPA Corporate Sponsors",
-  "c4": true,
-  "cols": "c4",
-  "logos": [
-   "arm.svg",
-   "synopsys.svg",
-   "cadence",
-   "amd",
-   "ase",
-   "jpmorgan",
-   "ey",
-   "advantest",
-   "sandisk",
-   "umc",
-   "coherent.svg",
-   "semtech.svg",
-   "diodes",
-   "innoscience.svg",
-   "empyrean",
-   "alchip.svg"
-  ]
  }
 ];
 
