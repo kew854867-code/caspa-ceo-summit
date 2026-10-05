@@ -41,7 +41,7 @@ export function VenueAbout() {
           <div className="mosaic2">
             <img className="wide" src={`${REDESIGN_BASE}img/scholar.jpg`} alt="CASPA scholarship recipients on stage" />
             <img src={`${REDESIGN_BASE}img/net.jpg`} alt="" />
-            <img src={`${REDESIGN_BASE}img/lisa.jpg`} alt="" />
+            <img src={`${REDESIGN_BASE}img/lisa-banquet.jpg`} alt="" />
           </div>
         </div>
       </section>
