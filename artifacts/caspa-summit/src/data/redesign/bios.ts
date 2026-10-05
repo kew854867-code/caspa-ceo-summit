@@ -405,4 +405,8 @@ export const BIOS: Record<string, Bio> = {
   "bio": "Nitin Dahad is a journalist at EE Times covering the global semiconductor and electronics industry. An electronic engineering graduate of City University, London, he began his career as an engineer at National Semiconductor, was part of the startup team that took ARC International to the U.S. market and to IPO, and co-founded The Chilli, an early publication serving the electronics startup scene.",
   "links": [["LinkedIn", "https://www.linkedin.com/in/nitindahad/"]]
  },
+ "Nan Zhou": {
+  "bio": "",
+  "links": [["LinkedIn", "https://www.linkedin.com/in/nan-zhou-3ba97213"]]
+ },
 };
