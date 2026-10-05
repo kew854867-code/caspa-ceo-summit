@@ -63,10 +63,17 @@ function Slot({ item }: { item: AgendaItem }) {
           </div>
         ) : null}
         {mod ? (
-          <div className="mod">
-            Moderated by<b>{modName}</b>
-            {modOrg ? <i>{modOrg}</i> : null}
-          </div>
+          byName(modName || "") ? (
+            <div className="modrow">
+              <span className="modl">Moderated by</span>
+              <Person name={modName as string} />
+            </div>
+          ) : (
+            <div className="mod">
+              Moderated by<b>{modName}</b>
+              {modOrg ? <i>{modOrg}</i> : null}
+            </div>
+          )
         ) : null}
       </div>
     </div>

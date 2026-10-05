@@ -12,13 +12,14 @@ function initials(name: string) {
 
 function PersonCard({ person, onOpen }: { person: Person; onOpen: () => void }) {
   const [broken, setBroken] = useState(false);
+  const clickable = Boolean(BIOS[person.name]);
   return (
-    <div className="card" data-name={person.name} tabIndex={0} onClick={onOpen} onKeyDown={(e) => {
+    <div className="card" data-name={person.name} tabIndex={clickable ? 0 : undefined} style={clickable ? undefined : { cursor: "default" }} onClick={clickable ? onOpen : undefined} onKeyDown={clickable ? (e) => {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
         onOpen();
       }
-    }}>
+    } : undefined}>
       <div className="ph">
         {broken ? (
           <i className="ini">{initials(person.name)}</i>
@@ -120,7 +121,7 @@ export function SpeakersSection() {
             className="btn line"
             onClick={() => setOpen((o) => !o)}
           >
-            {open ? "Show fewer ↑" : "See all 40 speakers →"}
+            {open ? "Show fewer ↑" : `See all ${ALL.length} speakers →`}
           </button>
         </div>
         <div className="feat">

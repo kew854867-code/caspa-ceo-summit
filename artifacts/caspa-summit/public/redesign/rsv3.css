@@ -356,3 +356,6 @@
 .rsv3 .lg img[src$=".svg"]{width:100%;height:100%;object-fit:contain}
 
 .rsv3 .tier .p .pill{position:static;margin:0 0 0 14px;vertical-align:middle;font-size:11px}
+
+.rsv3 .modrow{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:18px}
+.rsv3 .modl{font:500 12px 'DM Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}

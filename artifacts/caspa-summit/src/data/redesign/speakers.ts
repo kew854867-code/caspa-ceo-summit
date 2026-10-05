@@ -46,6 +46,14 @@ export const MORE: Person[] = [
   { name: "Stacy Rasgon", title: "Managing Director", company: "Bernstein", photo: "stacy-rasgon.jpg" },
   { name: "Sunghyun Park", title: "CEO", company: "Rebellions", photo: "sunghyun-park.jpg" },
   { name: "Umesh Padval", title: "Managing Partner", company: "Seligman Ventures", photo: "umesh-padval.jpg" },
+  { name: "Austin Lyons", title: "Senior Analyst", company: "Creative Strategies", photo: "austin-lyons.jpg" },
+  { name: "Brandon Wang", title: "VP", company: "Synopsys", photo: "brandon-wang.jpg" },
+  { name: "Dan Armbrust", title: "Co-founder", company: "Silicon Catalyst", photo: "dan-armbrust.jpg" },
+  { name: "Daniel Nenni", title: "Founder", company: "SemiWiki", photo: "daniel-nenni.jpg" },
+  { name: "Edward Sperling", title: "Editor in Chief", company: "Semiconductor Engineering", photo: "edward-sperling.jpg" },
+  { name: "Max Cherney", title: "Tech Correspondent", company: "Reuters", photo: "max-cherney-tech-correspondent-reuters.jpg" },
+  { name: "Nan Zhou", title: "Director", company: "Temasek", photo: "nan-zhou.jpg" },
+  { name: "Nitin Dahad", title: "Executive Editor", company: "EE Times", photo: "nitin-dahad.jpg" },
 ];
 
 export const ALL: Person[] = [...FEATURED, ...MORE];
