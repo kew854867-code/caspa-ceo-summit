@@ -376,5 +376,33 @@ export const BIOS: Record<string, Bio> = {
     "https://www.linkedin.com/in/ge-gary-wang-642b221/"
    ]
   ]
- }
+ },
+ "Austin Lyons": {
+  "bio": "Austin Lyons is a senior analyst at Creative Strategies and the author of the Chipstrat semiconductor newsletter. Earlier in his career he was a product manager on John Deere's autonomous tractor team and a hardware engineer at Intel. He holds an MS in electrical engineering from the University of Illinois Urbana-Champaign and an MBA from the University of Iowa.",
+  "links": [["LinkedIn", "https://www.linkedin.com/in/austinlyons/"]]
+ },
+ "Brandon Wang": {
+  "bio": "Brandon Wang is vice president of the Corporate Strategy Group at Synopsys, where he oversees corporate technology roadmaps, strategic partnerships and M&A, and heads the Chief Innovation Office. Before joining Synopsys in 2018, he spent more than two decades in senior roles at Cadence, Arm, Qualcomm and Lattice. He holds 10 patents and an MBA from the Wharton School.",
+  "links": [["LinkedIn", "https://www.linkedin.com/in/wangbrandon/"], ["Website", "https://brandon-on-tech.com/"]]
+ },
+ "Dan Armbrust": {
+  "bio": "Dan Armbrust is a co-founder and board member of Silicon Catalyst, the semiconductor startup incubator, and its initial CEO. He previously served as president and CEO of the SEMATECH consortium and spent more than 25 years at IBM. He advises and sits on the boards of many semiconductor startups, and serves on the Industrial Advisory Committee that advises the U.S. Department of Commerce on CHIPS Act R&D strategy.",
+  "links": [["LinkedIn", "https://www.linkedin.com/in/daniel-armbrust-086a2725/"]]
+ },
+ "Daniel Nenni": {
+  "bio": "Daniel Nenni is the founder of SemiWiki.com, an online forum and knowledge hub for semiconductor professionals that went online in 2011. A Silicon Valley veteran with more than four decades in the industry, he has worked in semiconductor IP, EDA, and chip design and manufacturing. He is the author of books including Fabless: The Transformation of the Semiconductor Industry.",
+  "links": [["LinkedIn", "https://www.linkedin.com/in/danielnenni/"]]
+ },
+ "Edward Sperling": {
+  "bio": "Ed Sperling is editor in chief of Semiconductor Engineering and a frequent moderator and speaker in Silicon Valley. He was previously a contributing editor at Forbes and editor in chief of Electronic News and Electronic Business, with earlier senior editorial roles at Ziff-Davis and CMP Publications. He began his career as a daily newspaper investigative reporter.",
+  "links": []
+ },
+ "Max Cherney": {
+  "bio": "Max Cherney is a technology correspondent at Reuters in San Francisco, covering chips and AI in the U.S. He joined Reuters in 2023 after nearly a decade of reporting on technology and business, including at Barron's, Protocol and the Silicon Valley Business Journal.",
+  "links": [["LinkedIn", "https://www.linkedin.com/in/maxcherney/"]]
+ },
+ "Nitin Dahad": {
+  "bio": "Nitin Dahad is a journalist at EE Times covering the global semiconductor and electronics industry. An electronic engineering graduate of City University, London, he began his career as an engineer at National Semiconductor, was part of the startup team that took ARC International to the U.S. market and to IPO, and co-founded The Chilli, an early publication serving the electronics startup scene.",
+  "links": [["LinkedIn", "https://www.linkedin.com/in/nitindahad/"]]
+ },
 };
