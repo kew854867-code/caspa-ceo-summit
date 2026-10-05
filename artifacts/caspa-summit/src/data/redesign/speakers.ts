@@ -17,7 +17,7 @@ export const FEATURED: Person[] = [
 
 export const MORE: Person[] = [
   { name: "Rajiv Khemani", title: "Executive Chairman, Upscale AI", company: "CEO, Velaura AI", photo: "rajiv-khemani.jpg" },
-  { name: "Avi Shetty", title: "Vice President", company: "Solidigm", photo: "avi-shetty-2.jpg" },
+  { name: "Avi Shetty", title: "Vice President", company: "Solidigm", photo: "avi-shetty-3.jpg" },
   { name: "Albert Kim", title: "Head", company: "Samsung Ventures America", photo: "albert-kim.jpg" },
   { name: "Albert Zhang", title: "CEO", company: "Silith", photo: "albert-zhang.jpg" },
   { name: "Andrew Tan", title: "Managing Director", company: "Salience Capital", photo: "andrew-tan.jpg" },
@@ -36,7 +36,7 @@ export const MORE: Person[] = [
   { name: "Krishna Rangasayee", title: "CEO", company: "Sima.ai", photo: "krishna-rangasayee.jpg" },
   { name: "Mark Wade", title: "CEO", company: "Ayar Labs", photo: "mark-wade.jpg" },
   { name: "Mary Ellen Randall", title: "President & CEO", company: "IEEE", photo: "mary-ellen-randall.jpg" },
-  { name: "Melton Chang", title: "President", company: "Schneider Electric Power Systems", photo: "melton-chang.jpg" },
+  { name: "Melton Chang", title: "President", company: "Schneider Electric Power Systems", photo: "melton-chang-2.jpg" },
   { name: "Michael Hurlston", title: "CEO", company: "Lumentum", photo: "michael-hurlston.jpg" },
   { name: "Michael Xie", title: "President & Co-founder", company: "Fortinet", photo: "michael-xie.jpg" },
   { name: "Naveen Rao", title: "CEO", company: "Unconventional AI", photo: "naveen-rao.jpg" },
@@ -47,13 +47,13 @@ export const MORE: Person[] = [
   { name: "Sunghyun Park", title: "CEO", company: "Rebellions", photo: "sunghyun-park.jpg" },
   { name: "Umesh Padval", title: "Managing Partner", company: "Seligman Ventures", photo: "umesh-padval.jpg" },
   { name: "Austin Lyons", title: "Senior Analyst", company: "Creative Strategies", photo: "austin-lyons.jpg" },
-  { name: "Brandon Wang", title: "VP", company: "Synopsys", photo: "brandon-wang.jpg" },
-  { name: "Dan Armbrust", title: "Co-founder", company: "Silicon Catalyst", photo: "dan-armbrust-2.jpg" },
-  { name: "Daniel Nenni", title: "Founder", company: "SemiWiki", photo: "daniel-nenni.jpg" },
-  { name: "Edward Sperling", title: "Editor in Chief", company: "Semiconductor Engineering", photo: "edward-sperling-2.jpg" },
-  { name: "Max Cherney", title: "Tech Correspondent", company: "Reuters", photo: "max-cherney-2.jpg" },
+  { name: "Brandon Wang", title: "VP", company: "Synopsys", photo: "brandon-wang-2.jpg" },
+  { name: "Dan Armbrust", title: "Co-founder", company: "Silicon Catalyst", photo: "dan-armbrust-3.jpg" },
+  { name: "Daniel Nenni", title: "Founder", company: "SemiWiki", photo: "daniel-nenni-2.jpg" },
+  { name: "Edward Sperling", title: "Editor in Chief", company: "Semiconductor Engineering", photo: "edward-sperling-3.jpg" },
+  { name: "Max Cherney", title: "Tech Correspondent", company: "Reuters", photo: "max-cherney-3.jpg" },
   { name: "Nan Zhou", title: "Director", company: "Temasek", photo: "nan-zhou.jpg" },
-  { name: "Nitin Dahad", title: "Executive Editor", company: "EE Times", photo: "nitin-dahad.jpg" },
+  { name: "Nitin Dahad", title: "Executive Editor", company: "EE Times", photo: "nitin-dahad-2.jpg" },
 ];
 
 export const ALL: Person[] = [...FEATURED, ...MORE];
