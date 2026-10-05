@@ -29,6 +29,7 @@ export const SPONSOR_TIERS: SponsorTier[] = [
    "tetramem",
    "multibeam",
    "infraeo",
+   "deepweave",
    "architectlabs",
    "sufastech",
    "opennetwork",
