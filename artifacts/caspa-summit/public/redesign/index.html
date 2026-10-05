@@ -128,7 +128,7 @@
 <script>
 const card=p=>`<div class="card" data-name="${p[0]}" tabindex="0"><div class="ph"><img loading="lazy" src="${B+p[3]}" alt="${p[0]}" onerror="this.outerHTML='<i class=ini>'+this.alt.split(' ').map(w=>w[0]).join('').slice(0,2)+'</i>'"></div><h4>${p[0]}</h4><div class="r">${p[1]}</div>${p[2]?`<div class="o">${p[2]}</div>`:''}</div>`;
 const TOP=['Lip-Bu Tan','Chenming Hu','Sassine Ghazi','Andrew Feldman','Irving Tan','Jimmy Cheng','Michael Hurlston','Bill Brennan','Ajit Manocha','Michael Xie','Dylan Patel','David Lam','Rodrigo Liang','Raghib Hussain','Hong Hou','Krishna Rangasayee','Gavin Uberti','Naveen Rao'];
-const topP=TOP.map(byName), rest=ALL.filter(p=>!TOP.includes(p[0]));
+const topP=TOP.map(byName), rest=ALL.filter(p=>!TOP.includes(p[0])&&p[0]!=='Gary Wang');
 document.getElementById('feat').innerHTML=topP.map(p=>card(p).replace('class="card"','class="card rv"')).join('');
 document.getElementById('more').innerHTML=rest.map(card).join('');
 const sa=document.getElementById('seeall'),mo=document.getElementById('more');

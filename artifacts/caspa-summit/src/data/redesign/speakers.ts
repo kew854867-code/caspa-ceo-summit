@@ -36,7 +36,7 @@ export const MORE: Person[] = [
   { name: "Krishna Rangasayee", title: "CEO", company: "Sima.ai", photo: "krishna-rangasayee.jpg" },
   { name: "Mark Wade", title: "CEO", company: "Ayar Labs", photo: "mark-wade.jpg" },
   { name: "Mary Ellen Randall", title: "President & CEO", company: "IEEE", photo: "mary-ellen-randall.jpg" },
-  { name: "Melton Chang", title: "Executive Vice President", company: "Schneider Electric Power Systems", photo: "melton-chang.jpg" },
+  { name: "Melton Chang", title: "President", company: "Schneider Electric Power Systems", photo: "melton-chang.jpg" },
   { name: "Michael Hurlston", title: "CEO", company: "Lumentum", photo: "michael-hurlston.jpg" },
   { name: "Michael Xie", title: "President & Co-founder", company: "Fortinet", photo: "michael-xie.jpg" },
   { name: "Naveen Rao", title: "CEO", company: "Unconventional AI", photo: "naveen-rao.jpg" },
@@ -57,6 +57,10 @@ export const MORE: Person[] = [
 ];
 
 export const ALL: Person[] = [...FEATURED, ...MORE];
+
+// Shown in the homepage speaker lists. Gary Wang stays in ALL so the agenda can still show him.
+export const HIDDEN_FROM_LISTS = ["Gary Wang"];
+export const LISTED: Person[] = ALL.filter((p) => !HIDDEN_FROM_LISTS.includes(p.name));
 
 export const TOP_NAMES: string[] = ["Lip-Bu Tan","Chenming Hu","Sassine Ghazi","Andrew Feldman","Irving Tan","Jimmy Cheng","Michael Hurlston","Bill Brennan","Ajit Manocha","Michael Xie","Dylan Patel","David Lam","Rodrigo Liang","Raghib Hussain","Hong Hou","Krishna Rangasayee","Gavin Uberti","Naveen Rao"];
 

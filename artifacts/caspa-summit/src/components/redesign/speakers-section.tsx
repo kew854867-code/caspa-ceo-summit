@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ALL, byName, PHOTO_BASE, topSpeakers, type Person } from "@/data/redesign/speakers";
+import { LISTED, byName, PHOTO_BASE, topSpeakers, type Person } from "@/data/redesign/speakers";
 import { BIOS } from "@/data/redesign/bios";
 
 function initials(name: string) {
@@ -106,7 +106,7 @@ export function SpeakersSection() {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
 
-  const rest = ALL.filter((p) => !topSpeakers.includes(p));
+  const rest = LISTED.filter((p) => !topSpeakers.includes(p));
 
   return (
     <section id="speakers">
@@ -121,7 +121,7 @@ export function SpeakersSection() {
             className="btn line"
             onClick={() => setOpen((o) => !o)}
           >
-            {open ? "Show fewer ↑" : `See all ${ALL.length} speakers →`}
+            {open ? "Show fewer ↑" : `See all ${LISTED.length} speakers →`}
           </button>
         </div>
         <div className="feat">
