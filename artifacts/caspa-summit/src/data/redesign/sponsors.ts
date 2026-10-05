@@ -38,7 +38,8 @@ export const SPONSOR_TIERS: SponsorTier[] = [
    "himalaya",
    "t3w",
    "futurus",
-   "youandi"
+   "youandi",
+   "playbook-openext"
   ]
  },
  {
