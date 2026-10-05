@@ -6,7 +6,7 @@ export function HeroSection() {
     <header className="hero">
       <div className="vbg">
         <video
-          src={`${REDESIGN_BASE}hero-loop.mp4`}
+          src={`${REDESIGN_BASE}hero-loop-2.mp4`}
           poster={`${REDESIGN_BASE}hero-poster.jpg`}
           autoPlay
           muted

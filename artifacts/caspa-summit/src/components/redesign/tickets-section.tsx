@@ -1,7 +1,4 @@
-import { REDESIGN_BASE } from "@/data/redesign/base";
 import { TICKETS } from "@/data/redesign/sponsors";
-
-const TICKET_IMAGES = ["img/aud.jpg", "img/banq.jpg", "img/fire.jpg"] as const;
 
 export function TicketsSection() {
   return (
@@ -17,14 +14,14 @@ export function TicketsSection() {
           </p>
         </div>
         <div className="tiers rv">
-          {TICKETS.map((t, i) => (
+          {TICKETS.map((t) => (
             <div key={t.name} className={`tier${t.hl ? " hl" : ""}`}>
-              <div className="timg" style={{ backgroundImage: `url(${REDESIGN_BASE}${TICKET_IMAGES[i]})` }}>
-                {t.hl ? <span className="pill">BEST VALUE</span> : null}
-              </div>
               <div className="tb">
                 <h3>{t.name}</h3>
-                <div className="p">{t.price}</div>
+                <div className="p">
+                  {t.price}
+                  {t.hl ? <span className="pill">BEST VALUE</span> : null}
+                </div>
                 <ul>
                   {t.perks.map((perk) => (
                     <li key={perk}>{perk}</li>

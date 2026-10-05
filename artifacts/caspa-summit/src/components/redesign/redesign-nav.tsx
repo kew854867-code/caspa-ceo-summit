@@ -23,9 +23,6 @@ export function RedesignNav({ active }: RedesignNavProps) {
           <Link href="/summit#sponsors" className={active === "sponsors" ? "on" : undefined}>
             Sponsors
           </Link>
-          <a href="/redesign/history.html" target="_blank" rel="noopener">
-            History
-          </a>
           <Link href="/summit#tickets" className={active === "tickets" ? "on" : undefined}>
             Tickets
           </Link>

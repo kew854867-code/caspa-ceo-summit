@@ -328,3 +328,5 @@ dialog.dlg{margin:auto;position:fixed;inset:0}
 @media(max-width:900px){.lgrid.c3{grid-template-columns:1fr}}
 
 .lg img[src$=".svg"]{width:100%;height:100%;object-fit:contain}
+
+.tier .p .pill{position:static;margin:0 0 0 14px;vertical-align:middle;font-size:11px}

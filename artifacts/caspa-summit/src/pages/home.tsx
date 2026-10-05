@@ -6,7 +6,6 @@ import { HeroSection } from "@/components/redesign/hero";
 import { SpeakersSection } from "@/components/redesign/speakers-section";
 import { SponsorsSection } from "@/components/redesign/sponsors-section";
 import { PartnersSection } from "@/components/redesign/partners-section";
-import { RecapSection } from "@/components/redesign/recap-section";
 import { TicketsSection } from "@/components/redesign/tickets-section";
 import { VenueAbout, IntroSection } from "@/components/redesign/venue-about-intro";
 import { openMail } from "@/components/redesign/mail-templates";
@@ -24,7 +23,6 @@ export default function Home() {
         <VenueAbout />
         <SponsorsSection onBecomeSponsor={() => openMail("sponsor")} />
         <PartnersSection onPress={() => openMail("press")} />
-        <RecapSection />
         <TicketsSection />
         <IntroSection />
       </main>
