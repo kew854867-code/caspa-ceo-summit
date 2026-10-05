@@ -48,10 +48,10 @@ export const MORE: Person[] = [
   { name: "Umesh Padval", title: "Managing Partner", company: "Seligman Ventures", photo: "umesh-padval.jpg" },
   { name: "Austin Lyons", title: "Senior Analyst", company: "Creative Strategies", photo: "austin-lyons.jpg" },
   { name: "Brandon Wang", title: "VP", company: "Synopsys", photo: "brandon-wang.jpg" },
-  { name: "Dan Armbrust", title: "Co-founder", company: "Silicon Catalyst", photo: "dan-armbrust.jpg" },
+  { name: "Dan Armbrust", title: "Co-founder", company: "Silicon Catalyst", photo: "dan-armbrust-2.jpg" },
   { name: "Daniel Nenni", title: "Founder", company: "SemiWiki", photo: "daniel-nenni.jpg" },
-  { name: "Edward Sperling", title: "Editor in Chief", company: "Semiconductor Engineering", photo: "edward-sperling.jpg" },
-  { name: "Max Cherney", title: "Tech Correspondent", company: "Reuters", photo: "max-cherney-tech-correspondent-reuters.jpg" },
+  { name: "Edward Sperling", title: "Editor in Chief", company: "Semiconductor Engineering", photo: "edward-sperling-2.jpg" },
+  { name: "Max Cherney", title: "Tech Correspondent", company: "Reuters", photo: "max-cherney-2.jpg" },
   { name: "Nan Zhou", title: "Director", company: "Temasek", photo: "nan-zhou.jpg" },
   { name: "Nitin Dahad", title: "Executive Editor", company: "EE Times", photo: "nitin-dahad.jpg" },
 ];
