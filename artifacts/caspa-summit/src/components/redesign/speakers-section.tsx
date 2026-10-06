@@ -121,7 +121,7 @@ export function SpeakersSection() {
             className="btn line"
             onClick={() => setOpen((o) => !o)}
           >
-            {open ? "Show fewer ↑" : `See all ${LISTED.length} speakers →`}
+            {open ? "Show Fewer ↑" : `See All ${LISTED.length} Speakers →`}
           </button>
         </div>
         <div className="feat">

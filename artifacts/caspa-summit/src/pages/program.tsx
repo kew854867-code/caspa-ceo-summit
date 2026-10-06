@@ -107,13 +107,13 @@ export default function ProgramPage() {
       <header className="ahero">
         <div className="wrap">
           <span className="eyebrow">Oct 23–24, 2026 · Santa Clara Convention Center</span>
-          <h1>The 2026 agenda</h1>
+          <h1>The 2026 Agenda</h1>
           <p>
             Two days, one stage. From the industry outlook to wafer-scale AI, and a closing evening with the CEO
             of Intel.
           </p>
           <Link className="btn gold" href="/summit#tickets">
-            Get your ticket →
+            Get Your Ticket →
           </Link>
         </div>
       </header>
@@ -143,10 +143,10 @@ export default function ProgramPage() {
         <div className="wrap">
           <span className="eyebrow">Seats are limited</span>
           <h2>
-            Be in the room for <em>all of it.</em>
+            Be In The Room For <em>All Of It.</em>
           </h2>
           <Link className="btn gold" href="/summit#tickets">
-            Get your ticket →
+            Get Your Ticket →
           </Link>
           <p className="dim" style={{ marginTop: 22, fontSize: 14 }}>
             Schedule and speakers are subject to change.

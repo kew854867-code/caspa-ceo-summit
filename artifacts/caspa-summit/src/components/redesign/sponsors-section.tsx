@@ -8,7 +8,7 @@ export function SponsorsSection({ onBecomeSponsor }: { onBecomeSponsor: () => vo
           <div>
             <span className="eyebrow">Backed By The Industry</span>
             <h2>
-              Trusted by the companies <em>building it.</em>
+              Trusted By The Companies <em>Building It.</em>
             </h2>
           </div>
           <button type="button" className="btn gold" onClick={onBecomeSponsor}>

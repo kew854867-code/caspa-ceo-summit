@@ -33,8 +33,8 @@ function TemplateDialog({ onClose }: { onClose: () => void }) {
         <button type="button" className="x" onClick={onClose} aria-label="Close">
           ×
         </button>
-        <span className="eyebrow">Need sign-off to attend?</span>
-        <h3>Email template for your leadership team</h3>
+        <span className="eyebrow">Need Sign-Off To Attend?</span>
+        <h3>Email Template For Your Leadership Team</h3>
         <p className="tpl-sub">Replace the bracketed names, then send.</p>
         <div className="tpl-body" tabIndex={0}>
           <b>Subject: {SIGNOFF_SUBJECT}</b>
@@ -43,10 +43,10 @@ function TemplateDialog({ onClose }: { onClose: () => void }) {
         </div>
         <div className="tpl-actions">
           <button type="button" className="btn gold" onClick={copy}>
-            {copied ? "Copied ✓" : "Copy email"}
+            {copied ? "Copied ✓" : "Copy Email"}
           </button>
           <button type="button" className="btn line" onClick={openMail}>
-            Open in email app
+            Open In Email App
           </button>
         </div>
       </div>
@@ -63,7 +63,7 @@ export function TicketsSection() {
         <div className="head rv">
           <div>
             <span className="eyebrow">Tickets</span>
-            <h2>Take a seat.</h2>
+            <h2>Take A Seat.</h2>
           </div>
           <p className="dim" style={{ maxWidth: 360 }}>
             Sales end Oct 23.
@@ -75,7 +75,7 @@ export function TicketsSection() {
             <div key={t.name} className={`tkt${t.hl ? " pop" : ""}`}>
               <div className="tkt-top">
                 <h3>{t.name}</h3>
-                {t.hl ? <span className="tkt-pill">Most popular</span> : null}
+                {t.hl ? <span className="tkt-pill">Most Popular</span> : null}
               </div>
               <div className="tkt-dt">{t.dates}</div>
               <div className="tkt-pr">{t.price}</div>
@@ -85,7 +85,7 @@ export function TicketsSection() {
                 ))}
               </ul>
               <a className="tkt-btn" href={t.href} target="_blank" rel="noopener noreferrer">
-                Register now
+                Register Now
               </a>
             </div>
           ))}
@@ -93,11 +93,11 @@ export function TicketsSection() {
 
         <div className="signoff rv">
           <div>
-            <h3>Need sign-off to attend?</h3>
+            <h3>Need Sign-Off To Attend?</h3>
             <p>A ready-to-send email making the case to your leadership team.</p>
           </div>
           <button type="button" className="signoff-btn" onClick={() => setTplOpen(true)}>
-            Get the email template <span aria-hidden="true">→</span>
+            Get The Email Template <span aria-hidden="true">→</span>
           </button>
         </div>
       </div>

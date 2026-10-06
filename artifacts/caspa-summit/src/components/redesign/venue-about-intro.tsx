@@ -8,11 +8,11 @@ export function VenueAbout() {
           <div>
             <span className="eyebrow">About CASPA</span>
             <h2 className="about-h">
-              A non-profit community
+              A Non-Profit Community
               <br />
-              of semiconductor professionals
+              Of Semiconductor Professionals
               <br />
-              since <em>1991.</em>
+              Since <em>1991.</em>
             </h2>
             <p className="dim" style={{ marginTop: 20, fontSize: 19, maxWidth: 540 }}>
               CASPA is a registered non-profit organization. Proceeds from our annual conference help support the
