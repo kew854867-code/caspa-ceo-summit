@@ -99,36 +99,42 @@ export const RECAP_VIDEOS: { id: string; title: string; meta: string }[] = [
  }
 ];
 
-export const TICKETS: { hl: boolean; name: string; price: string; perks: string[]; href: string; cta: string }[] = [
+export const TICKETS: { hl: boolean; name: string; dates: string; price: string; perks: string[]; href: string; cta: string }[] = [
  {
   "hl": false,
   "name": "Annual Conference",
+  "dates": "23\u201324 October",
   "price": "$399",
   "perks": [
-   "Oct 23–24 keynotes and panels"
+   "Two days of keynotes and panels",
+   "CEOs and leaders across semiconductors and AI"
   ],
   "href": "https://www.eventbrite.com/e/caspa-35th-annual-conference-dinner-banquet-the-ceo-summit-tickets-1994631439329?aff=oddtdtcreator",
-  "cta": "Register →"
+  "cta": "Register now"
  },
  {
   "hl": true,
   "name": "Conference + Banquet",
+  "dates": "23\u201324 October",
   "price": "$1,599",
   "perks": [
-   "Both days, plus the banquet",
-   "Save $99 vs. buying separately"
+   "Both conference days",
+   "The Dinner Banquet on Oct 24",
+   "Fireside chat with Intel CEO Lip-Bu Tan"
   ],
   "href": "https://www.eventbrite.com/e/caspa-35th-annual-conference-dinner-banquet-the-ceo-summit-tickets-1994631439329?aff=oddtdtcreator",
-  "cta": "Register →"
+  "cta": "Register now"
  },
  {
   "hl": false,
   "name": "Dinner Banquet",
+  "dates": "24 October, evening",
   "price": "$1,299",
   "perks": [
-   "Oct 24 evening with Lip-Bu Tan"
+   "Dinner Banquet on Oct 24",
+   "Fireside chat with Intel CEO Lip-Bu Tan"
   ],
   "href": "https://www.eventbrite.com/e/caspa-35th-annual-conference-dinner-banquet-the-ceo-summit-tickets-1994631439329?aff=oddtdtcreator",
-  "cta": "Register →"
+  "cta": "Register now"
  }
 ];
