@@ -24,7 +24,7 @@ export default function SponsorsPage() {
 
       <main>
         <SponsorsSection onBecomeSponsor={() => openMail("sponsor")} />
-        <PartnersSection onPress={() => openMail("press")} />
+        <PartnersSection onPress={() => openMail("press")} showMedia={false} />
       </main>
       <RedesignFooter />
     </div>

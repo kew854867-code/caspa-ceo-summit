@@ -18,7 +18,15 @@ function LogoGrid({ items, id }: { items: [string, string | null][]; id?: string
   );
 }
 
-export function PartnersSection({ onPress, showAlliance = true }: { onPress: () => void; showAlliance?: boolean }) {
+export function PartnersSection({
+  onPress,
+  showMedia = true,
+  showAlliance = true,
+}: {
+  onPress: () => void;
+  showMedia?: boolean;
+  showAlliance?: boolean;
+}) {
   return (
     <section id="partners" className="partners">
       <div className="wrap">
@@ -26,30 +34,38 @@ export function PartnersSection({ onPress, showAlliance = true }: { onPress: () 
           <div>
             <span className="eyebrow">Partners</span>
             <h2>
-              {showAlliance ? (
+              {showMedia && showAlliance ? (
                 <>
                   Media &amp; Alliance <em>Partners.</em>
                 </>
-              ) : (
+              ) : showMedia ? (
                 <>
                   Media <em>Partners.</em>
+                </>
+              ) : (
+                <>
+                  Alliance <em>Partners.</em>
                 </>
               )}
             </h2>
           </div>
-          <button type="button" className="btn gold" onClick={onPress}>
-            Cover The Summit
-          </button>
+          {showMedia && (
+            <button type="button" className="btn gold" onClick={onPress}>
+              Cover The Summit
+            </button>
+          )}
         </div>
       </div>
 
       <div className="wrap">
-        <div className="pgroup">
-          <div className="phead">
-            <span className="eyebrow">Official Media Partners</span>
+        {showMedia && (
+          <div className="pgroup">
+            <div className="phead">
+              <span className="eyebrow">Official Media Partners</span>
+            </div>
+            <LogoGrid items={MEDIA_PARTNERS} id="mediaPartners" />
           </div>
-          <LogoGrid items={MEDIA_PARTNERS} id="mediaPartners" />
-        </div>
+        )}
 
         {showAlliance && (
           <div className="pgroup">
