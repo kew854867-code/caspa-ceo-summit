@@ -25,9 +25,6 @@ export function RedesignNav({ active }: RedesignNavProps) {
           <Link href="/sponsors" className={active === "sponsors" ? "on" : undefined}>
             Sponsors
           </Link>
-          <Link href="/summit#tickets" className={active === "tickets" ? "on" : undefined}>
-            Tickets
-          </Link>
         </div>
         <button
           type="button"
