@@ -409,4 +409,8 @@ export const BIOS: Record<string, Bio> = {
   "bio": "",
   "links": [["LinkedIn", "https://www.linkedin.com/in/nan-zhou-3ba97213"]]
  },
+ "Matt Mahan": {
+  "bio": "Matt Mahan is the 66th mayor of San José, California, in office since January 2023. He previously served on the San José City Council, representing District 10 from 2021 to 2023. Before politics he worked in civic technology, as CEO of Causes and as co-founder and CEO of Brigade Media. He graduated magna cum laude from Harvard in 2005.",
+  "links": [["Wikipedia", "https://en.wikipedia.org/wiki/Matt_Mahan"]]
+ },
 };

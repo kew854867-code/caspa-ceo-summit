@@ -279,7 +279,21 @@ export const DAYS: AgendaDay[] = [
     []
    ],
    [
-    "6:30 – 7:00 PM",
+    "6:30 – 6:35 PM",
+    "KEYNOTE",
+    "Welcome Remarks by San Jose Mayor Matt Mahan",
+    [
+     "Matt Mahan"
+    ]
+   ],
+   [
+    "6:35 – 6:40 PM",
+    "CEREMONY",
+    "Bay Area Mayors on Stage",
+    []
+   ],
+   [
+    "6:40 – 7:00 PM",
     "",
     "Dinner",
     []

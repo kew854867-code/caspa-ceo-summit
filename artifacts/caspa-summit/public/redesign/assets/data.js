@@ -1,5 +1,6 @@
 const B='assets/spk/';
 const F=[
+['Matt Mahan','Mayor','City of San Jose','x'],
 ['Gary Wang','President','CASPA \'25–\'26','x'],
 ['Jimmy Cheng','President','CASPA \'26–\'27','IMG_4704_1779822235845-BaAA3PBK.png'],
 ['Lip-Bu Tan','CEO','Intel','2C524BF7-CBB4-419F-A97E-A9E39B687AA3_1779086898716-AQqWVzLv.png',1],
