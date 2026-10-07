@@ -6,6 +6,8 @@ import { HeroSection } from "@/components/redesign/hero";
 import { SpeakersSection } from "@/components/redesign/speakers-section";
 import { TicketsSection } from "@/components/redesign/tickets-section";
 import { VenueAbout, IntroSection } from "@/components/redesign/venue-about-intro";
+import { PartnersSection } from "@/components/redesign/partners-section";
+import { openMail } from "@/components/redesign/mail-templates";
 
 export default function Home() {
   const root = useRef<HTMLDivElement>(null);
@@ -18,6 +20,7 @@ export default function Home() {
       <main>
         <SpeakersSection />
         <VenueAbout />
+        <PartnersSection onPress={() => openMail("press")} />
         <TicketsSection />
         <IntroSection />
       </main>

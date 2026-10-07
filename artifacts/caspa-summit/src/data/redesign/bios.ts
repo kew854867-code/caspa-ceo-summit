@@ -122,7 +122,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Albert Kim": {
-  "bio": "",
+  "bio": "Albert Kim is Executive Vice President and Head of Samsung Ventures America. Trained as a physicist, he has been an active venture investor for more than a decade. Before joining Samsung in 2024, he led Ericsson Ventures for ten years. Over his career he has served as a board director or board observer at companies including Matterport, Menlo Security, PubNub, Pluribus Networks, SkyCross, and Guavus. Kim holds a Ph.D. in Applied Physics from Harvard University and an M.S. in Physics from RWTH Aachen University.",
   "links": [
    [
     "LinkedIn",
@@ -131,7 +131,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Albert Zhang": {
-  "bio": "",
+  "bio": "Albert Zhang is Founder and CEO of SiLith, a silicon photonics company building next-generation optical interconnect solutions for AI and data center infrastructure, with a focus on scalable, manufacturable silicon-based platforms. Before founding SiLith in 2021, Zhang spent 17 years at SMIC (中芯国际), progressing from lithography process engineer to director-level roles, including 200mm/300mm Lithography Director and Fab Operation Enhancement Director. Zhang holds a Ph.D. in Microelectronics from Fudan University, an MBA from CUHK Business School, and a B.S. in Electrical Engineering from Hefei University of Technology.",
   "links": [
    [
     "LinkedIn",
@@ -140,7 +140,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Andrew Tan": {
-  "bio": "",
+  "bio": "Andrew Tan is Managing Director at Salience Capital and Managing Director at A&E Investments, and co-founder of HiTA AI. Earlier in his career, he was a product leader at Katana Graph, an investment manager at Capstone Partners in Seoul, and a software engineer at Google. Tan holds B.S. and M.S. degrees in Electrical and Computer Engineering from Carnegie Mellon University.",
   "links": [
    [
     "LinkedIn",
@@ -149,7 +149,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Ankur Gupta": {
-  "bio": "",
+  "bio": "Ankur Gupta is Executive Vice President and Head of EDA IC Software at Siemens EDA, part of Siemens Digital Industries Software. Since joining Siemens in 2022, Gupta has led the Tessent Silicon Lifecycle Solutions business and, later, the Digital Design Platform, which includes Tessent, Catapult, Aprisa, PowerPro, and mPower. Gupta previously held senior product management and customer engagement roles at Ansys, and spent more than 12 years at Cadence Design Systems in product engineering, business management, and field leadership, where Gupta architected the industry's first low-power design automation solution and holds two U.S. patents. Gupta holds a master's degree in Electronics and Computer Engineering from Iowa State University and a Bachelor of Engineering from the National Institute of Technology, Tiruchirappalli.",
   "links": [
    [
     "LinkedIn",
@@ -158,7 +158,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Anna Goldie": {
-  "bio": "",
+  "bio": "Anna Goldie is Founder and CEO of Ricursive Intelligence, a company working on AI for chip design and chip design for AI. Goldie is a co-lead of AlphaChip, a deep reinforcement learning method for chip floorplanning published in Nature and used in production across multiple generations of Google's TPU AI accelerators. Goldie previously worked as a Senior Staff Research Scientist at Google DeepMind on LLM research for Gemini, as a Member of Technical Staff at Anthropic, and for nearly a decade at Google, where Goldie co-founded and led the ML for Systems team at Google Brain. Goldie holds a Ph.D. in Computer Science from Stanford University and B.S. and M.Eng. degrees in Computer Science from MIT, and was named to MIT Technology Review's 35 Innovators Under 35.",
   "links": [
    [
     "LinkedIn",
@@ -176,7 +176,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Faris Sbahi": {
-  "bio": "",
+  "bio": "Faris Sbahi is co-founder and CEO of Normal Computing, a company working to transform chips and chip development by unifying physics and computation to address AI scaling and reliability challenges. Normal Computing builds AI tools that accelerate the de-risking of novel chip architectures and works with leading semiconductor companies on their design workflows. Before founding Normal Computing in 2022, Sbahi was a Research Scientist at X, the moonshot factory, and a software engineer on the Google Brain team. Sbahi studied physics, mathematics, and computer science at Duke University, where research focused on quantum algorithms and error mitigation.",
   "links": [
    [
     "LinkedIn",
@@ -194,7 +194,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Hao Zhong": {
-  "bio": "",
+  "bio": "Hao Zhong is Co-founder and CEO of ScaleFlux, a pioneer in storage and memory infrastructure that builds silicon, firmware, software, and module solutions for the AI data pipeline. Zhong has more than 20 years of experience in the field, from architecting the industry's first LDPC read channel chip at LSI to leading SSD controller development at SandForce and Fusion-io, and has been recognized by Goldman Sachs as one of its Most Exceptional Entrepreneurs. Zhong co-founded ScaleFlux in 2014. Zhong holds a Ph.D. in Electrical Engineering from Rensselaer Polytechnic Institute.",
   "links": [
    [
     "LinkedIn",
@@ -225,7 +225,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Khurram Ismail": {
-  "bio": "",
+  "bio": "Khurram Ismail is Chief Product Officer at Sandisk, leading product and engineering across consumer, client, gaming, automotive, and data center markets. With more than 25 years of experience in semiconductors and storage, Ismail previously served as Senior Vice President of the Flash Products Group at Western Digital, responsible for enterprise, client, mobile, and retail storage products, and as Vice President of Client SSD Engineering. Earlier, Ismail held applications and test engineering roles at Micron Technology for 12 years. Ismail holds a B.S. in Electrical Engineering from Northern Arizona University and an MBA from the University of Phoenix.",
   "links": [
    [
     "LinkedIn",
@@ -270,7 +270,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Naveen Rao": {
-  "bio": "",
+  "bio": "Naveen Rao is CEO of Unconventional AI, a company rethinking the foundations of computing to build a new substrate for intelligence that approaches the efficiency of biology. A neuroscientist and processor architect by training, Rao co-founded Nervana, which was acquired by Intel in 2016, and went on to lead Intel's Artificial Intelligence Products Group. Rao then co-founded and led MosaicML as CEO, and served as Vice President of Artificial Intelligence at Databricks following its acquisition of MosaicML. Rao holds a Ph.D. in Neuroscience from Brown University and a B.S.E.E. from Duke University.",
   "links": [
    [
     "LinkedIn",
@@ -279,7 +279,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Raghib Hussain": {
-  "bio": "",
+  "bio": "Raghib Hussain is President and CEO of Altera, a leading provider of field programmable gate array (FPGA) technology. Hussain has more than 30 years of experience in semiconductors and systems and founded Cavium, where Hussain served as CTO and COO and grew the company into a multibillion-dollar enterprise with around 2,000 employees. Following Marvell's acquisition of Cavium, Hussain served as Chief Strategy Officer and then President of Products and Technologies at Marvell, overseeing business operations and technology development. Hussain serves on the board of directors of Cirrus Logic.",
   "links": [
    [
     "LinkedIn",
@@ -306,7 +306,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Sid Sheth": {
-  "bio": "",
+  "bio": "Sid Sheth is Founder, President, and CEO of d-Matrix, which he co-founded in 2019 to build an accelerated computing platform for AI inference focused on efficiency. Before d-Matrix, Sheth was Senior Vice President and General Manager of the Networking Business Unit at Inphi, growing it into a business of more than $1 billion; Inphi was later acquired by Marvell. Earlier, Sheth held marketing leadership roles at NetLogic Microsystems, was a founding team member of Aeluros, and held engineering and management positions on Intel's Pentium microprocessor and network processor groups. Sheth holds an M.S.E.E. from Purdue University and serves on the advisory board of its Elmore Family School of Electrical and Computer Engineering.",
   "links": [
    [
     "LinkedIn",
@@ -315,7 +315,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Stacy Rasgon": {
-  "bio": "",
+  "bio": "Stacy Rasgon is Managing Director and Senior Analyst covering U.S. Semiconductors and Semiconductor Capital Equipment at Bernstein Research, where Rasgon has led coverage since 2008. Rasgon has been ranked among the top semiconductor analysts in the Institutional Investor All-America Research Team Survey for 16 consecutive years, including numerous #1 rankings. Before joining Bernstein, Rasgon was an Engagement Manager at McKinsey & Company, advising semiconductor companies across the value chain. Rasgon holds a Ph.D. in Chemical Engineering from MIT, where Rasgon was an NSF Graduate Research Fellow, and a B.S. in Chemical Engineering from UCLA.",
   "links": [
    [
     "LinkedIn",
@@ -324,7 +324,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Sunghyun Park": {
-  "bio": "",
+  "bio": "Sunghyun Park is Co-founder and CEO of Rebellions, a South Korean AI chip company developing AI inference accelerators and software. Before founding Rebellions in 2020, Park was a Vice President at Morgan Stanley developing ultra-low-latency trading products, an ASIC design engineer on SpaceX's Starlink project, a Staff Engineer at Samsung Mobile, and a Senior Research Scientist at Intel Labs. Park holds a Ph.D. and S.M. in Electrical Engineering and Computer Science from MIT and a B.S. in Electrical Engineering from KAIST.",
   "links": [
    [
     "LinkedIn",
@@ -333,7 +333,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Umesh Padval": {
-  "bio": "",
+  "bio": "Umesh Padval is Managing Partner at Seligman Ventures, where he invests from seed through pre-IPO stages across AI and cloud infrastructure, cybersecurity, and modern data center systems. He brings more than 35 years of operating, management, and board experience, including 18 years in venture investing and earlier service as President and CEO of C-Cube Microsystems, which was acquired by LSI Logic in 2001. His investments have included P.A. Semi (acquired by Apple), Isovalent and ThousandEyes (both acquired by Cisco), and Skyhigh Networks (acquired by McAfee). He currently serves on the board of Impinj and has previously served on the boards of seven public companies, including Mellanox, Integrated Device Technology, and Monolithic Power Systems. Padval holds a bachelor's degree in engineering from IIT Bombay and a master's degree from Stanford University.",
   "links": [
    [
     "LinkedIn",
@@ -342,7 +342,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Rajiv Khemani": {
-  "bio": "",
+  "bio": "Rajiv Khemani is co-founder and Executive Chairman of Upscale, an AI-native company delivering open-standards, high-performance networking infrastructure for AI data centers, and co-founder and CEO of Velaura AI, which builds ultra-low-power compute solutions for the AI era. A serial entrepreneur with more than 25 years of experience, Khemani was previously co-founder and CEO of Innovium, a cloud-optimized network switching company acquired by Marvell for approximately $1.3 billion in 2021, and earlier served as COO of Cavium, which went public and was later acquired for over $6 billion. Earlier roles include executive and general manager positions at Intel, NetApp, and Sun Microsystems. Khemani holds a B.Tech. in Computer Science from IIT Delhi, where Khemani is a Distinguished Alumnus, an M.S. in Computer Science from NYU, and an MBA from Stanford.",
   "links": [
    [
     "LinkedIn",
@@ -351,7 +351,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Avi Shetty": {
-  "bio": "",
+  "bio": "Avi Shetty is Vice President of AI Ecosystem, Solutions & Market Enablement at Solidigm, where Shetty has worked since 2022 and previously led AI market enablement and partnerships as Senior Director. Shetty has spoken on storage's role in AI inference, including a keynote at COMPUTEX TAIPEI on how RAG pipelines and KV caches have made modern storage foundational to AI. Before Solidigm, Shetty spent more than 14 years at Intel in SSD strategic planning, product line management, and marketing, including work on Intel Optane SSD and memory products, after starting a career in IC and CAD design engineering at Tanner Research. Shetty holds a graduate degree from the UC Davis Graduate School of Management.",
   "links": [
    [
     "LinkedIn",
@@ -398,7 +398,7 @@ export const BIOS: Record<string, Bio> = {
   "links": []
  },
  "Max Cherney": {
-  "bio": "",
+  "bio": "Max Cherney is a Tech Correspondent at Reuters, covering chips and AI from San Francisco. Cherney's reporting includes a Special Report on Intel under CEO Pat Gelsinger and exclusives on Nvidia's custom chip unit. Before joining Reuters in 2023, Cherney reported for the Silicon Valley Business Journal, Protocol, Barron's, MarketWatch, and Investor's Business Daily. Cherney holds a B.A. in History from Trent University and an M.F.A. in Writing from California College of the Arts.",
   "links": [["LinkedIn", "https://www.linkedin.com/in/maxcherney/"]]
  },
  "Nitin Dahad": {
@@ -406,11 +406,11 @@ export const BIOS: Record<string, Bio> = {
   "links": [["LinkedIn", "https://www.linkedin.com/in/nitindahad/"]]
  },
  "Nan Zhou": {
-  "bio": "",
+  "bio": "Nan Zhou is a Director on Temasek's Emerging Technologies team, based in the San Francisco Bay Area, where she helps lead U.S. AI investments across frontier models, compute, physical AI, AI infrastructure, and vertical AI applications. Zhou has spent the past decade investing at the AI frontier: she began at Baidu, helping build its U.S. AI investment platform alongside Andrew Ng's Silicon Valley AI Lab, and was an early investor in Cerebras. She then spent more than six years at Qualcomm Ventures, leading investments in AI infrastructure, edge intelligence, compute, and enterprise AI, and has served as a board member or observer at more than ten AI companies. Zhou holds an MBA from the Wharton School and degrees in Economics and Accounting from the University of Maryland.",
   "links": [["LinkedIn", "https://www.linkedin.com/in/nan-zhou-3ba97213"]]
  },
  "Matt Mahan": {
-  "bio": "",
+  "bio": "Matt Mahan is the Mayor of San José. Raised in Watsonville by a school teacher and a letter carrier, he attended Bellarmine College Prep in San José on a full work-study scholarship, then went on to Harvard, where he was an honors student and student body president. After a year in Bolivia building irrigation systems with family farmers and two years teaching middle school English and History in Alum Rock through Teach for America, he joined Causes, a startup and early Facebook app, rising over five years from Director of Business Development to COO and CEO. In 2014 he co-founded Brigade, a nonpartisan voter network. Elected to the San José City Council in 2020, winning outright in the March primary with nearly 60% of the vote, he later ran for mayor. His agenda for the city centers on four priorities: crime, homelessness, blight, and economic development.",
   "links": [["Wikipedia", "https://en.wikipedia.org/wiki/Matt_Mahan"]]
  },
 };
