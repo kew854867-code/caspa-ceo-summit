@@ -8,6 +8,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
+import SponsorsPage from "@/pages/sponsors";
 import SponsorshipPage from "@/pages/sponsorship";
 import ProgramPage from "@/pages/program";
 import UserPortalPage from "@/pages/user-portal";
@@ -153,6 +154,7 @@ function Router() {
       <Route path="/summit" component={Home} />
       <Route path="/program" component={ProgramPage} />
       <Route path="/agenda" component={ProgramPage} />
+      <Route path="/sponsors" component={SponsorsPage} />
       <Route path="/sponsorship" component={SponsorshipPage} />
       <Route path="/user-portal" component={UserPortal} />
       <Route path="/sign-in/*?" component={SignInPage} />
