@@ -30,6 +30,7 @@ export const SPONSOR_TIERS: SponsorTier[] = [
    "multibeam",
    "infraeo",
    "deepweave-2",
+   "urbot",
    "architectlabs",
    "sufastech",
    "opennetwork",
@@ -48,6 +49,7 @@ export const SPONSOR_TIERS: SponsorTier[] = [
   "cols": "c4",
   "logos": [
    "wd.svg",
+   "ey",
    "tgvtech",
    "architectlabs",
    "puppygraph.svg",
