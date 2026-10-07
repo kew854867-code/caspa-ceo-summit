@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { Show } from "@clerk/react";
 import { REDESIGN_BASE } from "@/data/redesign/base";
 
 type RedesignNavProps = {
@@ -31,17 +30,6 @@ export function RedesignNav({ active }: RedesignNavProps) {
           </Link>
         </div>
         <div className="nav-auth">
-          <Show when="signed-out">
-            <Link href="/sign-in">Sign in</Link>
-            <Link href="/sign-up" className="btn gold sm">
-              Create account
-            </Link>
-          </Show>
-          <Show when="signed-in">
-            <Link href="/user-portal" className="btn line sm">
-              My account
-            </Link>
-          </Show>
           <Link href="/summit#tickets" className="btn gold sm">
             Get Tickets
           </Link>
