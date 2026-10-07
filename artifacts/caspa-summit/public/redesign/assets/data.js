@@ -31,7 +31,7 @@ const M=[
 ['Krishna Rangasayee','CEO','Sima.ai','147934E5-D9D9-425F-B01A-A3E1C83DAE03_1786154700547-CbmMUjej.png'],
 ['Mark Wade','CEO','Ayar Labs','0886A067-9919-4756-BAB4-6F8A0421AF07_1783024768619-D4y6esE6.png'],
 ['Mary Ellen Randall','President & CEO','IEEE','IMG_6572_1787074080316-vCPLV-Nj.jpeg'],
-['Melton Chang','President','Schneider Electric Power Systems','493_1784912725098-BHPl68Xa.jpeg'],
+['Melton Chang','Executive Vice President','Schneider Electric Power Systems','493_1784912725098-BHPl68Xa.jpeg'],
 ['Michael Hurlston','CEO','Lumentum','D4E3FEF0-CB1F-4CFC-92C8-FBE2423D3026_1778915933700-DV06OE13.png'],
 ['Michael Xie','President & Co-founder','Fortinet','278D7D17-9372-4E07-957C-EC5DCDA6FBA7_1780116650886-BZE2BXhe.png'],
 ['Naveen Rao','CEO','Unconventional AI','675C4E53-308C-478B-939B-5DCADE397C7F_1779175010186-DaP-4cQc.png'],

@@ -64,7 +64,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Michael Hurlston": {
-  "bio": "Michael Hurlston is a proven technology industry executive. From January 2018 to August 2019, Hurlston served as the Chief Executive Officer and a member of the Board of Directors of Finisar Corporation, where he oversaw the company's agreement to be acquired by II-VI. From November 2001 through October 2017, he served in a variety of senior leadership positions at Broadcom Limited and its predecessor corporation across the sales, marketing and general management functions, including serving as its Senior Vice President and General Manager of the Mobile Connectivity Products/Wireless Communications and Connectivity Division. Hurlston holds Bachelor of Science and Master of Science degrees in Electrical Engineering and a Master of Business Administration from the University of California, Davis.",
+  "bio": "Michael Hurlston is President and Chief Executive Officer and a member of the Board of Directors of Lumentum, effective February 2025. He was previously President and Chief Executive Officer and a member of the Board of Directors of Synaptics Incorporated from August 2019 until joining Lumentum. From January 2018 to August 2019, Hurlston served as the Chief Executive Officer and a member of the Board of Directors of Finisar Corporation, where he oversaw the company's agreement to be acquired by II-VI. From November 2001 through October 2017, he served in a variety of senior leadership positions at Broadcom Limited and its predecessor corporation across the sales, marketing and general management functions, including serving as its Senior Vice President and General Manager of the Mobile Connectivity Products/Wireless Communications and Connectivity Division. Hurlston holds Bachelor of Science and Master of Science degrees in Electrical Engineering and a Master of Business Administration from the University of California, Davis.",
   "links": [
    [
     "LinkedIn",
@@ -185,7 +185,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Gavin Uberti": {
-  "bio": "Harvard Thiel Fellow. World math champion, Math 55 alumnus, expert in AI compilers, developed the Cortex-M backend for TVM.",
+  "bio": "Gavin Uberti is co-founder and CEO of Etched, which develops AI inference hardware: chips, racks, software, and manufacturing methods designed so frontier models can run with high throughput, low latency, and strong cost and power efficiency. A Harvard Thiel Fellow, world math champion, and Math 55 alumnus, Uberti is an expert in AI compilers and developed the Cortex-M backend for TVM. He studied mathematics and computer science at Harvard before leaving to build Etched, which he co-founded with fellow Thiel Fellows Chris Zhu and Robert Wachen. Earlier, he worked on compilers and microkernels as an engineer at OctoAI and Coursedog and as an intern at Xnor.ai.",
   "links": [
    [
     "LinkedIn",
@@ -261,7 +261,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Melton Chang": {
-  "bio": "Melton joined Schneider Electric in 2007 and has held roles in North America, Taiwan, Shanghai, and France. In his previous role he led the group's medium voltage line of business, with responsibility for the overall R&D, quality assurance, marketing, global multi-hub business strategy, and the organizational transformation to enable agile development.",
+  "bio": "Melton Chang is Executive Vice President of Schneider Electric's Power Systems Division, appointed in January 2025. He joined Schneider Electric in 2007 and has held roles in North America, Taiwan, Shanghai, and France. Most recently as head of Medium Voltage Offers, he led the group's medium voltage line of business, with responsibility for the overall R&D, quality assurance, marketing, global multi-hub business strategy, and the organizational transformation to enable agile development.",
   "links": [
    [
     "LinkedIn",
