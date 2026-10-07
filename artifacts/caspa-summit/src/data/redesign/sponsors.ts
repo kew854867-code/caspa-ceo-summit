@@ -53,7 +53,6 @@ export const SPONSOR_TIERS: SponsorTier[] = [
    "puppygraph.svg",
    "phantafield",
    "wiskind",
-   "kaiyan",
    "upmarket"
   ]
  }
