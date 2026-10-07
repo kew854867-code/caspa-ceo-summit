@@ -3,7 +3,7 @@ export type Bio = { bio: string; links: [string, string][] };
 
 export const BIOS: Record<string, Bio> = {
  "Lip-Bu Tan": {
-  "bio": "Lip-Bu Tan became CEO of Intel in March 2025. He founded the venture firm Walden International in 1987, and was CEO of Cadence Design Systems from 2009 to 2021, when its revenue more than doubled. He holds a physics degree from Nanyang Technological University, a master's in nuclear engineering from MIT and an MBA from the University of San Francisco.",
+  "bio": "Lip-Bu Tan is chief executive officer of Intel Corporation and serves on the company's board of directors. He was appointed to his position in March 2025. Tan is a longtime technology investor and widely respected executive with more than two decades of semiconductor and software experience. He previously served as chief executive officer of Cadence Design Systems Inc. During his 12 years as Cadence's chief executive officer, he led a reinvention of the company and drove a cultural transformation centered on customer-centric innovation. Tan is a founding managing partner of Walden Catalyst Ventures and chairman of Walden International.",
   "links": [
    [
     "LinkedIn",
@@ -16,7 +16,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Chenming Hu": {
-  "bio": "Chenming Hu is TSMC Distinguished Professor Emeritus at UC Berkeley and is widely called the father of the 3D transistor for his pioneering work on FinFET in 1999. He received the U.S. National Medal of Technology and Innovation in 2016 and the IEEE Medal of Honor in 2020, and leads the BSIM transistor models used across the chip industry.",
+  "bio": "Chenming Hu is Professor Emeritus and Professor in the Graduate School at UC Berkeley EECS. He was formerly Chief Technology Officer of TSMC and is best known for contributions to IC reliability, BSIM SPICE models, and the FinFET transistor. He has received the US National Medal of Technology and Innovation from President Barack Obama and UC Berkeley's Distinguished Teaching Award. He earned a Ph.D. (1973) and M.S. (1970) in EECS from UC Berkeley and a B.S. in EE (1968) from National Taiwan University.",
   "links": [
    [
     "Personal website",
@@ -33,7 +33,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Sassine Ghazi": {
-  "bio": "Sassine Ghazi has been President and CEO of Synopsys since January 2024. He joined the company in 1998 as an applications engineer and went on to lead its EDA Design Group and serve as Chief Operating Officer. He began his career as a design engineer at Intel and holds engineering degrees from Georgia Tech and the University of Tennessee.",
+  "bio": "Sassine Ghazi is President and Chief Executive Officer of Synopsys and serves on the company's board of directors. Since becoming CEO in 2024, he has advanced Synopsys' transformation from a leader in electronic design automation (EDA) to an engineering solutions powerhouse spanning silicon to systems. Ghazi has held leadership roles across engineering, product development, sales, and operations during his more than 25 years at Synopsys. Prior to becoming CEO, he served as President and Chief Operating Officer, where he steered Synopsys through a period of record revenue growth and profitability. He began his career as a design engineer at Intel.",
   "links": [
    [
     "LinkedIn",
@@ -42,7 +42,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Andrew Feldman": {
-  "bio": "Andrew Feldman is co-founder and CEO of Cerebras Systems, which built the Wafer-Scale Engine, the largest processor in the computing industry. He previously co-founded and led SeaMicro, acquired by AMD in 2012, and held marketing roles at Force10 Networks and Riverstone Networks. He studied at Stanford.",
+  "bio": "Andrew Feldman is one of the co-founders and Chairman of the Board of Directors of Cerebras and has served as Chief Executive Officer, President and as a member of the board of directors since April 2016. From February 2012 to June 2014, Mr. Feldman served as Corporate Vice President and General Manager at Advanced Micro Devices, Inc. From November 2007 to February 2012, he served as Chief Executive Officer at SeaMicro, a dense microserver company acquired by AMD. Mr. Feldman holds an M.B.A. and a B.A. in Economics and Political Science from Stanford University.",
   "links": [
    [
     "LinkedIn",
@@ -55,7 +55,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Irving Tan": {
-  "bio": "Irving Tan has been CEO of Western Digital since February 2025, after serving as its executive vice president of global operations. Earlier he spent more than a decade at Cisco, ending as chairman for Asia Pacific, Japan and China. He holds mechanical engineering and MBA degrees from Nanyang Technological University and chairs the board of SATS.",
+  "bio": "Irving Tan is Chief Executive Officer of Western Digital. Widely known as an exceptional leader, he has decades of experience in sales and global operations, market transitions, and customer and government dynamics. Prior to becoming CEO, Tan was Executive Vice President for Global Operations at Western Digital, responsible for manufacturing operations, procurement and supply chain, and IT. Previously, he served as Cisco's Chairperson, Asia Pacific, Japan, and China, and as Executive Vice President and Global Chief of Operations at Cisco. He holds a bachelor's degree in mechanical engineering and an MBA from Nanyang Technological University.",
   "links": [
    [
     "LinkedIn",
@@ -64,7 +64,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Michael Hurlston": {
-  "bio": "Michael Hurlston is President and CEO of Lumentum, which he joined in February 2025. He was CEO of Synaptics from 2019 to 2025 and of Finisar before that, and spent more than 15 years in senior sales, marketing and general-management roles at Broadcom. He holds electrical engineering and MBA degrees from UC Davis.",
+  "bio": "Michael Hurlston is a proven technology industry executive. From January 2018 to August 2019, Hurlston served as the Chief Executive Officer and a member of the Board of Directors of Finisar Corporation, where he oversaw the company's agreement to be acquired by II-VI. From November 2001 through October 2017, he served in a variety of senior leadership positions at Broadcom Limited and its predecessor corporation across the sales, marketing and general management functions, including serving as its Senior Vice President and General Manager of the Mobile Connectivity Products/Wireless Communications and Connectivity Division. Hurlston holds Bachelor of Science and Master of Science degrees in Electrical Engineering and a Master of Business Administration from the University of California, Davis.",
   "links": [
    [
     "LinkedIn",
@@ -73,7 +73,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Bill Brennan": {
-  "bio": "Bill Brennan has been CEO of Credo since 2014 and led the company to its IPO in January 2022. His 40-year semiconductor career began at Texas Instruments and included 11 years at Marvell, where he became vice president of its storage business unit. He holds a degree in electrical engineering and computer science from the University of Colorado and joined the GSA board in 2025.",
+  "bio": "Bill Brennan has served as Credo's Chief Executive Officer and as a member of the Board since September 2014 and previously served as the Chief Executive Officer and a member of the board of directors of the predecessor entity from December 2013 to September 2014. Prior to joining Credo, Mr. Brennan served as Executive Vice President of Vital Connect, Inc., a biosensor technology company, from August 2011 to November 2013. Mr. Brennan also served as Vice President in the storage business unit of Marvell from May 2000 to August 2011. Mr. Brennan received his B.S. in Electrical Engineering and Computer Science from the University of Colorado.",
   "links": [
    [
     "LinkedIn",
@@ -82,7 +82,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Ajit Manocha": {
-  "bio": "Ajit Manocha is President and CEO of SEMI, the global association for the electronics manufacturing supply chain. He was previously CEO of GlobalFoundries and held senior roles at Spansion and Philips Semiconductors, and began his career as a research scientist at AT&T Bell Laboratories. He was inducted into the Silicon Valley Engineering Hall of Fame in 2020.",
+  "bio": "Throughout his career, Ajit Manocha has been a champion of semiconductor industry collaboration as a critical means of advancing technology for societal and economic prosperity. His four decades of industry experience gives him unique insights into the evolution of key trends and the concerns and priorities of member companies and their executives. In his role as the president and CEO of SEMI, Manocha has broadened the association's scope to serve the semiconductor and electronics manufacturing and design supply chain with an expanded range of offerings and member value. He has been inducted into two Hall of Fames (Silicon Valley Engineering Council 2020, VLSI Research 2021).",
   "links": [
    [
     "LinkedIn",
@@ -95,7 +95,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Michael Xie": {
-  "bio": "Michael Xie co-founded Fortinet in October 2000 and has served as its President and Chief Technology Officer since November 2013 and as a director since 2001. Before Fortinet he was vice president of engineering at ServGate Technologies and held software roles at NetScreen and Milkyway Networks. He studied engineering at Tsinghua University and the University of Manitoba.",
+  "bio": "Michael Xie has dedicated his career to the network security industry. For two decades, he has been relentlessly driving innovations at Fortinet, in areas of technology, products and services. He was honored with the 2009 Tech Innovator Awards by Everything Channel's CRN. He was also named a 2006 Northern California Entrepreneur of the Year by Ernst & Young and a Top Technology Innovator by VARBusiness Magazine in 2004. Michael has an M.S. degree in electrical & computer engineering from the University of Manitoba as well as M.S. degrees in automobile engineering from Tsinghua University.",
   "links": [
    [
     "LinkedIn",
@@ -104,7 +104,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Dylan Patel": {
-  "bio": "Dylan Patel is the founder, CEO and chief analyst of SemiAnalysis, which he launched on his own in 2020 and has grown to a team of more than 15 experts across five countries. The firm covers the semiconductor and AI supply chain from fab economics to frontier models and is widely cited in the press. He attended the University of Georgia.",
+  "bio": "Dylan Patel is the Founder and CEO of SemiAnalysis. Since 2020, he has expanded the firm from a solo operation into a focused team addressing strategic and complex semiconductor industry challenges, spanning supply chain through cloud ecosystem and underlying models. His research approach combines breaking news with quantitative analysis: fab economics, accelerator roadmaps, datacenter expansion plans, and cost models informing business decisions. He personally edits most firm research and authors much of it.",
   "links": [
    [
     "LinkedIn",
@@ -113,7 +113,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "David Lam": {
-  "bio": "David Lam founded Lam Research in 1980 and was its first CEO, leading the first single-wafer, microprocessor-controlled plasma etch system. In 1984 he became the first Asian American to take his own company public on the NASDAQ. He formed Multibeam in 2010, where he is chairman and CEO, and was inducted into the Silicon Valley Engineering Hall of Fame in 2013.",
+  "bio": "Dr. David K. Lam is a pioneering entrepreneur and foundational figure in the semiconductor equipment industry. He founded Lam Research Corporation in 1980 and served as its first CEO. He led the development and market launch of the industry's first single-wafer, microprocessor-controlled plasma etch system. In 1984, he became the first Asian American to take his eponymous company public on the NASDAQ exchange. Dr. Lam currently serves as Chairman and CEO of Multibeam Corporation, where he is advancing a new class of multicolumn electron-beam lithography (MEBL) systems for maskless semiconductor manufacturing.",
   "links": [
    [
     "Wikipedia",
@@ -122,7 +122,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Albert Kim": {
-  "bio": "Albert Kim is executive vice president and head of Samsung Ventures America, a role he has held since May 2024, and in December 2024 he also took over Samsung Venture Global. Before Samsung he led Ericsson Ventures for a decade and spent 12 years at Investor Growth Capital. He holds a degree in applied physics from Harvard.",
+  "bio": "",
   "links": [
    [
     "LinkedIn",
@@ -131,7 +131,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Albert Zhang": {
-  "bio": "Albert Zhang is the founder and CEO of SiLith, a silicon photonics company founded in 2021 that builds optical interconnect solutions, including silicon-based modulators and an optical engine. Before founding SiLith he worked in fab operations and lithography management, including at SMIC.",
+  "bio": "",
   "links": [
    [
     "LinkedIn",
@@ -140,7 +140,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Andrew Tan": {
-  "bio": "Andrew Tan is a managing director at Salience Capital, an investment firm. His investing focus includes semiconductors alongside enterprise software, consumer internet and other technology sectors.",
+  "bio": "",
   "links": [
    [
     "LinkedIn",
@@ -149,7 +149,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Ankur Gupta": {
-  "bio": "Ankur Gupta is executive vice president of Siemens EDA's IC products, responsible for its portfolio of IC design, verification and manufacturing solutions. He has more than 20 years of experience in design, implementation and signoff, including about 16 years at Cadence and five at Ansys. He holds a master's degree in electrical and computer engineering from Iowa State University.",
+  "bio": "",
   "links": [
    [
     "LinkedIn",
@@ -158,7 +158,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Anna Goldie": {
-  "bio": "Anna Goldie is co-founder and CEO of Ricursive Intelligence, started with Azalia Mirhoseini, her co-creator of Google's AlphaChip. At Google DeepMind she co-led AlphaChip, a reinforcement-learning system that automated chip floorplanning for several generations of TPUs. She also worked at Anthropic and Google Brain, holds a PhD from Stanford and degrees from MIT, and was named to MIT Technology Review's 35 Innovators Under 35.",
+  "bio": "",
   "links": [
    [
     "LinkedIn",
@@ -167,7 +167,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Faraj Aalaei": {
-  "bio": "Faraj Aalaei is founder and CEO of Cognichip, an AI company applying artificial intelligence to chip design. He previously founded and led two semiconductor companies, Centillium and Aquantia, and took both public; Aquantia was later acquired by Marvell, where he led the networking and automotive division. He started at AT&T Bell Laboratories and received the Ellis Island Medal of Honor in 2024.",
+  "bio": "Faraj Aalaei is a successful visionary entrepreneur with over 40 years of distinguished experience in communications and networking technologies. As a leading entrepreneur in Silicon Valley, Faraj was responsible for building and leading two semiconductor companies through IPOs as a founder and CEO. Prior to Aquantia and Centillium Communication, he worked at AT&T Bell Laboratory, Fujitsu Network Communication and MA/Com. Post acquisition of Aquantia by Marvell Technology, he was responsible for Marvell's billion-dollar Networking and Automotive segment. He holds multiple patents and an honorary doctorate in Engineering, and is the 2024 recipient of the United States Ellis Island Medal of Honor.",
   "links": [
    [
     "LinkedIn",
@@ -176,7 +176,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Faris Sbahi": {
-  "bio": "Faris Sbahi is co-founder and CEO of Normal Computing, a New York startup founded in 2022 that builds thermodynamic computing hardware and probabilistic AI for energy-efficient, reliable AI. He previously did research at Alphabet's X and Google Brain, and studied physics, mathematics and computer science at Duke University.",
+  "bio": "",
   "links": [
    [
     "LinkedIn",
@@ -185,7 +185,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Gavin Uberti": {
-  "bio": "Gavin Uberti is co-founder and CEO of Etched, which builds Sohu, a chip designed specifically for transformer AI models. He left Harvard, where he was studying math and computer science, to start the company. Earlier he worked at OctoML on AI compilers and developed the Cortex-M backend for TVM.",
+  "bio": "Harvard Thiel Fellow. World math champion, Math 55 alumnus, expert in AI compilers, developed the Cortex-M backend for TVM.",
   "links": [
    [
     "LinkedIn",
@@ -194,7 +194,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Hao Zhong": {
-  "bio": "Hao Zhong is co-founder and CEO of ScaleFlux, which he started in 2014 to build computational storage. Earlier he worked on the industry's first 40nm LDPC read channel chip at LSI, SSD controllers at SandForce, and led the flash technology team at Fusion-io. He earned his Ph.D. at Rensselaer Polytechnic Institute.",
+  "bio": "",
   "links": [
    [
     "LinkedIn",
@@ -203,7 +203,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Hong Hou": {
-  "bio": "Dr. Hong Hou has been President and CEO of Semtech since June 2024 and a board member since July 2023. He was previously president of Brooks Automation's Semiconductor Group and a corporate vice president at Intel, where his group became a leading silicon photonics supplier to hyperscale data centers. He also held executive roles at Fabrinet, AXT and EMCORE, and holds a Ph.D. in electrical engineering from UC San Diego.",
+  "bio": "Dr. Hou has served as president and chief executive officer of the Company since June 2024 and as a member of the Semtech board of directors since July 2023. Previously he was president of the Semiconductor Group at Brooks Automation, corporate vice president and general manager of the Cloud and Edge Networking Group at Intel Corporation, and executive vice president and chief technology officer of Fabrinet. Earlier he held executive roles at AXT, Inc. as chief operating officer and at EMCORE Corporation as president and chief executive officer. He holds a Ph.D. in electrical engineering from the University of California, San Diego.",
   "links": [
    [
     "LinkedIn",
@@ -212,7 +212,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Jodi Shelton": {
-  "bio": "Jodi Shelton is co-founder and CEO of the Global Semiconductor Alliance, which she established in 1994 as the Fabless Semiconductor Association. Under her leadership GSA has grown to include companies across the supply chain from 45 countries, and in 2018 she launched its Women's Leadership Initiative. She studied political science at San Diego State University and the University of Houston.",
+  "bio": "Jodi Shelton is co-founder and CEO of GSA. A pioneer within the technology space, Shelton was instrumental in the creation of the Alliance and has continuously addressed global issues in the industry as the voice of its members. Under her leadership, GSA has grown its membership to include companies throughout the supply chain representing 45 countries across the globe. She earned her bachelor's degree in political science from San Diego State University and her master's degree in political science from the University of Houston.",
   "links": [
    [
     "LinkedIn",
@@ -225,7 +225,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Khurram Ismail": {
-  "bio": "Khurram Ismail oversees product development at Sandisk, across consumer, client, gaming, automotive and data center markets. He has about 27 years in the memory industry, with roles at Micron, SanDisk and Western Digital, spanning applications engineering, product and test engineering, and product management. He graduated in electrical engineering from Northern Arizona University.",
+  "bio": "",
   "links": [
    [
     "LinkedIn",
@@ -234,7 +234,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Krishna Rangasayee": {
-  "bio": "Krishna Rangasayee is founder and CEO of SiMa.ai, which builds machine-learning chips for the embedded edge. He was previously COO of Groq and spent 18 years at Xilinx, rising to senior vice president and general manager of its overall business, with earlier roles at Altera and Cypress Semiconductor. He holds more than 25 international patents.",
+  "bio": "Krishna Rangasayee is founder and CEO of SiMa.ai, passionate about scaling Physical AI. Previously, he was the COO of Groq, a machine learning startup. He was with Xilinx for 18 years, where he was Senior Vice President and GM of Xilinx's overall business prior to his most recent role as Executive Vice President, Global Sales. Prior to Xilinx, he held various engineering and business roles at Altera Corporation and Cypress Semiconductor. He holds 25+ international patents. He has also served on the board of directors of public and private companies.",
   "links": [
    [
     "LinkedIn",
@@ -243,7 +243,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Mark Wade": {
-  "bio": "Mark Wade is co-founder and CEO of Ayar Labs, which he took over as CEO in December 2023 after serving as co-founder and CTO. The company, started in 2015 while he was still a student, builds optical interconnects for AI. He was part of the team that demonstrated the first microprocessor to communicate with the outside world using light, and holds a Ph.D. in electrical engineering from the University of Colorado Boulder.",
+  "bio": "Mark is Chief Executive Officer and Co-Founder of Ayar Labs. His prior roles at Ayar Labs include Chief Technology Officer and Senior Vice President of Engineering. He is recognized as a pioneer in photonics technologies and, prior to founding the company, led the team that designed the optics in the world's first processor to communicate using light. He and his co-founders invented breakthrough technology at MIT and UC Berkeley from 2010-2015 which led to the formation of Ayar Labs. He holds a PhD from University of Colorado.",
   "links": [
    [
     "LinkedIn",
@@ -252,7 +252,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Mary Ellen Randall": {
-  "bio": "Mary Ellen Randall is the 2026 President and CEO of IEEE and an IEEE Fellow. She began her career at IBM in hardware and software development, then founded Ascot Technologies in 2000, where she is CEO. Within IEEE she has served as Treasurer, Vice President of Member and Geographic Activities and Region 3 Director, and in 2016 founded the IEEE MOVE disaster-relief program.",
+  "bio": "Mary Ellen Randall is an IEEE Fellow and member of the IEEE-Eta Kappa Nu honor society. She held technical and management positions in IBM, including an international assignment, hardware and software development, digital video chips, client/server services, network management, operating systems, and test design automation. She served on the IEEE Board of Directors as IEEE Treasurer, IEEE Vice President of MGA, and Region 3 Director, and has served as IEEE WIE Committee Chair among other leadership positions. She created and developed the IEEE MOVE International Community Outreach Program for Disaster Relief and STEM education. Randall is founder/CEO of Ascot Technologies, Inc., an award-winning software company that develops enterprise applications utilizing mobile delivery technologies.",
   "links": [
    [
     "Wikipedia",
@@ -261,7 +261,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Melton Chang": {
-  "bio": "Melton Chang leads Schneider Electric's Power Systems Division, with global profit-and-loss responsibility for more than 20,000 people. He joined Schneider in 2007 and has worked in North America, Taiwan, Shanghai and France, most recently as senior vice president of the Medium Voltage business. He graduated from China Europe International Business School.",
+  "bio": "Melton joined Schneider Electric in 2007 and has held roles in North America, Taiwan, Shanghai, and France. In his previous role he led the group's medium voltage line of business, with responsibility for the overall R&D, quality assurance, marketing, global multi-hub business strategy, and the organizational transformation to enable agile development.",
   "links": [
    [
     "LinkedIn",
@@ -270,7 +270,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Naveen Rao": {
-  "bio": "Naveen Rao is CEO and co-founder of Unconventional AI, started in 2025 to rethink computing for biology-scale efficiency. He founded Nervana Systems, acquired by Intel in 2016, and MosaicML, acquired by Databricks in 2023, where he then led generative AI. He studied electrical engineering and computer science at Duke and earned a Ph.D. in neuroscience at Brown.",
+  "bio": "",
   "links": [
    [
     "LinkedIn",
@@ -279,7 +279,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Raghib Hussain": {
-  "bio": "Raghib Hussain became CEO of Altera, the FPGA company, in May 2025. He was previously President of Products and Technologies at Marvell, and co-founded Cavium, serving as CTO and COO until Marvell acquired it in 2018. He holds more than 40 patents in networking and security and studied at NED University in Karachi and San Jose State University.",
+  "bio": "",
   "links": [
    [
     "LinkedIn",
@@ -288,7 +288,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Rodrigo Liang": {
-  "bio": "Rodrigo Liang is co-founder and CEO of SambaNova, which builds chips, systems and software for AI. Born in Taipei and raised in Brazil, he earlier worked on the first multi-core processors at Sun Microsystems and was senior vice president at Oracle, overseeing SPARC processor and ASIC development. He holds bachelor's and master's degrees in electrical engineering from Stanford.",
+  "bio": "Rodrigo Liang is the CEO and co-founder of SambaNova. With more than two decades of experience in semiconductor engineering, Rodrigo previously led some of the industry's largest teams at Sun Microsystems and Oracle, where he built high-performance processors for enterprise systems. His career began at Hewlett-Packard. Rodrigo holds MS and BS degrees in Electrical Engineering from Stanford University.",
   "links": [
    [
     "LinkedIn",
@@ -297,7 +297,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Shahin Farshchi": {
-  "bio": "Shahin Farshchi is a general partner at Lux Capital, which he joined in 2006. He has led investments in companies including Planet, Zoox, Astranis, Relativity Space and MosaicML. Before venture capital he developed hybrid electric vehicles at General Motors and co-founded Vista Integrated Systems; he holds a Ph.D. in electrical engineering from UCLA.",
+  "bio": "Shahin Farshchi creates, funds, and mentors generational companies. He is a generalist at Lux, which has $7 billion under management, and has been first investors in category-defining companies across AI, automation, biotech, compute, defense, energy, infrastructure, robotics, and beyond, including Anduril, Applied Intuition, Auris, Chronosphere, Cognition, Eikon, Hugging Face, Impulse Space, Physical Intelligence, Runway, Sakana, and Together. After working at several software startups, he founded his first company in 2004 based on his PhD research designing chips, systems, and software to capture and interpret brain signals. In 2006, he joined Lux at the invitation of its founding team.",
   "links": [
    [
     "LinkedIn",
@@ -306,7 +306,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Sid Sheth": {
-  "bio": "Sid Sheth is co-founder, president and CEO of d-Matrix, which he started in 2019 to build an AI inference platform focused on efficiency. At Inphi he led the networking business to over $1 billion in revenue before Marvell acquired Inphi. He was also on the founding team of Aeluros and spent years at Intel on the Pentium and network processor groups.",
+  "bio": "",
   "links": [
    [
     "LinkedIn",
@@ -315,7 +315,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Stacy Rasgon": {
-  "bio": "Stacy Rasgon is a managing director and senior analyst at Bernstein Research, covering U.S. semiconductors and semiconductor capital equipment. He joined Bernstein in April 2008 after working as a management consultant at McKinsey and doing research at IBM's T.J. Watson Research Center. He holds a Ph.D. in chemical engineering from MIT and has been named to Institutional Investor's All-America Research Team every year since 2010.",
+  "bio": "",
   "links": [
    [
     "LinkedIn",
@@ -324,7 +324,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Sunghyun Park": {
-  "bio": "Sunghyun Park is co-founder and CEO of Rebellions, a South Korean AI chip company that develops neural processing units for AI inference. He studied electrical engineering at KAIST and earned his master's and Ph.D. at MIT, then worked as a chip design engineer at Intel and Samsung Research America and as an executive at Morgan Stanley. He returned to Korea in 2020 to launch Rebellions, which merged with SK Telecom's AI chip subsidiary in 2024.",
+  "bio": "",
   "links": [
    [
     "LinkedIn",
@@ -333,7 +333,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Umesh Padval": {
-  "bio": "Umesh Padval is managing partner of Seligman Ventures, the venture arm of Seligman Investments, with more than 35 years of operating, management and board experience, including 18 years of venture investing. He was previously President and CEO of C-Cube Microsystems, which was sold to LSI Logic in 2001, and held senior roles at Thomvest Ventures and Bessemer Venture Partners. He has served on the boards of Mellanox, Integrated Device Technology and P.A. Semi.",
+  "bio": "",
   "links": [
    [
     "LinkedIn",
@@ -342,7 +342,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Rajiv Khemani": {
-  "bio": "Rajiv Khemani is co-founder and executive chairman of Upscale AI and co-founder and CEO of Velaura AI. He co-founded Innovium in 2015, which built Ethernet switch chips for hyperscale data centers and was sold to Marvell in 2021, and was earlier COO of Cavium and held a role at Palo Alto Networks. He attended Stanford University.",
+  "bio": "",
   "links": [
    [
     "LinkedIn",
@@ -351,7 +351,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Avi Shetty": {
-  "bio": "Avi Shetty is vice president of AI ecosystem, solutions and market enablement at Solidigm. He works with platform providers, software vendors and server makers so that Solidigm's storage is validated and included in AI reference designs. Before Solidigm he spent about 14 years at Intel's storage division.",
+  "bio": "",
   "links": [
    [
     "LinkedIn",
@@ -378,31 +378,31 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Austin Lyons": {
-  "bio": "Austin Lyons is a senior analyst at Creative Strategies and the author of the Chipstrat semiconductor newsletter. Earlier in his career he was a product manager on John Deere's autonomous tractor team and a hardware engineer at Intel. He holds an MS in electrical engineering from the University of Illinois Urbana-Champaign and an MBA from the University of Iowa.",
+  "bio": "Austin Lyons is a Senior Analyst at Creative Strategies and author of the Chipstrat newsletter. His journey spans pioneering autonomous systems as a Product Manager at John Deere, advancing chip development at Intel, architecting software solutions for venture-backed startups, and pushing boundaries in nanoelectronics research. He earned an MS in Electrical Engineering from the University of Illinois Urbana-Champaign and an MBA from the University of Iowa.",
   "links": [["LinkedIn", "https://www.linkedin.com/in/austinlyons/"]]
  },
  "Brandon Wang": {
-  "bio": "Brandon Wang is vice president of the Corporate Strategy Group at Synopsys, where he oversees corporate technology roadmaps, strategic partnerships and M&A, and heads the Chief Innovation Office. Before joining Synopsys in 2018, he spent more than two decades in senior roles at Cadence, Arm, Qualcomm and Lattice. He holds 10 patents and an MBA from the Wharton School.",
+  "bio": "Brandon Wang is a Vice President, Corporate Strategy Group, part of the Office of the President at Synopsys. He oversees corporate-level technology roadmaps and strategies for growth, including strategic and ecosystem partnerships and M&A/investments in new horizons. He also heads the Chief Innovation Office, championing organic innovations and worldwide academic and research partnerships. Prior to joining Synopsys in 2018, Brandon spent over two decades serving in executive and senior roles at Cadence, Arm, Qualcomm, and Lattice in chief strategy office, product marketing, and R&D organizations.",
   "links": [["LinkedIn", "https://www.linkedin.com/in/wangbrandon/"], ["Website", "https://brandon-on-tech.com/"]]
  },
  "Dan Armbrust": {
-  "bio": "Dan Armbrust is a co-founder and board member of Silicon Catalyst, the semiconductor startup incubator, and its initial CEO. He previously served as president and CEO of the SEMATECH consortium and spent more than 25 years at IBM. He advises and sits on the boards of many semiconductor startups, and serves on the Industrial Advisory Committee that advises the U.S. Department of Commerce on CHIPS Act R&D strategy.",
+  "bio": "Daniel Armbrust is a Silicon Catalyst co-founder, member of the Board of Directors and its initial CEO. He serves as an advisor, board member, board chairman and angel investor for many semiconductor startups. He is an affiliate with Lawrence Berkeley National Labs and recently was appointed to the Industrial Advisory Committee, which advises the Department of Commerce on the R&D strategy for the CHIPS Act. He served as President and CEO of the SEMATECH semiconductor consortium and held various positions in semiconductor manufacturing and development over 25 years at IBM.",
   "links": [["LinkedIn", "https://www.linkedin.com/in/daniel-armbrust-086a2725/"]]
  },
  "Daniel Nenni": {
-  "bio": "Daniel Nenni is the founder of SemiWiki.com, an online forum and knowledge hub for semiconductor professionals that went online in 2011. A Silicon Valley veteran with more than four decades in the industry, he has worked in semiconductor IP, EDA, and chip design and manufacturing. He is the author of books including Fabless: The Transformation of the Semiconductor Industry.",
+  "bio": "Daniel Nenni is a respected Silicon Valley veteran with more than four decades of experience in the semiconductor industry. Since the 1980s, he has worked across fields including semiconductor IP, electronic design automation (EDA), and chip design and manufacturing. He is best known as the founder of SemiWiki.com, an influential online forum and knowledge-sharing hub for semiconductor professionals, launched in 2011. Nenni is also an author; his books include Fabless: The Transformation of the Semiconductor Industry.",
   "links": [["LinkedIn", "https://www.linkedin.com/in/danielnenni/"]]
  },
  "Edward Sperling": {
-  "bio": "Ed Sperling is editor in chief of Semiconductor Engineering and a frequent moderator and speaker in Silicon Valley. He was previously a contributing editor at Forbes and editor in chief of Electronic News and Electronic Business, with earlier senior editorial roles at Ziff-Davis and CMP Publications. He began his career as a daily newspaper investigative reporter.",
+  "bio": "Ed Sperling is the editor in chief of Semiconductor Engineering. He is a technology industry veteran and frequent moderator and speaker in Silicon Valley. Sperling is a former contributing editor at Forbes, where he wrote nearly 200 articles about business and technology issues affecting IT and CIOs. He was previously editor in chief of Electronic News and Electronic Business, and before that he held top editorial positions at Ziff-Davis and CMP Publications.",
   "links": []
  },
  "Max Cherney": {
-  "bio": "Max Cherney is a technology correspondent at Reuters in San Francisco, covering chips and AI in the U.S. He joined Reuters in 2023 after nearly a decade of reporting on technology and business, including at Barron's, Protocol and the Silicon Valley Business Journal.",
+  "bio": "",
   "links": [["LinkedIn", "https://www.linkedin.com/in/maxcherney/"]]
  },
  "Nitin Dahad": {
-  "bio": "Nitin Dahad is a journalist at EE Times covering the global semiconductor and electronics industry. An electronic engineering graduate of City University, London, he began his career as an engineer at National Semiconductor, was part of the startup team that took ARC International to the U.S. market and to IPO, and co-founded The Chilli, an early publication serving the electronics startup scene.",
+  "bio": "Nitin Dahad is an electronic engineering graduate from City University. He has been an engineer, journalist and entrepreneur. He was part of ARC International's startup team and took it public, and he co-founded a publication called The Chilli in the early 2000s. Nitin has also worked with National Semiconductor, GEC Plessey Semiconductors, Dialog Semiconductor, Marconi Instruments, Coresonic, Center for Integrated Photonics, IDENT Technology and Jennic.",
   "links": [["LinkedIn", "https://www.linkedin.com/in/nitindahad/"]]
  },
  "Nan Zhou": {
@@ -410,7 +410,7 @@ export const BIOS: Record<string, Bio> = {
   "links": [["LinkedIn", "https://www.linkedin.com/in/nan-zhou-3ba97213"]]
  },
  "Matt Mahan": {
-  "bio": "Matt Mahan is the 66th mayor of San José, California, in office since January 2023. He previously served on the San José City Council, representing District 10 from 2021 to 2023. Before politics he worked in civic technology, as CEO of Causes and as co-founder and CEO of Brigade Media. He graduated magna cum laude from Harvard in 2005.",
+  "bio": "",
   "links": [["Wikipedia", "https://en.wikipedia.org/wiki/Matt_Mahan"]]
  },
 };
