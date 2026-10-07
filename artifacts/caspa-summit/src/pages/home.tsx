@@ -20,7 +20,7 @@ export default function Home() {
       <main>
         <SpeakersSection />
         <VenueAbout />
-        <PartnersSection onPress={() => openMail("press")} />
+        <PartnersSection onPress={() => openMail("press")} showAlliance={false} />
         <TicketsSection />
         <IntroSection />
       </main>

@@ -18,7 +18,7 @@ function LogoGrid({ items, id }: { items: [string, string | null][]; id?: string
   );
 }
 
-export function PartnersSection({ onPress }: { onPress: () => void }) {
+export function PartnersSection({ onPress, showAlliance = true }: { onPress: () => void; showAlliance?: boolean }) {
   return (
     <section id="partners" className="partners">
       <div className="wrap">
@@ -26,7 +26,15 @@ export function PartnersSection({ onPress }: { onPress: () => void }) {
           <div>
             <span className="eyebrow">Partners</span>
             <h2>
-              Media &amp; Alliance <em>Partners.</em>
+              {showAlliance ? (
+                <>
+                  Media &amp; Alliance <em>Partners.</em>
+                </>
+              ) : (
+                <>
+                  Media <em>Partners.</em>
+                </>
+              )}
             </h2>
           </div>
           <button type="button" className="btn gold" onClick={onPress}>
@@ -43,12 +51,14 @@ export function PartnersSection({ onPress }: { onPress: () => void }) {
           <LogoGrid items={MEDIA_PARTNERS} id="mediaPartners" />
         </div>
 
-        <div className="pgroup">
-          <div className="phead">
-            <span className="eyebrow">Alliance Partners</span>
+        {showAlliance && (
+          <div className="pgroup">
+            <div className="phead">
+              <span className="eyebrow">Alliance Partners</span>
+            </div>
+            <LogoGrid items={ALLIANCE_PARTNERS} id="alliancePartners" />
           </div>
-          <LogoGrid items={ALLIANCE_PARTNERS} id="alliancePartners" />
-        </div>
+        )}
       </div>
     </section>
   );
