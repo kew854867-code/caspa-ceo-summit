@@ -360,7 +360,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Jimmy Cheng": {
-  "bio": "Jimmy Cheng is President of CASPA for 2026–2027 and the creator of the CEO Summit. He served as CASPA's vice president in 2025–2026. He works at Synopsys and has more than 20 years of industry experience, including at Sun Microsystems, Oracle's SPARC processor design group and NASA's Jet Propulsion Laboratory. He holds a master's degree in electrical engineering from Stanford.",
+  "bio": "Jimmy Cheng is a visionary technology leader at the forefront of the convergence between semiconductors and artificial intelligence. As Head of the Technology Intelligence Center within Synopsys' Corporate Strategy Office and Chief of Staff, he serves as a trusted strategic partner to senior leadership — charting emerging technology strategy and long-term investment direction while providing strategic oversight for 2,000+ engineers across EDA and AI-enabled chip design, helping power a core business generating over $1B in annual revenue. Beyond the enterprise, he is a driving force in the global technology community: President of CASPA, board member of Myriad Ventures (the corporate venture arm of Xerox), and advisor to Berkeley SkyDeck. As Chair of IEEE ICLAD 2026, he is helping define the emerging frontier of generative AI for hardware engineering. He is also Founder & CEO of Allie Inc., with senior leadership roles at Oracle and NASA's Jet Propulsion Laboratory, a faculty member at the California Institute of Technology, and an MS in Electrical Engineering from Stanford University.",
   "links": [
    [
     "LinkedIn",

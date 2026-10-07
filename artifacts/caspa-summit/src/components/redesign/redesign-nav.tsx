@@ -29,11 +29,6 @@ export function RedesignNav({ active }: RedesignNavProps) {
             Tickets
           </Link>
         </div>
-        <div className="nav-auth">
-          <Link href="/summit#tickets" className="btn gold sm">
-            Get Tickets
-          </Link>
-        </div>
         <button
           type="button"
           className="menu-toggle"
