@@ -20,7 +20,7 @@ export function RedesignNav({ active }: RedesignNavProps) {
           <Link href="/agenda" className={active === "agenda" ? "on" : undefined}>
             Agenda
           </Link>
-          <Link href="/summit#sponsors" className={active === "sponsors" ? "on" : undefined}>
+          <Link href="/sponsors" className={active === "sponsors" ? "on" : undefined}>
             Sponsors
           </Link>
           <Link href="/summit#tickets" className={active === "tickets" ? "on" : undefined}>
