@@ -136,7 +136,7 @@ sa.textContent=`See all 40 speakers →`;
 sa.onclick=()=>{const o=mo.classList.toggle('open');sa.textContent=o?'Show fewer ↑':'See all 40 speakers →'};
 
 document.querySelectorAll('.vid').forEach(v=>v.onclick=()=>{const th=v.querySelector('.th');th.innerHTML=`<iframe src="https://www.youtube.com/embed/${v.dataset.id}?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;th.classList.add('play')},{once:true});
-const MEDIA_PARTNERS=[['Reuters','reuters.png'],['ABC7','abc7.png'],['EE Times','eetimes.png'],['SemiWiki','semiwiki.png'],['NYSE Wired','nysewired.png']];
+const MEDIA_PARTNERS=[['Reuters','reuters.png'],['Bloomberg','bloomberg.svg'],['ABC7','abc7.png'],['EE Times','eetimes.png'],['NYSE Wired','nysewired.png'],['Semiconductor Engineering','semiengineering.png'],['SemiWiki','semiwiki.png'],['Creative Strategies','creativestrategies.svg'],['More than Moore','morethanmoore.png']];
 const ALLIANCE_PARTNERS=[['IEEE','ieee.png'],['GPT.DAO','gptdao.png'],['VIP Club','vipclub.png'],['CEO','stanfordceo.png'],['SESE','sese.png'],['PopPopTech','poppoptech.png'],['GSA',null],['CIE-SF',null],['Monte Jade',null],['SVTA',null],['TAITA',null],['SVCTBA',null],['HYSTA',null],['CALOBA',null]];
 (function(){const mk=ps=>ps.map(p=>p[1]?`<div class="lg"><img loading="lazy" src="assets/media/${p[1]}" alt="${p[0]}"></div>`:`<div class="lg tx">${p[0]}</div>`).join('');document.getElementById('mediaPartners').innerHTML=mk(MEDIA_PARTNERS);document.getElementById('alliancePartners').innerHTML=mk(ALLIANCE_PARTNERS);})();
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.05});
