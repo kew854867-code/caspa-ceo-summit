@@ -32,7 +32,7 @@ export const DAYS: AgendaDay[] = [
    [
     "1:40 – 2:00 PM",
     "KEYNOTE",
-    "Credo Address",
+    "$100/Watt: The Evolving Economics of AI Infrastructure",
     [
      "Bill Brennan"
     ]

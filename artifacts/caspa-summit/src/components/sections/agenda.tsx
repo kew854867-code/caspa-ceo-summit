@@ -73,7 +73,7 @@ const oct23AfternoonPanels: AgendaItem[] = [
   {
     start: "1:40 PM",
     end: "2:00 PM",
-    title: "Credo Address",
+    title: "$100/Watt: The Evolving Economics of AI Infrastructure",
     speakers: [
       { name: "Bill Brennan", title: "CEO", company: "Credo", image: billBrennanImg },
     ],
