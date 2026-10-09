@@ -60,7 +60,7 @@ export const SPONSOR_TIERS: SponsorTier[] = [
  }
 ];
 
-export const MEDIA_PARTNERS: [string, string][] = [["Reuters","reuters.png"],["Bloomberg","bloomberg.svg"],["Nikkei Asia","nikkeiasia.svg"],["ABC7","abc7.png"],["EE Times","eetimes.png"],["NYSE Wired","nysewired.png"],["Semiconductor Engineering","semiengineering.png"],["SemiWiki","semiwiki.png"],["Creative Strategies","creativestrategies.svg"],["More than Moore","morethanmoore.png"]];
+export const MEDIA_PARTNERS: [string, string][] = [["Reuters","reuters.png"],["Bloomberg","bloomberg.svg"],["Nikkei","nikkei.svg"],["ABC7","abc7.png"],["EE Times","eetimes.png"],["NYSE Wired","nysewired.png"],["Semiconductor Engineering","semiengineering.png"],["SemiWiki","semiwiki.png"],["Creative Strategies","creativestrategies.svg"],["More than Moore","morethanmoore.png"]];
 
 // Alliance partners: file is the logo file name, or null to render a text badge. Logos first, text badges after.
 export const ALLIANCE_PARTNERS: [string, string | null][] = [
