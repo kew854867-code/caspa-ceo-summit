@@ -118,7 +118,7 @@ export const DAYS: AgendaDay[] = [
    [
     "9:30 – 9:50 AM",
     "KEYNOTE",
-    "IEEE Address",
+    "Advancing Humanity through Responsible Design",
     [
      "Mary Ellen Randall"
     ]
@@ -126,7 +126,7 @@ export const DAYS: AgendaDay[] = [
    [
     "9:50 – 9:55 AM",
     "KEYNOTE",
-    "GSA Address (Video)",
+    "Collaboration, Innovation, and Leadership in the AI Era",
     [
      "Jodi Shelton"
     ]
