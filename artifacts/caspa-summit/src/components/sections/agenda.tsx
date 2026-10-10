@@ -83,7 +83,7 @@ const oct23AfternoonPanels: AgendaItem[] = [
     end: "2:40 PM",
     title: "Semiconductor Industry Outlook Panel",
     speakers: [
-      { name: "Austin Lyons", title: "Senior Analyst", company: "Creative Strategies", image: austinLyonsImg, moderator: true },
+      { name: "Austin Lyons", title: "Independent Analyst", company: "Chipstrat", image: austinLyonsImg, moderator: true },
       { name: "Stacy Rasgon", title: "Managing Director", company: "Bernstein", image: stacyRasgonImg },
       { name: "Dylan Patel", title: "CEO", company: "SemiAnalysis", image: dylanPatelImg },
     ],

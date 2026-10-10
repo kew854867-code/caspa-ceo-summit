@@ -99,7 +99,7 @@ const conferenceSpeakers = [
 ];
 
 const moderators = [
-  { name: "Austin Lyons", title: "Senior Analyst", company: "Creative Strategies", image: austinLyonsImg },
+  { name: "Austin Lyons", title: "Independent Analyst", company: "Chipstrat", image: austinLyonsImg },
   { name: "Max Cherney", title: "Tech Correspondent", company: "Reuters", image: maxCherneyImg },
   { name: "Nitin Dahad", title: "Executive Editor", company: "EE Times", image: nitinDahadImg },
   { name: "Nan Zhou", title: "Director", company: "Temasek", image: nanZhouImg },

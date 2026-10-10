@@ -45,7 +45,7 @@ export const DAYS: AgendaDay[] = [
      "Stacy Rasgon",
      "Dylan Patel"
     ],
-    "Austin Lyons|Creative Strategies"
+    "Austin Lyons|Chipstrat"
    ],
    [
     "2:40 – 3:30 PM",

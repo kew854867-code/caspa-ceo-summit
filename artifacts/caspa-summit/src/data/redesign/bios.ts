@@ -378,7 +378,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Austin Lyons": {
-  "bio": "Austin Lyons is a Senior Analyst at Creative Strategies and author of the Chipstrat newsletter. His journey spans pioneering autonomous systems as a Product Manager at John Deere, advancing chip development at Intel, architecting software solutions for venture-backed startups, and pushing boundaries in nanoelectronics research. He earned an MS in Electrical Engineering from the University of Illinois Urbana-Champaign and an MBA from the University of Iowa.",
+  "bio": "Austin Lyons is an independent analyst and the author of the Chipstrat newsletter. His journey spans pioneering autonomous systems as a Product Manager at John Deere, advancing chip development at Intel, architecting software solutions for venture-backed startups, and pushing boundaries in nanoelectronics research. He earned an MS in Electrical Engineering from the University of Illinois Urbana-Champaign and an MBA from the University of Iowa.",
   "links": [["LinkedIn", "https://www.linkedin.com/in/austinlyons/"]]
  },
  "Brandon Wang": {
