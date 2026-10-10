@@ -342,7 +342,7 @@ export const DAYS: AgendaDay[] = [
    [
     "8:45 – 9:05 PM",
     "CEREMONY",
-    "Award Ceremony",
+    "Award Ceremony for Annual Conference Speakers on Stage",
     []
    ],
    [
