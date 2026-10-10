@@ -13,7 +13,6 @@ import hongHouImg from "@assets/D68D902F-41E0-4CC1-BC62-B773BAA35122_17858609358
 import haoZhongImg from "@assets/636BA633-15E1-466C-9DF2-4DAB82F7F430_1785997200645.png";
 import krishnaRangasayeeImg from "@assets/147934E5-D9D9-425F-B01A-A3E1C83DAE03_1786154700547.png";
 import umeshPadvalImg from "@assets/DB5817CF-7F94-4B5D-BFC5-9AE571647808_1786154700547.png";
-import jodiSheltonImg from "@assets/019610F7-BA06-4F10-B334-E098B5FFDA07_1786154700547.png";
 import dylanPatelImg from "@assets/B3D57552-05EE-404E-B8B5-D6A3F1C08E7D_1780946493570.jpeg";
 import markWadeImg from "@assets/0886A067-9919-4756-BAB4-6F8A0421AF07_1783024768619.png";
 import xinGuoImg from "@assets/3DEF3128-BDD7-4370-A37C-159C25164D57_1783024768619.png";
@@ -76,7 +75,6 @@ const conferenceSpeakers = [
   { name: "Hao Zhong", title: "CEO", company: "Scaleflux", image: haoZhongImg },
   { name: "Hong Hou", title: "CEO", company: "Semtech", image: hongHouImg },
   { name: "Irving Tan", title: "CEO", company: "WD", image: irvingTanImg },
-  { name: "Jodi Shelton", title: "CEO", company: "Global Semiconductor Alliance", image: jodiSheltonImg },
   { name: "John Martinis", title: "2025 Nobel Laureate in Physics", company: "President's Council of Advisors on Science and Technology", image: johnMartinisImg },
   { name: "Khurram Ismail", title: "CPO", company: "SanDisk", image: khurramIsmailImg },
   { name: "Krishna Rangasayee", title: "CEO", company: "Sima.ai", image: krishnaRangasayeeImg },
