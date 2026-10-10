@@ -55,6 +55,7 @@ export const MORE: Person[] = [
   { name: "Max Cherney", title: "Tech Correspondent", company: "Reuters", photo: "max-cherney-3.jpg" },
   { name: "Nan Zhou", title: "Director", company: "Temasek", photo: "nan-zhou.jpg" },
   { name: "Nitin Dahad", title: "Executive Editor", company: "EE Times", photo: "nitin-dahad-2.jpg" },
+  { name: "Kristen Tze", title: "News Anchor", company: "ABC7", photo: "kristen-tze.jpg" },
   { name: "Christie Wang", title: "CEO", company: "Vista Robotics Inc.", photo: "christie-wang.jpg" },
   { name: "Qingyun Cao", title: "Founder & Host", company: "Silicon Valley Vector", photo: "qingyun-cao.jpg" },
 ];
@@ -65,7 +66,7 @@ export const ALL: Person[] = [...FEATURED, ...MORE];
 export const HIDDEN_FROM_LISTS = ["Gary Wang"];
 // Moderators and MCs get their own section (not counted as speakers).
 export const MODERATOR_NAMES = ["Austin Lyons","Brandon Wang","Daniel Nenni","Dan Armbrust","Edward Sperling","Max Cherney","Nan Zhou","Nitin Dahad"];
-export const MC_NAMES = ["Christie Wang","Qingyun Cao"];
+export const MC_NAMES = ["Kristen Tze","Christie Wang","Qingyun Cao"];
 const NON_SPEAKERS = [...MODERATOR_NAMES, ...MC_NAMES];
 export const LISTED: Person[] = ALL.filter((p) => !HIDDEN_FROM_LISTS.includes(p.name) && !NON_SPEAKERS.includes(p.name));
 export const MODERATORS: Person[] = MODERATOR_NAMES.map((n) => ALL.find((p) => p.name === n)).filter((p): p is Person => Boolean(p));
