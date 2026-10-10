@@ -141,26 +141,30 @@ export function SpeakersSection() {
             ))}
           </div>
         )}
-        <div className="modsec">
-          <div className="phead">
-            <span className="eyebrow">Moderators</span>
-          </div>
-          <div className="more open">
-            {MODERATORS.map((p) => (
-              <PersonCard key={p.name} person={p} onOpen={() => setSelected(p.name)} />
-            ))}
-          </div>
-        </div>
-        <div className="modsec">
-          <div className="phead">
-            <span className="eyebrow">MCs</span>
-          </div>
-          <div className="more open">
-            {MCS.map((p) => (
-              <PersonCard key={p.name} person={p} onOpen={() => setSelected(p.name)} />
-            ))}
-          </div>
-        </div>
+        {open && (
+          <>
+            <div className="modsec">
+              <div className="phead">
+                <span className="eyebrow">Moderators</span>
+              </div>
+              <div className="more open">
+                {MODERATORS.map((p) => (
+                  <PersonCard key={p.name} person={p} onOpen={() => setSelected(p.name)} />
+                ))}
+              </div>
+            </div>
+            <div className="modsec">
+              <div className="phead">
+                <span className="eyebrow">MCs</span>
+              </div>
+              <div className="more open">
+                {MCS.map((p) => (
+                  <PersonCard key={p.name} person={p} onOpen={() => setSelected(p.name)} />
+                ))}
+              </div>
+            </div>
+          </>
+        )}
       </div>
       <ProfileModal name={selected} onClose={() => setSelected(null)} />
     </section>
