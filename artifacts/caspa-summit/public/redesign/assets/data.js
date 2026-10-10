@@ -11,7 +11,7 @@ const F=[
 ['Rodrigo Liang','CEO','SambaNova','D5D33C40-3802-45DF-83B8-37A68C8E529B_1779121957187--7L-MwDc.png'],
 ['Ajit Manocha','CEO','SEMI','A460DB3B-9093-4E84-94AA-A6C8ADEC051A_1779085584552-CtYi2vwB.png']];
 const M=[
-['Rajiv Khemani','Executive Chairman, Upscale AI','CEO, Velaura AI','x'],
+['Rajiv Khemani','CEO','Upscale AI','x'],
 ['Avi Shetty','Vice President','Solidigm','x'],
 ['Albert Kim','Head','Samsung Ventures America','1F1F5885-6A94-4D7F-B33E-395286947D01_1783637006894-jfE0rzFn.png'],
 ['Albert Zhang','CEO','Silith','6AA5EE25-3C6E-4D4D-8475-B14C351175A2_1784656063216-Be3_jcdx.png'],
