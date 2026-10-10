@@ -128,7 +128,7 @@ export const DAYS: AgendaDay[] = [
     "KEYNOTE",
     "Collaboration, Innovation, and Leadership in the AI Era",
     [
-     "Chenming Hu"
+     "Jodi Shelton"
     ]
    ],
    [

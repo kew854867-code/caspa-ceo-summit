@@ -21,6 +21,7 @@ import farisSbahiImg from "@assets/13D263ED-E081-4D81-8948-2DE6A9C04C9D_17855182
 import rodrigoLiangImg from "@assets/D5D33C40-3802-45DF-83B8-37A68C8E529B_1779121957187.png";
 import ajitManochaImg from "@assets/A460DB3B-9093-4E84-94AA-A6C8ADEC051A_1779085584552.png";
 import maryEllenRandallImg from "@assets/IMG_6572_1787074080316.jpeg";
+import jodiSheltonImg from "@assets/019610F7-BA06-4F10-B334-E098B5FFDA07_1786154700547.png";
 import sassineGhaziImg from "@assets/92FE495A-00F9-44B1-AF46-A088FA81D57D_1780293398458.png";
 import michaelHurlstonImg from "@assets/D4E3FEF0-CB1F-4CFC-92C8-FBE2423D3026_1778915933700.png";
 import michaelXieImg from "@assets/278D7D17-9372-4E07-957C-EC5DCDA6FBA7_1780116650886.png";
@@ -131,7 +132,7 @@ const oct24MorningItems: AgendaItem[] = [
   { start: "9:00 AM", end: "9:10 AM", title: "CASPA Welcome Remarks" },
   { start: "9:10 AM", end: "9:30 AM", title: "SEMI Industry Update", speakers: [{ name: "Ajit Manocha", title: "CEO", company: "SEMI", image: ajitManochaImg }] },
   { start: "9:30 AM", end: "9:50 AM", title: "Advancing Humanity through Responsible Design", speakers: [{ name: "Mary Ellen Randall", title: "President & CEO", company: "IEEE", image: maryEllenRandallImg }] },
-  { start: "9:50 AM", end: "9:55 AM", title: "Collaboration, Innovation, and Leadership in the AI Era", speakers: [{ name: "Chenming Hu", title: "TSMC Distinguished Professor Emeritus, Father of 3D Transistor", company: "UC Berkeley", image: chenMingHuImg }] },
+  { start: "9:50 AM", end: "9:55 AM", title: "Collaboration, Innovation, and Leadership in the AI Era", speakers: [{ name: "Jodi Shelton", title: "CEO", company: "Global Semiconductor Alliance", image: jodiSheltonImg }] },
   { start: "9:55 AM", end: "10:15 AM", title: "Re-Engineering the Future", speakers: [{ name: "Sassine Ghazi", title: "CEO", company: "Synopsys", image: sassineGhaziImg }] },
   { start: "10:15 AM", end: "10:30 AM", title: "Break" },
   {

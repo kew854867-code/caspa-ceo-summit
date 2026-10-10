@@ -32,6 +32,7 @@ export const MORE: Person[] = [
   { name: "Hao Zhong", title: "CEO", company: "ScaleFlux", photo: "hao-zhong.jpg" },
   { name: "Hong Hou", title: "CEO", company: "Semtech", photo: "hong-hou.jpg" },
   { name: "Irving Tan", title: "CEO", company: "WD", photo: "irving-tan.jpg" },
+  { name: "Jodi Shelton", title: "CEO", company: "Global Semiconductor Alliance", photo: "jodi-shelton.jpg" },
   { name: "Khurram Ismail", title: "CPO", company: "Sandisk", photo: "khurram-ismail.jpg" },
   { name: "Krishna Rangasayee", title: "CEO", company: "Sima.ai", photo: "krishna-rangasayee.jpg" },
   { name: "Mark Wade", title: "CEO", company: "Ayar Labs", photo: "mark-wade.jpg" },
