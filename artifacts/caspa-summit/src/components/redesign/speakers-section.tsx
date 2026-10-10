@@ -129,11 +129,13 @@ export function SpeakersSection() {
             <PersonCard key={p.name} person={p} onOpen={() => setSelected(p.name)} />
           ))}
         </div>
-        <div className="seeall-m">
-          <button type="button" className="btn line" onClick={() => setOpen((o) => !o)}>
-            {open ? "Show Fewer ↑" : `See All ${LISTED.length} Speakers →`}
-          </button>
-        </div>
+        {!open && (
+          <div className="seeall-m">
+            <button type="button" className="btn line" onClick={() => setOpen(true)}>
+              {`See All ${LISTED.length} Speakers →`}
+            </button>
+          </div>
+        )}
         {open && (
           <div className="more open">
             {rest.map((p) => (
@@ -162,6 +164,11 @@ export function SpeakersSection() {
                   <PersonCard key={p.name} person={p} onOpen={() => setSelected(p.name)} />
                 ))}
               </div>
+            </div>
+            <div className="seeall-m">
+              <button type="button" className="btn line" onClick={() => setOpen(false)}>
+                Show Fewer ↑
+              </button>
             </div>
           </>
         )}
