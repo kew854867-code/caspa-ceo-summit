@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { LISTED, byName, PHOTO_BASE, topSpeakers, type Person } from "@/data/redesign/speakers";
+import { LISTED, MODERATORS, MCS, byName, PHOTO_BASE, topSpeakers, type Person } from "@/data/redesign/speakers";
 import { BIOS } from "@/data/redesign/bios";
 
 function initials(name: string) {
@@ -118,7 +118,7 @@ export function SpeakersSection() {
           </div>
           <button
             type="button"
-            className="btn line"
+            className="btn line seeall-d"
             onClick={() => setOpen((o) => !o)}
           >
             {open ? "Show Fewer ↑" : `See All ${LISTED.length} Speakers →`}
@@ -129,6 +129,11 @@ export function SpeakersSection() {
             <PersonCard key={p.name} person={p} onOpen={() => setSelected(p.name)} />
           ))}
         </div>
+        <div className="seeall-m">
+          <button type="button" className="btn line" onClick={() => setOpen((o) => !o)}>
+            {open ? "Show Fewer ↑" : `See All ${LISTED.length} Speakers →`}
+          </button>
+        </div>
         {open && (
           <div className="more open">
             {rest.map((p) => (
@@ -136,6 +141,16 @@ export function SpeakersSection() {
             ))}
           </div>
         )}
+        <div className="modsec">
+          <div className="phead">
+            <span className="eyebrow">Moderators &amp; MCs</span>
+          </div>
+          <div className="more open">
+            {[...MCS, ...MODERATORS].map((p) => (
+              <PersonCard key={p.name} person={p} onOpen={() => setSelected(p.name)} />
+            ))}
+          </div>
+        </div>
       </div>
       <ProfileModal name={selected} onClose={() => setSelected(null)} />
     </section>

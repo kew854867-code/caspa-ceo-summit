@@ -63,7 +63,13 @@ export const ALL: Person[] = [...FEATURED, ...MORE];
 
 // Shown in the homepage speaker lists. Gary Wang stays in ALL so the agenda can still show him.
 export const HIDDEN_FROM_LISTS = ["Gary Wang"];
-export const LISTED: Person[] = ALL.filter((p) => !HIDDEN_FROM_LISTS.includes(p.name));
+// Moderators and MCs get their own section (not counted as speakers).
+export const MODERATOR_NAMES = ["Austin Lyons","Brandon Wang","Daniel Nenni","Dan Armbrust","Edward Sperling","Max Cherney","Nan Zhou","Nitin Dahad"];
+export const MC_NAMES = ["Christie Wang","Qingyun Cao"];
+const NON_SPEAKERS = [...MODERATOR_NAMES, ...MC_NAMES];
+export const LISTED: Person[] = ALL.filter((p) => !HIDDEN_FROM_LISTS.includes(p.name) && !NON_SPEAKERS.includes(p.name));
+export const MODERATORS: Person[] = MODERATOR_NAMES.map((n) => ALL.find((p) => p.name === n)).filter((p): p is Person => Boolean(p));
+export const MCS: Person[] = MC_NAMES.map((n) => ALL.find((p) => p.name === n)).filter((p): p is Person => Boolean(p));
 
 export const TOP_NAMES: string[] = ["Lip-Bu Tan","Chenming Hu","Sassine Ghazi","Andrew Feldman","Irving Tan","Jimmy Cheng","Michael Hurlston","Bill Brennan","Ajit Manocha","Michael Xie","Dylan Patel","David Lam","Rodrigo Liang","Raghib Hussain","Hong Hou","Krishna Rangasayee","Gavin Uberti","Naveen Rao"];
 
