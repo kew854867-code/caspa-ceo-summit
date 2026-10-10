@@ -55,6 +55,8 @@ export const MORE: Person[] = [
   { name: "Max Cherney", title: "Tech Correspondent", company: "Reuters", photo: "max-cherney-3.jpg" },
   { name: "Nan Zhou", title: "Director", company: "Temasek", photo: "nan-zhou.jpg" },
   { name: "Nitin Dahad", title: "Executive Editor", company: "EE Times", photo: "nitin-dahad-2.jpg" },
+  { name: "Christie Wang", title: "CEO", company: "Vista Robotics Inc.", photo: "christie-wang.jpg" },
+  { name: "Qingyun Cao", title: "Founder & Host", company: "Silicon Valley Vector", photo: "qingyun-cao.jpg" },
 ];
 
 export const ALL: Person[] = [...FEATURED, ...MORE];
