@@ -1,4 +1,5 @@
 import { useState, type ReactNode } from "react";
+import { Link } from "wouter";
 import { ROLES, findSession } from "@/data/redesign/value";
 import { TICKETS } from "@/data/redesign/sponsors";
 import { MAP_W, MAP_H, MAP_RX, MAP_RY, MAP_STAGES, MAP_LABELS, MAP_WORDS, MAP_EDGES } from "@/data/redesign/chipmap";
@@ -67,6 +68,11 @@ export function RoleSection() {
                 );
               })}
             </ul>
+            <div className="rp-agenda">
+              <Link className="agenda-tag" href="/agenda">
+                See All The Agenda →
+              </Link>
+            </div>
           </div>
         </div>
       </div>
