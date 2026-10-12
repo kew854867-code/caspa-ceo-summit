@@ -26,7 +26,6 @@ export function RouteMap() {
         <circle cx={40} cy={y2} r={9} fill={BG} stroke={GOLD} strokeWidth={3} />
         <text className="dg-m" x={40} y={y2 - 46}>ARRIVE</text>
         <text className="dg-m" x={40} y={y2 - 28}>OCT 23–24</text>
-        <text className="dg-m" x={600} y={318} textAnchor="middle">THE SUMMIT</text>
         <text className="dg-h" x={600} y={356} textAnchor="middle">The Entire Chip Supply Chain. One Summit.</text>
         {stops.map(({ m, x, y, n }) => (
           <g key={m.key}>
@@ -44,7 +43,6 @@ export function RouteMap() {
 
       <div className="route-m">
         <div className="rm-head">
-          <span className="eyebrow">The Summit</span>
           <h3>The Entire Chip Supply Chain. One Summit.</h3>
         </div>
         <ol>
