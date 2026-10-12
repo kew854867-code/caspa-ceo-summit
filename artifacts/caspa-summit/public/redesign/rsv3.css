@@ -599,3 +599,6 @@
 .rsv3 .agenda-tag{display:inline-block;font:500 13px 'DM Mono',monospace;letter-spacing:.08em;color:var(--gold);border:1px solid rgba(217,170,62,.55);padding:11px 18px;border-radius:2px;transition:background .2s,color .2s,border-color .2s}
 .rsv3 .agenda-tag:hover{background:var(--gold);color:#140f00;border-color:var(--gold)}
 @media(max-width:1000px){.rsv3 .rp-agenda{text-align:left}}
+
+/* Agenda page starts straight with the filters; keep it clear of the fixed 68px nav */
+.rsv3 .nav-spacer{height:68px}

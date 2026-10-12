@@ -1,6 +1,5 @@
 import { useMemo, useRef, useState } from "react";
 import { useReveal } from "@/components/redesign/use-reveal";
-import { Link } from "wouter";
 import { RedesignNav } from "@/components/redesign/redesign-nav";
 import { RedesignFooter } from "@/components/redesign/redesign-footer";
 import { DAYS, DAY_CHIPS, type AgendaItem, type AgendaDay } from "@/data/redesign/agenda";
@@ -111,19 +110,7 @@ export default function ProgramPage() {
     <div className="rsv3" ref={root}>
       <RedesignNav active="agenda" />
 
-      <header className="ahero">
-        <div className="wrap">
-          <span className="eyebrow">Oct 23–24, 2026 · Santa Clara Convention Center</span>
-          <h1>The 2026 Agenda</h1>
-          <p>
-            Two days, one stage. From the industry outlook to wafer-scale AI, and a closing evening with the CEO
-            of Intel.
-          </p>
-          <Link className="btn gold" href="/summit#tickets">
-            Get Your Ticket →
-          </Link>
-        </div>
-      </header>
+      <div className="nav-spacer" aria-hidden="true" />
 
       <div className="fbar">
         <div className="wrap">
