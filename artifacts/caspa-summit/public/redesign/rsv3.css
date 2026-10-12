@@ -594,11 +594,15 @@
 .rsv3 .spage #all-speakers .tier-l{margin:64px 0 28px}
 @media(max-width:900px){.rsv3 .spk-grid{grid-template-columns:repeat(2,1fr);gap:32px 16px}.rsv3 .spk-grid .card h4{font-size:18px}.rsv3 .spk-grid .card .r{font-size:14px}.rsv3 .spk-grid .card .o{font-size:12px}}
 
-/* Gold "See All The Agenda" tag under the sessions list (bottom right of the role panel) */
-.rsv3 .rp-agenda{margin-top:24px;text-align:right}
-.rsv3 .agenda-tag{display:inline-block;font:500 13px 'DM Mono',monospace;letter-spacing:.08em;color:var(--gold);border:1px solid rgba(217,170,62,.55);padding:11px 18px;border-radius:2px;transition:background .2s,color .2s,border-color .2s}
-.rsv3 .agenda-tag:hover{background:var(--gold);color:#140f00;border-color:var(--gold)}
-@media(max-width:1000px){.rsv3 .rp-agenda{text-align:left}}
+/* "See All The Agenda" uses the standard gold button, pinned to the bottom of the role panel (right column stretches to the row) */
+.rsv3 .rp-side{display:flex;flex-direction:column}
+.rsv3 .rp-agenda{margin-top:auto;padding-top:28px;align-self:flex-end}
+@media(max-width:1000px){.rsv3 .rp-agenda{align-self:flex-start}}
 
 /* Agenda page starts straight with the filters; keep it clear of the fixed 68px nav */
 .rsv3 .nav-spacer{height:68px}
+/* Left column fills the row too, so its last rule always lines up with the button on the right */
+.rsv3 .rp-main{display:flex;flex-direction:column}
+.rsv3 .rp-actions{flex:1;display:flex;flex-direction:column}
+.rsv3 .rp-actions li{flex:1;align-items:center}
+.rsv3 .rp-actions .n{padding-top:0}

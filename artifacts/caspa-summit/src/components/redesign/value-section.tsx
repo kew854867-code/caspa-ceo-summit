@@ -69,7 +69,7 @@ export function RoleSection() {
               })}
             </ul>
             <div className="rp-agenda">
-              <Link className="agenda-tag" href="/agenda">
+              <Link className="btn gold" href="/agenda">
                 See All The Agenda →
               </Link>
             </div>
