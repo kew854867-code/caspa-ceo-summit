@@ -11,6 +11,7 @@ import Home from "@/pages/home";
 import SponsorshipPage from "@/pages/sponsorship";
 import ProgramPage from "@/pages/program";
 import SponsorsPage from "@/pages/sponsors";
+import SpeakersPage from "@/pages/speakers";
 import UserPortalPage from "@/pages/user-portal";
 
 const queryClient = new QueryClient();
@@ -155,6 +156,7 @@ function Router() {
       <Route path="/program" component={ProgramPage} />
       <Route path="/agenda" component={ProgramPage} />
       <Route path="/sponsors" component={SponsorsPage} />
+      <Route path="/speakers" component={SpeakersPage} />
       <Route path="/sponsorship" component={SponsorshipPage} />
       <Route path="/user-portal" component={UserPortal} />
       <Route path="/sign-in/*?" component={SignInPage} />

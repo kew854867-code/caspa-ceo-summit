@@ -8,6 +8,7 @@ import { TicketsSection } from "@/components/redesign/tickets-section";
 import { VenueAbout, IntroSection } from "@/components/redesign/venue-about-intro";
 import { PartnersSection } from "@/components/redesign/partners-section";
 import { openMail } from "@/components/redesign/mail-templates";
+import { RoleSection } from "@/components/redesign/value-section";
 
 export default function Home() {
   const root = useRef<HTMLDivElement>(null);
@@ -15,10 +16,11 @@ export default function Home() {
 
   return (
     <div className="rsv3" ref={root}>
-      <RedesignNav active="speakers" />
+      <RedesignNav />
       <HeroSection />
       <main>
         <SpeakersSection />
+        <RoleSection />
         <VenueAbout />
         <PartnersSection onPress={() => openMail("press")} showAlliance={false} />
         <TicketsSection />

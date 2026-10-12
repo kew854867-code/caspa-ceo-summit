@@ -72,7 +72,18 @@ export const LISTED: Person[] = ALL.filter((p) => !HIDDEN_FROM_LISTS.includes(p.
 export const MODERATORS: Person[] = MODERATOR_NAMES.map((n) => ALL.find((p) => p.name === n)).filter((p): p is Person => Boolean(p));
 export const MCS: Person[] = MC_NAMES.map((n) => ALL.find((p) => p.name === n)).filter((p): p is Person => Boolean(p));
 
-export const TOP_NAMES: string[] = ["Lip-Bu Tan","Chenming Hu","Sassine Ghazi","Andrew Feldman","Irving Tan","Jimmy Cheng","Michael Hurlston","Bill Brennan","Ajit Manocha","Michael Xie","Dylan Patel","David Lam","Rodrigo Liang","Raghib Hussain","Hong Hou","Krishna Rangasayee","Gavin Uberti","Naveen Rao"];
+// Homepage "Featured Speakers": company CEOs only, ordered by their company's market cap (public) or latest
+// disclosed valuation (private), highest first. Snapshot researched 12 Oct 2026; figures move, re-check before launch.
+//  1 Intel ~$516B (24 Jul)            2 Western Digital ~$158-172B (Jul)   3 Synopsys ~$77-85B (Jul)
+//  4 Lumentum ~$78B (28 Aug)          5 Cerebras ~$39B (9 Oct close)       6 Credo ~$36B (28 Jul)
+//  7 Etched $21B (Aug, Series D)      8 SambaNova $11B (Jul, Series F)     9 Semtech ~$9.6-11.6B (Jul-Sep)
+// 10 Altera $8.75B (2025 deal)       11 Unconventional AI $4.5B (Dec 25)  12 Ricursive $4B (Jan)
+// 13 Ayar Labs $3.75B (Mar)          14 Rebellions ~$2.34B (Mar)          15 d-Matrix $2B (Nov 25)
+// 16 SiMa.ai $1.45B (Sep)
+// 17-20: no valuation disclosed, ordered by disclosed funding: Cognichip (~$93M), ScaleFlux (~$79M, sources conflict),
+//        Normal Computing (>= $58.5M), Multibeam ($50M Series B + $15M debt).
+// Not eligible: association CEOs (SEMI, GSA, IEEE: no market cap) and non-CEO titles. Everyone is still on /speakers.
+export const TOP_NAMES: string[] = ["Lip-Bu Tan","Irving Tan","Sassine Ghazi","Michael Hurlston","Andrew Feldman","Bill Brennan","Gavin Uberti","Rodrigo Liang","Hong Hou","Raghib Hussain","Naveen Rao","Anna Goldie","Mark Wade","Sunghyun Park","Sid Sheth","Krishna Rangasayee","Faraj Aalaei","Hao Zhong","Faris Sbahi","David Lam"];
 
 export const byName = (name: string): Person | undefined =>
   ALL.find((p) => p.name === name);

@@ -5,6 +5,8 @@ import { RedesignFooter } from "@/components/redesign/redesign-footer";
 import { SponsorsSection } from "@/components/redesign/sponsors-section";
 import { PartnersSection } from "@/components/redesign/partners-section";
 import { openMail } from "@/components/redesign/mail-templates";
+import { WhySponsor } from "@/components/redesign/why-sponsor";
+import { RouteMapSection } from "@/components/redesign/route-map";
 
 export default function SponsorsPage() {
   const root = useRef<HTMLDivElement>(null);
@@ -14,17 +16,11 @@ export default function SponsorsPage() {
     <div className="rsv3" ref={root}>
       <RedesignNav active="sponsors" />
 
-      <header className="ahero">
-        <div className="wrap">
-          <span className="eyebrow">Oct 23–24, 2026 · Santa Clara Convention Center</span>
-          <h1>Sponsors &amp; Partners</h1>
-          <p>The companies and organizations making the 35th CASPA Annual Conference &amp; Dinner Banquet possible.</p>
-        </div>
-      </header>
-
-      <main>
+      <main className="spage">
         <SponsorsSection onBecomeSponsor={() => openMail("sponsor")} />
         <PartnersSection onPress={() => openMail("press")} showMedia={false} />
+        <RouteMapSection />
+        <WhySponsor onBecomeSponsor={() => openMail("sponsor")} />
       </main>
       <RedesignFooter />
     </div>

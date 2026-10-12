@@ -16,7 +16,7 @@ export function RedesignNav({ active }: RedesignNavProps) {
           <img src={`${REDESIGN_BASE}caspa-logo.png`} alt="CASPA" />
         </Link>
         <div className="links" onClick={close}>
-          <Link href="/summit#speakers" className={active === "speakers" ? "on" : undefined}>
+          <Link href="/speakers" className={active === "speakers" ? "on" : undefined}>
             Speakers
           </Link>
           <Link href="/agenda" className={active === "agenda" ? "on" : undefined}>

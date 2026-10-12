@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { LISTED, MODERATORS, MCS, byName, PHOTO_BASE, topSpeakers, type Person } from "@/data/redesign/speakers";
+import { Link } from "wouter";
+import { LISTED, byName, PHOTO_BASE, topSpeakers, type Person } from "@/data/redesign/speakers";
 import { BIOS } from "@/data/redesign/bios";
 
 function initials(name: string) {
@@ -10,7 +11,7 @@ function initials(name: string) {
     .slice(0, 2);
 }
 
-function PersonCard({ person, onOpen }: { person: Person; onOpen: () => void }) {
+export function PersonCard({ person, onOpen }: { person: Person; onOpen: () => void }) {
   const [broken, setBroken] = useState(false);
   const clickable = Boolean(BIOS[person.name]);
   return (
@@ -103,10 +104,7 @@ export function ProfileModal({
 }
 
 export function SpeakersSection() {
-  const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
-
-  const rest = LISTED.filter((p) => !topSpeakers.includes(p));
 
   return (
     <section id="speakers">
@@ -116,62 +114,20 @@ export function SpeakersSection() {
             <span className="eyebrow">Who Takes The Stage</span>
             <h2>Featured <em>Speakers</em></h2>
           </div>
-          <button
-            type="button"
-            className="btn line seeall-d"
-            onClick={() => setOpen((o) => !o)}
-          >
-            {open ? "Show Fewer ↑" : `See All ${LISTED.length} Speakers →`}
-          </button>
+          <Link className="btn line seeall-d" href="/speakers">
+            {`See All ${LISTED.length} Speakers →`}
+          </Link>
         </div>
-        <div className="feat">
+        <div className="spk-grid">
           {topSpeakers.map((p) => (
             <PersonCard key={p.name} person={p} onOpen={() => setSelected(p.name)} />
           ))}
         </div>
-        {!open && (
-          <div className="seeall-m">
-            <button type="button" className="btn line" onClick={() => setOpen(true)}>
-              {`See All ${LISTED.length} Speakers →`}
-            </button>
-          </div>
-        )}
-        {open && (
-          <div className="more open">
-            {rest.map((p) => (
-              <PersonCard key={p.name} person={p} onOpen={() => setSelected(p.name)} />
-            ))}
-          </div>
-        )}
-        {open && (
-          <>
-            <div className="modsec">
-              <div className="phead">
-                <span className="eyebrow">Moderators</span>
-              </div>
-              <div className="more open">
-                {MODERATORS.map((p) => (
-                  <PersonCard key={p.name} person={p} onOpen={() => setSelected(p.name)} />
-                ))}
-              </div>
-            </div>
-            <div className="modsec">
-              <div className="phead">
-                <span className="eyebrow">MCs</span>
-              </div>
-              <div className="more open">
-                {MCS.map((p) => (
-                  <PersonCard key={p.name} person={p} onOpen={() => setSelected(p.name)} />
-                ))}
-              </div>
-            </div>
-            <div className="seeall-m">
-              <button type="button" className="btn line" onClick={() => setOpen(false)}>
-                Show Fewer ↑
-              </button>
-            </div>
-          </>
-        )}
+        <div className="seeall-m">
+          <Link className="btn line" href="/speakers">
+            {`See All ${LISTED.length} Speakers →`}
+          </Link>
+        </div>
       </div>
       <ProfileModal name={selected} onClose={() => setSelected(null)} />
     </section>
