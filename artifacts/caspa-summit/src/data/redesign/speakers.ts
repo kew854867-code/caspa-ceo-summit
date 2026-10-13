@@ -84,8 +84,8 @@ export const MCS: Person[] = MC_NAMES.map((n) => ALL.find((p) => p.name === n)).
 //        Normal Computing (>= $58.5M), Multibeam ($50M Series B + $15M debt).
 // Not eligible: association CEOs (SEMI, GSA, IEEE: no market cap) and non-CEO titles. Everyone is still on /speakers.
 // 13 Oct additions (organizer): Jimmy Cheng (CASPA President) pinned 2nd; Melton Chang (Schneider Electric ~$188B, Aug, CompaniesMarketCap) slots 3rd and
-// Michael Xie (Fortinet ~$131B, early Oct, press reports) slots 5th by company market cap; Chenming Hu (no company) is last. Khurram Ismail (Sandisk ~$245B, 6 Oct close) and Ankur Gupta (Siemens ~$242B, Oct) added by organizer despite non-CEO titles. 26 names = 6 rows of 4 + 2.
-export const TOP_NAMES: string[] = ["Lip-Bu Tan","Jimmy Cheng","Khurram Ismail","Ankur Gupta","Melton Chang","Irving Tan","Michael Xie","Sassine Ghazi","Michael Hurlston","Andrew Feldman","Bill Brennan","Gavin Uberti","Rodrigo Liang","Hong Hou","Raghib Hussain","Naveen Rao","Anna Goldie","Mark Wade","Sunghyun Park","Sid Sheth","Krishna Rangasayee","Faraj Aalaei","Hao Zhong","Faris Sbahi","David Lam","Chenming Hu"];
+// Michael Xie (Fortinet ~$131B, early Oct, press reports) slots 5th by company market cap; Chenming Hu (no company) is last. Khurram Ismail (Sandisk ~$245B, 6 Oct close) and Ankur Gupta (Siemens ~$242B, Oct) added by organizer despite non-CEO titles. Albert Kim (Samsung ~$1.28T, Aug) and Avi Shetty (Solidigm, parent SK hynix ~$0.99T, Aug) added the same way, ahead of Sandisk. 28 names = 7 rows of 4.
+export const TOP_NAMES: string[] = ["Lip-Bu Tan","Jimmy Cheng","Albert Kim","Avi Shetty","Khurram Ismail","Ankur Gupta","Melton Chang","Irving Tan","Michael Xie","Sassine Ghazi","Michael Hurlston","Andrew Feldman","Bill Brennan","Gavin Uberti","Rodrigo Liang","Hong Hou","Raghib Hussain","Naveen Rao","Anna Goldie","Mark Wade","Sunghyun Park","Sid Sheth","Krishna Rangasayee","Faraj Aalaei","Hao Zhong","Faris Sbahi","David Lam","Chenming Hu"];
 
 export const byName = (name: string): Person | undefined =>
   ALL.find((p) => p.name === name);
