@@ -83,8 +83,9 @@ export const MCS: Person[] = MC_NAMES.map((n) => ALL.find((p) => p.name === n)).
 // 17-20: no valuation disclosed, ordered by disclosed funding: Cognichip (~$93M), ScaleFlux (~$79M, sources conflict),
 //        Normal Computing (>= $58.5M), Multibeam ($50M Series B + $15M debt).
 // Not eligible: association CEOs (SEMI, GSA, IEEE: no market cap) and non-CEO titles. Everyone is still on /speakers.
-// Exceptions (organizer, 13 Oct): CASPA President Jimmy Cheng is pinned in 2nd place; Chenming Hu, Michael Xie and Melton Chang are appended after the valuation-ranked names (not ranked by valuation). 24 names = 6 rows of 4.
-export const TOP_NAMES: string[] = ["Lip-Bu Tan","Jimmy Cheng","Irving Tan","Sassine Ghazi","Michael Hurlston","Andrew Feldman","Bill Brennan","Gavin Uberti","Rodrigo Liang","Hong Hou","Raghib Hussain","Naveen Rao","Anna Goldie","Mark Wade","Sunghyun Park","Sid Sheth","Krishna Rangasayee","Faraj Aalaei","Hao Zhong","Faris Sbahi","David Lam","Chenming Hu","Michael Xie","Melton Chang"];
+// 13 Oct additions (organizer): Jimmy Cheng (CASPA President) pinned 2nd; Melton Chang (Schneider Electric ~$188B, Aug, CompaniesMarketCap) slots 3rd and
+// Michael Xie (Fortinet ~$131B, early Oct, press reports) slots 5th by company market cap; Chenming Hu (no company) is last. 24 names = 6 rows of 4.
+export const TOP_NAMES: string[] = ["Lip-Bu Tan","Jimmy Cheng","Melton Chang","Irving Tan","Michael Xie","Sassine Ghazi","Michael Hurlston","Andrew Feldman","Bill Brennan","Gavin Uberti","Rodrigo Liang","Hong Hou","Raghib Hussain","Naveen Rao","Anna Goldie","Mark Wade","Sunghyun Park","Sid Sheth","Krishna Rangasayee","Faraj Aalaei","Hao Zhong","Faris Sbahi","David Lam","Chenming Hu"];
 
 export const byName = (name: string): Person | undefined =>
   ALL.find((p) => p.name === name);
