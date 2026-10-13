@@ -83,7 +83,8 @@ export const MCS: Person[] = MC_NAMES.map((n) => ALL.find((p) => p.name === n)).
 // 17-20: no valuation disclosed, ordered by disclosed funding: Cognichip (~$93M), ScaleFlux (~$79M, sources conflict),
 //        Normal Computing (>= $58.5M), Multibeam ($50M Series B + $15M debt).
 // Not eligible: association CEOs (SEMI, GSA, IEEE: no market cap) and non-CEO titles. Everyone is still on /speakers.
-export const TOP_NAMES: string[] = ["Lip-Bu Tan","Irving Tan","Sassine Ghazi","Michael Hurlston","Andrew Feldman","Bill Brennan","Gavin Uberti","Rodrigo Liang","Hong Hou","Raghib Hussain","Naveen Rao","Anna Goldie","Mark Wade","Sunghyun Park","Sid Sheth","Krishna Rangasayee","Faraj Aalaei","Hao Zhong","Faris Sbahi","David Lam"];
+// Exception (organizer, 13 Oct): CASPA President Jimmy Cheng is pinned in 2nd place. To keep the grid at 4 x 5 the last-ranked name (David Lam) moved off this list; he stays on /speakers.
+export const TOP_NAMES: string[] = ["Lip-Bu Tan","Jimmy Cheng","Irving Tan","Sassine Ghazi","Michael Hurlston","Andrew Feldman","Bill Brennan","Gavin Uberti","Rodrigo Liang","Hong Hou","Raghib Hussain","Naveen Rao","Anna Goldie","Mark Wade","Sunghyun Park","Sid Sheth","Krishna Rangasayee","Faraj Aalaei","Hao Zhong","Faris Sbahi"];
 
 export const byName = (name: string): Person | undefined =>
   ALL.find((p) => p.name === name);
