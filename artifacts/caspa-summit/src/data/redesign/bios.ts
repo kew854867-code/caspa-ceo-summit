@@ -261,7 +261,7 @@ export const BIOS: Record<string, Bio> = {
   ]
  },
  "Melton Chang": {
-  "bio": "Melton Chang is Executive Vice President of Schneider Electric's Power Systems Division, appointed in January 2025. He joined Schneider Electric in 2007 and has held roles in North America, Taiwan, Shanghai, and France. Most recently as head of Medium Voltage Offers, he led the group's medium voltage line of business, with responsibility for the overall R&D, quality assurance, marketing, global multi-hub business strategy, and the organizational transformation to enable agile development.",
+  "bio": "Melton Chang is President of Schneider Electric's Power Systems Division. He joined Schneider Electric in 2007 and has held roles in North America, Taiwan, Shanghai, and France. Most recently as head of Medium Voltage Offers, he led the group's medium voltage line of business, with responsibility for the overall R&D, quality assurance, marketing, global multi-hub business strategy, and the organizational transformation to enable agile development.",
   "links": [
    [
     "LinkedIn",
