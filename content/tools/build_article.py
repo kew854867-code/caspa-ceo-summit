@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-"""Build the designed HTML article from chip-world-map-article.md.
+"""Build the white, clean HTML article from chip-world-map-article.md.
 
 Usage: python3 build_article.py <out.html>
-Figures are generated here from the numbers recorded in the article's sources
-(each figure caption names its source and reference number).
+All figure numbers are copied from the sources cited in each caption.
 """
-import base64, html, re, sys
+import html, re, sys
 from pathlib import Path
 import markdown
 
@@ -17,186 +16,151 @@ TICKET_URL = ("https://www.eventbrite.com/e/caspa-35th-annual-conference-dinner-
               "the-ceo-summit-tickets-1994631439329?discount=CC15OFF")
 
 
-def b64(path, mime):
-    return f"data:{mime};base64," + base64.b64encode((ROOT / path).read_bytes()).decode()
+def cite(*ns):
+    return "".join(f'<sup class="cite"><a href="#ref-{n}">{n}</a></sup>' for n in ns)
 
 
-POSTER = b64("assets/summit-poster.jpg", "image/jpeg")
-QR = b64("assets/summit-qr.png", "image/png")
+# ------------------------------------------------------------- figures
+CHAIN = [
+    ("设计", "决定芯片做什么、怎么做", "英伟达等无晶圆设计公司",
+     "美国公司占 2025 年全球半导体销售额的 53.4%", (3,), "#2F6FDF"),
+    ("设计工具与 IP", "画图纸用的软件，和可以复用的标准件", "新思科技、铿腾电子（Cadence）、西门子 EDA、Arm",
+     "新思科技 2025 财年营收 70.54 亿美元，同比约 +15%", (32,), "#7A5AF8"),
+    ("制造", "把图纸刻在硅片上", "台积电、三星、中芯国际",
+     "台积电占 2026 年二季度全球代工营收的 72.5%", (17,), "#D99A00"),
+    ("设备", "造芯片工厂的机器，包括光刻机", "ASML、应用材料、泛林集团、东京电子、KLA",
+     "2025 年全球设备市场 1,362 亿美元，ASML 营收 275 亿美元居首", (24,), "#E4572E"),
+    ("封装与测试", "把裸片变成能用的产品，先进封装是 AI 芯片的关键一步", "CoWoS 先进封装，鸿海、纬创、Fabrinet 等承包商",
+     "英伟达用 CoWoS 做封装，组装与测试交给承包商", (16,), "#14A38B"),
+    ("存储", "芯片的记忆", "三星、SK 海力士、美光、长鑫存储",
+     "2026 年二季度 HBM 份额：SK 海力士 50%、三星 33%、美光 18%", (12,), "#F08A24"),
+    ("系统与数据中心", "最终买单的人", "云厂商、服务器厂商",
+     "英伟达 2026 年 5–7 月季度数据中心收入 890 亿美元，同比 +117%", (27,), "#5B6B8C"),
+]
 
-# ---------------------------------------------------------------- figures
-def cite(n):
-    return f'<sup class="cite"><a href="#ref-{n}">{n}</a></sup>'
 
-
-def fig_shares():
-    # BCG x SIA (Apr 2021), Exhibit 1, 2019 data. Only labelled values are shown;
-    # "rest" is the remainder that the exhibit leaves unlabelled.
-    rows = [
-        ("设计工具与核心 IP", {"us": 74}),
-        ("逻辑芯片设计", {"us": 67, "ea": 15, "eu": 8}),
-        ("存储设计", {"us": 29, "ea": 70}),
-        ("设备", {"us": 41, "ea": 36, "eu": 18}),
-        ("材料", {"us": 11, "cn": 13, "ea": 57, "eu": 12}),
-        ("晶圆制造", {"us": 12, "cn": 16, "ea": 56, "eu": 9}),
-        ("封装与测试", {"cn": 38, "ea": 43}),
-    ]
-    names = {"us": "美国", "cn": "中国大陆", "ea": "东亚（日韩台）", "eu": "欧洲"}
-    out = ['<figure class="fig" id="fig-shares"><div class="panel">',
-           '<div class="fig-kicker">谁主导哪一环</div>',
-           '<div class="fig-title">2019 年各环节的区域份额</div>',
-           '<div class="legend">']
-    for k in ("us", "ea", "cn", "eu"):
-        out.append(f'<span><i class="sw r-{k}"></i>{names[k]}</span>')
-    out.append('<span><i class="sw r-ot"></i>其他或未标注</span></div><div class="bars">')
-    for label, d in rows:
-        rest = 100 - sum(d.values())
-        desc = "，".join(f"{names[k]} {v}%" for k, v in d.items())
-        segs = "".join(
-            f'<span class="seg r-{k}" style="flex:{v}">{v}%</span>' if v >= 6
-            else f'<span class="seg r-{k}" style="flex:{v}"></span>'
-            for k, v in d.items())
-        if rest > 0:
-            segs += f'<span class="seg r-ot" style="flex:{rest}"></span>'
-        out.append(f'<div class="bar-row"><div class="bar-label">{label}</div>'
-                   f'<div class="bar" role="img" aria-label="{label}：{desc}">{segs}</div></div>')
-    out.append('</div></div>'
-               f'<figcaption>图 1　数据来源：BCG 与 SIA，2021 年 4 月报告 Exhibit 1，数据年份为 2019 年。{cite(6)} '
-               '该图只标出了报告标注的数值，未标注部分以灰色表示。“东亚”为报告口径，指韩国、日本和台湾。</figcaption></figure>')
+def fig_chain():
+    out = ['<figure class="fig" id="fig-chain"><div class="fig-title">一颗芯片的七个环节</div>'
+           '<div class="fig-sub">每个环节的代表公司，和最新一期的数据</div><ol class="chain">']
+    for i, (name, what, who, data, refs, color) in enumerate(CHAIN, 1):
+        out.append(
+            f'<li style="--c:{color}"><span class="dot" aria-hidden="true">{i}</span>'
+            f'<div class="ch-body"><div class="ch-h"><b>{name}</b><span>{what}</span></div>'
+            f'<div class="ch-who">{who}</div><div class="ch-data">{data}{cite(*refs)}</div></div></li>')
+    out.append('</ol><figcaption>图 1　产业链七个环节与各环节的最新数据（2025–2026 年）。统计口径与出处见各角标。</figcaption></figure>')
     return "".join(out)
 
 
 TIMELINE = [
-    ("1947–1959", "美国", "us", "发明晶体管与集成电路", "贝尔实验室 · 德州仪器 · 仙童"),
-    ("1971", "美国", "us", "第一款商用微处理器", "英特尔 4004"),
-    ("1980 年代", "日本", "ea", "存储领跑，后期全球份额 52%", "日本电气 · 日立等"),
-    ("1987–1990", "台湾 · 英国", "ea", "设计与制造分工", "台积电 · Arm"),
-    ("1992", "韩国", "ea", "DRAM 接棒", "三星电子"),
-    ("2010–2020", "荷兰", "eu", "EUV 光刻机走向量产", "ASML"),
-    ("2020 年代", "美 · 台 · 韩", "us", "AI 把整条链拉到极限", "英伟达 · 台积电 · SK 海力士"),
-    ("1996–2023", "中国大陆", "cn", "全球晶圆产能份额 1.62% → 25.83%", "中芯国际 · 长鑫存储"),
+    ("1947–1959", "美国", "us", "发明晶体管与集成电路", "贝尔实验室 · 德州仪器 · 仙童", (4, 5)),
+    ("1971", "美国", "us", "第一款商用微处理器", "英特尔 4004", (7,)),
+    ("1980 年代", "日本", "ea", "存储领跑，后期占全球半导体市场 52%", "日本电气 · 日立等", (9,)),
+    ("1987–1990", "台湾 · 英国", "ea", "设计与制造分工", "台积电 · Arm", (14, 15)),
+    ("1992", "韩国", "ea", "DRAM 接棒", "三星电子", (11,)),
+    ("2010–2026", "荷兰", "eu", "EUV 光刻机：从原型机到年出货约 65 台", "ASML", (19, 22)),
+    ("2026", "美 · 台 · 韩", "us", "AI 需求推动 8 月单月销售额达 1,597 亿美元", "英伟达 · 台积电 · SK 海力士", (2,)),
+    ("2025–2026", "中国大陆", "cn", "设备投入 493 亿美元，居全球首位", "中芯国际 · 华虹 · 长鑫存储", (13,)),
 ]
 
 
 def fig_timeline():
-    out = ['<figure class="fig" id="fig-timeline"><div class="panel">',
-           '<div class="fig-kicker">谁在推动</div>',
-           '<div class="fig-title">八个关键节点</div><ol class="tl">']
-    for when, who, reg, what, cos in TIMELINE:
-        out.append(f'<li class="tl-card r-line-{reg}"><div class="tl-when">{when}</div>'
-                   f'<div class="tl-who">{who}</div><div class="tl-what">{what}</div>'
-                   f'<div class="tl-co">{cos}</div></li>')
-    out.append('</ol></div><figcaption>图 2　本文各节的脉络。颜色与图 1 一致：蓝为美国，金为东亚，绿为欧洲，红为中国大陆。'
-               f'依据正文第一至七节及其出处{cite(1)}{cite(2)}{cite(4)}{cite(8)}{cite(10)}{cite(12)}{cite(13)}{cite(15)}{cite(21)}。</figcaption></figure>')
+    out = ['<figure class="fig" id="fig-timeline"><div class="fig-title">决定今天分工的八个节点</div>'
+           '<div class="fig-sub">按时间顺序，颜色代表推动者所在的地区</div>'
+           '<div class="legend"><span><i class="sw k-us"></i>美国</span><span><i class="sw k-ea"></i>日本、韩国、台湾</span>'
+           '<span><i class="sw k-eu"></i>欧洲</span><span><i class="sw k-cn"></i>中国大陆</span></div><ol class="tl">']
+    for when, who, reg, what, cos, refs in TIMELINE:
+        out.append(f'<li class="tl-card c-{reg}"><div class="tl-when">{when}</div><div class="tl-who">{who}</div>'
+                   f'<div class="tl-what">{what}{cite(*refs)}</div><div class="tl-co">{cos}</div></li>')
+    out.append('</ol><figcaption>图 2　八个关键节点。1980 年代的份额为日本厂商在全球半导体市场的份额；2010–2026 年指 ASML 从第一台 EUV 原型机到 2026 年预计出货。</figcaption></figure>')
     return "".join(out)
 
 
 def fig_ai():
-    return f'''<figure class="fig" id="fig-ai"><div class="panel">
-<div class="fig-kicker">2026 年的一条供应链</div>
-<div class="fig-title">一块 AI 加速器，经过哪些手</div>
+    return f'''<figure class="fig" id="fig-ai"><div class="fig-title">一块 AI 加速器，经过哪些手</div>
+<div class="fig-sub">以英伟达披露的供应链为例，数据为 2026 年最新一期</div>
 <div class="flow">
-  <div class="node n-design"><b>设计</b><span>NVIDIA（美国）</span></div>
+  <div class="node" style="--c:#2F6FDF"><b>设计</b><span>英伟达（美国）</span></div>
   <div class="arrow" aria-hidden="true">→</div>
-  <div class="node n-fab"><b>晶圆代工</b><span>台积电 · 三星</span><em>台积电 2026 年第二季度份额 72.5%</em></div>
+  <div class="node" style="--c:#D99A00"><b>晶圆代工</b><span>台积电 · 三星</span><em>台积电占二季度全球代工营收 72.5%{cite(17)}</em></div>
   <div class="arrow" aria-hidden="true">→</div>
-  <div class="node n-pack"><b>先进封装</b><span>CoWoS</span></div>
+  <div class="node" style="--c:#14A38B"><b>先进封装</b><span>CoWoS</span></div>
   <div class="arrow" aria-hidden="true">→</div>
-  <div class="node n-asm"><b>组装测试</b><span>鸿海 · 纬创 · Fabrinet</span></div>
+  <div class="node" style="--c:#5B6B8C"><b>组装测试</b><span>鸿海 · 纬创 · Fabrinet</span></div>
 </div>
 <div class="flow-mem">
-  <div class="mem-label"><b>HBM 内存</b><span>2026 年第二季度营收份额</span></div>
-  <div class="bar mem-bar" role="img" aria-label="HBM 份额：SK 海力士 50%，三星 33%，美光 18%">
-    <span class="seg m-1" style="flex:50">SK 海力士 50%</span><span class="seg m-2" style="flex:33">三星 33%</span><span class="seg m-3" style="flex:18">美光 18%</span>
+  <div class="mem-label"><b>HBM 内存</b><span>2026 年二季度营收份额{cite(12)}</span></div>
+  <div class="bar" role="img" aria-label="HBM 份额：SK 海力士 50%，三星 33%，美光 18%">
+    <span class="seg" style="flex:50;background:#F08A24">SK 海力士 50%</span><span class="seg" style="flex:33;background:#2F6FDF;color:#fff">三星 33%</span><span class="seg" style="flex:18;background:#14A38B">美光 18%</span>
   </div>
 </div>
 <div class="stats">
-  <div><b>7,020 亿美元</b><span>2026 年上半年全球半导体销售额，同比 +102%</span></div>
-  <div><b>+305%</b><span>2026 年上半年存储同比增速</span></div>
-  <div><b>+45%</b><span>2026 年上半年逻辑同比增速</span></div>
-  <div><b>7,917 亿美元</b><span>2025 年全年销售额，同比 +25.6%</span></div>
-</div></div>
-<figcaption>图 3　供应链环节取自 NVIDIA 2026 财年 10-K。{cite(14)} 代工份额来自 TrendForce。{cite(18)} HBM 份额来自 Counterpoint，为研究机构估算，四舍五入后合计可能不是 100%。{cite(11)} 销售额来自 WSTS 与 SIA。{cite(19)}{cite(20)}</figcaption></figure>'''
+  <div><b>1,597 亿美元</b><span>2026 年 8 月全球半导体销售额，同比 +144.3%{cite(2)}</span></div>
+  <div><b>+305%</b><span>2026 年上半年存储同比增速，逻辑为 +45%{cite(25)}</span></div>
+  <div><b>962 亿美元</b><span>英伟达 5–7 月季度营收，同比 +106%{cite(27)}</span></div>
+  <div><b>402 亿美元</b><span>台积电二季度营收，同比 +33.7%{cite(18)}</span></div>
+</div>
+<figcaption>图 3　供应链环节取自英伟达 2026 财年 10-K。{cite(16)} HBM 份额为研究机构估算，四舍五入后合计可能不是 100%。</figcaption></figure>'''
+
+
+EQUIP = [("中国大陆", 49.3, "-0.5%"), ("台湾", 31.5, "+90%"), ("韩国", 25.8, "+26%"),
+         ("北美", 10.9, "-20%"), ("日本", 9.5, "+22%"), ("其他地区", 5.2, "+25%"), ("欧洲", 2.9, "-41%")]
 
 
 def fig_china():
-    return f'''<figure class="fig" id="fig-china"><div class="panel">
-<div class="fig-kicker">中国大陆在全球晶圆产能中的位置</div>
-<div class="fig-title">规模在变大，最前沿仍是 0</div>
-<div class="china-grid">
-  <div class="big-pair">
-    <div><b>1.62%</b><span>1996 年 2 月</span></div>
-    <div class="big-arrow" aria-hidden="true">→</div>
-    <div><b class="gold">25.83%</b><span>2023 年 8 月</span></div>
-  </div>
-  <div class="node-bars">
-    <div class="nb-title">2023 年第三季度，占全球该类产能</div>
-    <div class="nb"><span class="nb-l">成熟制程<br><small>28 纳米及以上</small></span><div class="nb-track"><i style="width:30.19%"></i></div><span class="nb-v">30.19%</span></div>
-    <div class="nb"><span class="nb-l">先进制程<br><small>6 至 27 纳米</small></span><div class="nb-track"><i style="width:17.57%"></i></div><span class="nb-v">17.57%</span></div>
-    <div class="nb"><span class="nb-l">最前沿<br><small>5 纳米及以下</small></span><div class="nb-track"><i style="width:0%"></i></div><span class="nb-v">0%</span></div>
-  </div>
+    # values are in billions; show as 亿美元 = x10
+    rows = "".join(
+        f'<div class="eq-row{" hl" if n == "中国大陆" else ""}"><span class="eq-n">{n}</span>'
+        f'<div class="eq-track"><i style="width:{v / 49.3 * 100:.1f}%"></i></div>'
+        f'<span class="eq-v">{v * 10:.0f}</span><span class="eq-g">{g}</span></div>' for n, v, g in EQUIP)
+    return f'''<figure class="fig" id="fig-china"><div class="fig-title">2025 年，钱花在哪里</div>
+<div class="fig-sub">各地区半导体设备销售额（亿美元）与同比变化{cite(13)}</div>
+<div class="eq">{rows}</div>
+<div class="tiles">
+  <div><b>30.06 亿美元</b><span>中芯国际 2026 年二季度营收，同比 +36.1%{cite(28)}</span></div>
+  <div><b>3 家</b><span>二季度全球晶圆代工前十中的中国大陆企业：中芯国际、华虹集团、晶合集成{cite(17)}</span></div>
+  <div><b>约 10%</b><span>长鑫存储占 2026 年二季度全球 DRAM 营收{cite(12)}</span></div>
+  <div><b>约 20%</b><span>中国大陆占 ASML 2026 年全年净销售额的预期比例{cite(22)}</span></div>
+  <div><b>3,440 亿元</b><span>“大基金”三期注册资本，2024 年 5 月成立{cite(31)}</span></div>
+  <div><b>+131.3%</b><span>2026 年 8 月中国市场半导体销售额同比增速{cite(2)}</span></div>
 </div>
-<div class="fund">
-  <div class="fund-t">“大基金”募资</div>
-  <div class="fund-items">
-    <div><b>1,387 亿元</b><span>一期 · 2014</span></div>
-    <div><b>2,040 亿元</b><span>二期 · 2019</span></div>
-    <div><b>3,440 亿元</b><span>三期 · 2024</span></div>
-  </div>
-</div></div>
-<figcaption>图 4　产能数据来自美联储 FEDS Notes。{cite(21)} 大基金金额来自 heise online 报道。{cite(23)} 同一份美联储数据中，台湾占最前沿产能的 51.85%。三期金额为报道数字，具体到位资金未经核实。</figcaption></figure>'''
+<figcaption>图 4　设备销售额来自 SEMI，同比为 2025 年相对 2024 年的变化。“其他地区”为 SEMI 口径的 Rest of World。</figcaption></figure>'''
+
+
+WHO = [
+    ("发明晶体管与集成电路", "美国", "us", "贝尔实验室、德州仪器、仙童", "2025 年美国公司占全球半导体销售额 53.4%，为 1984 年以来最高", (3,)),
+    ("从微处理器到 AI 芯片", "美国", "us", "英特尔、英伟达", "英伟达 2026 年 5–7 月季度营收 962 亿美元，同比 +106%", (27,)),
+    ("存储领跑", "日本", "ea", "日本电气、日立等", "1993 年被美国反超，份额降至 20% 左右；东京电子居 2025 年设备厂商前五", (9, 24)),
+    ("设计与制造分工", "台湾、英国", "ea", "台积电、Arm", "台积电占 2026 年二季度全球代工营收 72.5%", (17,)),
+    ("存储接棒", "韩国", "ea", "三星电子、SK 海力士", "DRAM：三星 38%、SK 海力士 25%；HBM：SK 海力士 50%", (12,)),
+    ("光刻", "荷兰", "eu", "ASML", "预计 2026 年出货约 65 台低数值孔径 EUV，EUV 系统销售额增长超过 45%", (22,)),
+    ("AI 时代", "美、台、韩", "us", "英伟达、台积电、SK 海力士", "2026 年 8 月全球半导体销售额 1,597 亿美元，同比 +144.3%", (2,)),
+    ("新变量", "中国大陆", "cn", "中芯国际、华虹、长鑫存储", "2025 年设备投入 493 亿美元，居全球首位；代工第三，份额 5.4%", (13, 17)),
+]
 
 
 def fig_who():
-    rows = [
-        ("发明与集成", "美国", "us", "贝尔实验室、德州仪器、仙童", "2019 年 EDA 与核心 IP 美国占 74%，逻辑设计占 67%"),
-        ("微处理器", "美国", "us", "英特尔", "1971 年 4004 上市"),
-        ("存储领跑", "日本", "ea", "日本电气、日立等", "1980 年代后期全球半导体份额 52%，1993 年被美国反超"),
-        ("设计与制造分工", "台湾、英国", "ea", "台积电、Arm", "2026 年第二季度台积电代工份额 72.5%"),
-        ("存储接棒", "韩国", "ea", "三星电子、SK 海力士", "DRAM 三星 38%、SK 海力士 25%；HBM SK 海力士 50%"),
-        ("最难的设备", "荷兰", "eu", "ASML", "2021 年年报称其为 EUV 技术唯一供应商"),
-        ("AI 时代", "美、台、韩", "us", "英伟达、台积电、SK 海力士", "2026 年上半年全球销售额 7,020 亿美元"),
-        ("新变量", "中国大陆", "cn", "中芯国际、长鑫存储", "产能份额 25.83%（2023）；代工第三，5.4%（2026 Q2）"),
-    ]
-    out = ['<figure class="fig" id="fig-who"><div class="who-wrap"><table class="who"><thead><tr>'
-           '<th>转折</th><th>来自哪里</th><th>代表公司</th><th>今天的位置</th></tr></thead><tbody>']
-    for a, b, reg, c, d in rows:
-        out.append(f'<tr><th scope="row">{a}</th><td><span class="chip r-line-{reg}">{b}</span></td><td>{c}</td><td>{d}</td></tr>')
-    out.append('</tbody></table></div><figcaption>表 1　汇总前文各节，数字均来自正文所引出处。数据年份不同，不能直接相加或对比。</figcaption></figure>')
+    out = ['<figure class="fig" id="fig-who"><div class="fig-title">谁推动了什么，今天站在哪里</div>'
+           '<div class="who-wrap"><table class="who"><thead><tr><th>转折</th><th>来自哪里</th><th>代表公司</th><th>今天的位置</th></tr></thead><tbody>']
+    for a, b, reg, c, d, refs in WHO:
+        out.append(f'<tr><th scope="row">{a}</th><td><span class="chip c-{reg}">{b}</span></td><td>{c}</td><td>{d}{cite(*refs)}</td></tr>')
+    out.append('</tbody></table></div><figcaption>表 1　数据年份不同：历史节点取当时数据，“今天的位置”取 2025–2026 年最新数据。</figcaption></figure>')
     return "".join(out)
 
 
-def cta():
-    return f'''<aside class="cta" id="cta">
-  <img class="cta-poster" src="{POSTER}" alt="CASPA CEO Summit 官方海报：Silicon's Boldest Leaders Convene" width="480" height="600">
-  <div class="cta-body">
-    <div class="cta-eyebrow">35TH ANNUAL CONFERENCE &amp; DINNER BANQUET</div>
-    <h3 class="cta-title">The <em>CEO Summit</em></h3>
-    <p class="cta-date">2026 年 10 月 23–24 日</p>
-    <p class="cta-venue">Santa Clara Convention Center<br>Santa Clara, California</p>
-    <p class="cta-note">本文提到的设计工具、AI 算力、存储、互连、设备与资本，在这场峰会的议程里各有一席。</p>
-    <div class="cta-row">
-      <a class="btn" href="{TICKET_URL}" target="_blank" rel="noopener">报名参会</a>
-      <a class="btn ghost" href="https://caspaceosummit.com" target="_blank" rel="noopener">caspaceosummit.com</a>
-    </div>
-    <div class="cta-qr"><img src="{QR}" alt="报名二维码，指向 Eventbrite 售票页" width="96" height="96"><span>扫码报名<br>官方海报二维码</span></div>
-  </div>
-</aside>'''
+def info():
+    return f'''<aside class="info" id="info"><div class="info-h">CASPA 第 35 届年会 · The CEO Summit</div>
+<dl><div><dt>时间</dt><dd>2026 年 10 月 23–24 日</dd></div>
+<div><dt>地点</dt><dd>Santa Clara Convention Center，美国加州圣塔克拉拉</dd></div>
+<div><dt>官网</dt><dd><a href="https://caspaceosummit.com" target="_blank" rel="noopener">caspaceosummit.com</a></dd></div></dl>
+<a class="btn" href="{TICKET_URL}" target="_blank" rel="noopener">报名参会</a></aside>'''
 
 
-FIGS = {"{{FIG_SHARES}}": fig_shares, "{{FIG_TIMELINE}}": fig_timeline, "{{FIG_AI}}": fig_ai,
-        "{{FIG_WHO}}": fig_who, "{{CTA}}": cta}
+FIGS = {"{{FIG_CHAIN}}": fig_chain, "{{FIG_TIMELINE}}": fig_timeline, "{{FIG_AI}}": fig_ai,
+        "{{FIG_CHINA}}": fig_china, "{{FIG_WHO}}": fig_who, "{{INFO}}": info}
 
-# ---------------------------------------------------------------- markdown
-text = MD
-fm = dict(re.findall(r"^(\w+):\s*(.+)$", text.split("---")[1], re.M))
-body = text.split("---", 2)[2]
-
-# China figure goes after the 2nd paragraph of section 七 intro: add placeholder
-body = body.replace("再回头看 BCG 的 2019 年数据", "{{FIG_CHINA}}\n\n再回头看 BCG 的 2019 年数据")
-FIGS["{{FIG_CHINA}}"] = fig_china
-
-# split sections
+# ------------------------------------------------------------- markdown
+fm = dict(re.findall(r"^(\w+):\s*(.+)$", MD.split("---")[1], re.M))
+body = MD.split("---", 2)[2]
 parts = re.split(r"^## ", body, flags=re.M)
 sections = []
 for p in parts[1:]:
@@ -213,13 +177,10 @@ def md2html(s):
     return h
 
 
-sec_html = []
-toc = []
+sec_html, toc = [], []
 for i, (head, rest) in enumerate(sections):
     if head.startswith("参考与出处"):
-        # numbered list -> ids
-        m = re.split(r"\n(?=延伸阅读)", rest)
-        lst, extra = m[0], (m[1] if len(m) > 1 else "")
+        lst, _, extra = rest.partition("\n延伸阅读")
         items = re.findall(r"^(\d+)\.\s+(.*)$", lst, re.M)
         lis = []
         for n, t in items:
@@ -234,9 +195,9 @@ for i, (head, rest) in enumerate(sections):
             lis.append(f'<li id="ref-{n}"><span class="rn">{n}</span><div>{badge}{t}</div></li>')
         intro = rest.split("\n1.")[0].strip()
         sec_html.append(
-            f'<section class="sec refs" id="refs"><div class="sec-head"><span class="num">注</span><h2>{html.escape(head)}</h2></div>'
+            f'<section class="sec refs" id="refs"><div class="sec-head"><h2>{html.escape(head)}</h2></div>'
             f'<div class="prose"><p>{html.escape(intro)}</p></div><ol class="reflist">{"".join(lis)}</ol>'
-            f'<div class="prose"><p>{html.escape(extra.strip())}</p></div></section>')
+            f'<div class="prose"><p>延伸阅读{html.escape(extra.strip())}</p></div></section>')
         toc.append(("refs", "参考与出处"))
         continue
     num, _, title = head.partition("　")
@@ -246,179 +207,151 @@ for i, (head, rest) in enumerate(sections):
     cls = "sec note" if head.startswith("数据说明") else "sec"
     if head.startswith("数据说明"):
         num, title = "", head
+    numhtml = f'<span class="num">{html.escape(num)}</span>' if num else ""
     sec_html.append(
-        f'<section class="{cls}" id="{sid}"><div class="sec-head"><span class="num">{html.escape(num)}</span>'
-        f'<h2>{html.escape(title)}</h2></div><div class="prose">{md2html(rest)}</div></section>')
-    toc.append((sid, f"{num} {title}".strip()))
+        f'<section class="{cls}" id="{sid}"><div class="sec-head">{numhtml}<h2>{html.escape(title)}</h2></div>'
+        f'<div class="prose">{md2html(rest)}</div></section>')
+    toc.append((sid, (f"{num} {title}" if num else title).strip()))
 
 nav = "".join(f'<a href="#{a}">{html.escape(b)}</a>' for a, b in toc)
 
 CSS = r"""
 :root{
-  --bg:#F7F8FB; --surface:#FFFFFF; --ink:#101A2E; --muted:#55607A; --rule:#DCE1EC;
-  --gold:#D9A621; --gold-ink:#8A6508; --link:#1E4DA0;
-  --panel:#0E1830; --panel-2:#16264A; --panel-ink:#EAF0FA; --panel-mute:#9FB0CF; --panel-rule:#2A3C66;
-  --us:#5BB8E8; --cn:#EE7F6D; --ea:#D9A621; --eu:#4FC3A1; --ot:#55658A;
-  --shadow:0 1px 2px rgba(16,26,46,.06),0 8px 28px rgba(16,26,46,.08);
+  color-scheme:light;
+  --bg:#FFFFFF; --ink:#16191F; --muted:#5C6370; --rule:#E7E9EE; --soft:#F6F7F9;
+  --gold:#C99A1D; --gold-ink:#8A6508; --link:#16191F;
+  --us:#2F6FDF; --ea:#D99A00; --eu:#14A38B; --cn:#E4572E;
   --serif:'Noto Serif SC','Songti SC','STSong','Source Han Serif SC','WenQuanYi Zen Hei',serif;
   --sans:'Noto Sans SC','PingFang SC','Microsoft YaHei','Source Han Sans SC','WenQuanYi Zen Hei',system-ui,sans-serif;
   --disp:'Playfair Display','Noto Serif SC',Georgia,serif;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0B1424; --surface:#13203A; --ink:#EEF2F9; --muted:#A5B2CB; --rule:#26375A;
-  --gold:#E3B53C; --gold-ink:#E9BE4C; --link:#8DB4F2; --panel:#0E1A33; --panel-2:#182A52; --panel-rule:#2E4272;
-  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 28px rgba(0,0,0,.35); color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#0B1424; --surface:#13203A; --ink:#EEF2F9; --muted:#A5B2CB; --rule:#26375A;
-  --gold:#E3B53C; --gold-ink:#E9BE4C; --link:#8DB4F2; --panel:#0E1A33; --panel-2:#182A52; --panel-rule:#2E4272;
-  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 28px rgba(0,0,0,.35); color-scheme:dark}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:64px}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.95;
-  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+html{scroll-behavior:smooth;scroll-padding-top:60px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.95;-webkit-font-smoothing:antialiased}
 .wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.wide{max-width:960px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 #bar{position:fixed;left:0;top:env(safe-area-inset-top,0px);height:3px;width:0;background:var(--gold);z-index:30}
 /* hero */
-.hero{background:radial-gradient(1200px 500px at 85% -10%,#2A4A86 0%,rgba(42,74,134,0) 60%),linear-gradient(180deg,#14284D 0%,#0B1730 100%);
-  color:#F4F7FD;padding-block:56px 64px;position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-.brand{display:flex;align-items:center;gap:12px;margin-bottom:44px}
-.brand svg{height:34px;width:auto}
-.eyebrow{font-family:var(--sans);letter-spacing:.22em;font-size:12px;color:#D9A621;text-transform:uppercase;font-weight:500}
-.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(40px,9vw,80px);line-height:1.12;margin:14px 0 18px;letter-spacing:.01em;text-wrap:balance}
-.hero .sub{font-family:var(--serif);font-size:clamp(18px,3.2vw,24px);line-height:1.6;color:#E7C25E;max-width:30em;margin:0}
-.meta{margin-top:30px;display:flex;flex-wrap:wrap;gap:8px 22px;font-size:14px;color:#AFC0DE}
-.meta b{color:#F4F7FD;font-weight:500}
+.hero{padding-block:48px 40px;border-bottom:1px solid var(--rule)}
+.brand{display:flex;align-items:center;gap:10px;margin-bottom:56px}
+.brand svg{height:30px;width:auto}
+.eyebrow{letter-spacing:.2em;font-size:12px;color:var(--gold-ink);text-transform:uppercase;font-weight:500}
+.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(40px,9vw,72px);line-height:1.15;margin:14px 0 16px;text-wrap:balance}
+.hero .sub{font-family:var(--serif);font-size:clamp(18px,3.2vw,22px);line-height:1.65;color:var(--muted);margin:0;max-width:28em}
+.rule{width:56px;height:3px;background:var(--gold);margin:26px 0 18px;border:0}
+.meta{font-size:13.5px;color:var(--muted);line-height:1.7}
 /* nav */
-.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--surface);border-bottom:1px solid var(--rule)}
-.nav-in{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding-block:8px}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--rule)}
+.nav-in{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;padding-block:6px}
 .nav-in::-webkit-scrollbar{display:none}
 .nav a{white-space:nowrap;font-size:13.5px;color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:999px;line-height:1.4}
-.nav a:hover,.nav a.on{background:var(--panel);color:#fff}
+.nav a:hover{color:var(--ink)}
+.nav a.on{color:var(--ink);background:var(--soft);font-weight:500}
 /* sections */
-.sec{padding-block:56px 8px}
-.sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:22px}
-.num{font-family:var(--serif);font-weight:700;font-size:clamp(44px,9vw,64px);line-height:1;color:var(--gold);min-width:1.1em}
-.sec h2{font-family:var(--serif);font-weight:700;font-size:clamp(24px,5vw,32px);line-height:1.35;margin:0;text-wrap:balance}
+.sec{padding-block:52px 4px}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:20px}
+.num{font-family:var(--serif);font-weight:700;font-size:clamp(40px,8vw,56px);line-height:1;color:var(--gold);min-width:1.1em}
+.sec h2{font-family:var(--serif);font-weight:700;font-size:clamp(24px,5vw,30px);line-height:1.4;margin:0;text-wrap:balance}
 .prose p{margin:0 0 1.15em}
-.prose strong{font-weight:700;background:linear-gradient(transparent 62%,rgba(217,166,33,.28) 0)}
+.prose strong{font-weight:700}
 .prose ul{padding-left:1.2em;margin:0 0 1.2em}
 .prose li{margin-bottom:.45em}
 .prose li::marker{color:var(--gold)}
-sup.cite{font-size:.68em;line-height:0;margin-left:1px;vertical-align:super}
+.prose a{color:var(--link);text-decoration-color:var(--gold);text-underline-offset:3px}
+sup.cite{font-size:.66em;line-height:0;margin-left:1px;vertical-align:super}
 sup.cite a{color:var(--gold-ink);text-decoration:none;font-weight:600;padding:0 1px}
-sup.cite a:hover{background:var(--gold);color:#101A2E;border-radius:3px}
-.prose a{color:var(--link)}
+sup.cite a:hover{background:var(--gold);color:#fff;border-radius:3px}
 /* figures */
-.fig{margin:34px 0}
-.fig-bleed{margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}
-.panel{background:var(--panel);color:var(--panel-ink);border-radius:16px;padding:26px 24px;box-shadow:var(--shadow);border:1px solid var(--panel-rule)}
-.fig-kicker{font-size:12px;letter-spacing:.2em;color:var(--gold);font-weight:500}
-.fig-title{font-family:var(--serif);font-size:22px;font-weight:700;margin:4px 0 18px;line-height:1.4}
-figcaption{font-size:13px;line-height:1.75;color:var(--muted);margin-top:10px;padding-inline:4px}
-figcaption sup.cite a{color:var(--gold-ink)}
-.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--panel-mute);margin-bottom:16px}
-.legend i.sw{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
-.r-us{background:var(--us)}.r-cn{background:var(--cn)}.r-ea{background:var(--ea)}.r-eu{background:var(--eu)}.r-ot{background:var(--ot)}
-.bars{display:flex;flex-direction:column;gap:11px}
-.bar-row{display:grid;grid-template-columns:8.2em 1fr;gap:12px;align-items:center}
-.bar-label{font-size:14px;color:var(--panel-ink)}
-.bar{display:flex;height:30px;border-radius:7px;overflow:hidden;gap:2px;background:var(--panel-2)}
-.seg{display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600;color:#0B1427;min-width:0;white-space:nowrap;overflow:hidden}
-.seg.r-ot{background:var(--ot)}
+.fig{margin:36px 0}
+.fig-title{font-family:var(--serif);font-size:21px;font-weight:700;line-height:1.4}
+.fig-sub{font-size:13.5px;color:var(--muted);margin:2px 0 16px;line-height:1.6}
+figcaption{font-size:12.5px;line-height:1.75;color:var(--muted);margin-top:12px}
+.legend{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:12.5px;color:var(--muted);margin-bottom:14px}
+.legend .sw{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
+.k-us{background:var(--us)}.k-ea{background:var(--ea)}.k-eu{background:var(--eu)}.k-cn{background:var(--cn)}
+/* chain */
+.chain{list-style:none;margin:0;padding:0;position:relative}
+.chain::before{content:"";position:absolute;left:17px;top:18px;bottom:18px;width:2px;background:linear-gradient(180deg,#2F6FDF,#7A5AF8,#D99A00,#E4572E,#14A38B,#F08A24,#5B6B8C);border-radius:2px}
+.chain li{position:relative;display:grid;grid-template-columns:36px 1fr;gap:16px;padding:6px 0 18px}
+.chain li:last-child{padding-bottom:0}
+.dot{position:relative;z-index:1;width:36px;height:36px;border-radius:50%;background:var(--c);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px;box-shadow:0 0 0 4px #fff}
+.ch-body{background:color-mix(in srgb,var(--c) 7%,#fff);border:1px solid color-mix(in srgb,var(--c) 22%,#fff);border-radius:12px;padding:12px 16px 12px;line-height:1.7}
+.ch-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}
+.ch-h b{font-family:var(--serif);font-size:18px;color:var(--c)}
+.ch-h span{font-size:13.5px;color:var(--muted)}
+.ch-who{font-size:14.5px;margin-top:2px}
+.ch-data{font-size:13.5px;margin-top:6px;padding-top:6px;border-top:1px dashed color-mix(in srgb,var(--c) 35%,#fff);color:var(--ink)}
 /* timeline */
 .tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
-.tl-card{background:var(--panel-2);border-radius:12px;padding:14px 16px 16px;border-top:4px solid var(--ot)}
-.r-line-us{border-top-color:var(--us)}.r-line-ea{border-top-color:var(--ea)}.r-line-eu{border-top-color:var(--eu)}.r-line-cn{border-top-color:var(--cn)}
-.tl-when{font-family:var(--disp);font-size:20px;font-weight:700;color:#fff;letter-spacing:.02em}
-.tl-who{font-size:13px;color:var(--panel-mute);margin:2px 0 8px}
-.tl-what{font-family:var(--serif);font-weight:600;font-size:16px;line-height:1.5;margin-bottom:8px}
-.tl-co{font-size:12.5px;color:var(--panel-mute);line-height:1.6}
+.tl-card{background:#fff;border:1px solid var(--rule);border-top:4px solid var(--ot,#aab);border-radius:12px;padding:14px 16px 16px}
+.c-us{border-top-color:var(--us)}.c-ea{border-top-color:var(--ea)}.c-eu{border-top-color:var(--eu)}.c-cn{border-top-color:var(--cn)}
+.tl-when{font-family:var(--disp);font-size:20px;font-weight:700;letter-spacing:.02em}
+.tl-who{font-size:13px;color:var(--muted);margin:1px 0 8px}
+.tl-what{font-family:var(--serif);font-weight:600;font-size:15.5px;line-height:1.55;margin-bottom:8px}
+.tl-co{font-size:12.5px;color:var(--muted);line-height:1.6}
 /* ai flow */
 .flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;gap:8px;align-items:stretch}
-.node{background:var(--panel-2);border-radius:12px;padding:12px 12px 14px;border-top:4px solid var(--ot);display:flex;flex-direction:column;gap:2px;font-size:13.5px;line-height:1.55}
-.node b{font-family:var(--serif);font-size:16px}
-.node span{color:var(--panel-mute)}
-.node em{font-style:normal;color:var(--gold);font-size:12.5px;margin-top:4px}
-.n-design{border-top-color:var(--us)}.n-fab{border-top-color:var(--ea)}.n-pack{border-top-color:var(--ea)}.n-asm{border-top-color:var(--ot)}
+.node{background:color-mix(in srgb,var(--c) 7%,#fff);border:1px solid color-mix(in srgb,var(--c) 25%,#fff);border-top:4px solid var(--c);border-radius:12px;padding:12px 12px 14px;display:flex;flex-direction:column;gap:2px;font-size:13.5px;line-height:1.55}
+.node b{font-family:var(--serif);font-size:16px;color:var(--c)}
+.node span{color:var(--muted)}
+.node em{font-style:normal;color:var(--ink);font-size:12.5px;margin-top:4px}
 .arrow{align-self:center;color:var(--gold);font-size:20px}
-.flow-mem{margin-top:14px;display:grid;grid-template-columns:8.2em 1fr;gap:12px;align-items:center}
-.mem-label{display:flex;flex-direction:column;font-size:13px;line-height:1.5}
-.mem-label span{color:var(--panel-mute);font-size:12px}
-.m-1{background:var(--ea)}.m-2{background:var(--us)}.m-3{background:var(--eu)}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:20px}
-.stats div{border-top:1px solid var(--panel-rule);padding-top:10px}
-.stats b{display:block;font-family:var(--disp);font-size:24px;color:var(--gold);line-height:1.2}
-.stats span{font-size:12.5px;color:var(--panel-mute);line-height:1.55;display:block;margin-top:4px}
-/* china */
-.china-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:26px;align-items:center}
-.big-pair{display:flex;align-items:center;justify-content:space-around;gap:6px}
-.big-pair b{display:block;font-family:var(--disp);font-size:clamp(30px,6vw,42px);line-height:1.1}
-.big-pair b.gold{color:var(--gold)}
-.big-pair span{font-size:12.5px;color:var(--panel-mute)}
-.big-arrow{font-size:26px;color:var(--gold)}
-.nb-title{font-size:12.5px;color:var(--panel-mute);margin-bottom:8px}
-.nb{display:grid;grid-template-columns:6.4em 1fr 3.6em;gap:10px;align-items:center;margin-bottom:10px;font-size:14px;line-height:1.35}
-.nb small{color:var(--panel-mute);font-size:11.5px}
-.nb-track{height:14px;background:var(--panel-2);border-radius:7px;overflow:hidden}
-.nb-track i{display:block;height:100%;background:var(--cn);border-radius:7px}
-.nb-v{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
-.fund{margin-top:24px;padding-top:14px;border-top:1px solid var(--panel-rule)}
-.fund-t{font-size:12.5px;color:var(--panel-mute);margin-bottom:8px}
-.fund-items{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.fund-items b{display:block;font-family:var(--disp);font-size:clamp(18px,4vw,24px);color:var(--gold);line-height:1.25}
-.fund-items span{font-size:12.5px;color:var(--panel-mute)}
+.flow-mem{margin-top:16px;display:grid;grid-template-columns:9em 1fr;gap:12px;align-items:center}
+.mem-label{display:flex;flex-direction:column;font-size:13.5px;line-height:1.5}
+.mem-label span{color:var(--muted);font-size:12px}
+.bar{display:flex;height:32px;border-radius:8px;overflow:hidden;gap:2px}
+.seg{display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600;color:#14161B;min-width:0;white-space:nowrap;overflow:hidden}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:20px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.stats div,.tiles div{background:var(--soft);border-radius:12px;padding:12px 14px}
+.stats b,.tiles b{display:block;font-family:var(--disp);font-size:22px;line-height:1.25;color:var(--ink)}
+.stats span,.tiles span{display:block;font-size:12.5px;color:var(--muted);line-height:1.6;margin-top:4px}
+/* equipment bars */
+.eq{display:flex;flex-direction:column;gap:9px}
+.eq-row{display:grid;grid-template-columns:5.2em 1fr 3.2em 3.4em;gap:10px;align-items:center;font-size:14px}
+.eq-track{height:16px;background:var(--soft);border-radius:8px;overflow:hidden}
+.eq-track i{display:block;height:100%;background:#B9C0CD;border-radius:8px}
+.eq-row.hl .eq-track i{background:var(--cn)}
+.eq-row.hl .eq-n,.eq-row.hl .eq-v{font-weight:700}
+.eq-v{text-align:right;font-variant-numeric:tabular-nums}
+.eq-g{font-size:12.5px;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
 /* who table */
-.who-wrap{overflow-x:auto;border-radius:14px;box-shadow:var(--shadow);border:1px solid var(--rule);background:var(--surface)}
-table.who{border-collapse:collapse;width:100%;min-width:640px;font-size:14.5px;line-height:1.65}
+.who-wrap{overflow-x:auto;margin-top:12px;border:1px solid var(--rule);border-radius:12px}
+table.who{border-collapse:collapse;width:100%;min-width:660px;font-size:14.5px;line-height:1.65}
 .who th,.who td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
-.who thead th{background:var(--panel);color:#EAF0FA;font-size:13px;letter-spacing:.08em;font-weight:500;white-space:nowrap}
+.who thead th{background:var(--soft);color:var(--muted);font-size:12.5px;letter-spacing:.08em;font-weight:500;white-space:nowrap}
 .who tbody th{font-family:var(--serif);font-weight:700;white-space:nowrap}
 .who tbody tr:last-child>*{border-bottom:0}
-.chip{display:inline-flex;align-items:center;gap:7px;padding:2px 11px 2px 9px;border-radius:999px;font-size:13px;font-weight:500;background:var(--bg);color:var(--ink);white-space:nowrap;border:1px solid var(--rule)}
-.chip::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--ot)}
-.chip.r-line-us::before{background:var(--us)}.chip.r-line-ea::before{background:var(--ea)}.chip.r-line-eu::before{background:var(--eu)}.chip.r-line-cn::before{background:var(--cn)}
+.chip{display:inline-flex;align-items:center;gap:7px;padding:2px 11px 2px 9px;border-radius:999px;font-size:13px;font-weight:500;border:1px solid var(--rule);white-space:nowrap}
+.chip::before{content:"";width:9px;height:9px;border-radius:50%;background:#aab}
+.chip.c-us::before{background:var(--us)}.chip.c-ea::before{background:var(--ea)}.chip.c-eu::before{background:var(--eu)}.chip.c-cn::before{background:var(--cn)}
+/* info */
+.info{margin:40px 0 8px;border:1px solid var(--rule);border-radius:14px;padding:22px 24px;background:#fff}
+.info-h{font-family:var(--serif);font-weight:700;font-size:20px;margin-bottom:12px}
+.info dl{margin:0 0 16px}
+.info dl div{display:grid;grid-template-columns:3.2em 1fr;gap:10px;padding:4px 0;font-size:15.5px;line-height:1.7}
+.info dt{color:var(--muted)}.info dd{margin:0}
+.info a{color:var(--ink);text-decoration-color:var(--gold);text-underline-offset:3px}
+.btn{display:inline-block;padding:10px 24px;border-radius:999px;background:var(--ink);color:#fff!important;font-weight:700;text-decoration:none!important;font-size:15px;line-height:1.4}
+.btn:hover{background:#2B303A}
 /* note */
-.sec.note .prose{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:20px 24px 8px;font-size:15px;line-height:1.85}
-.sec.note .sec-head{margin-bottom:16px}
-.sec.note .sec-head h2{font-size:22px}
+.sec.note .prose{background:var(--soft);border-radius:12px;padding:18px 22px 6px;font-size:14.5px;line-height:1.85}
+.sec.note .sec-head h2{font-size:20px}
 /* refs */
-.reflist{list-style:none;padding:0;margin:18px 0;display:flex;flex-direction:column;gap:2px;font-size:14px;line-height:1.7}
-.reflist li{display:grid;grid-template-columns:2.2em 1fr;gap:6px;padding:10px 12px;border-radius:10px;scroll-margin-top:70px}
-.reflist li:target{background:rgba(217,166,33,.18);outline:1px solid var(--gold)}
+.refs h2{font-size:22px}
+.reflist{list-style:none;padding:0;margin:16px 0;display:flex;flex-direction:column;gap:2px;font-size:13.5px;line-height:1.7}
+.reflist li{display:grid;grid-template-columns:2.2em 1fr;gap:6px;padding:9px 10px;border-radius:8px;scroll-margin-top:70px}
+.reflist li:target{background:#FFF6DC;outline:1px solid var(--gold)}
 .rn{font-family:var(--disp);font-weight:700;color:var(--gold-ink);text-align:right}
-.reflist a{color:var(--link);word-break:break-all}
+.reflist a{color:var(--muted);word-break:break-all}
 .badge{display:inline-block;font-size:11.5px;padding:0 8px;border-radius:999px;margin-right:8px;font-weight:600;line-height:1.7}
-.b-prim{background:rgba(79,195,161,.2);color:#1B7A5F}.b-res{background:rgba(91,184,232,.22);color:#1E6C98}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .b-prim{color:#7FE3C3}:root:not([data-theme="light"]) .b-res{color:#8DD3F5}}
-:root[data-theme="dark"] .b-prim{color:#7FE3C3}:root[data-theme="dark"] .b-res{color:#8DD3F5}
-/* cta */
-.cta{margin:56px 0 8px;display:grid;grid-template-columns:minmax(0,240px) 1fr;gap:28px;align-items:center;background:linear-gradient(160deg,#14284D,#0B1730);color:#F4F7FD;border-radius:18px;padding:26px;box-shadow:var(--shadow);border:1px solid #2A3C66}
-.cta-poster{width:100%;height:auto;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.45);display:block}
-.cta-eyebrow{font-size:11.5px;letter-spacing:.2em;color:#D9A621;font-weight:500}
-.cta-title{font-family:var(--disp);font-size:clamp(34px,6vw,46px);font-weight:700;margin:6px 0 8px;line-height:1.1}
-.cta-title em{color:#E3B53C;font-style:italic}
-.cta-date{font-family:var(--serif);font-size:20px;font-weight:700;margin:0 0 4px;line-height:1.5}
-.cta-venue{margin:0 0 14px;color:#B7C5E0;font-size:15px;line-height:1.7}
-.cta-note{font-size:14px;line-height:1.8;color:#C9D6EE;margin:0 0 18px}
-.cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
-.btn{display:inline-block;padding:11px 22px;border-radius:999px;background:#D9A621;color:#101A2E;font-weight:700;text-decoration:none;font-size:15px;line-height:1.3}
-.btn:hover{background:#E8B93A}
-.btn.ghost{background:transparent;color:#F4F7FD;border:1px solid #4A5E8C;font-weight:500}
-.btn.ghost:hover{background:#1B2F58}
-.cta-qr{display:flex;align-items:center;gap:12px;font-size:12.5px;color:#B7C5E0;line-height:1.6}
-.cta-qr img{background:#fff;padding:6px;border-radius:8px;width:96px;height:96px}
-.foot{padding-block:40px 64px;color:var(--muted);font-size:13px;line-height:1.8;text-align:center}
-.foot a{color:var(--muted)}
+.b-prim{background:#E2F5EF;color:#0E7A64}.b-res{background:#E5EEFB;color:#2457B3}
+.foot{padding-block:40px 64px;color:var(--muted);font-size:13px;line-height:1.8;text-align:center;border-top:1px solid var(--rule);margin-top:48px}
 @media (max-width:720px){
   body{font-size:16.5px}
-  .bar-row{grid-template-columns:1fr;gap:4px}
   .flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg);justify-self:center}
   .flow-mem{grid-template-columns:1fr}
-  .china-grid{grid-template-columns:1fr}
-  .cta{grid-template-columns:1fr}.cta-poster{max-width:280px;margin-inline:auto}
-  .panel{padding:20px 16px}
+  .eq-row{grid-template-columns:4.6em 1fr 2.8em 3.2em;gap:8px;font-size:13px}
+  .tiles{grid-template-columns:repeat(2,1fr)}
   .sec-head{gap:12px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -429,20 +362,20 @@ JS = r"""
   var bar=document.getElementById('bar');
   function onScroll(){var h=document.documentElement;var m=h.scrollHeight-h.clientHeight;bar.style.width=(m>0?(h.scrollTop/m*100):0)+'%';}
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
-  var links=[].slice.call(document.querySelectorAll('.nav a'));
-  var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  var links=[].slice.call(document.querySelectorAll('.nav a')),map={};
+  links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(es){es.forEach(function(e){
-      if(e.isIntersecting){links.forEach(function(a){a.classList.remove('on')});var a=map[e.target.id];if(a){a.classList.add('on');
-        var nav=a.parentElement;nav.scrollLeft=a.offsetLeft-nav.clientWidth/2+a.clientWidth/2;}}});},{rootMargin:'-30% 0px -60% 0px'});
+      if(e.isIntersecting){links.forEach(function(a){a.classList.remove('on')});var a=map[e.target.id];
+        if(a){a.classList.add('on');var n=a.parentElement;n.scrollLeft=a.offsetLeft-n.clientWidth/2+a.clientWidth/2;}}});},{rootMargin:'-30% 0px -60% 0px'});
     document.querySelectorAll('.sec').forEach(function(s){io.observe(s)});
   }
 })();
 """
 
-LOGO = ('<svg viewBox="0 0 240 70" role="img" aria-label="CASPA"><g fill="none" stroke="#D4AF37" stroke-width="2">'
+LOGO = ('<svg viewBox="0 0 240 70" role="img" aria-label="CASPA"><g fill="none" stroke="#C99A1D" stroke-width="2.4">'
         '<circle cx="35" cy="35" r="25"/><ellipse cx="35" cy="35" rx="12" ry="25"/><path d="M10 35h50M15 23h40M15 47h40"/></g>'
-        '<text x="73" y="46" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="34" font-weight="600" letter-spacing="3">CASPA</text></svg>')
+        '<text x="73" y="46" fill="#16191F" font-family="Arial, sans-serif" font-size="34" font-weight="600" letter-spacing="3">CASPA</text></svg>')
 
 page = f"""<title>{html.escape(fm['title'])}</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -455,12 +388,13 @@ page = f"""<title>{html.escape(fm['title'])}</title>
   <div class="eyebrow">CASPA 35th Annual Conference · The CEO Summit</div>
   <h1>{html.escape(fm['title'])}</h1>
   <p class="sub">{html.escape(fm['subtitle'])}</p>
-  <div class="meta"><span><b>阅读约 15 分钟</b></span><span>正文所有数据均附出处，见文末 <b>26 条参考</b></span><span>检索与核对：2026 年 10 月 16 日</span></div>
+  <hr class="rule">
+  <div class="meta">阅读约 15 分钟　·　全文数据均为 2025–2026 年最新统计，附 35 条出处　·　2026 年 10 月 16 日</div>
 </div></header>
 <nav class="nav" aria-label="章节"><div class="wrap nav-in">{nav}</div></nav>
 <main class="wrap">{''.join(sec_html)}</main>
 <footer class="foot wrap">CASPA CEO Summit · 2026 年 10 月 23–24 日 · Santa Clara Convention Center<br>
-正文所引数据与出处以文末列表为准；峰会嘉宾与议程以官网最新信息为准。</footer>
+正文数据与出处以文末列表为准；峰会嘉宾与议程以官网最新信息为准。</footer>
 <script>{JS}</script>
 """
 OUT.write_text(page, encoding="utf-8")
