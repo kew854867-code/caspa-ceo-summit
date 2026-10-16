@@ -231,42 +231,48 @@ def chart_title(t):
     return f'<div class="ch-ct">{t}</div>'
 
 
-# ---- the seven links (company-reported figures; see reference numbers)
-NV = ("英伟达", C_US, [("FY24", 609), ("FY25", 1305), ("FY26", 2159)])
-QC = ("高通", "#7A8BA6", [("FY23", 358), ("FY24", 390), ("FY25", 443)])
-AM = ("AMD", "#9AA6BC", [("2023", 227), ("2024", 258), ("2025", 346)])
-SY = ("新思科技", "#7A5AF8", [("FY23", 53.2), ("FY24", 61.3), ("FY25", 70.5)])
-CD = ("铿腾电子", "#A99BFA", [("2023", 40.9), ("2024", 46.4), ("2025", 53.0)])
-AS = ("ASML（欧元）", C_CN, [("2023", 275.6), ("2024", 282.6), ("2025", 326.7)])
-AP = ("应用材料", "#F0836B", [("FY23", 265.2), ("FY24", 271.8), ("FY25", 283.7)])
-LM = ("泛林集团", "#F2A898", [("FY24", 149.1), ("FY25", 184.4), ("FY26", 232.3)])
-NVD = ("英伟达数据中心业务", "#5B6B8C", [("FY24", 475), ("FY25", 1152), ("FY26", 1937)])
+# ---- the seven links (shares from published statistics; see reference numbers)
+def pie(slices, center="", sub=""):
+    """slices: [(label, pct, color)] -> donut (conic-gradient) + legend"""
+    acc, stops = 0.0, []
+    for _, v, c in slices:
+        stops.append(f"{c} {acc:.2f}% {acc+v:.2f}%"); acc += v
+    leg = "".join(f'<div class="pl"><i style="background:{c}"></i><span>{l}</span><b>{v:g}%</b></div>' for l, v, c in slices)
+    return (f'<div class="pie"><div class="donut" style="background:conic-gradient({",".join(stops)})">'
+            f'<div class="dh"><b>{center}</b><span>{sub}</span></div></div><div class="pleg">{leg}</div></div>')
 
+
+GREY, GREY2 = "#D5DAE3", "#B9C0CD"
 CHAIN_ROWS = [
     # name, what, art, companies, chart html, data line, refs, color
     ("设计", "决定芯片做什么、怎么做", art_design, ["英伟达", "高通", "AMD"],
-     chart_title("三家代表公司近三个财年营收（亿美元）") + grouped([NV, QC, AM], ""),
-     "英伟达的营收，三个财年里增长了近 3.5 倍", (18, 39, 40), C_US),
+     chart_title("2025 年全球半导体销售额，按公司总部所在地") +
+     pie([("美国公司", 53.4, C_US), ("其他国家和地区", 46.6, GREY)], "53.4%", "美国公司"),
+     "美国公司 2025 年销售额 4,250 亿美元，占全球 7,956 亿美元的 53.4%，为 1984 年以来最高", (3,), C_US),
     ("设计工具与 IP", "画图纸用的软件，和可以复用的标准件", art_eda, ["新思科技", "铿腾电子", "西门子 EDA", "Arm"],
-     chart_title("两家公司近三年营收（亿美元）") + grouped([SY, CD], ""),
-     "图中为单独披露营收的两家公司；Arm 靠授权设计收费", (41, 42, 17), "#7A5AF8"),
+     "",
+     "新思科技、铿腾电子、西门子 EDA 是这一环的三家主要供应商；Arm 靠授权设计、按产出收取版税", (17,), "#7A5AF8"),
     ("制造", "把图纸刻在硅片上", art_wafer, ["台积电", "三星", "中芯国际"],
-     chart_title("2026 年二季度全球晶圆代工份额（%）") +
-     hbars([("台积电", 72.5, C_EA), ("三星", 5.9, "#C9CFDB"), ("中芯国际", 5.4, C_CN), ("联电", 3.9, "#C9CFDB"), ("格芯", 3.2, "#C9CFDB")], "%"),
-     "台积电一家，占去全球晶圆代工营收的七成以上", (19,), C_EA),
+     chart_title("2026 年二季度全球晶圆代工营收份额") +
+     pie([("台积电", 72.5, C_EA), ("三星", 5.9, "#F2C94C"), ("中芯国际", 5.4, C_CN), ("联电", 3.9, "#9FD8CB"), ("格芯", 3.2, "#A9C3F5"), ("其他", 9.1, GREY)], "72.5%", "台积电"),
+     "台积电一家，占去全球晶圆代工营收的七成以上；“其他”为 100% 减去前五名", (19,), C_EA),
     ("设备", "造芯片工厂的机器，包括光刻机", art_litho, ["ASML", "应用材料", "泛林集团", "东京电子", "KLA"],
-     chart_title("三家公司最近三个财年营收（亿，各自币种）") + grouped([AS, AP, LM], ""),
-     "2025 年全球芯片制造设备市场 1,362 亿美元，ASML 以 275 亿美元居首", (11, 43, 44, 45), C_CN),
+     chart_title("2025 年全球芯片制造设备市场，ASML 的占比") +
+     pie([("ASML", 20.2, C_CN), ("应用材料、泛林、东京电子、KLA 及其他", 79.8, GREY)], "约 20%", "ASML"),
+     "市场总额 1,362 亿美元，ASML 营收 275 亿美元，相除得约 20.2%；其余四家居第二至第五，未公布各自份额", (11,), C_CN),
     ("封装与测试", "把裸片变成能用的产品，先进封装是 AI 芯片的关键一步", art_package, ["Fabrinet", "鸿海", "纬创"],
-     chart_title("2024 年封测厂商营收（亿美元）") + hbars([("日月光", 185.4, C_EU), ("安靠", 63.2, "#9FD8CB"), ("长电科技", 50.0, "#9FD8CB")], ""),
-     "日月光一家，占前十大封测厂合计营收的约 45%；英伟达用 CoWoS 做封装", (46, 18), C_EU),
+     chart_title("2024 年前十大封测厂商合计营收中的占比") +
+     pie([("日月光", 44.6, C_EU), ("安靠", 15.2, "#4FBFA8"), ("长电科技", 12.0, "#9FD8CB"), ("通富微电", 8.0, "#C8EBE3"), ("力成", 5.5, "#E1F4F0"), ("其余五家", 14.7, GREY)], "44.6%", "日月光"),
+     "占比为各家 2024 年营收除以前十大合计 415.6 亿美元；英伟达用 CoWoS 做封装", (39, 18), C_EU),
     ("存储", "芯片的记忆", art_hbm, ["三星", "SK 海力士", "美光"],
-     chart_title("2026 年二季度 DRAM 份额（%）") + hbars([("三星", 38, "#F08A24"), ("SK 海力士", 25, "#F7BE86"), ("美光", 24, "#F7BE86"), ("长鑫存储（约）", 10, "#F7BE86")], "%") +
-     chart_title("2026 年二季度 HBM 份额（%）") + hbars([("SK 海力士", 50, "#F08A24"), ("三星", 33, "#F7BE86"), ("美光", 18, "#F7BE86")], "%"),
-     "AI 加速器必需的 HBM，SK 海力士一家占一半", (22,), "#F08A24"),
+     chart_title("2026 年二季度 DRAM 营收份额") +
+     pie([("三星", 38, "#F08A24"), ("SK 海力士", 25, "#F7BE86"), ("美光", 24, "#FBD9B5"), ("其他", 13, GREY)], "38%", "三星") +
+     chart_title("2026 年二季度 HBM 营收份额") +
+     pie([("SK 海力士", 50, "#F08A24"), ("三星", 33, "#F7BE86"), ("美光", 18, "#FBD9B5")], "50%", "SK 海力士"),
+     "AI 加速器必需的 HBM，SK 海力士一家占一半；DRAM“其他”约 13%，其中长鑫存储约 10%", (22,), "#F08A24"),
     ("系统与数据中心", "最终买单的人", art_rack, ["英伟达"],
-     chart_title("英伟达数据中心业务收入（亿美元）") + grouped([NVD], ""),
-     "两个财年里，从 475 亿美元增长到 1,937 亿美元", (18,), "#5B6B8C"),
+     '<div class="tiles"><div><b>4,500+</b><span>一个 AI 服务器机架里的封装芯片数量</span></div><div><b>95%+</b><span>芯片占 AI 服务器机架价值的比例</span></div></div>',
+     "芯片在 AI 数据中心的总投资里，占到一半以上", (3,), "#5B6B8C"),
 ]
 
 
@@ -278,7 +284,7 @@ def fig_chain():
             f'<li class="link" style="--c:{color}" id="link-{i}"><div class="link-art">{art(color, f"c{i}")}</div>'
             f'<div class="link-body"><div class="ch-h"><span class="dot">{i}</span><b>{name}</b></div><div class="ch-what">{what}</div>'
             f'{logos(cos)}<div class="ch-chart">{chart}</div><div class="ch-data">{line}{cite(*refs)}</div></div></li>')
-    out.append('</ol><figcaption>图 1　七个环节与代表公司。插画为示意图；图表数据为公司申报或研究机构统计，口径见文末数据说明。</figcaption></figure>')
+    out.append('</ol><figcaption>图 1　七个环节与代表公司。插画为示意图；图表数据为官方或研究机构统计，口径见文末数据说明。</figcaption></figure>')
     return "".join(out)
 
 
@@ -507,6 +513,7 @@ figcaption{font-size:12px;line-height:1.75;color:var(--muted);margin-top:10px}
 .ch-ct{font-size:12.5px;color:var(--muted);margin:0 0 8px;line-height:1.5}
 .ch-data{font-size:13.5px;margin-top:10px;line-height:1.75}
 /* bars */
+.pie{display:flex;align-items:center;gap:14px;margin-bottom:8px}.donut{flex:0 0 112px;width:112px;height:112px;border-radius:50%;display:grid;place-items:center}.dh{width:70px;height:70px;border-radius:50%;background:var(--soft);display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.2}.dh b{font-size:16px}.dh span{font-size:10.5px;color:#667}.pleg{flex:1;min-width:0}.pl{display:grid;grid-template-columns:10px 1fr auto;gap:7px;align-items:center;font-size:12.5px;margin:3px 0}.pl i{width:10px;height:10px;border-radius:3px}.pl b{font-variant-numeric:tabular-nums}
 .hb-r,.gb-r{display:grid;grid-template-columns:5.6em 1fr 4.4em;gap:8px;align-items:center;font-size:12.5px;margin-bottom:6px;line-height:1.3}
 .hb-t{height:12px;background:#E7EAF0;border-radius:6px;overflow:hidden}
 .hb-t i{display:block;height:100%;background:#B9C0CD;border-radius:6px}

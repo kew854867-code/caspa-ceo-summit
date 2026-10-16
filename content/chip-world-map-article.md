@@ -160,8 +160,8 @@ AI 带来的新问题，集中在“芯片与芯片之间”：数据怎么搬�
 - **公司自述。** ASML 的 EUV 工作原理与产品线、台积电的商业模式、三星 1992 年研发 64M DRAM、英伟达的供应链，来自公司自己的公开文件。
 - **来自财报电话会。** ASML 中国市场约占全年销售额 20%、2026 年约出货 65 台 EUV 的表述，来自 2026 年 7 月 15 日的投资者电话会，不在同日的新闻稿里。
 - **日本的材料份额。** 硅片与光刻胶的份额来自日经 2025 年的市场份额调查，文中引用的是日经中文网 2026 年 7 月 31 日的报道（经 36 氪转载），非日经原始数据。
-- **三年营收。** 各环节的三年营收，取自公司向美国证券交易委员会提交的年报，口径为各公司自己的财年：英伟达财年截至每年 1 月，高通截至 9 月，应用材料截至 10 月，泛林集团截至 6 月，其余为自然年。ASML 以欧元计，其余以美元计。英伟达、高通、AMD 是设计环节的三家代表公司，博通因业务含软件而未列入。
-- **封测。** 封测环节采用 2024 年榜单；2025 年的榜单暂未查到。
+- **封测。** 封测环节采用 2024 年榜单；2025 年的榜单暂未查到。图中占比，是各家营收除以前十大合计营收（415.6 亿美元）所得，并非占全球封测市场的比例。
+- **设备与代工的占比。** ASML 约 20% 为其 275 亿美元营收除以 1,362 亿美元的市场总额，属自行计算；代工图中的“其他”为 100% 减去前五名。
 - **历史数据。** 1980 年代日本的份额等历史数据，来自日本半导体历史馆的论述，各研究的口径差别较大，文中只采用“全球半导体市场份额”这一口径。
 - **H200 的细节。** 2026 年 1 月的 H200 规定，据财新报道，为逐案审查、1 月 15 日生效；具体条件以美国商务部公告为准。
 - **大基金。** 三期的注册资本与 2025 年初的出资来自公开报道，2025 年初之后的投资进展，没有查到公开披露。
@@ -209,13 +209,6 @@ AI 带来的新问题，集中在“芯片与芯片之间”：数据怎么搬�
 36. 【一手】英特尔：*Intel Appoints Lip-Bu Tan as Chief Executive Officer*，2025 年 3 月 12 日发布，3 月 18 日生效。<https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-appoints-lip-bu-tan-chief-executive-officer.html>
 37. 【一手】CASPA：*About*；1991 年成立，超过 6,000 名个人会员。<https://www.caspa.com/about>
 38. 【一手】CASPA CEO Summit 官方网站（caspaceosummit.com）；峰会主题、日期、地点、嘉宾与议程。
-39. 【一手】高通（Qualcomm）：年度营收，美国证券交易委员会（SEC）EDGAR 公司申报数据。<https://data.sec.gov/api/xbrl/companyconcept/CIK0000804328/us-gaap/Revenues.json>
-40. 【一手】AMD：年度营收，SEC EDGAR 公司申报数据。<https://data.sec.gov/api/xbrl/companyconcept/CIK0000002488/us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax.json>
-41. 【一手】新思科技（Synopsys）：年度营收，SEC EDGAR 公司申报数据（2023 财年为年报重述口径）。<https://data.sec.gov/api/xbrl/companyconcept/CIK0000883241/us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax.json>
-42. 【一手】铿腾电子（Cadence）：年度营收，SEC EDGAR 公司申报数据。<https://data.sec.gov/api/xbrl/companyfacts/CIK0000813672.json>
-43. 【一手】应用材料（Applied Materials）：年度营收，SEC EDGAR 公司申报数据。<https://data.sec.gov/api/xbrl/companyconcept/CIK0000006951/us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax.json>
-44. 【一手】泛林集团（Lam Research）：年度营收，SEC EDGAR 公司申报数据，2026 财年截至 2026 年 6 月 28 日。<https://data.sec.gov/api/xbrl/companyconcept/CIK0000707549/us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax.json>
-45. 【一手】ASML：年度营收（欧元），SEC EDGAR 公司申报数据。<https://data.sec.gov/api/xbrl/companyfacts/CIK0000937966.json>
-46. 【研究机构】TrendForce：*Top 10 OSAT Companies of 2024*，2025 年 5 月 13 日；2024 年封测厂商营收排名。<https://www.trendforce.com/presscenter/news/20250513-12577.html>
+39. 【研究机构】TrendForce：*Top 10 OSAT Companies of 2024*，2025 年 5 月 13 日；2024 年封测厂商营收排名。<https://www.trendforce.com/presscenter/news/20250513-12577.html>
 
 延伸阅读：Chris Miller，*Chip War: The Fight for the World's Most Critical Technology*（Scribner，2022）。
