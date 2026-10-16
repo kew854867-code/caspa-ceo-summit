@@ -1,0 +1,30 @@
+01  01-title-block.png  顶部标题区
+02  02-heading-s0.png  章节标题：序 一颗芯片，要走多远
+03  03-block-1.png  板块 1：设计
+04  04-block-2.png  板块 2：设计工具与 IP
+05  05-block-3.png  板块 3：制造
+06  06-block-4.png  板块 4：设备与材料
+07  07-block-5.png  板块 5：封装与测试
+08  08-block-6.png  板块 6：存储
+09  09-block-7.png  板块 7：系统与数据中心
+10  10-timeline.png  八个关键节点：从 1947 年到今天，每一步由谁推动
+11  11-heading-s1.png  章节标题：一 美国：一块锗片，和一个想法
+12  12-bell-labs.jpg  巴丁、肖克利、布拉顿，晶体管的三位发明者，贝尔实验室。AT&T 新闻照片，公有领域 [40]
+13  13-heading-s2.png  章节标题：二 日本：领先的技术，不等于领先的产业
+14  14-toshiba-dram.jpg  东芝 1M DRAM 芯片，1980 年代。图片来源：日本半导体历史馆 [43]
+15  15-heading-s3.png  章节标题：三 台湾：把“设计”和“制造”拆开
+16  16-morris-chang.jpg  张忠谋，2011 年。图片来源：IEEE 工程与技术史 Wiki [44]
+17  17-heading-s4.png  章节标题：四 韩国：存储的新主人
+18  18-samsung-dram.jpg  三星半导体事业的起点，是 64Kb DRAM。图片来源：三星新闻中心 [45]
+19  19-heading-s5.png  章节标题：五 荷兰：一台机器，一家公司
+20  20-asml-hq.jpg  ASML 总部，荷兰费尔德霍芬，2008 年。摄影：A. Ansems，公有领域 [42]
+21  21-heading-s6.png  章节标题：六 中国：一个正在变大的变量
+22  22-smic.jpg  中芯国际厂区外墙。图片来源：凤凰网 [46]
+23  23-china-equipment.png  2025 年，各地区半导体设备销售额（亿美元）与同比变化 [12]
+24  24-heading-s7.png  章节标题：七 AI：同一张地图，被拉到极限
+25  25-nvidia-hq.jpg  英伟达总部 Voyager 大楼。图片来源：NVIDIA 新闻中心 [32]
+26  26-nvidia-supply-chain.png  英伟达披露的主要供应链伙伴（公司整体披露，不代表某一型号的固定生产路线）[18]
+27  27-heading-s8.png  章节标题：八 回到现场：下一步，在芯片与芯片之间
+28  28-summit-poster.jpg  CASPA 第 35 届年会 · The CEO Summit 官方海报
+29  29-eight-sectors.jpg  八大板块，同在一个现场
+30  30-info-card.png  报名信息卡片
