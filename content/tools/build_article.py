@@ -22,7 +22,7 @@ C_US, C_EA, C_EU, C_CN = "#2F6FDF", "#D99A00", "#14A38B", "#E4572E"
 
 
 def cite(*ns):
-    return "".join(f'<sup class="cite"><a href="#ref-{n}">{n}</a></sup>' for n in ns)
+    return '<sup class="cite">' + '<span class="cs">,</span>'.join(f'<a href="#ref-{n}">{n}</a>' for n in ns) + '</sup>'
 
 
 # ------------------------------------------------------------------ logos
@@ -194,7 +194,7 @@ def art_converge(c, u="v"):
         x, y = 120 + 58 * math.cos(a), 75 + 58 * math.sin(a)
         out += f'<path d="M120 75L{x:.1f} {y:.1f}" stroke="{col}" stroke-width="2" opacity=".6"/><circle cx="{x:.1f}" cy="{y:.1f}" r="10" fill="{col}"/><text x="{x:.1f}" y="{y+4:.1f}" font-size="11" font-weight="700" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif">{i+1}</text>'
     out += f'<circle cx="120" cy="75" r="19" fill="{INK}"/><circle cx="120" cy="75" r="8" fill="#fff"/>'
-    return f'<svg viewBox="0 0 240 150" role="img" aria-label="七个环节汇聚示意图">{out}</svg>'
+    return f'<svg viewBox="0 0 240 150" role="img" aria-label="七个关键板块示意图">{out}</svg>'
 
 
 # --------------------------------------------------------------- charts
@@ -247,20 +247,20 @@ CHAIN_ROWS = [
     # name, what, art, companies, chart html, data line, refs, color
     ("设计", "决定芯片做什么、怎么做", art_design, ["英伟达", "高通", "AMD"],
      chart_title("2025 年全球半导体销售额，按公司总部所在地") +
-     pie([("美国公司", 53.4, C_US), ("其他国家和地区", 46.6, GREY)], "53.4%", "美国公司"),
-     "美国公司 2025 年销售额 4,250 亿美元，占全球 7,956 亿美元的 53.4%，为 1984 年以来最高", (3,), C_US),
+     pie([("美国总部企业", 53.4, C_US), ("其他国家和地区", 46.6, GREY)], "53.4%", "美国总部"),
+     "总部在美国的企业，2025 年销售额 4,250 亿美元，占全球 7,956 亿美元的 53.4%；这是全部半导体业务的份额，不是设计业务的份额，也不是美国本土制造的份额", (3,), C_US),
     ("设计工具与 IP", "画图纸用的软件，和可以复用的标准件", art_eda, ["新思科技", "铿腾电子", "西门子 EDA", "Arm"],
-     chart_title("2025 财年营收（亿美元）") + hbars([("新思科技", 70.5, "#7A5AF8"), ("铿腾电子", 53.0, "#A99BFA")], ""),
-     "图中为单独披露营收的两家公司；新思科技财年截至 2025 年 10 月，铿腾电子为 2025 自然年", (35, 41), "#7A5AF8"),
+     chart_title("2025 年公司总营收（亿美元）") + hbars([("新思科技", 70.5, "#7A5AF8"), ("铿腾电子", 53.0, "#A99BFA")], "", fmt="{:.1f}"),
+     "图中是公司总营收，不是 EDA 市场份额；新思科技财年截至 2025 年 10 月，含并表的 Ansys 业务（7.57 亿美元）；铿腾电子为 2025 自然年", (35, 41), "#7A5AF8"),
     ("制造", "把图纸刻在硅片上", art_wafer, ["台积电", "三星", "中芯国际"],
      chart_title("2026 年二季度全球晶圆代工营收份额") +
      pie([("台积电", 72.5, C_EA), ("三星", 5.9, "#F2C94C"), ("中芯国际", 5.4, C_CN), ("联电", 3.9, "#9FD8CB"), ("格芯", 3.2, "#A9C3F5"), ("其他", 9.1, GREY)], "72.5%", "台积电"),
      "台积电一家，占去全球晶圆代工营收的七成以上", (19,), C_EA),
-    ("设备", "造芯片工厂的机器，包括光刻机", art_litho, ["ASML", "应用材料", "泛林集团", "东京电子", "KLA"],
+    ("设备与材料", "造芯片工厂的机器，包括光刻机；以及硅片、光刻胶等原材料", art_litho, ["ASML", "应用材料", "泛林集团", "东京电子", "KLA"],
      chart_title("2025 年全球芯片制造设备市场，ASML 的占比") +
      pie([("ASML", 20, C_CN), ("应用材料、泛林、东京电子、KLA 及其他", 80, GREY)], "约 20%", "ASML"),
-     "2025 年全球市场 1,362 亿美元，ASML 营收 275 亿美元居首；应用材料、泛林集团、东京电子、KLA 居第二至第五", (11,), C_CN),
-    ("封装与测试", "把裸片变成能用的产品，先进封装是 AI 芯片的关键一步", art_package, ["Fabrinet", "鸿海", "纬创"],
+     "2025 年全球设备市场 1,362 亿美元，ASML 营收 275 亿美元居首，应用材料、泛林集团、东京电子、KLA 居第二至第五；材料方面，信越化学与 SUMCO 合计占全球硅片的 44.1%", (11, 13), C_CN),
+    ("封装与测试", "把裸片变成能用的产品，先进封装是 AI 芯片的关键一步", art_package, ["日月光", "安靠", "长电科技"],
      chart_title("2024 年前十大封测厂商合计营收中的占比") +
      pie([("日月光", 44.6, C_EU), ("安靠", 15.2, "#4FBFA8"), ("长电科技", 12.0, "#9FD8CB"), ("通富微电", 8.0, "#C8EBE3"), ("力成", 5.5, "#E1F4F0"), ("其余五家", 14.7, GREY)], "44.6%", "日月光"),
      "日月光一家，占前十大封测厂合计营收的四成以上；英伟达用 CoWoS 做封装", (39, 18), C_EU),
@@ -270,34 +270,34 @@ CHAIN_ROWS = [
      chart_title("2026 年二季度 HBM 营收份额") +
      pie([("SK 海力士", 50, "#F08A24"), ("三星", 33, "#F7BE86"), ("美光", 18, "#FBD9B5")], "50%", "SK 海力士"),
      "AI 加速器必需的 HBM，SK 海力士一家占一半；DRAM“其他”约 13%，其中长鑫存储约 10%", (22,), "#F08A24"),
-    ("系统与数据中心", "最终买单的人", art_rack, ["英伟达"],
+    ("系统与数据中心", "芯片被装成服务器和机架，送进数据中心", art_rack, ["英伟达", "鸿海", "纬创"],
      '<div class="tiles"><div><b>4,500+</b><span>一个 AI 服务器机架里的封装芯片数量</span></div><div><b>95%+</b><span>芯片占 AI 服务器机架价值的比例</span></div></div>',
      "芯片在 AI 数据中心的总投资里，占到一半以上", (3,), "#5B6B8C"),
 ]
 
 
 def fig_chain():
-    out = ['<figure class="fig" id="fig-chain"><div class="fig-title">一颗芯片的七个环节</div>'
-           '<div class="fig-sub">每个环节长什么样，谁在做，规模有多大</div><ol class="chain">']
+    out = ['<figure class="fig" id="fig-chain"><div class="fig-title">理解半导体产业的七个关键板块</div>'
+           '<div class="fig-sub">每个板块做什么，谁在做，格局如何</div><ol class="chain">']
     for i, (name, what, art, cos, chart, line, refs, color) in enumerate(CHAIN_ROWS, 1):
         out.append(
             f'<li class="link" style="--c:{color}" id="link-{i}"><div class="link-art">{art(color, f"c{i}")}</div>'
             f'<div class="link-body"><div class="ch-h"><span class="dot">{i}</span><b>{name}</b></div><div class="ch-what">{what}</div>'
             f'{logos(cos)}<div class="ch-chart">{chart}</div><div class="ch-data">{line}{cite(*refs)}</div></div></li>')
-    out.append('</ol><figcaption>图 1　七个环节与代表公司。插画为示意图；图表数据为官方或研究机构统计，口径见文末数据说明。</figcaption></figure>')
+    out.append('</ol><figcaption>图 1　七个关键板块与代表公司。七个板块是编辑为理解产业所做的归类，并非行业唯一的标准分类，板块之间不是先后相接的工序。插画为示意图；图表数据为官方或研究机构统计，口径见文末数据说明。</figcaption></figure>')
     return "".join(out)
 
 
 TIMELINE = [
     ("1947–1959", "美国", "us", "发明晶体管与集成电路", ["贝尔实验室", "德州仪器", "仙童"], (4, 5),
-     "美国公司占 2025 年全球半导体销售额的 53.4%", (3,)),
+     "总部在美国的企业，占 2025 年全球半导体销售额的 53.4%", (3,)),
     ("1971", "美国", "us", "第一款商用微处理器", ["英特尔"], (7,),
      "美国半导体企业 2025 年研发投入 768 亿美元，创纪录", (3,)),
     ("1980 年代", "日本", "ea", "存储领跑，后期占全球半导体市场 52%", ["日本电气", "日立"], (9,),
      "铠侠居 NAND 全球第四，份额 13.6%；信越化学与 SUMCO 占硅片 44.1%", (14, 13)),
     ("1987–1990", "台湾 · 英国", "ea", "设计与制造分工", ["台积电", "Arm"], (16, 17),
      "台积电占 2026 年二季度全球代工营收 72.5%", (19,)),
-    ("1992", "韩国", "ea", "DRAM 接棒", ["三星", "SK 海力士"], (21,),
+    ("1992", "韩国", "ea", "DRAM 领先者更替", ["三星", "SK 海力士"], (21,),
      "DRAM：三星 38%、SK 海力士 25%；HBM：SK 海力士 50%", (22,)),
     ("2010–2026", "荷兰", "eu", "EUV 光刻机，从原型机到量产", ["ASML"], (23,),
      "ASML 预计 2026 年出货约 65 台 EUV", (26,)),
@@ -322,13 +322,14 @@ def fig_timeline():
 
 
 def fig_ai():
-    return f'''<figure class="fig" id="fig-ai"><div class="fig-title">一块 AI 加速器，经过哪些手</div>
-<div class="fig-sub">以英伟达披露的供应链为例</div>
+    return f'''<figure class="fig" id="fig-ai"><div class="fig-title">英伟达披露的主要供应链伙伴</div>
+<div class="fig-sub">按类别列出，来自公司整体披露，不代表某一型号的固定生产路线</div>
 <div class="flow">
-  <div class="node" style="--c:{C_US}"><b>设计</b><span>英伟达（美国）</span></div><div class="arrow" aria-hidden="true">→</div>
-  <div class="node" style="--c:{C_EA}"><b>晶圆代工</b><span>台积电 · 三星</span><em>台积电占二季度全球代工营收 72.5%{cite(19)}</em></div><div class="arrow" aria-hidden="true">→</div>
-  <div class="node" style="--c:{C_EU}"><b>先进封装</b><span>CoWoS</span></div><div class="arrow" aria-hidden="true">→</div>
-  <div class="node" style="--c:#5B6B8C"><b>组装测试</b><span>鸿海 · 纬创 · Fabrinet</span></div>
+  <div class="node" style="--c:{C_US}"><b>设计</b><span>英伟达（美国）</span></div>
+  <div class="node" style="--c:{C_EA}"><b>晶圆代工</b><span>台积电 · 三星</span><em>二季度全球代工营收，台积电占 72.5%{cite(19)}</em></div>
+  <div class="node" style="--c:#F08A24"><b>内存</b><span>SK 海力士 · 美光 · 三星</span></div>
+  <div class="node" style="--c:{C_EU}"><b>封装技术</b><span>CoWoS</span></div>
+  <div class="node" style="--c:#5B6B8C"><b>组装与测试</b><span>鸿海 · 纬创 · Fabrinet 等</span></div>
 </div>
 <div class="ch-ct" style="margin-top:18px">HBM 内存：2026 年二季度营收份额{cite(22)}</div>
 <div class="bar" role="img" aria-label="HBM 份额：SK 海力士 50%，三星 33%，美光 18%">
@@ -337,9 +338,9 @@ def fig_ai():
   <div><b>1,597 亿美元</b><span>2026 年 8 月全球半导体销售额，同比 +144.3%{cite(2)}</span></div>
   <div><b>+305%</b><span>2026 年上半年存储同比增速，逻辑为 +45%{cite(34)}</span></div>
   <div><b>962 亿美元</b><span>英伟达 5–7 月季度营收，同比 +106%{cite(32)}</span></div>
-  <div><b>402 亿美元</b><span>台积电二季度营收，同比 +33.7%{cite(20)}</span></div>
+  <div><b>467.2 亿美元</b><span>台积电三季度营收，同比 +41.2%{cite(48)}</span></div>
 </div>
-<figcaption>图 3　供应链环节取自英伟达 2026 财年 10-K。{cite(18)} HBM 份额为研究机构估算，四舍五入后合计可能不是 100%。</figcaption></figure>'''
+<figcaption>图 4　供应链类别取自英伟达 2026 财年 10-K，是公司整体的披露。{cite(18)} HBM 份额为研究机构估算，四舍五入后合计为 101%。</figcaption></figure>'''
 
 
 EQUIP = [("中国大陆", 49.3, "-0.5%"), ("台湾", 31.5, "+90%"), ("韩国", 25.8, "+26%"),
@@ -362,7 +363,7 @@ def fig_china():
   <div><b>3,440 亿元</b><span>“大基金”三期注册资本，2024 年 5 月成立{cite(29)}</span></div>
   <div><b>+131.3%</b><span>2026 年 8 月中国市场半导体销售额同比增速{cite(2)}</span></div>
 </div>
-<figcaption>图 4　同比为 2025 年相对 2024 年的变化。“其他地区”指统计口径中的 Rest of World。</figcaption></figure>'''
+<figcaption>图 3　同比为 2025 年相对 2024 年的变化。“其他地区”指统计口径中的 Rest of World。</figcaption></figure>'''
 
 
 def info():
@@ -424,7 +425,7 @@ for p in parts[1:]:
 def md2html(s):
     s = re.sub(r"\[\[(\d+)\]\]", lambda m: f"@@CITE{m.group(1)}@@", s)
     h = markdown.markdown(s, extensions=["sane_lists"])
-    h = re.sub(r"@@CITE(\d+)@@", lambda m: cite(m.group(1)), h)
+    h = re.sub(r"(?:@@CITE\d+@@)+", lambda m: cite(*re.findall(r"\d+", m.group(0))), h)
     for k, fn in FIGS.items():
         h = h.replace(f"<p>{k}</p>", fn())
     return h
@@ -503,6 +504,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font
 .prose ul{padding-left:1.15em;margin:0 0 1.2em}.prose li{margin-bottom:.4em}.prose li::marker{color:var(--gold)}
 .prose a{color:var(--ink);text-decoration-color:var(--gold);text-underline-offset:3px}
 sup.cite{font-size:.64em;line-height:0;margin-left:1px;vertical-align:super;white-space:nowrap}
+sup.cite .cs{color:var(--gold-ink);padding:0 1px}
 sup.cite a{color:var(--gold-ink);text-decoration:none;font-weight:600;padding:0 1px}
 /* banner illustration */
 .photo{margin:2px 0 22px}.photo img{display:block;width:100%;height:auto;border-radius:14px}.photo figcaption{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.5}
@@ -557,7 +559,7 @@ figcaption{font-size:12px;line-height:1.75;color:var(--muted);margin-top:10px}
 .vt-now{margin-top:8px;padding-top:8px;border-top:1px dashed var(--rule);font-size:13px;line-height:1.7;color:#3A404C}
 .vt-now b{display:inline-block;margin-right:8px;padding:0 8px;border-radius:999px;background:var(--soft);font-size:11.5px;color:var(--muted);font-weight:500}
 /* ai flow */
-.flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;gap:8px;align-items:stretch}
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;align-items:stretch}
 .node{background:color-mix(in srgb,var(--c) 7%,#fff);border:1px solid color-mix(in srgb,var(--c) 25%,#fff);border-top:4px solid var(--c);border-radius:12px;padding:10px 12px 12px;display:flex;flex-direction:column;gap:2px;font-size:13px;line-height:1.55}
 .node b{font-family:var(--serif);font-size:16px;color:var(--c)}.node span{color:var(--muted)}.node em{font-style:normal;color:var(--ink);font-size:12px;margin-top:4px}
 .arrow{align-self:center;color:var(--gold);font-size:20px}
@@ -594,7 +596,7 @@ figcaption{font-size:12px;line-height:1.75;color:var(--muted);margin-top:10px}
 .b-prim{background:#E2F5EF;color:#0E7A64}.b-res{background:#E5EEFB;color:#2457B3}
 .foot{padding-block:32px 56px;color:var(--muted);font-size:12.5px;line-height:1.8;text-align:center;border-top:1px solid var(--rule);margin-top:40px}
 @media (min-width:640px){body{font-size:17px}.stats,.tiles{grid-template-columns:repeat(3,1fr)}.link{display:grid;grid-template-columns:240px 1fr}.link-art{display:flex;align-items:center;padding:10px}.link-art svg{width:100%}}
-@media (max-width:560px){.flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg);justify-self:center}}
+@media (max-width:560px){.flow{grid-template-columns:1fr 1fr}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 """
 
@@ -631,7 +633,7 @@ page = f"""<title>{html.escape(fm['title'])}</title>
   <h1>{html.escape(fm['title'])}</h1>
   <p class="sub">{html.escape(fm['subtitle'])}</p>
   <hr class="rule">
-  <div class="meta">阅读约 15 分钟　·　数据均为 2025–2026 年统计，附 {nrefs} 条出处　·　2026 年 10 月 16 日</div>
+  <div class="meta">阅读约 15 分钟　·　当代产业数据主要采用 2025–2026 年资料，历史与个别榜单另有注明　·　参考资料及图片来源共 {nrefs} 项　·　2026 年 10 月 16 日</div>
 </div></header>
 <nav class="nav" aria-label="章节"><div class="wrap nav-in">{nav}</div></nav>
 <main class="wrap">{''.join(sec_html)}</main>
