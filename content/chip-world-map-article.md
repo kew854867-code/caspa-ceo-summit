@@ -212,5 +212,6 @@ AI 带来的新问题，集中在“芯片与芯片之间”：数据怎么搬�
 39. 【研究机构】TrendForce：*Top 10 OSAT Companies of 2024*，2025 年 5 月 13 日；2024 年封测厂商营收排名。<https://www.trendforce.com/presscenter/news/20250513-12577.html>
 40. 【公有领域】维基共享资源（Wikimedia Commons）：*Bardeen Shockley Brattain 1948.JPG*，AT&T 新闻照片，摄影师署名为纽约的 Jack St.（姓氏未能辨认）；晶体管三位发明者的合影。<https://commons.wikimedia.org/wiki/File:Bardeen_Shockley_Brattain_1948.JPG>
 41. 【一手】铿腾电子（Cadence）：年度营收，SEC EDGAR 公司申报数据。<https://data.sec.gov/api/xbrl/companyfacts/CIK0000813672.json>
+42. 【公有领域】维基共享资源（Wikimedia Commons）：*ASML headquarters Veldhoven.jpg*，摄影者 A. Ansems，2008 年 5 月 22 日。<https://commons.wikimedia.org/wiki/File:ASML_headquarters_Veldhoven.jpg>
 
 延伸阅读：Chris Miller，*Chip War: The Fight for the World's Most Critical Technology*（Scribner，2022）。

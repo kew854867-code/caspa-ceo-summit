@@ -383,6 +383,7 @@ BANNERS = {"一": (art_transistor, C_US), "二": (art_dram, C_EA), "三": (art_s
 
 
 PHOTOS = {  # section number -> (file, caption, ref)
+    "五": ("asml-hq.jpg", "ASML 总部，荷兰费尔德霍芬（Veldhoven），2008 年。摄影：A. Ansems，公有领域", 42),
     "八": ("summit-poster.jpg", "CASPA 第 35 届年会 · The CEO Summit 官方海报", None),
     "一": ("bell-1948.jpg", "巴丁、肖克利、布拉顿，晶体管的三位发明者，贝尔实验室。AT&T 新闻照片，公有领域", 40),
 }
