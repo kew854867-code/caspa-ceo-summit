@@ -591,9 +591,9 @@ JS = r"""
 })();
 """
 
-LOGO = ('<svg viewBox="0 0 240 70" role="img" aria-label="CASPA"><g fill="none" stroke="#C99A1D" stroke-width="2.4">'
-        '<circle cx="35" cy="35" r="25"/><ellipse cx="35" cy="35" rx="12" ry="25"/><path d="M10 35h50M15 23h40M15 47h40"/></g>'
-        '<text x="73" y="46" fill="#16191F" font-family="Arial, sans-serif" font-size="34" font-weight="600" letter-spacing="3">CASPA</text></svg>')
+import base64
+LOGO = ('<img src="data:image/png;base64,' + base64.b64encode((ROOT / "assets" / "caspa-logo-dark.png").read_bytes()).decode() +
+        '" alt="CASPA" style="height:58px;width:auto;display:block">')
 
 nrefs = len(re.findall(r"^\d+\.\s", MD.split("## 参考与出处")[1], re.M))
 page = f"""<title>{html.escape(fm['title'])}</title>
