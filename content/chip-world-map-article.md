@@ -141,15 +141,9 @@ AI 带来的新问题，集中在“芯片与芯片之间”：数据怎么搬�
 
 这场会是 CASPA（Chinese American Semiconductor Professional Association，华美半导体协会）第 35 届年会暨晚宴的 CEO 峰会。CASPA 成立于 1991 年，拥有超过 6,000 名个人会员。[[37]] 今年峰会的主题是 **“Silicon, Systems, and Intelligence: Designing the Next Decade”**，硅，系统，与智能。[[38]]
 
-前面讲到的几条线，都有人在场：
+英特尔首席执行官陈立武（Lip-Bu Tan，2025 年 3 月 18 日出任）[[36]]，将与 CASPA 会长 Jimmy Cheng 对话；被称为“3D 晶体管之父”的胡正明（Chenming Hu）教授，将介绍陈立武出场。[[38]]
 
-- **设计工具**：新思科技（Synopsys）首席执行官 Sassine Ghazi，与西门子 EDA 的 Ankur Gupta。新思科技 2025 财年（截至 2025 年 10 月 31 日）营收 70.54 亿美元，同比增长约 15%。[[35]]
-- **AI 算力**：Cerebras 的 Andrew Feldman，以及 SambaNova、Etched 等公司的 CEO。
-- **存储**：Solidigm、SanDisk、WD、ScaleFlux 的负责人。
-- **互连**：Lumentum、Ayar Labs、Semtech、Credo、Silith 的负责人。
-- **设备与制造**：SEMI 首席执行官 Ajit Manocha，和泛林集团（Lam Research）创始人 David Lam。
-- **资本**：Lux Capital、Samsung Ventures America、Salience Capital、Seligman Ventures 与淡马锡（Temasek）的代表。
-- **产业领袖**：英特尔首席执行官陈立武（Lip-Bu Tan，2025 年 3 月 18 日出任）[[36]]，将与 CASPA 会长 Jimmy Cheng 对话；被称为“3D 晶体管之父”的胡正明（Chenming Hu）教授，将介绍陈立武出场。[[38]]
+{{ROOM}}
 
 {{INFO}}
 
@@ -213,5 +207,9 @@ AI 带来的新问题，集中在“芯片与芯片之间”：数据怎么搬�
 40. 【公有领域】维基共享资源（Wikimedia Commons）：*Bardeen Shockley Brattain 1948.JPG*，AT&T 新闻照片，摄影师署名为纽约的 Jack St.（姓氏未能辨认）；晶体管三位发明者的合影。<https://commons.wikimedia.org/wiki/File:Bardeen_Shockley_Brattain_1948.JPG>
 41. 【一手】铿腾电子（Cadence）：年度营收，SEC EDGAR 公司申报数据。<https://data.sec.gov/api/xbrl/companyfacts/CIK0000813672.json>
 42. 【公有领域】维基共享资源（Wikimedia Commons）：*ASML headquarters Veldhoven.jpg*，摄影者 A. Ansems，2008 年 5 月 22 日。<https://commons.wikimedia.org/wiki/File:ASML_headquarters_Veldhoven.jpg>
+43. 日本半导体历史馆（Semiconductor History Museum of Japan）：*Japan Semiconductor Innovation 50（D-8，1980 年代）*，东芝 1M DRAM 照片。<https://www.shmj.or.jp/innovation50/english/detail_D08E.htm>
+44. IEEE 工程与技术史 Wiki（ETHW）：*Morris Chang*，张忠谋 2011 年肖像。<https://ethw.org/Morris_Chang>
+45. 【一手】三星新闻中心（Samsung Global Newsroom）：*[Photo Essay] An Intimate Look into Samsung's Semiconductor Operations (Part 1)*，2017 年 11 月 10 日。<https://news.samsung.com/global/photo-essay-an-intimate-look-into-samsungs-semiconductor-operations-part-1>
+46. 凤凰网：*大手笔！刚刚，中芯国际公告：投资超500亿元*，文章配图。<https://tech.ifeng.com/c/8IndklkUjO7>
 
 延伸阅读：Chris Miller，*Chip War: The Fight for the World's Most Critical Technology*（Scribner，2022）。

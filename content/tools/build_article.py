@@ -373,7 +373,12 @@ def info():
 <a class="btn" href="{TICKET_URL}" target="_blank" rel="noopener">报名参会</a></aside>'''
 
 
-FIGS = {"{{FIG_CHAIN}}": fig_chain, "{{FIG_TIMELINE}}": fig_timeline, "{{FIG_AI}}": fig_ai,
+def room():
+    b64 = base64.b64encode((ROOT / "assets" / "photos" / "summit-room.jpg").read_bytes()).decode()
+    return f'<figure class="photo"><img src="data:image/jpeg;base64,{b64}" alt="八大板块，同在一个现场" loading="lazy"></figure>'
+
+
+FIGS = {"{{ROOM}}": room, "{{FIG_CHAIN}}": fig_chain, "{{FIG_TIMELINE}}": fig_timeline, "{{FIG_AI}}": fig_ai,
         "{{FIG_CHINA}}": fig_china, "{{INFO}}": info}
 
 # banners: section number -> (art function, colour)
@@ -382,18 +387,23 @@ BANNERS = {"一": (art_transistor, C_US), "二": (art_dram, C_EA), "三": (art_s
            "八": (art_converge, "#5B6B8C")}
 
 
-PHOTOS = {  # section number -> (file, caption, ref)
-    "五": ("asml-hq.jpg", "ASML 总部，荷兰费尔德霍芬（Veldhoven），2008 年。摄影：A. Ansems，公有领域", 42),
-    "八": ("summit-poster.jpg", "CASPA 第 35 届年会 · The CEO Summit 官方海报", None),
-    "一": ("bell-1948.jpg", "巴丁、肖克利、布拉顿，晶体管的三位发明者，贝尔实验室。AT&T 新闻照片，公有领域", 40),
+PHOTOS = {  # section number -> (file, caption, ref, max width px)
+    "一": ("bell-1948.jpg", "巴丁、肖克利、布拉顿，晶体管的三位发明者，贝尔实验室。AT&T 新闻照片，公有领域", 40, None),
+    "二": ("toshiba-1m-dram.jpg", "东芝 1M DRAM 芯片，1980 年代。图片来源：日本半导体历史馆", 43, 321),
+    "三": ("morris-chang.jpg", "张忠谋，2011 年。图片来源：IEEE 工程与技术史 Wiki（ETHW）", 44, None),
+    "四": ("samsung-early-dram.jpg", "三星半导体事业的起点，是 64Kb DRAM。图片来源：三星新闻中心", 45, None),
+    "五": ("asml-hq.jpg", "ASML 总部，荷兰费尔德霍芬（Veldhoven），2008 年。摄影：A. Ansems，公有领域", 42, None),
+    "六": ("smic-building.jpg", "中芯国际厂区外墙。图片来源：凤凰网", 46, None),
+    "七": ("nvidia-hq.jpg", "英伟达总部 Voyager 大楼。图片来源：NVIDIA 新闻中心", 32, None),
+    "八": ("summit-poster.jpg", "CASPA 第 35 届年会 · The CEO Summit 官方海报", None, None),
 }
 
 
 def banner(num):
     if num in PHOTOS:
-        f, cap, ref = PHOTOS[num]
+        f, cap, ref, mw = PHOTOS[num]
         b64 = base64.b64encode((ROOT / "assets" / "photos" / f).read_bytes()).decode()
-        return (f'<figure class="photo"><img src="data:image/jpeg;base64,{b64}" alt="{cap}" loading="lazy">'
+        return (f'<figure class="photo"{(" style=max-width:%dpx;margin-left:auto;margin-right:auto" % mw) if mw else ""}><img src="data:image/jpeg;base64,{b64}" alt="{cap}" loading="lazy">'
                 f'<figcaption>{cap}{cite(ref) if ref else ""}</figcaption></figure>')
     if num not in BANNERS:
         return ""
