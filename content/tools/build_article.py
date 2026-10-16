@@ -382,7 +382,17 @@ BANNERS = {"一": (art_transistor, C_US), "二": (art_dram, C_EA), "三": (art_s
            "八": (art_converge, "#5B6B8C")}
 
 
+PHOTOS = {  # section number -> (file, caption, ref)
+    "一": ("bell-1948.jpg", "巴丁、肖克利、布拉顿，晶体管的三位发明者，贝尔实验室。AT&T 新闻照片，公有领域", 40),
+}
+
+
 def banner(num):
+    if num in PHOTOS:
+        f, cap, ref = PHOTOS[num]
+        b64 = base64.b64encode((ROOT / "assets" / "photos" / f).read_bytes()).decode()
+        return (f'<figure class="photo"><img src="data:image/jpeg;base64,{b64}" alt="{cap}" loading="lazy">'
+                f'<figcaption>{cap}{cite(ref)}</figcaption></figure>')
     if num not in BANNERS:
         return ""
     fn, col = BANNERS[num]
@@ -483,6 +493,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font
 sup.cite{font-size:.64em;line-height:0;margin-left:1px;vertical-align:super;white-space:nowrap}
 sup.cite a{color:var(--gold-ink);text-decoration:none;font-weight:600;padding:0 1px}
 /* banner illustration */
+.photo{margin:2px 0 22px}.photo img{display:block;width:100%;height:auto;border-radius:14px}.photo figcaption{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.5}
 .banner{position:relative;margin:2px 0 22px;border-radius:14px;overflow:hidden;background:linear-gradient(135deg,color-mix(in srgb,var(--c) 11%,#fff),#fff 70%);border:1px solid color-mix(in srgb,var(--c) 18%,#fff);padding:12px 0 8px}
 .banner svg{display:block;width:min(100%,300px);height:auto;margin:0 auto}
 .banner-tag{position:absolute;right:10px;bottom:6px;font-size:11px;color:var(--muted)}
