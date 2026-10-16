@@ -383,6 +383,7 @@ BANNERS = {"一": (art_transistor, C_US), "二": (art_dram, C_EA), "三": (art_s
 
 
 PHOTOS = {  # section number -> (file, caption, ref)
+    "八": ("summit-poster.jpg", "CASPA 第 35 届年会 · The CEO Summit 官方海报", None),
     "一": ("bell-1948.jpg", "巴丁、肖克利、布拉顿，晶体管的三位发明者，贝尔实验室。AT&T 新闻照片，公有领域", 40),
 }
 
@@ -392,7 +393,7 @@ def banner(num):
         f, cap, ref = PHOTOS[num]
         b64 = base64.b64encode((ROOT / "assets" / "photos" / f).read_bytes()).decode()
         return (f'<figure class="photo"><img src="data:image/jpeg;base64,{b64}" alt="{cap}" loading="lazy">'
-                f'<figcaption>{cap}{cite(ref)}</figcaption></figure>')
+                f'<figcaption>{cap}{cite(ref) if ref else ""}</figcaption></figure>')
     if num not in BANNERS:
         return ""
     fn, col = BANNERS[num]
@@ -603,8 +604,8 @@ JS = r"""
 """
 
 import base64
-LOGO = ('<img src="data:image/png;base64,' + base64.b64encode((ROOT / "assets" / "caspa-logo-dark.png").read_bytes()).decode() +
-        '" alt="CASPA" style="height:58px;width:auto;display:block">')
+LOGO = ('<img src="data:image/jpeg;base64,' + base64.b64encode((ROOT / "assets" / "caspa-logo-original.jpg").read_bytes()).decode() +
+        '" alt="CASPA" style="height:72px;width:auto;display:block">')
 
 nrefs = len(re.findall(r"^\d+\.\s", MD.split("## 参考与出处")[1], re.M))
 page = f"""<title>{html.escape(fm['title'])}</title>
