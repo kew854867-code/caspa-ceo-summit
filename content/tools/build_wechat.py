@@ -83,6 +83,8 @@ for p in parts[1:]:
         body.append(f'<h2 style="font-size:20px;color:{INK};border-left:4px solid {GOLD};padding-left:10px;margin:34px 0 14px;">参考资料及图片来源</h2>')
         intro, _, lst = rest.partition("\n1.")
         lst, _, extra = ("1." + lst).partition("\n延伸阅读")
+        body.append('<p style="font-size:12px;color:#999;margin:0 0 6px;">向下滑动，阅读全文 ↓</p>')
+        body.append('<section style="max-height:260px;overflow-y:auto;-webkit-overflow-scrolling:touch;border:1px solid #E6E2D3;border-radius:10px;padding:12px 14px;background:#FCFBF7;margin:0 0 18px;">')
         body.append(f'<p style="font-size:12px;line-height:1.7;color:{MUTED};margin:0 0 10px;">{html.escape(intro.strip())}</p>')
         for n, t in re.findall(r"^(\d+)\.\s+(.*)$", lst, re.M):
             t = html.escape(t, quote=False)
@@ -90,10 +92,11 @@ for p in parts[1:]:
             t = re.sub(r"\*([^*]+)\*", r"\1", t)
             body.append(f'<p style="font-size:12px;line-height:1.7;color:#666;margin:0 0 6px;word-break:break-all;">[{n}] {t}</p>')
         if extra: body.append(f'<p style="font-size:12px;line-height:1.7;color:#666;">延伸阅读{html.escape(extra.strip())}</p>')
+        body.append('</section>')
         continue
     if head.startswith("数据说明"):
         body.append(f'<h2 style="font-size:20px;color:{INK};border-left:4px solid {GOLD};padding-left:10px;margin:34px 0 14px;">数据说明</h2>')
-        body.append(md2(rest)); continue
+        body.append('<p style="font-size:12px;color:#999;margin:0 0 6px;">向下滑动，阅读全文 ↓</p>'); body.append('<section style="max-height:260px;overflow-y:auto;-webkit-overflow-scrolling:touch;border:1px solid #E6E2D3;border-radius:10px;padding:12px 14px;background:#FCFBF7;margin:0 0 18px;">'); body.append(md2(rest).replace('font-size:16px','font-size:13px')); body.append('</section>'); continue
     num = m.group(1) if m else None
     shown = head.replace("　", " ")
     sid = "s0" if head.startswith("序") else None
