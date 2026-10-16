@@ -132,6 +132,8 @@ html_out = ('<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta
             '<div id="article" style="max-width:680px;margin:0 auto;background:#fff;padding:20px 16px;font-family:-apple-system,BlinkMacSystemFont,\'PingFang SC\',\'Helvetica Neue\',sans-serif;">'
             + "\n".join(body) + "</div>"
             '<script>document.getElementById("cp").onclick=function(){var el=document.getElementById("article");var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r);var ok=false;try{ok=document.execCommand("copy")}catch(e){}document.getElementById("msg").textContent=ok?"已复制，去公众号编辑器粘贴":"请手动全选后复制"}</script>'
+            '<div style="max-width:680px;margin:0 auto;padding:12px 16px;font:13px/1.8 sans-serif;color:#666;"><b>图片清单（若粘贴后某张图缺失，用同编号文件手动上传）</b><br>'
+            + "<br>".join(f'<a href="{BASE}{fn}" target="_blank">{n:02d}　{fn}</a>　{html.escape(cap)}' for n, fn, cap in order) + "</div>"
             "</body></html>")
 (OUT / "article-wechat.html").write_text(html_out, encoding="utf8")
 (OUT / "images-order.txt").write_text("\n".join(f"{n:02d}  {fn}  {cap}" for n, fn, cap in order), encoding="utf8")
